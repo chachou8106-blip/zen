@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Encyclopédie des Solutions Nomades – Zen Chez Toi</title>
+    <meta name="description" content="Découvrez les 5 volumes de l'Encyclopédie des Solutions Nomades. Un parcours d'évolution en PDF pour maîtriser votre environnement et votre bien-être.">
+    
+    <meta name="p:domain_verify" content="549770272775"/>
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; }
+
+        header { background: var(--brun-sombre); color: #f4eee8; padding: 1.1rem 1.5rem; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; color: inherit; }
+        .brand img { width: 40px; height: 40px; border-radius: 50%; }
+        nav { display: flex; gap: 1rem; }
+        nav a { padding: .45rem .85rem; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18); text-decoration: none; color: inherit; font-size: .85rem; }
+
+        .hero-encyclo { padding: 80px 20px; text-align: center; background: var(--blanc); border-bottom: 1px solid #ddd; }
+        .hero-encyclo h1 { font-size: 2.8em; margin-bottom: 20px; font-weight: normal; }
+        .hero-encyclo p { font-style: italic; color: #666; max-width: 800px; margin: 0 auto; font-size: 1.2em; }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        
+        .vol-detail { display: flex; background: var(--blanc); border-radius: 20px; margin-bottom: 40px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 8px solid; }
+        .vol-info { padding: 40px; flex: 1; }
+        .vol-img { width: 300px; background-size: cover; background-position: center; }
+        
+        .vol-detail.v1 { border-color: var(--maison); }
+        .vol-detail.v2 { border-color: var(--jardin); }
+        .vol-detail.v3 { border-color: var(--corps); }
+        .vol-detail.v4 { border-color: var(--bienetre); }
+        .vol-detail.v5 { border-color: var(--eso); }
+
+        .vol-info h2 { font-size: 1.8rem; margin-bottom: 15px; font-weight: normal; }
+        .vol-info p { margin-bottom: 20px; color: #555; }
+        .btn-buy-now { display: inline-block; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; color: #fff; transition: 0.3s; }
+
+        /* SECTION PRICING SACRÉE */
+        .pricing-section { background-color: var(--blanc); padding: 80px 20px; text-align: center; border-top: 1px solid #ddd; }
+        .pricing-subtitle { font-style: italic; color: #666; margin-bottom: 40px; }
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
+        .vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-size: 1em; font-weight: bold; background: var(--blanc); }
+        .btn-v1 { border-color: var(--maison); color: var(--maison); }
+        .btn-v2 { border-color: var(--jardin); color: var(--jardin); }
+        .btn-v3 { border-color: var(--corps); color: var(--corps); }
+        .btn-v4 { border-color: var(--bienetre); color: var(--bienetre); }
+        .btn-v5 { border-color: var(--eso); color: var(--eso); }
+
+        .pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+        .price-item { flex: 1; min-width: 200px; }
+        .price-item h4 { font-weight: normal; font-size: 1.1em; margin-bottom: 5px; }
+        .price-item .amount { font-size: 2em; color: var(--or-zen); font-weight: bold; }
+
+        footer { background: var(--brun-sombre); color: #f4eee8; padding: 60px 20px; text-align: center; }
+        .footer-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; font-size: 0.85rem; }
+        .footer-links a { color: #fff; text-decoration: none; opacity: 0.7; }
+        .footer-links a:hover { opacity: 1; color: var(--or-zen); }
+
+        @media (max-width: 800px) { .vol-detail { flex-direction: column; } .vol-img { width: 100%; height: 200px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.png" alt="Logo">
+                <span>Zen Chez Toi</span>
+            </a>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="grimoire.html">Grimoire</a>
+                <a href="blog.html">Journal</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-encyclo">
+        <h1>L'Encyclopédie des Solutions Nomades</h1>
+        <p>Plus de 100 fiches de solutions naturelles condensées en 5 volumes pour une autonomie totale au quotidien.</p>
+    </section>
+
+    <div class="container">
+        <div class="vol-detail v1">
+            <div class="vol-img" style="background-image: url('assets/hero-maison.jpg');"></div>
+            <div class="vol-info">
+                <h2>Vol 1 : Les Fondations (Maison)</h2>
+                <p>Purifier l'air, gérer l'humidité, et entretenir son foyer sans aucun produit chimique. Le guide essentiel pour une maison saine.</p>
+                <a href="#" class="btn-buy-now" style="background:var(--maison)">Acheter ce Volume</a>
+            </div>
+        </div>
+
+        <div class="vol-detail v2">
+            <div class="vol-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
+            <div class="vol-info">
+                <h2>Vol 2 : L'Enracinement (Jardin)</h2>
+                <p>Traiter les pucerons, le mildiou et nourrir le sol avec ce que la nature vous offre. Pour un jardin luxuriant et naturel.</p>
+                <a href="#" class="btn-buy-now" style="background:var(--jardin)">Acheter ce Volume</a>
+            </div>
+        </div>
+
+        <div class="vol-detail v3">
+            <div class="vol-img" style="background-image: url('assets/hero-corps.jpg');"></div>
+            <div class="vol-info">
+                <h2>Vol 3 : L'Éclosion (Corps)</h2>
+                <p>Soin de la peau, des cheveux et remèdes naturels pour les petits maux physiques. Éclore vers une beauté authentique.</p>
+                <a href="#" class="btn-buy-now" style="background:var(--corps)">Acheter ce Volume</a>
+            </div>
+        </div>
+
+        <div class="vol-detail v4">
+            <div class="vol-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
+            <div class="vol-info">
+                <h2>Vol 4 : L'Harmonie (Bien-être)</h2>
+                <p>Retrouver un sommeil profond et apaiser le stress. Des solutions douces pour harmoniser votre esprit au quotidien.</p>
+                <a href="#" class="btn-buy-now" style="background:var(--bienetre)">Acheter ce Volume</a>
+            </div>
+        </div>
+
+        <div class="vol-detail v5">
+            <div class="vol-img" style="background-image: url('assets/hero-eso.jpg');"></div>
+            <div class="vol-info">
+                <h2>Vol 5 : L'Élévation (Ésotérisme)</h2>
+                <p>Énergies, cristaux, et rituels ancestraux. Le guide pour élever votre vibration et vous protéger subtilement.</p>
+                <a href="#" class="btn-buy-now" style="background:var(--eso)">Acheter ce Volume</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="pricing-section">
+        <h2 class="section-title">Investissez dans votre Savoir</h2>
+        <p class="pricing-subtitle">Format PDF Haute Qualité - Lecture immédiate sur tous vos supports.</p>
+        <div class="volume-buttons">
+            <div class="vol-btn btn-v1">Vol 1</div>
+            <div class="vol-btn btn-v2">Vol 2</div>
+            <div class="vol-btn btn-v3">Vol 3</div>
+            <div class="vol-btn btn-v4">Vol 4</div>
+            <div class="vol-btn btn-v5">Vol 5</div>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-item"><h4>1 Volume (PDF)</h4><span class="amount">29 €</span></div>
+            <div class="price-item"><h4>3 Volumes (PDF)</h4><span class="amount">59 €</span></div>
+            <div class="price-item"><h4>L'Intégrale - 5 Volumes</h4><span class="amount">79 €</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a> | 
+            <a href="confidentialite.html">Confidentialité</a> | 
+            <a href="cookies.html">Cookies</a> | 
+            <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Sélection Amazon</a>
+        </div>
+        <p>&copy; 2026 Zen Chez Toi – L'Harmonie au Naturel</p>
+    </footer>
+
+</body>
+</html>

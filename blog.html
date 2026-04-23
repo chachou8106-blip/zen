@@ -1,348 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Chez Toi – Blog</title>
-  <meta name="description" content="Le blog Zen Chez Toi : articles pour aller plus loin, réfléchir, t’inspirer et relier les cinq univers entre eux.">
-  <style>
-    :root{
-      --bg:#f5f2ec;
-      --text:#2b2622;
-      --muted:#6f6660;
-      --accent:#a67b51;
-      --surface:rgba(255,255,255,.95);
-      --dark:#221b16;
-      --border:rgba(43,38,34,.12);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Georgia,serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Journal Zen - Zen Chez Toi</title>
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; }
 
-    /* HEADER */
-    header{
-      background:var(--dark);
-      color:#f4eee8;
-      padding:1.1rem 1.5rem;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-    .topbar{
-      max-width:1150px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-      font-size:.95rem;
-    }
-    .brand img{
-      width:34px;
-      height:34px;
-      border-radius:999px;
-      object-fit:cover;
-    }
-    nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      font-size:.85rem;
-    }
-    nav a{
-      padding:.45rem .85rem;
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.18);
-    }
+        /* HEADER & NAV */
+        header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo img { max-height: 80px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-    /* HERO BLOG */
-    .hero-blog{
-      max-width:1150px;
-      margin:1.8rem auto 0;
-      padding:0 1.25rem 2rem;
-    }
-    .hero-blog h1{
-      font-size:2.1rem;
-      margin:.2rem 0 .6rem;
-    }
-    .hero-blog p{
-      margin:0;
-      color:var(--muted);
-      max-width:720px;
-      font-size:.98rem;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:.4rem;
-      padding:.35rem .7rem;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.7);
-      font-size:.8rem;
-      margin-bottom:.4rem;
-    }
+        /* HERO */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-accueil.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
+        }
+        .hero h1 { font-size: 3.5em; font-weight: normal; letter-spacing: 2px; }
+        .hero p { font-size: 1.3em; font-style: italic; max-width: 800px; margin-top: 15px; padding: 0 20px; }
 
-    main{
-      max-width:1150px;
-      margin:0 auto;
-      padding:0 1.25rem 4rem;
-    }
+        /* SÉPARATEUR */
+        .section-separator { text-align: center; margin: 40px 0; }
+        .section-separator img { height: 40px; opacity: 0.5; }
+        .section-title { text-align: center; font-size: 2.2em; margin-bottom: 40px; font-weight: normal; }
 
-    /* LAYOUT */
-    .layout{
-      display:grid;
-      grid-template-columns:2.1fr 1fr;
-      gap:1.8rem;
-      align-items:start;
-    }
+        /* GRILLE DE BLOG (5 Colonnes) */
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 80px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 
-    /* POSTS */
-    .section-title{
-      font-size:1.3rem;
-      margin:2rem 0 1rem;
-    }
-    .posts-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:1.2rem;
-    }
-    .post-card{
-      background:var(--surface);
-      border-radius:22px;
-      border:1px solid var(--border);
-      padding:1.2rem 1.3rem;
-      box-shadow:0 18px 40px rgba(0,0,0,.04);
-    }
-    .post-meta{
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--muted);
-      margin-bottom:.3rem;
-    }
-    .post-card h2{
-      font-size:1.05rem;
-      margin:.1rem 0 .4rem;
-    }
-    .post-card p{
-      margin:0 0 .7rem;
-      font-size:.9rem;
-      color:var(--muted);
-    }
-    .post-card a.more{
-      display:inline-block;
-      font-size:.88rem;
-      padding:.45rem .85rem;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-    }
+        .blog-card { 
+            background: var(--blanc); border-radius: 12px; text-decoration: none; color: inherit; transition: 0.3s; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;
+            border-bottom: 4px solid transparent;
+        }
+        .blog-card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .blog-img { height: 150px; background-size: cover; background-position: center; }
+        .blog-content { padding: 20px; flex-grow: 1; }
+        .blog-meta { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--or-zen); margin-bottom: 10px; display: block; }
+        .blog-card h3 { font-size: 1.1em; font-weight: normal; margin-bottom: 10px; line-height: 1.3; }
+        .blog-card p { font-size: 0.85em; color: #666; margin-bottom: 15px; }
+        .read-more { font-size: 0.8em; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid var(--or-zen); padding-bottom: 2px; align-self: flex-start; }
 
-    /* SIDEBAR */
-    .sidebar{
-      display:flex;
-      flex-direction:column;
-      gap:1.2rem;
-    }
-    .side-block{
-      background:var(--surface);
-      border-radius:22px;
-      border:1px solid var(--border);
-      padding:1.2rem 1.3rem;
-      box-shadow:0 18px 40px rgba(0,0,0,.04);
-      font-size:.92rem;
-    }
-    .side-block h3{
-      margin:.1rem 0 .6rem;
-      font-size:1.02rem;
-    }
-    .chip-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem;
-      margin-top:.3rem;
-    }
-    .chip-row a{
-      padding:.4rem .75rem;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-size:.82rem;
-    }
-    .side-block ul{
-      list-style:none;
-      padding:0;
-      margin:.2rem 0 0;
-      font-size:.9rem;
-    }
-    .side-block li+li{
-      margin-top:.25rem;
-    }
+        /* COULEURS PAR UNIVERS */
+        .card-maison { border-bottom-color: var(--maison); }
+        .card-jardin { border-bottom-color: var(--jardin); }
+        .card-corps { border-bottom-color: var(--corps); }
+        .card-bienetre { border-bottom-color: var(--bienetre); }
+        .card-eso { border-bottom-color: var(--eso); }
 
-    /* Slot pub discret */
-    .ad-slot{
-      margin:1.5rem 0 0;
-      padding:1rem 1.1rem;
-      border-radius:18px;
-      border:1px dashed var(--border);
-      font-size:.85rem;
-      color:var(--muted);
-      background:rgba(255,255,255,.8);
-    }
+        /* SECTION PRICING SACRÉE */
+        .pricing-section { background-color: var(--blanc); padding: 80px 20px; text-align: center; border-top: 1px solid #eee; }
+        .pricing-subtitle { font-style: italic; color: #666; margin-bottom: 40px; }
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 0 auto 50px; max-width: 1300px; }
+        .vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-size: 1em; font-weight: bold; transition: 0.3s; background: var(--blanc); }
+        .btn-v1 { border-color: var(--maison); color: var(--maison); } .btn-v1:hover { background: var(--maison); color: #fff; }
+        .btn-v2 { border-color: var(--jardin); color: var(--jardin); } .btn-v2:hover { background: var(--jardin); color: #fff; }
+        .btn-v3 { border-color: var(--corps); color: var(--corps); } .btn-v3:hover { background: var(--corps); color: #fff; }
+        .btn-v4 { border-color: var(--bienetre); color: var(--bienetre); } .btn-v4:hover { background: var(--bienetre); color: #fff; }
+        .btn-v5 { border-color: var(--eso); color: var(--eso); } .btn-v5:hover { background: var(--eso); color: #fff; }
+        .pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+        .price-item { flex: 1; min-width: 200px; }
+        .price-item h4 { font-weight: normal; font-size: 1.1em; margin-bottom: 5px; color: #555; }
+        .price-item .amount { font-size: 1.8em; color: var(--or-zen); }
 
-    footer{
-      background:var(--dark);
-      color:#f4eee8;
-      padding:2rem 1.25rem;
-      font-size:.9rem;
-      text-align:center;
-    }
+        /* FOOTER */
+        footer { background: var(--brun-sombre); color: var(--bg-sable); padding: 60px 20px; text-align: center; }
+        .footer-promo { background: rgba(255, 255, 255, 0.03); padding: 15px; margin-bottom: 30px; border-top: 1px solid rgba(166, 123, 81, 0.2); border-bottom: 1px solid rgba(166, 123, 81, 0.2); }
+        .footer-promo a { color: var(--or-zen); text-decoration: none; font-variant: small-caps; font-size: 1em; display: block; }
+        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .footer-links a { color: var(--bg-sable); text-decoration: none; font-size: 0.9em; opacity: 0.7; }
 
-    @media(max-width:960px){
-      .layout{grid-template-columns:1fr;}
-      .posts-grid{grid-template-columns:1fr;}
-      header{position:static;}
-      .topbar{flex-direction:column;align-items:flex-start;}
-    }
-  </style>
+        @media (max-width: 1200px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .blog-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5em; } }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <img src="logo.jpg" alt="Logo Zen Chez Toi">
-        <span>Zen Chez Toi – Blog</span>
-      </div>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="jardin.html">Jardin</a>
-        <a href="maison.html">Maison</a>
-        <a href="bienetre.html">Bien-être</a>
-        <a href="corps.html">Corps</a>
-        <a href="eso.html">Ésotérisme</a>
-      </nav>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+            <nav><ul><li><a href="index.html">Accueil</a></li><li><a href="grimoire.html">Grimoire</a></li><li><a href="encyclopedie.html">L'Encyclopédie</a></li></ul></nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Le Journal Zen</h1>
+        <p>Le blog qui relie tes 5 univers : jardin, maison, corps, bien-être et ésotérisme.</p>
+    </section>
+
+    <div class="section-separator"><img src="assets/logo.png" alt="Séparateur"></div>
+
+    <div class="container">
+        <h2 class="section-title">Dernières Inspirations</h2>
+        
+        <div class="blog-grid">
+            <a href="article-maison.html" class="blog-card card-maison">
+                <div class="blog-img" style="background-image: url('assets/hero-maison.jpg');"></div>
+                <div class="blog-content">
+                    <span class="blog-meta">Maison • Ambiance</span>
+                    <h3>Alléger l’air chez toi, pièce par pièce</h3>
+                    <p>Comment transformer ton quotidien sans tout bouleverser par des gestes simples.</p>
+                    <span class="read-more">Lire l'article</span>
+                </div>
+            </a>
+
+            <a href="article-jardin.html" class="blog-card card-jardin">
+                <div class="blog-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
+                <div class="blog-content">
+                    <span class="blog-meta">Jardin • Conseils</span>
+                    <h3>Ce que ton jardin essaie de te dire</h3>
+                    <p>Apprendre à décrypter les signes de fatigue du sol et des feuilles.</p>
+                    <span class="read-more">Lire l'article</span>
+                </div>
+            </a>
+
+            <a href="article-corps.html" class="blog-card card-corps">
+                <div class="blog-img" style="background-image: url('assets/hero-corps.jpg');"></div>
+                <div class="blog-content">
+                    <span class="blog-meta">Corps • Vitalité</span>
+                    <h3>Rituel matinal pour réveiller ses sens</h3>
+                    <p>Une routine naturelle pour préparer son corps à une journée harmonieuse.</p>
+                    <span class="read-more">Lire l'article</span>
+                </div>
+            </a>
+
+            <a href="article-sommeil.html" class="blog-card card-bienetre">
+                <div class="blog-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
+                <div class="blog-content">
+                    <span class="blog-meta">Bien-être • Sommeil</span>
+                    <h3>Quand le corps ne lâche pas la journée</h3>
+                    <p>Des pistes concrètes pour relâcher la pression et retrouver le repos.</p>
+                    <span class="read-more">Lire l'article</span>
+                </div>
+            </a>
+
+            <a href="article-tarot.html" class="blog-card card-eso">
+                <div class="blog-img" style="background-image: url('assets/hero-eso.jpg');"></div>
+                <div class="blog-content">
+                    <span class="blog-meta">Ésotérisme • Rituels</span>
+                    <h3>Donner une forme à tes questions</h3>
+                    <p>Utiliser le tarot et les cristaux pour accompagner tes moments de doute.</p>
+                    <span class="read-more">Lire l'article</span>
+                </div>
+            </a>
+        </div>
     </div>
-  </header>
 
-  <section class="hero-blog">
-    <div class="badge">
-      <span>Articles</span><span>•</span><span>Guides &amp; inspirations</span>
-    </div>
-    <h1>Le blog qui relie tes 5 univers.</h1>
-    <p>
-      Ici, tu peux raconter, expliquer, inspirer, relier jardin, maison, corps, bien-être et ésotérisme.
-      Chaque article peut ensuite envoyer vers tes pages “problèmes” et tes recommandations.
-    </p>
-  </section>
-
-  <main>
-    <div class="layout">
-      <section>
-        <h2 class="section-title">Autour du jardin et de la maison</h2>
-        <div class="posts-grid">
-          <article class="post-card">
-            <div class="post-meta">Jardin • Conseils</div>
-            <h2>Comprendre ce que ton jardin essaie de te dire</h2>
-            <p>
-              Un article pour expliquer les signes de fatigue du sol, des feuilles,
-              et comment les relier à tes pages pucerons, mildiou, oïdium, sol épuisé…
-            </p>
-            <a class="more" href="pucerons.html">Voir la page Pucerons</a>
-          </article>
-
-          <article class="post-card">
-            <div class="post-meta">Maison • Ambiance</div>
-            <h2>Alléger l’air chez toi, pièce par pièce</h2>
-            <p>
-              Un texte qui peut renvoyer vers humidité, mauvaises odeurs, vitres éclatantes
-              et canalisations pour transformer ton quotidien sans tout bouleverser.
-            </p>
-            <a class="more" href="humidite.html">Voir la page Humidité</a>
-          </article>
+    <section class="pricing-section">
+        <h2 class="section-title">L'Encyclopédie des Solutions Nomades (PDF)</h2>
+        <p class="pricing-subtitle">Un parcours d'évolution. Cliquez sur un volume pour l'acquérir.</p>
+        
+        <div class="volume-buttons">
+            <a href="encyclopedie.html" class="vol-btn btn-v1">Vol 1 : Les Fondations</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v2">Vol 2 : L'Enracinement</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v3">Vol 3 : L'Éclosion</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v4">Vol 4 : L'Harmonie</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v5">Vol 5 : L'Élévation</a>
         </div>
 
-        <h2 class="section-title">Bien-être, corps et monde intérieur</h2>
-        <div class="posts-grid">
-          <article class="post-card">
-            <div class="post-meta">Bien-être • Sommeil</div>
-            <h2>Quand le corps ne lâche pas la journée</h2>
-            <p>
-              Article qui peut relier fatigue, sommeil profond, méditation et anti-stress,
-              avec des pistes concrètes pour relâcher vraiment.
-            </p>
-            <a class="more" href="sommeil-profond.html">Voir Sommeil profond</a>
-          </article>
-
-          <article class="post-card">
-            <div class="post-meta">Ésotérisme • Rituels</div>
-            <h2>Donner une forme à tes questions</h2>
-            <p>
-              Un texte qui renvoie vers tarot, runes, pendule, cristaux et encens
-              pour accompagner les moments de doute ou de transition.
-            </p>
-            <a class="more" href="tarot.html">Voir la page Tarot</a>
-          </article>
+        <div class="pricing-grid">
+            <div class="price-item"><h4>1 Volume (PDF)</h4><span class="amount">29 €</span></div>
+            <div class="price-item"><h4>3 Volumes (PDF)</h4><span class="amount">59 €</span></div>
+            <div class="price-item"><h4>L'Intégrale - 5 Volumes</h4><span class="amount">79 €</span></div>
         </div>
-      </section>
+    </section>
 
-      <aside class="sidebar">
-        <div class="side-block">
-          <h3>Explorer par univers</h3>
-          <div class="chip-row">
-            <a href="jardin.html">Côté Jardin</a>
-            <a href="maison.html">Côté Maison</a>
-            <a href="bienetre.html">Côté Bien-être</a>
-            <a href="corps.html">Côté Corps</a>
-            <a href="eso.html">Côté Ésotérisme</a>
-          </div>
+    <footer>
+        <div class="footer-promo">
+            <a href="encyclopedie.html">📥 L'Encyclopédie des Solutions Nomades (PDF) : Vol 1 : Les Fondations • Vol 2 : L'Enracinement • Vol 3 : L'Éclosion • Vol 4 : L'Harmonie • Vol 5 : L'Élévation</a>
         </div>
-
-        <div class="side-block">
-          <h3>Pages utiles à relier</h3>
-          <ul>
-            <li><a href="pucerons.html">Traiter les pucerons</a></li>
-            <li><a href="humidite.html">Gérer l’humidité</a></li>
-            <li><a href="sommeil-profond.html">Retrouver un sommeil profond</a></li>
-            <li><a href="mal-de-dos.html">Soulager le mal de dos</a></li>
-            <li><a href="tarot.html">Découvrir le tarot</a></li>
-          </ul>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a> | <a href="confidentialite.html">Confidentialité</a> | <a href="cookies.html">Cookies</a> | <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Sélection Amazon</a>
         </div>
+        <p>&copy; 2026 Zen Chez Toi - L'Harmonie au Naturel</p>
+    </footer>
 
-        <!-- Emplacement publicitaire discret (blog sidebar) -->
-        <div class="side-block ad-slot" aria-label="contenu sponsorisé">
-          <!-- Code publicitaire / bloc affiliation à insérer ici -->
-          Emplacement prévu pour un encart publicitaire discret (produit phare, bannière, sélection).
-        </div>
-
-        <div class="side-block">
-          <h3>Note pour toi</h3>
-          <p>
-            Tu pourras créer de nouveaux articles en suivant ce principe :
-            un sujet précis, de la valeur, puis des liens vers tes pages clés
-            et, quand tu seras prêt, quelques produits bien choisis.
-          </p>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-  <footer>
-    © Zen Chez Toi – Blog des 5 univers
-  </footer>
 </body>
 </html>

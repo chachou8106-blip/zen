@@ -1,450 +1,264 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Chez Toi – L'Encyclopédie des 50 Solutions Naturelles</title>
-  <meta name="description" content="Découvrez les 50 solutions naturelles brutes pour soigner votre Maison, votre Jardin, votre Corps, votre Bien-être et vos Énergies.">
-  <style>
-    :root{
-      /* Fond sable doux, cohérent avec une ambiance zen */
-      --bg:#f5f2ec;
-      --text:#2b2622;
-      --muted:#6f6660;
-      /* Accent brun doré chaleureux pour l'accueil */
-      --accent:#a67b51;
-      --accent-soft:#e9ddcf;
-      --dark:#221b16;
-      --surface:rgba(255,255,255,.92);
-      --border:rgba(43,38,34,.12);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Georgia,"Times New Roman",serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-
-    /* Barre de promo inspirée des pages produits */
-    .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; }
-    .promo-bar a { color: var(--accent-soft); font-weight: bold; text-decoration: underline; margin-left: 10px; }
-
-    header.hero{
-      min-height:100vh;
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
-      background:
-        linear-gradient(rgba(21,16,12,.5),rgba(21,16,12,.7)),
-        url("hero-accueil.jpg") center/cover no-repeat;
-      color:#fff;
-      text-align:center;
-    }
-    .hero-inner{
-      max-width:960px;
-      margin:0 auto;
-    }
-    .logo{
-      width:min(360px,72vw);
-      margin:0 auto 1.5rem;
-      filter:drop-shadow(0 12px 32px rgba(0,0,0,.4));
-    }
-    h1{
-      font-size:clamp(2.2rem,4.4vw,4.4rem);
-      line-height:1.08;
-      margin:1rem auto .9rem;
-      max-width:18ch;
-    }
-    .sub{
-      max-width:720px;
-      margin:0 auto 1.6rem;
-      font-size:1.15rem;
-      color:rgba(255,255,255,.9);
-    }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:.85rem;
-    }
-    .btn-primary,
-    .btn-ghost{
-      padding:.9rem 1.3rem;
-      border-radius:999px;
-      font-size:.95rem;
-      border:1px solid rgba(255,255,255,.2);
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn-primary{
-      background:#fff;
-      color:#1d1510;
-    }
-    .btn-primary:hover{ background:var(--accent-soft); }
-    .btn-ghost{
-      background:rgba(255,255,255,.1);
-      color:#fff;
-    }
-    .btn-ghost:hover{ background:rgba(255,255,255,.3); }
-
-    nav.main-nav{
-      position:absolute;
-      top:1.2rem;
-      left:50%;
-      transform:translateX(-50%);
-      display:flex;
-      gap:.9rem;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    nav.main-nav a{
-      padding:.55rem .95rem;
-      border-radius:999px;
-      font-size:.85rem;
-      background:rgba(0,0,0,.24);
-      border:1px solid rgba(255,255,255,.16);
-      transition: 0.3s;
-    }
-    nav.main-nav a:hover { background: var(--accent); }
-
-    main{
-      max-width:1200px;
-      margin:0 auto;
-      padding:4rem 1.25rem 5rem;
-    }
-    .section-title{
-      font-size:2rem;
-      margin:0 0 .5rem;
-      color: var(--dark);
-    }
-    .section-sub{
-      margin:0 0 3rem;
-      color:var(--muted);
-      font-size: 1.1rem;
-      max-width: 800px;
-    }
-
-    .univers-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-      gap:1.4rem;
-      margin-bottom:5rem;
-    }
-    .card{
-      background:var(--surface);
-      border-radius:26px;
-      border:1px solid var(--border);
-      padding:2rem;
-      box-shadow:0 22px 55px rgba(0,0,0,.06);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .tag{
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--accent);
-      margin-bottom:.4rem;
-      font-weight: bold;
-    }
-    .card h2,
-    .card h3{
-      margin:.2rem 0 .5rem;
-      font-size:1.4rem;
-      color: var(--dark);
-    }
-    .card p{margin:0; color: var(--muted);}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen Chez Toi - L'Harmonie au Naturel</title>
     
-    .card-footer{
-      margin-top:1.5rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:.5rem;
-      font-size:.9rem;
-    }
-    .pill-link{
-      padding:.5rem .9rem;
-      border-radius:999px;
-      border:1px solid var(--accent);
-      background:#fff;
-      color: var(--accent);
-      font-size:.85rem;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .pill-link:hover { background: var(--accent); color: #fff; }
+    <meta name="description" content="Zen Chez Toi : maison, jardin, corps, bien-être et ésotérisme. Découvrez l'Encyclopédie des Solutions Nomades.">
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <meta name="p:domain_verify" content="VOTRE_CODE_PINTEREST_ICI"/>
 
-    /* Section Grades / Volumes (Nouveau) */
-    .grades-section { background: var(--dark); color: #fff; padding: 4rem 3rem; border-radius: 40px; margin-bottom: 5rem; }
-    .grades-section .section-title { color: #fff; }
-    .grades-section .section-sub { color: var(--accent-soft); }
-    .grades-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-    .grade-card { background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); text-align: center;}
-    .grade-card h3 { color: var(--accent-soft); margin-top: 0; font-size: 1.2rem;}
-    .grade-card .vol { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: block;}
+    <style>
+        :root {
+            --bg-sable: #f5f2ec;
+            --blanc: #ffffff;
+            --brun-sombre: #2b2622;
+            --or-zen: #a67b51;
+            /* COULEURS DES VOLUMES / UNIVERS */
+            --vol1-vert: #7b9074;  /* Vert Sauge - Maison */
+            --vol2-bleu: #6a7f8f;  /* Bleu Ardoise - Jardin */
+            --vol3-rose: #cca8a0;  /* Rose Argile - Corps */
+            --vol4-jaune: #d4a259; /* Jaune Safran - Bien-être */
+            --vol5-violet: #826a8f;/* Violet Améthyste - Ésotérisme */
+        }
 
-    .two-cols{
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:2.5rem;
-      margin-bottom:5rem;
-      align-items:center;
-    }
-    .lead-magnet-box { background: var(--surface); padding: 3rem; border-radius: 30px; border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0,0,0,.08); }
-    .lead-magnet-box input[type="email"] { width: 100%; padding: 1rem; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 1rem; font-family: inherit; }
-    .lead-magnet-box button { width: 100%; padding: 1rem; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s;}
-    .lead-magnet-box button:hover { background: var(--dark); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; }
 
-    .product-box{
-      border-radius:24px;
-      border:2px dashed var(--accent);
-      background:var(--accent-soft);
-      padding:2rem;
-      text-align: center;
-    }
-    .product-box h3{ margin-top:0; margin-bottom:.4rem; font-size:1.4rem; color: var(--dark); }
-    .product-box p{ margin:.2rem 0 1.5rem; font-size:1rem; color: var(--dark); }
-    .product-cta{ display:inline-block; padding:.8rem 1.5rem; border-radius:999px; background:var(--dark); color:#fff; font-size:1rem; font-weight: bold; }
+        /* --- NAVIGATION & LOGO HEADER --- */
+        header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        
+        .logo { background: none; border: none; padding: 0; }
+        .logo img { 
+            max-height: 90px; 
+            width: auto; 
+            display: block;
+            background: transparent; /* Force la transparence */
+            border: none;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); 
+        }
 
-    /* Bloc lecteur audio intégré */
-    .audio-section{
-      margin:0 auto 5rem;
-      max-width:900px;
-      background:var(--surface);
-      border-radius:26px;
-      border:1px solid var(--border);
-      box-shadow:0 18px 50px rgba(0,0,0,.05);
-      padding:1.8rem 1.6rem 1.6rem;
-      display:grid;
-      grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);
-      gap:1.4rem;
-      align-items:center;
-    }
-    .audio-text h2{ margin:0 0 .4rem; font-size:1.4rem; color: var(--dark);}
-    .audio-text p{ margin:0; font-size:.95rem; color:var(--muted); }
-    .audio-player-wrap{ background:var(--accent-soft); border-radius:20px; padding:1rem 1.1rem .9rem; }
-    .audio-player-wrap h3{ margin:0 0 .4rem; font-size:1rem; font-weight:600; color:var(--text); }
-    .audio-player-wrap p{ margin:0 0 .6rem; font-size:.85rem; color:var(--muted); }
-    audio{ width:100%; border-radius:12px; margin-top:.2rem; }
+        nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-    footer{
-      background:var(--dark);
-      color:#f4eee8;
-      padding:3rem 1.25rem;
-    }
-    .footer-inner{
-      max-width:1200px;
-      margin:0 auto;
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-      align-items:center;
-      justify-content:space-between;
-      font-size:.9rem;
-    }
-    .footer-links{ display:flex; flex-wrap:wrap; gap:1.5rem; }
-    .footer-links a{opacity:.86}
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/hero-accueil.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
+        }
+        .titre-marque { font-size: 4.5em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .titre-marque em { font-style: italic; color: var(--or-zen); text-transform: none; }
+        .hero p { font-size: 1.6em; font-style: italic; opacity: 0.9; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-    @media(max-width:960px){
-      .univers-grid, .two-cols, .grades-grid {grid-template-columns:1fr;}
-      .hero-inner{text-align:center;}
-      .hero-actions{justify-content:center;}
-      .main-nav{max-width:92vw;}
-      .audio-section{ grid-template-columns:1fr; }
-    }
-  </style>
+        /* --- RECHERCHE --- */
+        .search-area { background: var(--blanc); padding: 80px 20px 40px; text-align: center; }
+        .search-container { max-width: 700px; margin: 20px auto 0; position: relative; }
+        .search-container input { width: 100%; padding: 20px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
+        .search-container button { position: absolute; right: 10px; top: 10px; padding: 10px 25px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; }
+
+        /* --- SÉPARATEUR LOGO (NETTOYÉ) --- */
+        .section-separator { text-align: center; margin: 40px 0; background: none; }
+        .section-separator img { 
+            height: 50px; 
+            width: auto; 
+            opacity: 0.6; 
+            background: transparent; 
+            border: none; 
+        }
+
+        .section-title { text-align: center; font-size: 2.2em; margin-bottom: 30px; font-weight: normal; }
+
+        /* --- GRILLES 5 CARTES --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 60px; }
+        .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        
+        .card { 
+            background: var(--blanc); border-radius: 8px; text-decoration: none; color: inherit; transition: 0.3s; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; border-bottom: 4px solid transparent;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .card-img { height: 160px; background-size: cover; background-position: center; }
+        .card-content { padding: 20px 15px; text-align: center; flex-grow: 1; }
+        .card h3 { font-size: 1.3em; font-weight: normal; margin: 0; }
+
+        .card.maison { border-color: var(--vol1-vert); }
+        .card.jardin { border-color: var(--vol2-bleu); }
+        .card.corps { border-color: var(--vol3-rose); }
+        .card.bienetre { border-color: var(--vol4-jaune); }
+        .card.eso { border-color: var(--vol5-violet); }
+
+        /* --- ENCYCLOPÉDIE (BOUTONS SUR UNE LIGNE AVEC COULEURS) --- */
+        .pricing-section { background-color: var(--blanc); padding: 80px 20px; text-align: center; border-top: 1px solid #eee; }
+        .pricing-subtitle { font-style: italic; color: #666; margin-bottom: 40px; }
+        
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 0 auto 50px; max-width: 1300px; }
+        .vol-btn { 
+            padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; 
+            font-variant: small-caps; font-size: 1em; font-weight: bold; transition: 0.3s; background: var(--blanc);
+        }
+        
+        /* Attribution des couleurs aux boutons */
+        .btn-v1 { border-color: var(--vol1-vert); color: var(--vol1-vert); }
+        .btn-v1:hover { background: var(--vol1-vert); color: #fff; }
+        
+        .btn-v2 { border-color: var(--vol2-bleu); color: var(--vol2-bleu); }
+        .btn-v2:hover { background: var(--vol2-bleu); color: #fff; }
+        
+        .btn-v3 { border-color: var(--vol3-rose); color: var(--vol3-rose); }
+        .btn-v3:hover { background: var(--vol3-rose); color: #fff; }
+        
+        .btn-v4 { border-color: var(--vol4-jaune); color: var(--vol4-jaune); }
+        .btn-v4:hover { background: var(--vol4-jaune); color: #fff; }
+        
+        .btn-v5 { border-color: var(--vol5-violet); color: var(--vol5-violet); }
+        .btn-v5:hover { background: var(--vol5-violet); color: #fff; }
+
+        .pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+        .price-item { flex: 1; min-width: 200px; }
+        .price-item h4 { font-weight: normal; font-size: 1.1em; margin-bottom: 5px; color: #555; }
+        .price-item .amount { font-size: 1.8em; color: var(--or-zen); }
+
+        /* --- FOOTER --- */
+        footer { background: var(--brun-sombre); color: var(--bg-sable); padding: 40px 20px; text-align: center; }
+        .footer-promo { 
+            background: rgba(255, 255, 255, 0.03); padding: 15px; margin-bottom: 30px; 
+            border-top: 1px solid rgba(166, 123, 81, 0.2); border-bottom: 1px solid rgba(166, 123, 81, 0.2);
+        }
+        .footer-promo a { color: var(--or-zen); text-decoration: none; font-variant: small-caps; font-size: 1em; display: block; }
+        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .footer-links a { color: var(--bg-sable); text-decoration: none; font-size: 0.9em; opacity: 0.7; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1100px) { .grid-5 { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .grid-5 { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-5 { grid-template-columns: 1fr; } .vol-btn { width: 100%; text-align: center; } }
+    </style>
 </head>
 <body>
 
-  <div class="promo-bar">🎁 L'Encyclopédie Complète est disponible : Maîtrisez les 50 solutions naturelles. <a href="#encyclopedie">Découvrir les 5 Volumes</a></div>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+            <nav>
+                <ul>
+                    <li><a href="grimoire.html">Grimoire</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                    <li><a href="encyclopedie.html">L'Encyclopédie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <header class="hero">
-    <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="#univers">Les 5 Mondes</a>
-      <a href="#encyclopedie">L'Encyclopédie</a>
-      <a href="blog.html">Blog & Rituels</a>
-    </nav>
-    <div class="hero-inner">
-      <h1 style="font-family: inherit; margin-bottom: 20px;">Zen Chez Toi</h1>
-      <h1>Une seule matière. 5 mondes apaisés.</h1>
-      <p class="sub">
-        Reprenez le contrôle de votre Maison, votre Jardin, votre Corps, votre Bien-être et vos Énergies 
-        grâce à une encyclopédie de 50 solutions naturelles brutes. Arrêtez d'accumuler, apprenez à transmuter.
-      </p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#encyclopedie">Découvrir l'Encyclopédie</a>
-        <a class="btn-ghost" href="#cadeau">Télécharger le Guide Gratuit</a>
-      </div>
+    <section class="hero">
+        <h1 class="titre-marque">Zen <em>Chez</em> Toi</h1>
+        <p>"Le calme est la plus grande des forces."</p>
+    </section>
+
+    <section class="search-area">
+        <h2 class="section-title">Que cherchez-vous dans ce grimoire ?</h2>
+        <div class="search-container">
+            <form action="recherche.html" method="GET">
+                <input type="text" name="q" placeholder="Sommeil, pucerons, taches, cristaux...">
+                <button type="submit">Chercher</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="section-separator">
+        <img src="assets/logo.png" alt="Symbole Zen">
     </div>
-  </header>
 
-  <main>
-    <section id="univers">
-      <h2 class="section-title">Les 5 Mondes de Zen Chez Toi</h2>
-      <p class="section-sub">
-        Nos 50 solutions ne sont pas limitées à une seule tâche. Le bicarbonate qui nettoie votre évier 
-        est le même qui apaise vos pieds fatigués. Découvrez comment nos solutions voyagent à travers vos 5 mondes.
-      </p>
-      <div class="univers-grid">
-        <article class="card">
-          <div>
-            <div class="tag">Monde 1</div>
-            <h2>La Maison</h2>
-            <p>Dégraisser, assainir, purifier l'air et chasser l'humidité sans aucune chimie industrielle toxique.</p>
-          </div>
-          <div class="card-footer">
-            <a class="pill-link" href="maison.html">Explorer la Maison</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div>
-            <div class="tag">Monde 2</div>
-            <h2>Le Jardin</h2>
-            <p>Lutter contre les pucerons, le mildiou, enrichir les sols et soigner les plantes de façon 100% biologique.</p>
-          </div>
-          <div class="card-footer">
-            <a class="pill-link" href="jardin.html">Explorer le Jardin</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div>
-            <div class="tag">Monde 3</div>
-            <h2>Le Corps</h2>
-            <p>Soulager les peaux sèches, cicatriser, fortifier les cheveux et détoxifier l'épiderme en profondeur.</p>
-          </div>
-          <div class="card-footer">
-            <a class="pill-link" href="corps.html">Explorer le Corps</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div>
-            <div class="tag">Monde 4</div>
-            <h2>Le Bien-être</h2>
-            <p>Retrouver le sommeil, apaiser les tensions musculaires, réduire le stress et relancer l'énergie vitale.</p>
-          </div>
-          <div class="card-footer">
-            <a class="pill-link" href="bienetre.html">Explorer le Bien-être</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div>
-            <div class="tag">Monde 5</div>
-            <h2>L'Ésotérisme</h2>
-            <p>Purifier les lieux, ancrer les énergies, préparer des rituels et protéger vos espaces vibratoires.</p>
-          </div>
-          <div class="card-footer">
-            <a class="pill-link" href="eso.html">Explorer l'Ésotérisme</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="encyclopedie" class="grades-section">
-      <h2 class="section-title">L'Encyclopédie des 50 Solutions</h2>
-      <p class="section-sub">
-        50 produits bruts. 5 niveaux de maîtrise. Apprenez à remplacer les dizaines de produits chimiques 
-        de vos placards par des solutions naturelles qui servent partout.
-      </p>
-      <div class="grades-grid">
-        <div class="grade-card">
-          <span class="vol">Volume 1</span>
-          <h3>L'Apprenti</h3>
-          <p>Les 10 piliers de base (Vinaigre, Bicarbonate, Argile...) pour arrêter de gaspiller votre argent.</p>
-          <a class="pill-link" href="#" style="background: transparent; color: var(--accent-soft); border-color: var(--accent-soft);">Voir le Vol. 1</a>
+    <div class="container">
+        <h2 class="section-title">Nos Univers</h2>
+        <div class="grid-5">
+            <a href="maison.html" class="card maison">
+                <div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div>
+                <div class="card-content"><h3>La Maison</h3></div>
+            </a>
+            <a href="jardin.html" class="card jardin">
+                <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
+                <div class="card-content"><h3>Le Jardin</h3></div>
+            </a>
+            <a href="corps.html" class="card corps">
+                <div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div>
+                <div class="card-content"><h3>Le Corps</h3></div>
+            </a>
+            <a href="bienetre.html" class="card bienetre">
+                <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
+                <div class="card-content"><h3>Le Bien-être</h3></div>
+            </a>
+            <a href="eso.html" class="card eso">
+                <div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div>
+                <div class="card-content"><h3>L'Ésotérisme</h3></div>
+            </a>
         </div>
-        <div class="grade-card">
-          <span class="vol">Volume 2</span>
-          <h3>Le Compagnon</h3>
-          <p>10 solutions de soin et de protection (Huiles, Cire, Sels) pour réparer la matière.</p>
-          <a class="pill-link" href="#" style="background: transparent; color: var(--accent-soft); border-color: var(--accent-soft);">Voir le Vol. 2</a>
-        </div>
-        <div class="grade-card">
-          <span class="vol">Volume 3</span>
-          <h3>L'Apothicaire</h3>
-          <p>10 ressources brutes et sauvages (Cendre, Miel, Marc de Café) pour l'autonomie.</p>
-          <a class="pill-link" href="#" style="background: transparent; color: var(--accent-soft); border-color: var(--accent-soft);">Voir le Vol. 3</a>
-        </div>
-        <div class="grade-card">
-          <span class="vol">Volume 4</span>
-          <h3>Le Maître</h3>
-          <p>10 expertises lourdes (Neem, Ricin, Alun) pour traiter les problèmes que personne ne règle.</p>
-          <a class="pill-link" href="#" style="background: transparent; color: var(--accent-soft); border-color: var(--accent-soft);">Voir le Vol. 4</a>
-        </div>
-        <div class="grade-card" style="border-color: var(--accent); background: rgba(166, 123, 81, 0.1);">
-          <span class="vol" style="color: var(--accent);">Volume 5</span>
-          <h3 style="color: var(--accent);">L'Alchimiste</h3>
-          <p>Les 10 secrets ultimes (Résines, Cristaux, Soufre) pour la transmutation vibratoire.</p>
-          <a class="pill-link" href="#" style="background: var(--accent); color: #fff; border-color: var(--accent);">L'Intégrale (50)</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="cadeau" class="two-cols">
-      <div class="lead-magnet-box">
-        <h2 style="margin-top: 0; color: var(--dark);">Ton Cadeau de Bienvenue 🎁</h2>
-        <p style="color: var(--muted); margin-bottom: 2rem;">
-          Tu ne sais pas par où commencer ? <strong>Télécharge gratuitement le Manuel de l'Apprenti</strong>. 
-          Découvre les 10 produits indispensables qui remplaceront 80% des produits toxiques de chez toi.
-        </p>
-        <form action="#" method="POST">
-          <input type="email" placeholder="Ton adresse email principale" required>
-          <button type="submit">Recevoir mon Manuel Gratuit</button>
-        </form>
-        <p style="font-size: 0.8rem; text-align: center; margin-top: 10px; color: var(--muted);">Pas de spam, promis. Juste de la simplicité.</p>
-      </div>
-
-      <aside class="product-box">
-        <h3>Le Coffret de l'Apprenti</h3>
-        <p>Tu veux démarrer tout de suite avec les bonnes matières premières ? J'ai sélectionné pour toi le kit de démarrage idéal (Vinaigre pro, Bicarbonate pur, Savon noir véritable).</p>
-        <a class="product-cta" href="https://www.amazon.fr/dp/B07SST9I8?&linkCode=ll1&tag=zencheztoi-21" target="_blank">Voir le Kit sur Amazon</a>
-      </aside>
-    </section>
-
-    <section class="audio-section" aria-label="Moment audio Zen Chez Toi">
-      <div class="audio-text">
-        <h2>Un moment pour respirer</h2>
-        <p>
-          Avant de te perdre dans l'Encyclopédie, tu peux prendre une minute pour ralentir.
-          Lance cette ambiance sonore et laisse-toi accompagner en douceur pendant ta lecture.
-        </p>
-      </div>
-      <div class="audio-player-wrap">
-        <h3>Ambiance Zen Chez Toi</h3>
-        <p>Un fond sonore calme, pensé pour rester en arrière‑plan pendant que tu lis.</p>
-        <audio controls preload="none">
-          <source src="ambiance-zen.mp3" type="audio/mpeg">
-          Votre navigateur ne prend pas en charge la lecture audio.
-        </audio>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>© Zen Chez Toi – L'Encyclopédie des Solutions Transversales</div>
-      <div class="footer-links">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="confidentialite.html">Confidentialité</a>
-        <a href="blog.html">Blog</a>
-      </div>
     </div>
-  </footer>
+
+    <div class="section-separator">
+        <img src="assets/logo.png" alt="Symbole Zen">
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Le Journal Zen</h2>
+        <div class="grid-5">
+            <a href="blog.html#maison" class="card maison">
+                <div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div>
+                <div class="card-content"><h3>Blog Maison</h3></div>
+            </a>
+            <a href="blog.html#jardin" class="card jardin">
+                <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
+                <div class="card-content"><h3>Blog Jardin</h3></div>
+            </a>
+            <a href="blog.html#corps" class="card corps">
+                <div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div>
+                <div class="card-content"><h3>Blog Corps</h3></div>
+            </a>
+            <a href="blog.html#bienetre" class="card bienetre">
+                <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
+                <div class="card-content"><h3>Blog Bien-être</h3></div>
+            </a>
+            <a href="blog.html#eso" class="card eso">
+                <div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div>
+                <div class="card-content"><h3>Blog Ésotérisme</h3></div>
+            </a>
+        </div>
+    </div>
+
+    <section class="pricing-section">
+        <h2 class="section-title">L'Encyclopédie des Solutions Nomades (PDF)</h2>
+        <p class="pricing-subtitle">Un parcours d'évolution. Cliquez sur un volume pour l'acquérir.</p>
+        
+        <div class="volume-buttons">
+            <a href="encyclopedie.html" class="vol-btn btn-v1">Vol 1 : Les Fondations</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v2">Vol 2 : L'Enracinement</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v3">Vol 3 : L'Éclosion</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v4">Vol 4 : L'Harmonie</a>
+            <a href="encyclopedie.html" class="vol-btn btn-v5">Vol 5 : L'Élévation</a>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-item"><h4>1 Volume (PDF)</h4><span class="amount">29 €</span></div>
+            <div class="price-item"><h4>3 Volumes (PDF)</h4><span class="amount">59 €</span></div>
+            <div class="price-item"><h4>L'Intégrale - 5 Volumes</h4><span class="amount">79 €</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-promo">
+            <a href="encyclopedie.html">📥 L'Encyclopédie des Solutions Nomades : Les Fondations • L'Enracinement • L'Éclosion • L'Harmonie • L'Élévation</a>
+        </div>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="livre-or.html">Livre d'Or</a>
+            <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Sélection Amazon</a>
+        </div>
+        <p>&copy; 2024 Zen Chez Toi - L'Harmonie au Naturel</p>
+    </footer>
+
 </body>
 </html>
