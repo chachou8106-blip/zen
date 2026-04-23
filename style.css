@@ -1,0 +1,32 @@
+:root {
+    --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+    --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+}
+
+body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); margin: 0; line-height: 1.6; }
+
+/* HEADER HARMONISÉ */
+.site-header { background: var(--brun-sombre); color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+.site-header a { color: #fff; text-decoration: none; font-variant: small-caps; }
+
+/* STRUCTURE DE FICHE */
+.fiche-container { max-width: 900px; margin: 40px auto; background: var(--blanc); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.fiche-title { color: var(--or-zen); border-bottom: 2px solid var(--bg-sable); padding-bottom: 10px; }
+
+/* LA SECTION PRICING SACRÉE (PRÉSENTE SUR CHAQUE PAGE) */
+.pricing-section { background-color: var(--blanc); padding: 60px 20px; text-align: center; border-top: 1px solid #ddd; margin-top: 60px; }
+.volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-size: 1em; font-weight: bold; transition: 0.3s; background: var(--blanc); }
+.btn-v1 { border-color: var(--maison); color: var(--maison); } .btn-v1:hover { background: var(--maison); color: #fff; }
+.btn-v2 { border-color: var(--jardin); color: var(--jardin); } .btn-v2:hover { background: var(--jardin); color: #fff; }
+.btn-v3 { border-color: var(--corps); color: var(--corps); } .btn-v3:hover { background: var(--corps); color: #fff; }
+.btn-v4 { border-color: var(--bienetre); color: var(--bienetre); } .btn-v4:hover { background: var(--bienetre); color: #fff; }
+.btn-v5 { border-color: var(--eso); color: var(--eso); } .btn-v5:hover { background: var(--eso); color: #fff; }
+
+.pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+.price-item h4 { font-weight: normal; font-size: 1.1em; color: #555; }
+.price-item .amount { font-size: 1.8em; color: var(--or-zen); font-weight: bold; }
+
+/* FOOTER 2026 */
+.site-footer { background: var(--brun-sombre); color: #fff; padding: 40px 20px; text-align: center; margin-top: 60px; }
+.site-footer a { color: var(--or-zen); text-decoration: none; }
