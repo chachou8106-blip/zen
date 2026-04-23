@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc de Café – Zen Chez Toi</title>
+  <style>
+    :root{ --bg:#f5f2ec; --text:#2b2622; --muted:#6f6660; --accent:#a67b51; --accent-soft:#e9ddcf; --dark:#221b16; --surface:rgba(255,255,255,.94); --border:rgba(43,38,34,.12); --shadow:0 15px 35px rgba(0,0,0,.08); }
+    *{box-sizing:border-box} body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; }
+    .promo-bar a { color: var(--accent-soft); font-weight: bold; text-decoration: underline; margin-left: 10px; }
+    header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--dark); }
+    .tagline { font-style: italic; color: var(--muted); font-size: 1.2rem; }
+    .main-btn { display: inline-block; background: #c68642; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; box-shadow: var(--shadow); transition: 0.3s; }
+    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .univers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+    .univers-card { background: var(--surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .univers-card h3 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.5rem; }
+    .univers-card ul { padding-left: 1.2rem; } .univers-card li { margin-bottom: 0.5rem; }
+    .pricing-section { background: var(--dark); color: #fff; padding: 4rem 2rem; border-radius: 40px; text-align: center; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .price-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+    .price-card.featured { background: var(--surface); color: var(--text); transform: scale(1.05); }
+    .price { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; }
+    .buy-btn { display: block; background: var(--accent); color: white; padding: 0.8rem; border-radius: 10px; text-decoration: none; font-weight: bold; }
+    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="promo-bar">🎁 VOLUME 3 : Maîtrisez les ressources brutes de la Terre. <a href="#offres">Voir les offres</a></div>
+  <header>
+    <div style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent);">Solution n°21 / 50</div>
+    <h1>Marc de Café</h1>
+    <p class="tagline">"L'or noir du quotidien : une ressource gratuite qui circule du jardin à votre peau."</p>
+    <a href="https://www.amazon.fr/Boite-Cafe-Hermetique-Inox/dp/B07SST9I8?&linkCode=ll1&tag=zencheztoi-21" class="main-btn" target="_blank">Accessoires de Stockage (Sélection Pro)</a>
+  </header>
+  <main>
+    <div class="univers-grid">
+      <div class="univers-card"><h3>🏠 Monde Maison</h3><ul><li>Désodorise le réfrigérateur (coupe les odeurs fortes).</li><li>Dégraisse les canalisations avec de l'eau bouillante.</li><li>Nettoie les mains incrustées (cambouis, peinture).</li><li>Éloigne les fourmis des placards.</li><li>Récupère les rayures sur les meubles en bois sombre.</li></ul></div>
+      <div class="univers-card"><h3>🌿 Monde Jardin</h3><ul><li>Engrais azoté naturel pour plantes vertes.</li><li>Répulsif contre les limaces et escargots.</li><li>Éloigne les chats des semis fragiles.</li><li>Active le compost (accélérateur naturel).</li><li>Lutte contre les pucerons (macération).</li></ul></div>
+      <div class="univers-card"><h3>✨ Monde Corps</h3><ul><li>Gommage corporel tonifiant (anti-cellulite).</li><li>Exfoliant doux pour le visage.</li><li>Neutralise les odeurs tenaces sur les mains (ail, oignon).</li><li>Soin pour raviver les reflets des cheveux bruns.</li><li>Masque contour des yeux (décongestionnant).</li></ul></div>
+      <div class="univers-card"><h3>🧘 Monde Bien-être</h3><ul><li>Soin exfoliant pour les pieds fatigués.</li><li>Aide à la concentration (olfactothérapie brute).</li><li>Nettoyage énergétique des mains après un soin.</li><li>Savon "maître" pour le réveil des sens.</li><li>Soin détoxifiant pour la peau après l'effort.</li></ul></div>
+      <div class="univers-card"><h3>🔮 Monde Ésotérisme</h3><ul><li>Support de divination ancestral (Cafédomancie).</li><li>Ancrage puissant à la matière terrestre.</li><li>Absorption des énergies de "stagnation".</li><li>Offrande de gratitude à la Terre nourricière.</li><li>Purification des objets ayant trop "vibré".</li></ul></div>
+    </div>
+    <section id="offres" class="pricing-section">
+      <h2>Débloquez le Volume 3 : La Maîtrise Sauvage</h2>
+      <div class="pricing-grid">
+        <div class="price-card"><h3>Volume 3</h3><div class="price">9,90€</div><a href="#" class="buy-btn">Acheter Vol. 3</a></div>
+        <div class="price-card featured"><h3>Pack 3 Volumes</h3><div class="price">24,90€</div><a href="#" class="buy-btn">Choisir le Trio</a></div>
+        <div class="price-card"><h3>L'Intégrale (5 Vol.)</h3><div class="price">39,90€</div><a href="#" class="buy-btn">La Totale Zen</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>© Zen Chez Toi - Rien ne se perd, tout se transforme.</footer>
+</body>
+</html>

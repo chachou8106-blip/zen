@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articulations : retrouver plus de souplesse | Zen Chez Toi</title>
+  <meta name="description" content="Douleurs articulaires, raideurs, manque de souplesse : chaleur, mobilité douce et curcuma pour accompagner le confort articulaire au quotidien.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google Fonts corrigé -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#fff7f4;
+      --text:#3b221d;
+      --muted:#8a5c52;
+      --accent:#e27b63;
+      --dark:#2a1410;
+      --surface:rgba(255,255,255,.94);
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a { text-decoration:none; color:var(--accent); transition:.3s; }
+    img { max-width:100%; display:block; }
+
+    .main-nav {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,246,243,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .nav-wrap {
+      max-width:1200px;
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .nav-wrap a {
+      font-size:.8rem;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--muted);
+      letter-spacing:.1em;
+      padding:4px 8px;
+    }
+    .nav-wrap a.active,
+    .nav-wrap a:hover { color:var(--accent); }
+    .dot { color:rgba(0,0,0,.1); font-size:.7rem; }
+
+    .hero {
+      position:relative;
+      background:#000;
+      line-height:0;
+    }
+    .hero img {
+      width:100%;
+      max-height:460px;
+      min-height:300px;
+      object-fit:cover;
+    }
+    .hero-overlay {
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.28);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+      line-height:1.6;
+    }
+    .hero-content { max-width:860px; color:white; }
+    .hero-kicker {
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.8rem;
+      font-weight:700;
+      margin-bottom:10px;
+      opacity:.9;
+    }
+    h1 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.4rem,5vw,4rem);
+      margin:0 0 14px;
+      line-height:1.08;
+    }
+    .hero-sub {
+      font-size:1.04rem;
+      max-width:720px;
+      margin:0 auto;
+      color:rgba(255,255,255,.92);
+    }
+
+    main {
+      max-width:900px;
+      margin:0 auto;
+      padding:28px 20px 70px;
+    }
+    h2 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.8rem;
+      margin-top:42px;
+      margin-bottom:10px;
+    }
+    p { margin:0 0 14px; }
+    ul { padding-left:20px; margin:0 0 14px; }
+
+    .box {
+      background:var(--surface);
+      border-radius:18px;
+      padding:18px;
+      margin:26px 0;
+      box-shadow:0 12px 28px rgba(0,0,0,.05);
+      border:1px solid rgba(0,0,0,.03);
+    }
+
+    .cta-link {
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 18px;
+      border:1px solid var(--accent);
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:.95rem;
+    }
+    .cta-link:hover {
+      background:var(--accent);
+      color:white;
+    }
+
+    /* Slot pub discret */
+    .ad-slot{
+      margin:32px auto 0;
+      max-width:900px;
+      padding:1rem 1.2rem;
+      border-radius:18px;
+      border:1px dashed rgba(0,0,0,.12);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.7);
+    }
+
+    .footer {
+      background:var(--dark);
+      color:#f3dfca;
+      padding:60px 20px 80px;
+      text-align:center;
+      margin-top:30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="Corps.html" class="active">Corps</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="assets/douleurs-articulaires.jpg" alt="Apaiser les douleurs articulaires">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="hero-kicker">Corps · Mobilité</div>
+        <h1>Articulations : soutenir la souplesse sans brusquer</h1>
+        <p class="hero-sub">
+          Quand les articulations deviennent raides ou sensibles, la mobilité douce, la chaleur locale et certains soutiens nutritionnels comme le curcuma sont souvent évoqués pour accompagner le confort et le mouvement.[web:1048][web:1056]
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pourquoi la raideur s’installe-t-elle ?</h2>
+      <p>
+        Les articulations peuvent devenir plus sensibles avec l’âge, après des efforts répétés, en période inflammatoire ou simplement après des journées trop statiques, ce qui limite la mobilité.[web:1056]
+      </p>
+      <p>
+        Dans ce contexte, l’objectif est souvent moins la performance que le maintien du mouvement dans des conditions confortables.[web:1053]
+      </p>
+    </section>
+
+    <section>
+      <h2>Les gestes qui aident au quotidien</h2>
+      <ul>
+        <li>Préserver une mobilité douce et régulière, plutôt que rester complètement immobile.[web:1056]</li>
+        <li>Utiliser la chaleur locale (bouillotte, douche tiède) pour assouplir les zones raides.[web:1056]</li>
+        <li>Adopter une routine simple et répétable, plutôt qu’un effort intense ponctuel.[web:1053]</li>
+      </ul>
+      <p>
+        Le mouvement progressif est souvent mieux toléré que l’immobilité complète, car rester totalement inactif peut majorer la sensation d’enraidissement.[web:1056]
+      </p>
+    </section>
+
+    <section>
+      <h2>Produit choisi pour cette page</h2>
+      <div class="box">
+        <strong>Produit associé – Curcuma ou soutien articulaire</strong>
+        <p>
+          Le curcuma, et en particulier la curcumine, est souvent mis en avant pour aider à réduire l’inconfort articulaire et accompagner la mobilité, même si les effets varient selon les personnes.[web:1056][web:1048]
+        </p>
+        <a class="cta-link"
+           href="https://www.amazon.fr/s?k=curcuma+articulations&tag=zencheztoi-21"
+           target="_blank" rel="nofollow sponsored">
+          Voir le soutien articulations
+        </a>
+      </div>
+    </section>
+
+    <!-- Emplacement publicitaire discret pour la page articulations -->
+    <div class="ad-slot" aria-label="contenu sponsorisé">
+      <!-- Code publicitaire / bloc affiliation à insérer ici -->
+      Tu pourras mettre ici un produit articulations (curcuma,
+      collagène, mélange plantes) ou une bannière liée au confort
+      articulaire, sans surcharger le haut de page.
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;">
+      Zen <em style="color:var(--accent);font-style:italic;">Chez</em> Toi
+    </div>
+    <p style="opacity:.65;">© 2026 Zen Chez Toi — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

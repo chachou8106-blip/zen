@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Chez Toi Corps</title>
+  <meta name="description" content="Un univers pour soulager, soutenir et apaiser le corps avec des pistes concrètes, des pages utiles et des sélections choisies.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+     crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --bg:#fff7f4;
+      --text:#3b221d;
+      --muted:#8a5c52;
+      --accent:#a86f5a;
+      --surface:rgba(255,255,255,.94);
+      --surface-soft:rgba(255,255,255,.90);
+      --dark:#2a1410;
+      --border:rgba(59,34,29,.12);
+      --shadow-soft:0 14px 34px rgba(0,0,0,.05);
+      --shadow-strong:0 18px 42px rgba(0,0,0,.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Georgia,serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .hero{
+      min-height:74vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1.2rem 1.2rem 1.8rem;
+      background:
+        linear-gradient(rgba(17,10,8,.20),rgba(17,10,8,.32)),
+        url("hero-corps.jpg") center/cover no-repeat;
+      color:#fff;
+      text-align:left;
+    }
+
+    nav.main-nav{
+      position:absolute;
+      top:1rem;
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      gap:.22rem;
+      flex-wrap:nowrap;
+      justify-content:center;
+      align-items:center;
+      padding:.3rem .42rem;
+      border-radius:999px;
+      background:rgba(0,0,0,.24);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(10px);
+      font-size:.77rem;
+      z-index:5;
+      max-width:min(96vw,980px);
+      overflow-x:auto;
+      white-space:nowrap;
+      scrollbar-width:none;
+    }
+    nav.main-nav::-webkit-scrollbar{display:none}
+    nav.main-nav a{
+      padding:.4rem .68rem;
+      border-radius:999px;
+      color:#fdfaf6;
+      flex:0 0 auto;
+    }
+
+    .hero-inner{
+      max-width:1020px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.12fr .85fr;
+      gap:1.2rem;
+      align-items:center;
+    }
+
+    .logo{
+      width:min(220px,46vw);
+      margin:0 0 .8rem;
+      filter:drop-shadow(0 10px 24px rgba(0,0,0,.35));
+    }
+
+    h1{
+      font-size:clamp(1.45rem,2.2vw,2.15rem);
+      line-height:1.14;
+      margin:0 0 .7rem;
+      max-width:20ch;
+      font-weight:600;
+    }
+
+    .sub{
+      max-width:500px;
+      margin:0 0 .95rem;
+      font-size:.9rem;
+      color:rgba(255,255,255,.9);
+    }
+
+    .pill-hero{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.68rem .95rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      font-size:.8rem;
+      background:#fff;
+      color:#2a1410;
+      white-space:nowrap;
+    }
+
+    .hero-aside{
+      background:rgba(0,0,0,.16);
+      border-radius:18px;
+      padding:1rem 1.05rem;
+      border:1px solid rgba(255,255,255,.16);
+      font-size:.88rem;
+    }
+    .hero-aside p{margin:.4rem 0 0}
+
+    main{
+      max-width:1080px;
+      margin:0 auto;
+      padding:2.8rem 1.1rem 4rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1.35fr .88fr;
+      gap:1.15rem;
+      align-items:start;
+      margin-bottom:2.6rem;
+    }
+
+    .card{
+      background:var(--surface);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:1.25rem;
+      box-shadow:var(--shadow-strong);
+    }
+
+    .card-soft{
+      background:var(--surface-soft);
+      border-radius:20px;
+      border:1px solid var(--border);
+      padding:1.15rem;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .eyebrow{
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      color:var(--accent);
+      margin-bottom:.35rem;
+    }
+
+    h2{
+      margin:.15rem 0 .75rem;
+      font-size:1.28rem;
+      line-height:1.2;
+    }
+
+    .muted{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.52rem;
+      margin-top:.72rem;
+    }
+
+    .links a{
+      padding:.46rem .8rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.8rem;
+    }
+
+    .blog-corps{
+      margin:0 0 2.6rem;
+      background:var(--surface-soft);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:1.25rem 1.35rem;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .blog-corps h3{
+      margin:.05rem 0 .45rem;
+      font-size:1.08rem;
+    }
+
+    .blog-corps p{
+      margin:0 0 .85rem;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .blog-corps-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.52rem;
+      margin-top:.35rem;
+    }
+
+    .blog-corps-list a{
+      padding:.46rem .8rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.8rem;
+    }
+
+    .focus-section{
+      margin:0 0 2.6rem;
+    }
+
+    .focus-box{
+      background:var(--surface);
+      border-radius:22px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow-soft);
+      padding:1.25rem;
+      max-width:840px;
+      margin:0 auto;
+    }
+
+    .focus-box h3{
+      margin:.15rem 0 .6rem;
+      font-size:1.08rem;
+    }
+
+    .focus-box p{
+      margin:.2rem 0 .75rem;
+      font-size:.92rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:.68rem .92rem;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      border-radius:999px;
+      font-weight:700;
+      margin-top:.25rem;
+      background:#fff;
+      font-size:.82rem;
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .ad-section{
+      max-width:840px;
+      margin:0 auto 2.6rem;
+    }
+
+    .ad-slot{
+      margin:0 auto;
+      padding:.88rem 1rem;
+      border-radius:16px;
+      border:1px dashed var(--border);
+      font-size:.8rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.72);
+    }
+
+    .livredor-section{
+      max-width:720px;
+      margin:0 auto 2.6rem;
+    }
+
+    .livredor-card{
+      background:var(--surface);
+      border-radius:22px;
+      padding:1.35rem;
+      box-shadow:var(--shadow-soft);
+      border:1px solid var(--border);
+      text-align:center;
+    }
+
+    .livredor-form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:1rem;
+    }
+
+    .livredor-form input,
+    .livredor-form textarea{
+      padding:13px;
+      border-radius:12px;
+      border:1px solid #eee;
+      font-family:inherit;
+      outline:none;
+      background:#fff;
+    }
+
+    .livredor-form button{
+      padding:14px;
+      border-radius:999px;
+      border:none;
+      background:var(--dark);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+      font-size:.88rem;
+    }
+
+    footer{
+      background:var(--dark);
+      color:#f3dfca;
+      padding:1.9rem 1.1rem;
+      text-align:center;
+      font-size:.84rem;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin:.7rem 0 0;
+      opacity:.86;
+    }
+
+    #disclaimer-bar{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:rgba(0,0,0,.95);
+      color:rgba(255,255,255,.62);
+      font-size:.72rem;
+      text-align:center;
+      padding:9px 12px;
+      z-index:1000;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    @media(max-width:900px){
+      .hero{
+        text-align:center;
+        min-height:82vh;
+        padding-top:4.2rem;
+      }
+      nav.main-nav{
+        top:.7rem;
+        left:.6rem;
+        right:.6rem;
+        transform:none;
+        max-width:none;
+        justify-content:flex-start;
+      }
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+      .hero-aside{
+        margin-top:.25rem;
+      }
+      .grid{
+        grid-template-columns:1fr;
+      }
+      .logo{
+        margin:0 auto .8rem;
+      }
+      .sub{
+        margin:0 auto .95rem;
+      }
+      h1{
+        margin:0 auto .7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="jardin.html">Jardin</a>
+      <a href="maison.html">Maison</a>
+      <a href="bienetre.html">Bien-être</a>
+      <a href="corps.html">Corps</a>
+      <a href="eso.html">Ésotérisme</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="hero-inner">
+      <div>
+        <img src="logo.png" alt="Zen Chez Toi" class="logo">
+        <h1>Quand le corps fatigue, il demande surtout qu’on l’écoute un peu mieux.</h1>
+        <p class="sub">
+          Jambes lourdes, digestion, peau, posture, tensions ou petits inconforts :
+          des pistes simples pour soulager sans surcharger.
+        </p>
+        <a href="#contenu" class="pill-hero">Voir les pistes corps</a>
+      </div>
+
+      <div class="hero-aside">
+        <strong>Du concret, sans brutaliser le corps.</strong>
+        <p>
+          Ici tu aides à choisir calmement entre quelques pages utiles et une sélection essentielle,
+          sans promesse miracle ni accumulation.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="grid">
+      <article class="card">
+        <div class="eyebrow">Corps</div>
+        <h2>Soulager sans surcharger</h2>
+        <p>
+          Cette page rassemble tes grandes thématiques corps : articulations, jambes lourdes,
+          digestion, éclat de peau, tensions musculaires, odeurs corporelles, posture et autres
+          inconforts du quotidien.
+        </p>
+        <p class="muted">
+          L’idée est de guider vers la bonne page selon le besoin, puis de laisser chaque sujet
+          développer ses conseils et ses quelques produits utiles.
+        </p>
+        <div class="links">
+          <a href="articulations.html">Articulations</a>
+          <a href="cellulite.html">Cellulite</a>
+          <a href="chute-cheveux.html">Chute de cheveux</a>
+          <a href="digestion.html">Digestion</a>
+          <a href="eclat-de-peau.html">Éclat de peau</a>
+          <a href="immunite.html">Immunité</a>
+          <a href="jambes-lourdes.html">Jambes lourdes</a>
+          <a href="mal-de-dos.html">Mal de dos</a>
+          <a href="odeurs-corps.html">Odeurs du corps</a>
+          <a href="peau-seche.html">Peau sèche</a>
+          <a href="pieds-fatigues.html">Pieds fatigués</a>
+          <a href="posture.html">Posture</a>
+          <a href="tensions-musculaires.html">Tensions musculaires</a>
+          <a href="varices.html">Varices</a>
+          <a href="corps-selection.html">Les essentiels</a>
+        </div>
+      </article>
+
+      <aside class="card-soft">
+        <div class="eyebrow">Intérêt</div>
+        <h2>Rassurer puis orienter</h2>
+        <p class="muted">
+          Les personnes qui arrivent ici cherchent souvent une réponse simple à un inconfort concret :
+          douleur, lourdeur, sécheresse, digestion difficile ou fatigue physique.
+        </p>
+        <p class="muted">
+          Ta mission est de les aider à se repérer vite, puis de les envoyer vers la bonne page
+          ou vers ta sélection essentielle si elles veulent aller au plus direct.
+        </p>
+        <div class="links" style="margin-top:.9rem;">
+          <a href="corps-selection.html">Voir les essentiels du corps</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="blog-corps" aria-labelledby="blog-corps-titre">
+      <div class="eyebrow">Univers Corps</div>
+      <h3 id="blog-corps-titre">Les pages éditoriales de l’univers Corps</h3>
+      <p>
+        Pour approfondir chaque sujet, tu peux renvoyer ici vers les pages qui expliquent,
+        rassurent et proposent quelques produits choisis selon le besoin du moment.
+      </p>
+      <div class="blog-corps-list">
+        <a href="articulations.html">Articulations sensibles</a>
+        <a href="cellulite.html">Cellulite & circulation</a>
+        <a href="chute-cheveux.html">Chute de cheveux</a>
+        <a href="digestion.html">Digestion plus légère</a>
+        <a href="eclat-de-peau.html">Éclat de peau</a>
+        <a href="immunite.html">Immunité au quotidien</a>
+        <a href="jambes-lourdes.html">Jambes lourdes</a>
+        <a href="mal-de-dos.html">Mal de dos</a>
+        <a href="odeurs-corps.html">Odeurs corporelles</a>
+        <a href="peau-seche.html">Peau sèche</a>
+        <a href="pieds-fatigues.html">Pieds fatigués</a>
+        <a href="posture.html">Posture & maintien</a>
+        <a href="tensions-musculaires.html">Tensions musculaires</a>
+        <a href="varices.html">Varices & confort</a>
+        <a href="corps-selection.html">Les essentiels du corps</a>
+      </div>
+    </section>
+
+    <section class="focus-section">
+      <div class="focus-box">
+        <div class="eyebrow">Focus</div>
+        <h3>Transpiration : confort au quotidien</h3>
+        <p>
+          La transpiration est un mécanisme naturel. L’enjeu n’est pas de la bloquer à tout prix,
+          mais surtout de limiter les odeurs et de se sentir plus à l’aise au quotidien.
+        </p>
+        <p class="muted">
+          Un déodorant à la sauge, d’origine naturelle, peut être une piste intéressante si tu veux
+          quelque chose de plus doux pour le quotidien.
+        </p>
+        <a class="btn"
+           href="https://www.amazon.fr/Weleda-9921-D%C3%A9odorant-sauge-200/dp/B000ORV01C?linkCode=ll2&tag=zencheztoi-21&linkId=846603fd154ccea3c6fe674c9963c8d2&ref_=as_li_ss_tl"
+           target="_blank" rel="nofollow sponsored noopener noreferrer">
+          Voir le déodorant à la sauge
+        </a>
+      </div>
+    </section>
+
+    <section class="ad-section" aria-label="contenu sponsorisé">
+      <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7501098246029504"
+             data-ad-slot="5678468169"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </section>
+
+    <section class="livredor-section" id="livredor">
+      <div class="livredor-card">
+        <h2 style="margin:0 0 .5rem;font-size:1.25rem;">Livre d’or Corps</h2>
+        <p class="muted" style="margin:0 0 .9rem;">
+          Ton retour aide à garder cet univers utile, doux et concret.
+        </p>
+        <form class="livredor-form" onsubmit="event.preventDefault(); alert('Merci pour votre message 💛');">
+          <input type="text" placeholder="Prénom" required>
+          <textarea placeholder="Votre message" rows="4" required></textarea>
+          <button type="submit">Envoyer mon message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Zen Chez Toi Corps • confort, équilibre et solutions utiles
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const adUnits = document.querySelectorAll('.adsbygoogle');
+      adUnits.forEach(function () {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

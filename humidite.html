@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Humidité dans la maison : gestes simples, astuces naturelles et pistes d’équipement pour assainir l’air au quotidien, sans dramatiser.">
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <title>Humidité : assainir la maison en douceur | Zen Chez Toi</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fdfaf5;
+      --text: #332a22;
+      --muted: #685e55;
+      --accent: #d97757;
+      --dark: #1f140e;
+      --surface: rgba(255,255,255,.92);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 245, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+
+    .dot {
+      color: rgba(0,0,0,0.12);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 20px 24px;
+      text-align: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .box-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Slot pub discret */
+    .ad-slot{
+      margin:32px auto 0;
+      max-width:900px;
+      padding:1rem 1.2rem;
+      border-radius:18px;
+      border:1px dashed rgba(0,0,0,.12);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.7);
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0.72;
+      font-size: 0.88rem;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 52px; }
+      h2 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html" class="active">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Maison · Humidité</div>
+    <h1>Humidité : assainir l’air sans se prendre la tête</h1>
+    <p class="hero-sub">
+      Buée sur les vitres, odeur de linge qui ne sèche pas, petites traces sombres derrière un meuble… L’humidité peut vite peser sur l’ambiance. Il existe pourtant des gestes simples et quelques aides naturelles pour alléger tout ça.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Repérer les signes et agir doucement</h2>
+      <p>
+        De nombreux guides rappellent qu’il vaut mieux agir dès les premiers signes d’humidité : buée persistante, sensation de froid humide, odeurs de renfermé, petites moisissures sur les joints ou les murs.
+      </p>
+      <p>
+        Ils insistent aussi sur un point : l’objectif n’est pas de tout assécher, mais de rester dans une zone de confort, souvent située autour de 40 à 60&nbsp;% d’humidité relative.
+      </p>
+
+      <div class="box">
+        <div class="box-title">Signes courants d’humidité</div>
+        <ul>
+          <li>Condensation fréquente sur les vitres et miroirs, surtout le matin.</li>
+          <li>Murs froids au toucher, peinture qui cloque, taches sombres.</li>
+          <li>Odeur de renfermé, linge qui met longtemps à sécher.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Les gestes simples du quotidien</h2>
+      <p>
+        Pour beaucoup d’acteurs (énergie, habitat, assurances), la première réponse reste la ventilation naturelle : ouvrir les fenêtres quelques minutes chaque jour pour renouveler l’air.
+      </p>
+
+      <h3>Aérer régulièrement</h3>
+      <p>
+        Des recommandations évoquent généralement 10 à 15 minutes d’aération quotidienne par pièce, même en hiver, pour laisser l’excès d’humidité s’échapper.
+      </p>
+
+      <h3>Limiter ce qui charge l’air en vapeur</h3>
+      <p>
+        Plusieurs sources suggèrent aussi de couvrir les casseroles, utiliser la hotte, faire sécher le linge à l’extérieur quand c’est possible, et ventiler plus après la douche.
+      </p>
+
+      <div class="box">
+        <div class="box-title">Petit réglage d’ambiance</div>
+        <p>
+          Garder une température relativement stable, utiliser la hotte ou la VMC quand on cuisine ou se douche, et éviter d’accumuler meubles et objets contre les murs froids peuvent déjà soulager l’air.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Remèdes naturels pour petites zones humides</h2>
+      <p>
+        Pour une chambre un peu humide, un placard, une salle d’eau sans grande gravité, plusieurs astuces naturelles reviennent souvent : gros sel, bicarbonate, charbon de bois, gomme arabique ou même litière minérale.
+      </p>
+
+      <h3>Gros sel &amp; bicarbonate</h3>
+      <p>
+        Le gros sel et le bicarbonate peuvent servir d’absorbeurs simples : on les place dans un bol ou un récipient dans les zones humides, et on les remplace lorsqu’ils sont saturés.
+      </p>
+
+      <h3>Charbon de bois</h3>
+      <p>
+        Le charbon de bois est présenté comme une méthode naturelle et économique : quelques morceaux dans une boîte ou un bocal percé peuvent aider à absorber l’excès d’humidité dans une petite pièce.
+      </p>
+
+      <h3>Autres absorbeurs naturels</h3>
+      <p>
+        Certains articles mentionnent aussi la gomme arabique, la litière pour chat minérale ou encore certaines formes de charbon de bambou, à placer dans des coupelles et à renouveler régulièrement.
+      </p>
+
+      <div class="box">
+        <div class="box-title">Important</div>
+        <p>
+          Ces remèdes “DIY” sont surtout pensés pour de petites zones et un excès léger, pas pour traiter des problèmes structurels d’infiltration ou de remontées capillaires.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ventilation et aides techniques</h2>
+      <p>
+        Pour les situations plus installées, beaucoup de conseils orientent vers la vérification ou l’installation de systèmes de ventilation adaptés, comme une VMC, des extracteurs ou un déshumidificateur d’air.
+      </p>
+
+      <h3>VMC et extracteurs d’air</h3>
+      <p>
+        La VMC (simple ou double flux) et les extracteurs dans les pièces d’eau sont souvent cités comme solutions efficaces pour évacuer l’air humide et limiter les moisissures.
+      </p>
+
+      <h3>Déshumidificateurs</h3>
+      <p>
+        Les déshumidificateurs d’air mobiles sont également présentés comme une aide utile, à choisir selon la taille de la pièce et le taux d’humidité observé.
+      </p>
+
+      <div class="box">
+        <div class="box-title">Quand penser aux travaux ?</div>
+        <p>
+          Si l’humidité est liée à un défaut d’étanchéité, de toiture, d’isolation ou de menuiseries, des organismes recommandent de consulter un professionnel pour envisager des travaux ciblés (fenêtres, murs, ventilation…).
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outils utiles pour gérer l’humidité au quotidien</h2>
+      <p>
+        Sans multiplier les produits, quelques solutions peuvent t’aider à garder un air plus neutre dans les pièces sensibles.
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Déshumidificateur d’air rechargeable AbsoDry Duo Family</strong>
+          <p>
+            Un petit déshumidificateur sans électricité, pratique pour les pièces très humides ou peu ventilées (salle de bain, buanderie, sous-sol, chambre d’amis). Tu le poses, il absorbe l’excès d’humidité en continu, sans bruit.
+          </p>
+          <a href="https://www.amazon.fr/AbsoDry-Duo-Family-D%C3%A9shumidificateur-moisissure/dp/B0BLHJB1BQ?dib=eyJ2IjoiMSJ9.XZW7gjnID_fM3qfFJJX2TVyJN-2VzZcSm3hCtc9BgvYPMZ0rDNr9V96ypHsH4PGXygvR7l2vKlUZ3kZdKPyTnl8dPL-QBmHT23tKmZQ2NE4V9rm5DwlUGOyMPL8wkyj9V2-9Q_Oh6JTsLIq8pBhbdLTQ6K_4ta7oegLfd3r3fUasz1o5ZLE50eZb2aAyGMWq_-eAREIJ7QPCRhaDFh2Lm2KbvMckMugvi1zKEMT-8xya0OZmjE9GgC1xLEOKXIJildda2qI6bEYhz3bDED_dSaYq4ze1tcLPl2EkkRAH2VQ.u2AjU1xaGyk8mJN5DIXleMLMIPP11cFa-kwU3tw5iV8&dib_tag=se&keywords=d%C3%A9shumidificateur%2Bnaturel&qid=1776771994&sr=8-49-spons&aref=7aVAFdKVxn&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=1b9be134e5fc1e007cd3f8c7c4a56478&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Sachets de charbon de bambou réutilisables</strong>
+          <p>
+            Des petits sachets à base de charbon de bambou, à suspendre ou à poser dans les placards, chaussures, salles d’eau ou chambres un peu humides. Ils aident à absorber l’humidité et les odeurs, et se “rechargent” simplement au soleil.
+          </p>
+          <a href="https://www.amazon.fr/absorbeurs-crochets-%C3%A9liminer-purifiants-dhumidit%C3%A9/dp/B0CQMS6QMS?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1Q242M4PG7QPT&dib=eyJ2IjoiMSJ9.vypIAjbL_7EH4fp3JC_Oq49_tNlar20UKt7bnnvzON6iYmGcHrDeYNLOlZ0GMQuG9fDXnhe5-MBrJUd91KKZ3aBP7l6UUSbSkDtbG6R3uSTRi8lzsjkE9yVGkT4uRD754qnZLjUvfHDJfRBQPQgG3CJOR2wrv1e2BXeIS5Y6bHZtVMTlJWmLQaRmbjd2QrG6Fue70-Bw5FXjJ41tF7Hf0HgZiFXc2Ul2-roGUe69NMFeejtqzh6raw-JCHa50sdnzEJGBAPdiHACG7B5cM_H2j4_dBwZO9eXEjsrKZuTy2c.2_1QNMNjTYkUinkczBj62Stq07Jhf5qRxbaco2sdszQ&dib_tag=se&keywords=charbon%2Bde%2Bbambou%2Banti%2Bhumidit%C3%A9%2Breutilisable%2Bpetite%2Bentreprise&qid=1776772830&sprefix=charbon%2Bde%2Bbambou%2Banti%2Bhumidit%C3%A9%2Breutilisable%2Bpetite%2Bentreprise%2Caps%2C222&sr=8-24&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=f506ca29b0607c0508e8b11289a76ece&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Station météo analogique avec hygromètre</strong>
+          <img src="assets/sputnik.jpg" alt="Station météo Sputnik avec hygromètre" loading="lazy" />
+          <p>
+            Une station météo bois &amp; métal avec hygromètre intégré pour suivre le taux d’humidité et la température d’un coup d’œil. Pratique pour garder une ambiance confortable entre 40 et 60&nbsp;% sans se fier seulement aux sensations.
+          </p>
+          <a href="https://www.amazon.fr/TFA-Dostmann-20-2047-52-Sputnik-Station-m%C3%A9t%C3%A9o/dp/B000JG4NS0?content-id=amzn1.sym.2b04206e-43f5-4bd8-b39d-d4671ceea54e%3Aamzn1.sym.2b04206e-43f5-4bd8-b39d-d4671ceea54e&crid=RP8ERRFVYMW&cv_ct_cx=station%2Bm%C3%A9t%C3%A9o%2Banalogique%2Bbois&keywords=station%2Bm%C3%A9t%C3%A9o%2Banalogique%2Bbois&pd_rd_i=B000JG2RQA&pd_rd_r=e64c840d-2d6e-4d91-8172-13688376414f&pd_rd_w=fYHO2&pd_rd_wg=UrY62&pf_rd_p=2b04206e-43f5-4bd8-b39d-d4671ceea54e&pf_rd_r=X7376QMR43JVK6AT88S8&qid=1776773160&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=station%2Bm%C3%A9t%C3%A9o%2Banalogique%2Caps%2C275&sr=1-4-1c0bc4f8-9a4b-47e4-b117-3d30b74c13f1-spons&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43&aref=Ju9YmIda6L&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=28c2af13aa88f60eafd302ec9dd29488&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Prendre l’humidité au sérieux, sans panique</h2>
+      <p>
+        Les contenus de référence insistent sur deux choses : ne pas laisser l’humidité s’installer, mais ne pas non plus dramatiser chaque trace isolée.
+      </p>
+      <p>
+        Entre gestes simples, remèdes maison et, si besoin, un avis pro pour les cas plus lourds, tu peux construire une approche progressive qui respecte à la fois ta maison et ton énergie.
+      </p>
+
+      <div class="box">
+        <div class="box-title">À faire cette semaine</div>
+        <p>
+          Choisis une seule pièce qui te semble un peu humide (salle de bain, chambre, coin buanderie). Mets en place un combo simple : aération régulière + un petit absorbeur naturel (sel, charbon ou bicarbonate) + observation de ce qui change.
+        </p>
+      </div>
+    </section>
+
+    <!-- Emplacement publicitaire discret (humidité / maison) -->
+    <div class="ad-slot" aria-label="contenu sponsorisé">
+      <!-- Code publicitaire / bloc affiliation à insérer ici -->
+      Cet emplacement discret peut accueillir une bannière, un produit du moment
+      ou une autre sélection Maison autour de l’humidité (par exemple un autre modèle
+      de déshumidificateur ou un pack hygromètre + absorbeurs).
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

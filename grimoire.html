@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Grimoire &amp; carnet de rituels : écrire ta pratique | Zen Chez Toi</title>
+  <meta name="description" content="Comment utiliser un grimoire ou un carnet de rituels pour relier tes tirages, tes rêves, tes rituels de bougies, de sauge, de cristaux et tes ressentis du quotidien.">
+
+  <!-- Vérification & tracking -->
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f111a;
+      --text: #f5f3ff;
+      --muted: #b2b0c8;
+      --accent: #a98bff;
+      --dark: #060712;
+      --surface: rgba(18, 20, 35, 0.96);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15,17,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+    .dot {
+      color: rgba(255,255,255,0.15);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      margin: 0 0 10px;
+    }
+    .hero-sub {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.9rem;
+      margin: 40px 0 12px;
+    }
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.3rem;
+      margin: 26px 0 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .box-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+    li { margin-bottom: 6px; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f5f3ff;
+      padding: 70px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.6rem;
+    }
+    .footer-title em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .footer-links {
+      margin-top: 18px;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 50px; }
+      h2 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">•</span>
+      <a href="eso.html" class="active">Ésotérisme</a><span class="dot">•</span>
+      <a href="jardin.html">Jardin</a><span class="dot">•</span>
+      <a href="maison.html">Maison</a><span class="dot">•</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">•</span>
+      <a href="corps.html">Corps</a><span class="dot">•</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Ésotérisme · Grimoire</div>
+    <h1>Grimoire &amp; carnet de rituels : écrire ta pratique</h1>
+    <p class="hero-sub">
+      Un grimoire, c’est simplement un carnet consacré à ta vie intérieure&nbsp;: un endroit où
+      relier tes tirages, tes rêves, tes rituels et tes petits signes du quotidien.[web:1334][web:1340]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pourquoi tenir un grimoire&nbsp;?</h2>
+      <p>
+        Écrire dans un grimoire te permet de garder une trace de ce que tu explores&nbsp;: tirages de tarot,
+        expériences avec le pendule, runes du jour, rituels de sauge, rêves marquants…[web:1334][web:1337]
+      </p>
+      <p>
+        Avec le temps, tu peux relire ces pages et voir comment ta pratique évolue, quels symboles reviennent
+        souvent et comment tes intentions se transforment.[web:1334][web:1340]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Ce que tu peux y noter</div>
+        <ul>
+          <li>Cartes tirées, questions posées, ressentis pendant et après tirage.[web:269][web:270][web:271][web:1334]</li>
+          <li>Rituels de sauge, d’encens, de bougies, avec la date et le pourquoi.[web:11][web:14][web:73][web:75][web:276]</li>
+          <li>Rêves, synchronicités, signes qui t’interpellent dans la journée.[web:1336][web:1339][web:1342]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Idées de sections pour ton carnet</h2>
+      <p>
+        Tu peux garder un seul grimoire avec plusieurs parties, ou plusieurs carnets spécialisés
+        (cartes, rêves, rituels de lune…).[web:1334][web:1340]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Une structure possible</div>
+        <ul>
+          <li>Section «&nbsp;Tarot &amp; oracles&nbsp;» : tirages, cartes du jour, messages marquants.[web:269][web:270][web:271]</li>
+          <li>Section «&nbsp;Pendule &amp; runes&nbsp;» : questions, runes du jour, petits talismans.[web:260][web:262][web:275][web:279]</li>
+          <li>Section «&nbsp;Sommeil &amp; rêves&nbsp;» : rêves, sensations au réveil, rituels du soir.[web:1336][web:1339][web:1342]</li>
+          <li>Section «&nbsp;Rituels &amp; saisons&nbsp;» : sauge, encens, bougies, fêtes qui rythment ton année.[web:11][web:14][web:73][web:75][web:276][web:1340]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Un petit rituel d’écriture</h2>
+      <p>
+        Tu peux transformer le moment où tu écris dans ton grimoire en mini‑rituel, pour marquer la
+        différence avec une simple to‑do list ou un agenda.[web:1334][web:1340]
+      </p>
+
+      <h3>Rituel «&nbsp;Je pose mes pages&nbsp;»</h3>
+      <p>
+        Allume une bougie ou un bâton d’encens, ouvre ton carnet à une page blanche et prends
+        quelques respirations profondes avant de commencer.[web:73][web:75][web:276][web:1340]
+      </p>
+      <p>
+        Note la date, un titre simple (par exemple «&nbsp;Rune du jour&nbsp;», «&nbsp;Tirage du soir&nbsp;»,
+        «&nbsp;Rêve de la nuit&nbsp;») puis écris sans te censurer ce qui vient.[web:1336][web:1339][web:1342]
+      </p>
+      <p>
+        Tu peux clôturer en remerciant, en dessinant un petit symbole ou en ajoutant une carte ou une
+        rune qui résume ton ressenti.[web:1334][web:1337]
+      </p>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section>
+      <h2>3 gestes express avec ton grimoire quand tu te sens un peu perdu·e</h2>
+      <p>
+        Si tu ne sais pas quoi écrire ou par où commencer, ces trois gestes rapides peuvent t’aider à rouvrir le lien avec ton carnet sans pression ni perfection.[web:1334][web:1340]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Une page « météo intérieure »</div>
+        <p>
+          Ouvre ton grimoire et note simplement la date, puis trois mots pour décrire ton énergie du moment (par exemple : « brume », « agitation », « curiosité »).[web:1340]
+          Tu peux ajouter un symbole, une petite carte ou une rune qui te vient spontanément, sans chercher à interpréter tout de suite.[web:1334][web:1337]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. Attraper un rêve ou un signe</div>
+        <p>
+          Au réveil, écris quelques lignes sur le dernier rêve dont tu te souviens, même si ce n’est qu’un fragment, ou sur un signe qui t’a marqué dans la journée (une phrase, un animal, un nombre qui revient).[web:1336][web:1339][web:1342]
+          L’important n’est pas d’analyser tout de suite, mais de créer l’habitude de déposer ces fragments dans ton carnet.[web:1336][web:1339]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Noter un seul rituel ou une seule intention</div>
+        <p>
+          Choisis un tout petit geste sacré (allumer une bougie, brûler un peu de sauge ou d’encens, poser une pierre sur la page) et écris en une phrase ton intention du moment : « Aujourd’hui, je demande plus de clarté », « Je remercie pour… ».[web:11][web:14][web:73][web:75][web:1340]
+          Même une seule phrase répétée de temps en temps suffit à faire de ton grimoire un compagnon vivant plutôt qu’un carnet qui « attend d’être bien rempli ».[web:1334][web:1340]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grimoires &amp; outils d’écriture · Sélection Zen Chez Toi</h2>
+      <p>
+        Voici deux styles de carnets pour accueillir ta pratique (un carnet doux et polyvalent, un vrai
+        grimoire en cuir plus « sorcière »), un stylo recyclé, ainsi qu’un porte‑plume en verre qui
+        transforme l’écriture en geste encore plus cérémonial.[web:1335][web:1341]
+      </p>
+
+      <div class="products-grid">
+
+        <!-- 1. Carnet recyclé Zen Chez Toi -->
+        <div class="product-card">
+          <strong>Carnet recyclé pour rituels du quotidien</strong>
+          <p>
+            Un carnet à couverture souple et recyclée, parfait si tu veux un compagnon polyvalent
+            pour noter à la fois tes rituels, tes rêves et tes réflexions du quotidien.[web:1336][web:1340]
+          </p>
+          <p>
+            Il se glisse facilement dans un sac et peut aussi faire le lien entre ta vie « classique »
+            et ta pratique spirituelle (gratitude, to‑do list plus consciente, etc.).[web:1340][web:1341]
+          </p>
+          <p>
+            Idéal si tu préfères une esthétique douce, minimaliste et éco‑responsable plutôt qu’un
+            grimoire très marqué « sorcière ».[web:1335][web:1340]
+          </p>
+          <a href="https://www.amazon.fr/dp/B0BVTJ4C2M?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000E001&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir le carnet recyclé sur Amazon
+          </a>
+        </div>
+
+        <!-- 2. Grimoire en cuir URBAN LEATHER -->
+        <div class="product-card">
+          <strong>Grimoire en cuir style ancien</strong>
+          <p>
+            Un grimoire en cuir au look ancien, avec couverture texturée et pages épaisses, qui
+            donne vraiment l’impression d’ouvrir un livre de magie ou un livre des ombres.[web:1334][web:1337]
+          </p>
+          <p>
+            Parfait si tu as envie d’un objet plus ritualisé, à garder sur ton autel ou dans un
+            endroit spécial de la maison.[web:1337]
+          </p>
+          <p>
+            Tu peux y consacrer uniquement tes tirages, tes rituels importants et les pages qui
+            comptent le plus pour toi.[web:1334][web:1337]
+          </p>
+          <a href="https://www.amazon.fr/URBAN-LEATHER-Rustiques-Anciennes-Couverture/dp/B0CS6XB4D9?linkCode=ll2&tag=zencheztoi-21&linkId=19ee199764cfa69354bd44b4e3da1982&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir le grimoire en cuir URBAN LEATHER sur Amazon
+          </a>
+        </div>
+
+        <!-- 3. Stylo recyclé / éco-responsable -->
+        <div class="product-card">
+          <strong>Stylo recyclé pour ton grimoire</strong>
+          <p>
+            Un stylo fabriqué à partir de matières recyclées (papier, carton, blé ou métal recyclé),
+            pour écrire en cohérence avec tes valeurs écologiques.[web:1335][web:1341]
+          </p>
+          <p>
+            Il devient ton stylo « sacré » réservé à ton grimoire et à ton carnet de rêves, ce qui
+            renforce le côté rituel à chaque fois que tu l’ouvres.[web:1340][web:1341]
+          </p>
+          <p>
+            Tu peux le ranger avec ton carnet dans une pochette dédiée, pour garder ce duo toujours
+            prêt pour un moment d’écriture.[web:1335][web:1340]
+          </p>
+          <a href="https://www.amazon.fr/dp/B09XXXXX00?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000E003&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un stylo recyclé sur Amazon
+          </a>
+        </div>
+
+        <!-- 4. Porte-plume en verre calligraphie -->
+        <div class="product-card">
+          <strong>Porte‑plume en verre pour écriture rituelle</strong>
+          <p>
+            Un porte‑plume en verre avec plumes interchangeables, parfait pour transformer tes pages
+            de grimoire en moments de calligraphie lente et délicate.[web:1335]
+          </p>
+          <p>
+            Il peut rester posé sur ton autel ou sur ton bureau comme objet décoratif, et devenir
+            ton outil dédié aux signatures d’intention, aux mantras ou aux pages importantes.[web:1340][web:1341]
+          </p>
+          <p>
+            Tu peux l’utiliser ponctuellement, par exemple pour ouvrir un nouveau chapitre de ton
+            grimoire, écrire une lettre à toi‑même ou consacrer un rituel de lune.[web:1340]
+          </p>
+          <a href="https://www.amazon.fr/AOKUY-12-porte-stylo-signature-d%C3%A9coration/dp/B0CL9Q499T?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=LHIZ3IX8MN6T&dib=eyJ2IjoiMSJ9.uftEnyWKwYFH9W2zvBnP33zEICyuJNotBatIGcqOPwEAhZ7w-_tS_2dlQBj4WmkNi4ETdBtiC2t5DfucqgqWF-_QaMghP0LD6u4YsVdtpiMEXaQnFinyGyKiU7fPN9Tgvt00VvF4uVhlrb9MV4LnBC2blMVlnisNXzQeV8uEl9H6gh9lh64Unx8xwe4cIbgamdTsqAo0kdG7N5Zm5teow8IlD-LxXoXcZ9Y-mdtjMEINzWlBCFbcMPQ7CdSMqAserXDhJk_EJ1XwRjHJ5KPNcyvIpyjZG4M-VIIiW7sVA6E.wlCJf1B-wTRfOG8kKmH2kmqkbqedigNokQNJBmfdFTo&dib_tag=se&keywords=porte%2Bplume%2Ben%2Bverre%2Bcalligraphie&qid=1776802676&refinements=p_n_condition-type%3A15135266031&rnid=15135264031&sprefix=porte%2Bplume%2Ben%2Bverre%2Bcalligraphie%2Caps%2C267&sr=8-6&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=5c406b7bfadfc4bdd666be6da9749253&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir le porte-plume en verre sur Amazon
+          </a>
+        </div>
+
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Certains liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création
+        de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <!-- Liens croisés vers les autres pratiques -->
+    <section>
+      <div class="box">
+        <div class="box-title">Relier ton grimoire aux autres cartes</div>
+        <p>
+          Tu peux utiliser la page
+          <a href="eso.html" style="color:var(--accent); font-weight:700;">Ésotérisme</a>
+          comme sommaire vivant de ton grimoire&nbsp;: une section pour chaque pratique qui t’appelle
+          (sauge, encens, cristaux, pendule, tarot, runes, bougies, sommeil).[web:1334][web:1337]
+        </p>
+        <p>
+          Et si tu veux ajouter une dimension plus « bien‑être » à tes pages (respiration, routines,
+          corps), les rubriques
+          <a href="bienetre.html" style="color:var(--accent); font-weight:700;">Bien-être</a>
+          et
+          <a href="corps.html" style="color:var(--accent); font-weight:700;">Corps</a>
+          peuvent t’inspirer d’autres façons de prendre soin de toi.[web:1340][web:1341]
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="eso.html">Retour à l’univers Ésotérisme</a>
+    </div>
+    <p style="margin-top:30px; opacity:0.35; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Pratiques ésotériques : ces contenus ont une portée symbolique et ne remplacent pas un avis médical,
+    psychologique ou juridique. Liens affiliés Amazon : je réalise un bénéfice sur les achats remplissant
+    les conditions requises.
+  </div>
+
+</body>
+</html>

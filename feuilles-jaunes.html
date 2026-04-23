@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Feuilles jaunes au jardin : reconnaître la chlorose, distinguer les causes possibles (eau, sol, carence), et agir doucement avec compost, chélates de fer et purins.">
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <title>Feuilles jaunes & chlorose : comprendre et agir | Zen Chez Toi</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fdfaf5;
+      --text: #332a22;
+      --muted: #685e55;
+      --accent: #5da679;
+      --dark: #1f140e;
+      --surface: rgba(255,255,255,.92);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 245, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+
+    .dot {
+      color: rgba(0,0,0,0.12);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 20px 24px;
+      text-align: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .box-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo em {
+      color: #d97757;
+      font-style: italic;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0.72;
+      font-size: 0.88rem;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 52px; }
+      h2 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html" class="active">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Jardin · Feuillage</div>
+    <h1>Feuilles jaunes & chlorose : quand la plante manque de quelque chose</h1>
+    <p class="hero-sub">
+      Feuilles qui jaunissent, nervures qui restent vertes, plantes qui semblent “dégonflées”… Ce n’est pas toujours une maladie. Souvent, c’est une façon pour la plante de dire que quelque chose ne va pas dans le sol, l’eau ou sa nourriture.[web:1314][web:1320]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Différencier les principaux cas</h2>
+      <p>
+        Toutes les feuilles jaunes ne racontent pas la même histoire : les observer de près aide à éviter d’ajouter des produits “au hasard”.[web:1314][web:1320]
+      </p>
+      <p>
+        La chlorose ferrique se reconnaît par des feuilles jaunes avec nervures encore vertes, alors que l’excès d’eau ou le manque d’azote donnent plutôt des feuilles uniformément jaunes ou molles.[web:1315][web:1319]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Pistes simples à observer</div>
+        <ul>
+          <li>Feuilles jaunes + nervures vertes : souvent chlorose ferrique (manque de fer assimilable).[web:1315][web:1319]</li>
+          <li>Feuilles jaunes molles, terreau détrempé : excès d’arrosage ou problème de drainage.[web:1314][web:1320]</li>
+          <li>Feuilles qui jaunissent en partant du bas, plante globalement pâle : possible manque d’azote.[web:1315][web:1320]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Chlorose ferrique : le cas classique des feuilles jaunes</h2>
+      <p>
+        La chlorose ferrique est une carence en fer assimilable qui provoque un jaunissement des feuilles, tout en laissant souvent les nervures bien vertes.[web:1315][web:1319]
+      </p>
+      <p>
+        Elle apparaît fréquemment en sol calcaire ou très compact, sur des plantes sensibles comme certains hortensias, rosiers, fruitiers ou plantes de terre de bruyère.[web:1315][web:1319]
+      </p>
+
+      <h3>Agir sur le sol</h3>
+      <p>
+        Enrichir le sol en matière organique (compost, amendements) et améliorer sa structure aide la plante à mieux absorber le fer et les autres oligo‑éléments, au‑delà du “coup de fouet” immédiat.[web:1315][web:1323]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Chélates de fer</div>
+        <p>
+          Les chélates de fer (fer chélaté) sont souvent utilisés pour corriger rapidement une chlorose, car ils rendent le fer disponible même en sol calcaire, en arrosage ou en pulvérisation.[web:1317][web:1319][web:1321]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Autres causes fréquentes de feuilles jaunes</h2>
+      <p>
+        Au‑delà du fer, les feuilles jaunes peuvent aussi signaler d’autres déséquilibres (eau, nutriments, pH…).[web:1314][web:1320]
+      </p>
+
+      <h3>Excès ou manque d’eau</h3>
+      <p>
+        L’excès d’arrosage est l’une des causes les plus fréquentes de jaunissement : racines asphyxiées, pourrissement, mauvaise absorption des nutriments. Un sol qui reste détrempé longtemps est un signal important.[web:1314][web:1320]
+      </p>
+
+      <h3>Carences en azote ou autres éléments</h3>
+      <p>
+        Un manque d’azote, de magnésium ou d’autres éléments peut aussi faire jaunir les feuilles, parfois en commençant par les plus anciennes, d’où l’intérêt d’un apport régulier de matière organique.[web:1315][web:1320]
+      </p>
+
+      <h3>pH et calcaire</h3>
+      <p>
+        Le pH du sol et la présence de calcaire jouent un rôle clé : un sol trop calcaire peut bloquer le fer et d’autres éléments, même s’ils sont présents, et favoriser l’apparition de chlorose.[web:1315][web:1319]
+      </p>
+    </section>
+
+    <section>
+      <h2>Des gestes doux pour aider les plantes</h2>
+      <p>
+        Les solutions les plus solides combinent des corrections ciblées (fer, eau) et un travail de fond sur le sol, plutôt que des traitements “coup de poing” répétés.[web:1315][web:1317]
+      </p>
+
+      <h3>Limiter l’eau calcaire & ajuster l’arrosage</h3>
+      <p>
+        Pour les plantes sensibles, tu peux essayer d’utiliser de l’eau moins calcaire (eau de pluie si possible) et de laisser le sol sécher un peu entre deux arrosages. En pot, vérifie aussi que l’eau s’évacue bien.[web:1314][web:1318]
+      </p>
+
+      <h3>Apports de fer et d’oligo-éléments</h3>
+      <p>
+        En complément des chélates de fer, des préparations comme le purin d’ortie ou de prêle peuvent aider à renforcer les plantes et à atténuer certains jaunissements liés au stress ou aux carences, surtout si tu les couples à un sol mieux nourri.[web:1317][web:1323]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Renforcer le sol en continu</div>
+        <p>
+          Enrichir le sol en compost, pailler et éviter de laisser la terre nue sont autant de façons de limiter à long terme les carences et les stress. C’est moins spectaculaire qu’un traitement unique, mais plus durable.[web:1315][web:1323]
+        </p>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section>
+      <h2>3 gestes express quand les feuilles jaunissent</h2>
+      <p>
+        Quand tu découvres des feuilles jaunes, tu peux commencer par ces trois gestes simples avant d’ajouter d’autres produits, histoire de mieux comprendre ce que la plante essaie de dire.[web:1314][web:1320]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Vérifier l’eau et le drainage</div>
+        <p>
+          Enfonce un doigt dans la terre : si le sol est détrempé plusieurs centimètres en profondeur, espace les arrosages et assure‑toi que l’eau peut bien s’évacuer (trous de drainage, soucoupe vidée).[web:1314][web:1320]
+          Si au contraire la terre est très sèche, reprends l’arrosage doucement plutôt que de noyer d’un coup.[web:1318][web:1320]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. Observer le pH et la lumière</div>
+        <p>
+          Si tu as un pH‑mètre, teste le sol pour voir s’il est très calcaire ou au contraire trop acide, ce qui peut bloquer l’absorption du fer et d’autres éléments.[web:1315][web:1319]
+          Profites‑en pour vérifier que la plante ne reçoit ni trop peu ni trop de lumière, deux facteurs qui favorisent aussi les jaunissements.[web:1316][web:1318]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Donner un coup de pouce ciblé</div>
+        <p>
+          Si les nervures restent vertes dans un feuillage jaune, un apport de chélate de fer peut aider à reverdir rapidement tout en préparant un apport de compost pour le long terme.[web:1315][web:1317][web:1321]
+        </p>
+        <p>
+          Si les jaunissements sont plus diffus, enrichir le sol avec du compost ou un amendement organique reste souvent l’un des gestes les plus sûrs pour aider la plante sur la durée.[web:1315][web:1323]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outils utiles pour gérer les feuilles jaunes</h2>
+      <p>
+        Quelques produits peuvent t’aider à corriger une chlorose, nourrir le sol et mieux comprendre ce qui se passe sous la surface.[web:1317][web:1323]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Chélate de fer SoluControl (anti-chlorose)</strong>
+          <p>
+            Un chélate de fer EDTA 13 % conçu pour corriger rapidement les carences en fer responsables de la chlorose ferrique, avec un effet reverdissant visible sur les feuilles.[web:1321]
+          </p>
+          <a href="https://www.amazon.fr/SoluControl-Ch%C3%A9late-Anti-chlorose-Fertilisant-Reverdissant/dp/B0DQJ6T9P6?&linkCode=ll2&tag=zencheztoi-21&linkId=1a475bbb49e6ab8a2ff86c465d688625&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Compost / amendement organique</strong>
+          <p>
+            Un compost mûr ou un amendement organique de qualité aide à enrichir le sol en humus et en nutriments, améliore la structure et la vie du sol, et rend le fer et les oligo‑éléments plus disponibles.[web:1315][web:1323]
+          </p>
+          <a href="https://www.amazon.fr/SoluControl-Ch%C3%A9late-Anti-chlorose-Fertilisant-Reverdissant/dp/B0DQJ6T9P6?&linkCode=ll2&tag=zencheztoi-21&linkId=b5da4498387447a43d7ba04ce0ede49d&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Purin de prêle prêt à l’emploi</strong>
+          <p>
+            Un purin de prêle 100 % naturel, à utiliser dilué en arrosage ou en pulvérisation pour renforcer les défenses des plantes et accompagner certains jaunissements liés au stress ou aux carences.[web:1317]
+          </p>
+          <a href="https://www.amazon.fr/Purin-Pr%C3%AAle-100-Naturel-Pr%C3%A9vention/dp/B0FC6C7RZ8?&linkCode=ll2&tag=zencheztoi-21&linkId=688b83ca092816c6fe88c8247d540df3&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Kit pH‑mètre et indicateurs pour le sol</strong>
+          <p>
+            Un appareil 3‑en‑1 sans pile qui mesure pH, humidité et lumière du sol : idéal pour vérifier si ton sol est très calcaire, trop sec ou trop humide avant de décider d’un traitement contre la chlorose.[web:1318][web:1320]
+          </p>
+          <a href="https://www.amazon.fr/Melko-Appareil-mesure-plantes-indicateurs/dp/B0DBLPTS7K?dib=eyJ2IjoiMSJ9.6hVcEQllCuy9NSQkRyA45CHAeFopYC-_aT8ttpc0RanQ-NrcBN3CpQAJ6sel766p_j_de-v3KiIrUWvY5wbK6ZibnyiVZWT0tIpDOruxILBTs9NV75qeYL1W14qI_M4U9mqN_s6eCBb9eTo_9B7WMRkamGRHKmLbH72uFmmeIGIVnkRQAhur2Tf8muR0m_0IhAVw0_joMzHPdok_cAWwopyFRqYKCJddUU9hIDK2EQ_teT1SZMlBeL3_uH10U7cwTmeFeefcAP6XTW28qz9Hv1KxMqkV8oVr9vUb6o4TngI.0dAsWMvTK-05Yg7yofy9Ww3N8Fe1-8EPPNvGVSIYS9Q&dib_tag=se&keywords=ph%2Bmetre%2Bpour%2Ble%2Bjardin&qid=1776771121&sr=8-6&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=b188d549d3b1e8c4725539e5bdd075a1&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Apprendre à lire le langage des feuilles</h2>
+      <p>
+        Une feuille qui jaunit est d’abord un message, pas forcément une catastrophe : la plante signale un stress ou une carence, et tu peux répondre progressivement plutôt que tout changer d’un coup.[web:1314][web:1320]
+      </p>
+      <p>
+        En prenant le temps d’observer l’emplacement des feuilles touchées, le type de jaune, l’arrosage et la nature du sol, tu apprends petit à petit à décoder ce langage et à agir avec plus de confiance.[web:1314][web:1318]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Petit exercice d’observation</div>
+        <p>
+          Choisis une plante qui jaunit, regarde les nervures, la texture des feuilles et l’état du sol. Note tes hypothèses (eau, fer, sol), puis teste une seule action à la fois avant d’en rajouter une autre.[web:1314][web:1320]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

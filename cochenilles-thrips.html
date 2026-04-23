@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cochenilles & thrips : traitements doux au jardin | Zen Chez Toi</title>
+  <meta name="description" content="Comment repérer cochenilles et thrips, nettoyer les feuilles et utiliser des solutions douces comme l'huile de neem et le savon noir au jardin.">
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504" crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f4ec;
+      --text: #2d3a2f;
+      --muted: #66756a;
+      /* Jardin : sauge profonde */
+      --accent: #6f8b6b;
+      --dark: #20281f;
+      --surface: rgba(255,255,255,0.95);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(246,244,236,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.15); font-size: 0.7rem; }
+
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin: 0 0 10px;
+    }
+    .hero-sub {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin: 40px 0 12px;
+    }
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .box-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    ul { padding-left: 18px; margin: 0 0 12px; }
+    li { margin-bottom: 6px; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+    }
+    .product-card p { font-size: 0.92rem; color: var(--muted); }
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* Slot pub discret Jardin */
+    .ad-slot{
+      margin:32px auto 0;
+      max-width:920px;
+      padding:1rem 1.2rem;
+      border-radius:18px;
+      border:1px dashed rgba(0,0,0,.12);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.8);
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f6f4ec;
+      padding: 70px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.6rem;
+    }
+    .footer-title em {
+      color: #a7d27f;
+      font-style: italic;
+    }
+    .footer-links {
+      margin-top: 18px;
+      opacity: 0.7;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9);
+      color: rgba(255,255,255,0.72);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 50px; }
+      h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">•</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">•</span>
+      <a href="Jardin.html" class="active">Jardin</a><span class="dot">•</span>
+      <a href="maison.html">Maison</a><span class="dot">•</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">•</span>
+      <a href="Corps.html">Corps</a><span class="dot">•</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Jardin · Parasites</div>
+    <h1>Cochenilles & thrips : agir avant l’invasion</h1>
+    <p class="hero-sub">
+      Les cochenilles et les thrips s’installent souvent sur des plantes déjà fragilisées, puis marquent les feuilles avec du miellat, des points, des décolorations ou des déformations. Une action rapide, régulière et douce donne souvent de meilleurs résultats qu’un traitement unique trop agressif.[web:1108][web:1105]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Comment les reconnaître</h2>
+      <p>
+        Les cochenilles se voient souvent comme de petites masses cotonneuses, brunes ou bombées sur les tiges, sous les feuilles ou près des nervures.[web:1104][web:1108]
+      </p>
+      <p>
+        Les thrips, eux, sont plus discrets : ils laissent surtout des feuilles argentées, piquées, tordues ou desséchées, avec parfois de minuscules insectes allongés visibles à l’œil nu.[web:1105][web:1107]
+      </p>
+      <div class="box">
+        <div class="box-title">Signes fréquents</div>
+        <ul>
+          <li>Feuilles collantes ou noircies par le miellat et la fumagine.[web:1104][web:1108]</li>
+          <li>Jeunes pousses qui se déforment ou stagnent.[web:1105][web:1108]</li>
+          <li>Petits points clairs, argentés ou bronzés sur le feuillage.[web:1105][web:1111]</li>
+          <li>Parasites regroupés sous les feuilles, sur les tiges ou dans les aisselles des feuilles.[web:1108]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Le bon réflexe</h2>
+      <p>
+        Avant tout traitement, isole la plante atteinte si c’est possible, puis enlève à la main les parties les plus infestées, par exemple avec un chiffon humide ou un coton imbibé.[web:1108]
+      </p>
+      <p>
+        Une douche tiède sur le feuillage, un nettoyage régulier et une surveillance tous les deux ou trois jours permettent déjà de faire baisser la pression parasitaire.[web:1105][web:1108]
+      </p>
+      <p>
+        Pour les thrips comme pour les cochenilles, la régularité compte plus que la force du produit : plusieurs passages espacés sont souvent nécessaires.[web:1111][web:1107]
+      </p>
+    </section>
+
+    <section>
+      <h2>Deux solutions douces à intégrer</h2>
+      <h3>Huile de neem</h3>
+      <p>
+        L’huile de neem est souvent utilisée au jardin comme traitement doux polyvalent contre différents ravageurs, notamment les thrips, grâce à son action insecticide et larvicide.[web:1107][web:1113]
+      </p>
+      <p>
+        Elle s’emploie diluée en pulvérisation sur le feuillage, en respectant le mode d’emploi, en évitant le plein soleil et en privilégiant les moments plus frais.[web:1107][web:1111]
+      </p>
+
+      <h3>Savon noir / nettoyant feuilles</h3>
+      <p>
+        Un nettoyant doux type savon noir aide à décoller le miellat, la fumagine et une partie des parasites présents sur les feuilles, en agissant de manière mécanique sur leur enveloppe.[web:1104][web:1111]
+      </p>
+      <p>
+        C’est particulièrement utile en première étape ou entre deux traitements, pour garder le feuillage plus propre et plus respirant.[web:1105][web:1108]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Méthode simple</div>
+        <ul>
+          <li>Nettoyer d’abord les feuilles et les tiges les plus touchées.[web:1108]</li>
+          <li>Traiter ensuite avec un produit adapté et bien dilué.[web:1104][web:1107]</li>
+          <li>Recommencer quelques jours plus tard si nécessaire.[web:1111]</li>
+          <li>Surveiller les nouvelles pousses pendant deux à trois semaines.[web:1105][web:1108]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Produits à tester</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Huile de neem concentrée</strong>
+          <p>
+            Une option intéressante pour intégrer un traitement doux dans une routine anti-cochenilles ou anti-thrips, surtout après un premier nettoyage manuel de la plante.[web:1107][web:1108]
+          </p>
+          <a href="https://www.amazon.fr/Garten-Gl%C3%BCck-Huile-Neem-Concentr%C3%A9e/dp/B097TTRW8T?&linkCode=ll2&tag=zencheztoi-21&linkId=1d8060c9675d1a00d44b1adea3911291&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Nettoyant feuilles type savon noir</strong>
+          <p>
+            Utile pour laver le feuillage, retirer les dépôts collants et accompagner les soins réguliers sur les plantes d’intérieur ou du balcon.[web:1104][web:1105]
+          </p>
+          <a href="https://www.amazon.fr/Naturel-Concentr%C3%A9-SoluControl-Nettoyant-Feuilles/dp/B0DFXVQXLM?crid=1BT67RR0PSCIX&dib=eyJ2IjoiMSJ9.cvQooRl36W4qJXd30hJ6a0gdyfALAhmT91_5xfw6tLftnKYpcQzZHpsldY_QpHR4XA1onbggb74RMONWJ0oO2Dgjvd5gY8n3U3UT80vJeWtSaOWe2lS2k1G4FIe5TaUyRBKMqh1CwwkVKspNdCCs2Y7Btwas5pSJP0qjY00CF_pGbr6u0vvYGzaSoF4q5UmsULUSCA4J0kbbLYyg4b7FtTc7bEOJjUiKGU3e9FBVHvMUeDKN8U_5tF1GxAoewx2a-rP84XrlAPJhNL1AnrtUC2uH0BUe9TEg-dU4nVCDoX0.qgiVhP7sr75DSN089DC4hX3boSoUkhqnktxrUkyN_B0&dib_tag=se&keywords=savon+noir+liquide+pur+pour+le+jardin&qid=1776781012&sprefix=savon+noir+pour+le+jardin%2Caps%2C263&sr=8-12&linkCode=ll2&tag=zencheztoi-21&linkId=ed688f2604700b9bb0bd6fc47648ad6a&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ce qu’il faut éviter</h2>
+      <p>
+        Ne traite pas en plein soleil, sur un feuillage assoiffé ou avec un dosage improvisé, pour éviter de brûler ou stresser davantage la plante.[web:1111][web:1107]
+      </p>
+      <p>
+        Évite aussi de multiplier trop de produits en même temps : mieux vaut une routine simple, bien observée, qu’un mélange trop fort qui fatigue davantage la plante.[web:1108][web:1113]
+      </p>
+      <div class="box">
+        <div class="box-title">Après le traitement</div>
+        <ul>
+          <li>Vérifier le revers des feuilles tous les 2 à 3 jours.[web:1105][web:1108]</li>
+          <li>Couper les feuilles trop abîmées si besoin.[web:1108]</li>
+          <li>Améliorer l’aération autour de la plante.[web:1108]</li>
+          <li>Nettoyer le pot, la soucoupe et le rebord de fenêtre.[web:1105][web:1108]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Slot pub Jardin -->
+    <div class="ad-slot" aria-label="contenu sponsorisé">
+      <!-- Code publicitaire / bloc affiliation à insérer ici -->
+      Ici, tu pourras mettre en avant un “kit parasites” (savon noir,
+      huile de neem, pulvérisateur) ou une bannière liée aux soins des
+      plantes d’intérieur / balcon.
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="Jardin.html">Retour à l’univers Jardin</a>
+    </div>
+    <p style="margin-top:30px; opacity:0.35; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Conseils jardin : toujours tester sur une petite zone, respecter le mode d’emploi des produits et adapter selon la variété de plante. Liens affiliés Amazon : je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Éclat de la peau : gestes doux de l’intérieur vers l’extérieur | Zen Chez Toi</title>
+  <meta name="description" content="Des gestes simples pour retrouver plus d’éclat : hydratation, sommeil, auto-massage du visage, exfoliation douce, soins naturels et petits rituels quotidiens.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  //fonts.googleapis.com">
+  //fonts.gstatic.com" crossorigin>
+  //fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f9;
+      --text: #2d2633;
+      --muted: #62566d;
+      --accent: #9b72c2;
+      --dark: #1a1421;
+      --surface: rgba(255,255,255,.9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    img { max-width: 100%; display: block; }
+
+    /* HERO */
+    .hero-inner {
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .hero-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    /* NAVIGATION */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.1); font-size: 0.7rem; }
+
+    /* CONTENU */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .box-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card strong { display: block; margin-bottom: 4px; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 50px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .footer-logo em { color: var(--accent); font-style: italic; }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      opacity: 0.6;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html" class="active">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero-inner">
+    <div class="hero-kicker">Bien-être · Peau</div>
+    <h1>Éclat de la peau : gestes doux de l’intérieur vers l’extérieur</h1>
+    <p class="hero-sub">
+      Teint terne, petites irrégularités, manque de luminosité… La peau reflète souvent notre rythme de vie. Vous pouvez lui redonner un peu d’éclat, pas à pas, sans la brusquer.[web:779]
+    </p>
+    <p class="hero-note">
+      Ici, pas d’idéal de perfection : seulement des pistes pour prendre soin de votre peau comme d’un terrain vivant, en partant de ce qui est possible pour vous.
+    </p>
+
+    <div style="max-width:420px;margin:24px auto 0;">
+      <img src="assets/peau-seche-visage.png"
+           alt="Peau du visage sèche vue de près, illustrant un besoin d'hydratation"
+           style="width:100%;border-radius:18px;box-shadow:0 12px 28px rgba(0,0,0,0.15);">
+    </div>
+  </header>
+
+  <main>
+    <section id="comprendre">
+      <h2>Comprendre l’éclat de votre peau</h2>
+      <p>
+        L’éclat de la peau ne dépend pas uniquement des crèmes : il est aussi lié au sommeil, à l’hydratation, à l’alimentation, au stress, à la pollution et aux soins que l’on apporte (ou non) au visage.[web:779][web:777]
+      </p>
+      <p>
+        Plutôt que de multiplier les produits, il peut être apaisant de revenir à quelques gestes essentiels, réalisés avec régularité et douceur.[web:1237]
+      </p>
+      <div class="box">
+        <div class="box-title">Ce que vous pouvez remarquer</div>
+        <u
+        <ul>
+          >Teint terne, manque de luminosité, impression de “grise mine”.[web:1237]</li>
+          >Petites irrégularités de texture, peau qui marque plus facilement.[web:1230]</li>
+          >Sensation de peau “fatiguée” en périodes de stress ou de manque de sommeil.[web:1228]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gestes">
+      <h2>Rituels doux pour réveiller l’éclat</h2>
+      <p>
+        Vous pouvez choisir un ou deux rituels dans cette liste, et les transformer en petits rendez‑vous avec votre peau. L’idée n’est pas de faire “parfait”, mais de créer une continuité douce.[web:1235]
+      </p>
+
+      <h3>Rituel 1 · Nettoyage simple mais régulier</h3>
+      <p>
+        Matin et/ou soir, nettoyez votre visage avec un produit adapté à votre peau (lait, gel, huile, savon doux). L’objectif : retirer l’excès de pollution, de sébum et de résidus sans décaper.[web:1237]
+        Une peau trop agressée aura plus de mal à rester lumineuse.
+      </p>
+
+      <h3>Rituel 2 · Hydratation au quotidien</h3>
+      <p>
+        Appliquez une crème ou un fluide hydratant adapté à votre type de peau, en massant légèrement. L’hydratation régulière aide à maintenir la souplesse et la luminosité du teint.[web:1230]
+        En parallèle, veillez à boire suffisamment d’eau dans la journée : la peau est aussi nourrie de l’intérieur.
+      </p>
+
+      <h3>Rituel 3 · Auto-massage du visage</h3>
+      <p>
+        Une à deux fois par jour, au moment d’appliquer votre soin, prenez 1 à 3 minutes pour masser votre visage avec vos doigts ou un outil doux (roll‑on, gua sha, champignon en pierre).[web:1232][web:1235]
+        Ces gestes favorisent la circulation, aident à détendre les traits et réveillent parfois l’éclat naturel du teint.
+      </p>
+
+      <div style="max-width:420px;margin:16px auto 8px;">
+        <img src="assets/peau-seche.png"
+             alt="Zones de peau sèche sur le visage, symbolisant un manque de confort cutané"
+             style="width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,0.12);">
+      </div>
+
+      <h3>Rituel 4 · Exfoliation douce et ponctuelle</h3>
+      <p>
+        Une à deux fois par semaine maximum, utilisez un gommage très doux ou un masque exfoliant adapté à votre peau. L’objectif est d’aider la peau à se débarrasser des cellules mortes qui ternissent le teint, sans l’agresser.[web:1237]
+      </p>
+
+      <h3>Rituel 5 · Veiller à ce qui nourrit votre peau de l’intérieur</h3>
+      <p>
+        Sans viser un régime parfait, vous pouvez doucement privilégier des aliments colorés et riches en antioxydants (fruits, légumes, thé vert), de bonnes graisses (huiles végétales de qualité, noix), et limiter ce qui vous donne l’impression de “ternir”.[web:777][web:779]
+      </p>
+
+      <div class="box">
+        <div class="box-title">À garder en tête</div>
+        <p>
+          Si votre peau présente des problèmes importants ou persistants (douleurs, lésions, réactions fortes), l’avis d’un·e professionnel·le de santé ou d’un·e dermatologue est précieux.[web:1230]
+          Les rituels proposés ici accompagnent le quotidien, mais ne remplacent pas un suivi adapté.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section id="gestes-express">
+      <h2>3 gestes express avant une journée chargée ou une soirée</h2>
+      <p>
+        Quand vous sentez que votre peau a besoin d’un petit coup de frais avant une journée dense ou une soirée, ces trois gestes rapides peuvent réveiller l’éclat sans tout changer à votre routine.[web:1228][web:1234]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Nettoyage + splash d’eau fraîche</div>
+        <p>
+          Commencez par un nettoyage doux pour retirer les résidus de la nuit ou de la journée, puis terminez par un jet d’eau fraîche sur le visage.[web:1231][web:1237]
+          Le contraste léger réveille la microcirculation et donne souvent un aspect plus frais au teint.
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. 2–3 minutes d’auto-massage ciblé</div>
+        <p>
+          Avec votre crème ou votre huile, massez rapidement le visage en insistant sur les pommettes, le contour des yeux et le front, avec des mouvements lissants vers le haut et l’extérieur.[web:1229][web:1235]
+          Cela aide à relancer la circulation, à détendre les traits et à retrouver un peu de luminosité immédiate.
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Un soutien intérieur régulier</div>
+        <p>
+          Pour préparer le terrain sur le moyen terme, vous pouvez, après avis médical, envisager une cure de compléments ciblés comme le zinc, les oméga‑3 ou le collagène marin, en suivant les dosages recommandés.[web:1230][web:1236]
+        </p>
+        <p>
+          Le zinc est souvent associé à une peau plus nette, les oméga‑3 à une meilleure hydratation et le collagène à la fermeté et à la texture de la peau.[web:1230][web:1233]
+        </p>
+        <p style="font-size:0.9rem; margin-top:6px;">
+          Sur cette page, vous trouverez par exemple un
+          <a href="https://www.amazon.fr/dp/B07H2VQQP5?linkCode=ll2&tag=zencheztoi-21&linkId=5a38f17f2a0c7b8a4cfa58ad0bb55b1a&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored" style="color:var(--accent);font-weight:700;">
+            zinc pour peau à imperfections
+          </a>, des
+          <a href="https://www.amazon.fr/dp/B07BRY1FRZ?linkCode=ll2&tag=zencheztoi-21&linkId=6c2ff7d2ed3ac38395224207c72bcab1&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored" style="color:var(--accent);font-weight:700;">
+            oméga‑3 d’algues pour peau sèche
+          </a>
+          et un
+          <a href="https://www.amazon.fr/dp/B07C5J6KD3?linkCode=ll2&tag=zencheztoi-21&linkId=18f9b9c62a7b0a580d5f49d278f2f5c3&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored" style="color:var(--accent);font-weight:700;">
+            collagène marin pour la fermeté
+          </a>.
+        </p>
+        <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">
+          Comme toujours, demandez conseil à un·e professionnel·le de santé avant de commencer une cure, surtout en cas de traitement en cours ou de pathologie cutanée.[web:1236]
+        </p>
+      </div>
+    </section>
+
+    <section id="solutions-peau">
+      <h2>Compléments pour soutenir l’éclat et la qualité de la peau</h2>
+      <p>
+        Dans certains cas, un travail “de l’intérieur” peut compléter les gestes externes, en particulier sur la qualité globale de la peau, l’hydratation et les imperfections.[web:1230][web:1236]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Zinc pour peau à imperfections et teint terne</strong>
+          <p>
+            Le zinc contribue à l’équilibre cutané, aide à réguler le sébum, favorise la cicatrisation et peut améliorer les imperfections et le teint terne lorsqu’il est dosé de façon adaptée.[web:1230][web:1236]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07H2VQQP5?linkCode=ll2&tag=zencheztoi-21&linkId=5a38f17f2a0c7b8a4cfa58ad0bb55b1a&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored">
+            Découvrir ce zinc pour la peau
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Oméga‑3 d’algues pour peau sèche et sensible</strong>
+          <p>
+            Les oméga‑3 participent au bon état de la barrière cutanée et à l’hydratation de la peau, tout en aidant à apaiser certaines réactions inflammatoires (rougeurs, irritations).[web:1230][web:1233]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07BRY1FRZ?linkCode=ll2&tag=zencheztoi-21&linkId=6c2ff7d2ed3ac38395224207c72bcab1&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored">
+            Découvrir ces oméga‑3 d’algues
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Collagène marin pour fermeté et hydratation</strong>
+          <p>
+            Plusieurs études suggèrent que la supplémentation en collagène marin hydrolysé peut améliorer l’hydratation, la fermeté et la texture de la peau, en soutenant la production de collagène naturel.[web:1230][web:1236]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07C5J6KD3?linkCode=ll2&tag=zencheztoi-21&linkId=18f9b9c62a7b0a580d5f49d278f2f5c3&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored">
+            Découvrir ce collagène marin
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Les compléments ne remplacent pas une alimentation variée ni un avis médical. Demandez conseil à un·e professionnel·le de santé avant de commencer, surtout en cas de traitement en cours, de grossesse ou de pathologie dermatologique.[web:1236]
+      </p>
+    </section>
+
+    <section id="produits">
+      <h2>Outils doux pour vos rituels visage</h2>
+      <p>
+        Quelques objets simples peuvent rendre vos rituels plus agréables et vous donner envie de les maintenir, sans transformer votre salle de bain en laboratoire.[web:1235]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Roll‑on ou gua sha en pierre naturelle</strong>
+          <p>
+            Un outil doux pour masser le visage, favoriser la circulation et détendre les traits, à utiliser avec une huile ou un sérum adapté.[web:1232][web:1235]
+          </p>
+          <a href="https://www.amazon.fr/dp/B08F2H2CXB?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Huile végétale pour peau sèche</strong>
+          <p>
+            Une huile végétale de qualité (comme l’argan ou le jojoba) peut nourrir et protéger la peau, surtout le soir, en complément ou en remplacement de la crème selon vos besoins.[web:1232]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07G9R3L6N?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Serviette visage douce en coton</strong>
+          <p>
+            Une petite serviette dédiée au visage, en coton doux, peut rendre le séchage et le retrait des masques plus confortables, tout en limitant les frottements agressifs.[web:1237]
+          </p>
+          <a href="https://www.amazon.fr/dp/B09R3M4Y3B?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section id="notice-madero">
+      <div class="box">
+        <div class="box-title">Bonus à garder sous la main</div>
+        <h3 style="margin-top:4px;">Notice d’utilisation du kit Madelys</h3>
+        <p>
+          Pour vous aider à utiliser les 7 accessoires de madérothérapie en douceur et en sécurité,
+          vous pouvez recevoir une notice au format PDF, prête à imprimer ou à consulter sur votre téléphone.
+        </p>
+
+        <form id="form-notice-madero" method="POST" action="#">
+          abel for="email-madero" style="display:block; font-weight:700; margin-bottom:8px;">
+            Votre email
+          </label>
+          <input
+            id="email-madero"
+            type="email"
+            name="email"
+            required
+            placeholder="votre@email.com"
+            style="width:100%; padding:12px 14px; border-radius:10px;
+                   border:1px solid rgba(0,0,0,0.12); margin-bottom:12px; font:inherit;"
+          >
+          <button type="submit"
+                  style="width:100%; padding:10px 16px; border-radius:999px;
+                         border:1px solid var(--accent); background:none;
+                         color:var(--accent); font-weight:700; cursor:pointer;">
+            Recevoir la notice PDF
+          </button>
+        </form>
+
+        <div style="margin-top:14px; padding:12px; border-radius:12px;
+                    background:rgba(155,114,194,0.08);">
+          <p style="margin:0 0 8px; font-size:0.92rem; color:var(--muted);">
+            Lorsque votre système sera en place, ce formulaire permettra de récupérer les emails
+            avant de proposer le téléchargement de la notice. Pour l’instant, vous pouvez aussi
+            télécharger directement le PDF ci‑dessous.
+          </p>
+          <a href="assets/notice-madero.pdf"
+             download="notice-madero-zen-chez-toi.pdf"
+             style="display:inline-block;margin-top:4px;padding:9px 16px;border-radius:999px;
+                    border:1px solid var(--accent);color:var(--accent);font-weight:700;text-decoration:none;">
+            Télécharger la notice Madelys (PDF)
+          </a>
+        </div>
+
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:8px;">
+          Cette notice ne remplace pas un avis médical. En cas de doute ou de pathologie,
+          demandez toujours conseil à un·e professionnel·le de santé.
+        </p>
+      </div>
+    </section>
+
+    <section id="liens-croises">
+      <h2>Parce que votre peau parle aussi de votre rythme</h2>
+      <div class="box">
+        <u
+        <ul>
+          ><a href="sommeil-profond-gestes-doux.html">Rituels du soir pour un sommeil plus profond</a>, précieux pour le renouvellement de la peau.</l/li>
+          ><a href="digestion-plus-legere.html">Routines douces pour une digestion plus légère</a>, car intestins et peau sont souvent liés.</l/li>
+          ><a href="bienetre-anti-stress-gestes-simples.html">Gestes simples pour apaiser le stress du quotidien</a>, quand les poussées cutanées suivent les périodes de tension.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ancrage">
+      <h2>Intégrer ces gestes à votre rythme</h2>
+      <p>
+        Vous pouvez commencer par un seul rituel quotidien (par exemple l’auto‑massage au moment de la crème), puis voir comment votre peau et votre ressenti évoluent.[web:1235]
+        Ensuite, ajoutez peut‑être une exfoliation douce hebdomadaire ou une attention particulière à votre hydratation.
+      </at de la peau n’est pas un objectif à cocher, mais une conséquence de petites attentions répétées, à l’intérieur comme à l’extérieur.[web:1230]
+      </p>
+      <div class="box">
+        <div class="box-title">Une invitation</div>
+        <p>
+          Ce soir ou demain matin, prenez 2 minutes pour appliquer votre soin visage en conscience : massez doucement votre peau, sentez la texture, la température de vos mains, la réaction de votre visage.
+          Remarquez ce que cela change dans votre manière de vous regarder.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="index.html">Accueil</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

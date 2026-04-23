@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Focus &amp; concentration : gestes doux pour retrouver le fil | Zen Chez Toi</title>
+  <meta name="description" content="Des gestes simples pour soutenir votre concentration : respirations, organisation douce, pauses, environnement apaisé et petites routines pour votre cerveau.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f9;
+      --text: #2d2633;
+      --muted: #62566d;
+      --accent: #9b72c2; 
+      --dark: #1a1421;
+      --surface: rgba(255,255,255,.9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    /* HERO */
+    .hero-inner {
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .hero-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    /* NAVIGATION */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.1); font-size: 0.7rem; }
+
+    /* CONTENU */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .box-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card strong { display: block; margin-bottom: 4px; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 50px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .footer-logo em { color: var(--accent); font-style: italic; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px;
+      opacity: 0.6; font-size: 0.85rem; flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html" class="active">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero-inner">
+    <div class="hero-kicker">Bien-être · Focus</div>
+    <h1>Focus &amp; concentration : gestes doux pour retrouver le fil</h1>
+    <p class="hero-sub">
+      Notifs, pensées qui partent dans tous les sens, multitâche… Il devient difficile de rester vraiment présent·e à ce que l’on fait. Vous pouvez recréer des îlots de concentration, à votre manière.[web:274][web:280]
+    </p>
+    <p class="hero-note">
+      Ici, pas de culte de la productivité : seulement des pistes pour vous aider à vous rassembler, sans vous crisper.[web:277][web:283]
+    </p>
+  </header>
+
+  <main>
+    <section id="comprendre">
+      <h2>Comprendre votre concentration sans culpabilité</h2>
+      <p>
+        La concentration est mise à rude épreuve dans un quotidien rempli de sollicitations : écrans, notifications, charge mentale, stress, fatigue.[web:274][web:277][web:280]
+        Le cerveau a du mal à rester longtemps sur une même chose sans pause.[web:276][web:279][web:282]
+      </p>
+      <p>
+        Plutôt que de vous juger, vous pouvez observer ce qui vous aide à être un peu plus présent·e : le contexte, le moment de la journée, le type de tâche, le niveau de bruit, l’état de votre corps.[web:274][web:280]
+      </p>
+      <div class="box">
+        <div class="box-title">Ce que vous pouvez remarquer</div>
+        <ul>
+          <li>Difficulté à rester sur une tâche plus de quelques minutes sans être distrait·e.[web:274][web:277][web:280][web:283]</li>
+          <li>Envie fréquente de vérifier votre téléphone, vos mails, vos réseaux.[web:274][web:280]</li>
+          <li>Fatigue mentale ou agitation intérieure après de longues périodes devant les écrans.[web:274][web:279][web:280]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gestes">
+      <h2>Rituels pour soutenir votre focus au quotidien</h2>
+      <p>
+        Vous pouvez tester un ou deux rituels à la fois, et voir ce qui vous aide vraiment. Le but n’est pas de rester concentré toute la journée, mais de créer des plages de vraie présence à ce que vous faites.[web:274][web:277][web:280][web:283]
+      </p>
+
+      <h3>Rituel 1 · Commencer par clarifier une seule intention</h3>
+      <p>
+        Avant une période de travail ou de concentration, prenez une minute pour noter ce qui est vraiment important pendant ce temps : une tâche principale, éventuellement une deuxième.[web:274][web:280][web:283]
+        Cela évite de passer d’une activité à l’autre sans fil conducteur.
+      </p>
+
+      <h3>Rituel 2 · Créer une bulle de temps (25 + 5)</h3>
+      <p>
+        Vous pouvez utiliser une version douce de la méthode Pomodoro : 25 minutes pour vous concentrer sur une tâche, puis 5 minutes de pause.[web:275][web:277][web:281][web:1330]
+        Pendant les 25 minutes, vous mettez votre téléphone en mode silencieux/loin, et vous vous autorisez à ignorer le reste.[web:274][web:277][web:281]
+      </p>
+
+      <h3>Rituel 3 · Une respiration pour rassembler l’attention</h3>
+      <p>
+        Avant ou pendant votre temps de focus, prenez quelques respirations lentes : inspirez par le nez sur 4 temps, retenez l’air 2 ou 3 temps, puis expirez doucement sur 6 ou 8 temps.[web:274][web:277][web:279][web:282][web:283][web:1330]
+        Répétez 3 à 5 fois. Cela aide le système nerveux à se poser, et rend la concentration plus accessible.[web:1324][web:1327]
+      </p>
+
+      <h3>Rituel 4 · Simplifier l’environnement immédiat</h3>
+      <p>
+        Avant de commencer, prenez 2 minutes pour ranger un peu la zone autour de vous : enlever ce qui n’est pas utile, fermer les onglets non nécessaires, poser votre carnet à portée de main.[web:274][web:280][web:283][web:1333]
+        Un environnement moins saturé soutient souvent un esprit moins dispersé.[web:1327][web:1333]
+      </p>
+
+      <h3>Rituel 5 · Donner de la place aux pauses</h3>
+      <p>
+        Entre deux blocs de concentration, accordez‑vous de vraies pauses : marcher, boire un verre d’eau, regarder par la fenêtre, respirer.[web:276][web:279][web:282]
+        Le cerveau a besoin de moments sans sollicitation pour consolider ce que vous venez de faire.[web:276][web:279][web:282][web:1324]
+      </p>
+
+      <div class="box">
+        <div class="box-title">À garder en tête</div>
+        <p>
+          Si vous avez des difficultés de concentration très anciennes ou importantes, un bilan avec un professionnel (médecin, neuropsychologue, etc.) peut être utile.[web:277][web:280]
+          Les rituels proposés ici sont des soutiens du quotidien, pas un diagnostic ni un traitement.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section id="gestes-express">
+      <h2>3 gestes express quand l’esprit se met à papillonner</h2>
+      <p>
+        Quand vous sentez que votre attention part dans tous les sens, vous pouvez tester ce petit trio de gestes pour vous recentrer sans vous brusquer.[web:1324][web:1327]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Une minute de respiration ancrée</div>
+        <p>
+          Posez les pieds au sol, détendez les épaules et fermez les yeux si c’est possible, puis pratiquez 4 cycles de respiration 4‑7‑8 : inspirez 4 temps, retenez 7 temps, expirez 8 temps.[web:1330]
+          Cet exercice simple aide à calmer l’agitation interne et à ramener l’attention dans le corps, ce qui prépare mieux au focus qu’un effort de volonté seule.[web:1324][web:1327]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. Écrire ce qui encombre la tête</div>
+        <p>
+          Prenez votre carnet et notez tout ce qui tourne en boucle : idées, tâches à ne pas oublier, préoccupations.[web:1327][web:1333]
+          Le fait de poser ces pensées à l’extérieur les rend souvent moins envahissantes et libère un peu d’espace pour la tâche du moment.[web:1324][web:1327]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Créer une micro-bulle de silence</div>
+        <p>
+          Si le bruit vous disperse, mettez des bouchons d’oreilles ou un casque qui atténue le son, puis lancez un simple bloc de 15 à 25 minutes avec un minuteur dédié plutôt que votre téléphone.[web:1326][web:1329][web:1330]
+          Réduire le volume sonore de quelques décibels et externaliser la gestion du temps suffisent souvent à rendre la concentration plus accessible.[web:1326][web:1333]
+        </p>
+      </div>
+    </section>
+
+    <section id="produits">
+      <h2>Outils doux pour soutenir votre concentration</h2>
+      <p>
+        Quelques outils simples peuvent vous aider à ritualiser vos temps de focus et à rendre l’expérience plus agréable, sans obligation.[web:274][web:277][web:280]
+      </p>
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Timer Pomodoro Cuteefun</strong>
+          <p>
+            Un minuteur numérique silencieux pour structurer vos blocs de travail (25 minutes + 5 minutes de pause) sans dépendre de votre téléphone.[web:1330]
+          </p>
+          <a href="https://www.amazon.fr/Cuteefun-Num%C3%A9rique-Affichage-Silencieux-Productivit%C3%A9/dp/B0G521L3S3?tag=zencheztoi-21" target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+        <div class="product-card">
+          <strong>Carnet recyclé éco-responsable</strong>
+          <p>
+            Un carnet à couverture éco-responsable pour noter vos priorités, intentions et idées à remettre à plus tard, et alléger un peu la charge mentale.[web:1327][web:1333]
+          </p>
+          <a href="https://www.amazon.fr/certifi%C3%A9-%C3%89criture-Couverture-%C3%A9co-responsable-%C3%A9crivant/dp/B0DT14P82T?tag=zencheztoi-21" target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+        <div class="product-card">
+          <strong>Bouchons d’oreilles Alpine</strong>
+          <p>
+            Des bouchons d’oreilles pensés pour réduire le bruit ambiant et vous aider à créer une bulle sonore plus calme, à la maison ou au travail.[web:1326][web:1329]
+          </p>
+          <a href="https://www.amazon.fr/Boules-Protection-Auditive-Naturelle-Quies%C3%82/dp/B01M8KPCPO?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3ORY5U6X9XIVJ&dib=eyJ2IjoiMSJ9.jJN1f0Zr_hdp8SZahklhot-2nDlnTYkMMJJZISAqykYr8rw5bvbK5wJVG9609yHAEeR3odXvvMYqQRt2Ga38umda91BHG5andsIKzzWwqxeP1m78U8g7AlxXrMeyxjpqgqPqsfk8vWq_DyNfQnWUQnVWFZoYFUpR492clWcB4qFjR0wbf1YC7q4BnrhUcRk2IIyNNq5up8A3pbDzojR87edFjEla7NF-9G4ladA8N6lJPEBLcjXUbc2Tr7VTAIyoDYXLXlgrQfYe5vewmYCwRMk7QGeibk1eHAyNUyuELl0.bHYzJ1VaHWWVQfNqfOfEq81Eyl5-NT7G-3V335hs34o&dib_tag=se&keywords=bouchon+anti+bruit+naturel&qid=1776754057&sprefix=bouchon+anti+bruit+naturel%2Caps%2C239&sr=8-9&linkCode=ll2&tag=zencheztoi-21&linkId=2e9eb3773cdae23b633699b8b42b1361&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section id="ancrage">
+      <h2>Installer le focus comme un rendez-vous avec vous</h2>
+      <p>
+        Plutôt que d’attendre de “vous sentir concentré·e” pour commencer, vous pouvez décider d’un moment de la journée où vous vous offrez un petit bloc de focus, comme un rendez‑vous avec vous‑même.[web:274][web:277][web:283]
+      </p>
+      <p>
+        Même si vous n’êtes pas dans un état de concentration parfaite, le fait de revenir, encore et encore, à ce que vous faites, est déjà une manière de rééduquer doucement votre attention.[web:277][web:283]
+      </p>
+      <div class="box">
+        <div class="box-title">Une invitation</div>
+        <p>
+          Demain, choisissez une tâche qui compte pour vous et accordez‑lui un bloc de 25 minutes : clarifiez votre intention, simplifiez votre environnement, coupez les notifications et offrez‑vous ce temps pour avancer, sans vous juger.[web:275][web:277][web:281][web:1330]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="index.html">Accueil</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

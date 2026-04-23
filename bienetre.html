@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Chez Toi Bien-être</title>
+  <meta name="description" content="Un univers pour apaiser le stress, retrouver de l’énergie, mieux dormir et respirer avec des pistes douces et crédibles.">
+  <style>
+    :root{
+      --bg:#f4f1eb;
+      --text:#2f2b29;
+      --muted:#716a66;
+      --accent:#a78c6d;
+      --surface:rgba(255,255,255,.92);
+      --surface-soft:rgba(255,255,255,.9);
+      --dark:#221d1a;
+      --border:rgba(47,43,41,.14);
+      --shadow-soft:0 20px 50px rgba(0,0,0,.06);
+      --shadow-strong:0 24px 60px rgba(0,0,0,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Georgia,serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .hero{
+      min-height:92vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem 1.5rem 2.5rem;
+      background:
+        linear-gradient(rgba(19,18,17,.34),rgba(19,18,17,.48)),
+        url("hero-bienetre.jpg") center/cover no-repeat;
+      color:#fff;
+      text-align:left;
+    }
+    .hero-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr .9fr;
+      gap:2rem;
+      align-items:center;
+    }
+    .logo{
+      width:min(330px,60vw);
+      margin:0 0 1.2rem;
+      filter:drop-shadow(0 12px 32px rgba(0,0,0,.45));
+    }
+
+    nav.main-nav{
+      position:absolute;
+      top:1.2rem;
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      gap:.9rem;
+      flex-wrap:wrap;
+      justify-content:center;
+      padding:.4rem .8rem;
+      border-radius:999px;
+      background:rgba(0,0,0,.32);
+      border:1px solid rgba(255,255,255,.18);
+      backdrop-filter:blur(10px);
+      font-size:.85rem;
+      z-index:3;
+    }
+    nav.main-nav a{
+      padding:.5rem .9rem;
+      border-radius:999px;
+      background:transparent;
+      color:#fdfaf6;
+    }
+
+    h1{
+      font-size:clamp(1.95rem,3.3vw,3.15rem);
+      line-height:1.12;
+      margin:0 0 1rem;
+      max-width:18ch;
+    }
+    .sub{
+      max-width:540px;
+      margin:0 0 1.3rem;
+      font-size:.98rem;
+      color:rgba(255,255,255,.9);
+    }
+    .pill-hero{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.82rem 1.2rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      font-size:.88rem;
+      background:#fff;
+      color:#2f2b29;
+      white-space:nowrap;
+    }
+    .hero-aside{
+      background:rgba(0,0,0,.24);
+      border-radius:22px;
+      padding:1.35rem 1.45rem;
+      border:1px solid rgba(255,255,255,.26);
+      font-size:.94rem;
+    }
+
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:3.5rem 1.25rem 4.5rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1.4fr .9fr;
+      gap:1.6rem;
+      align-items:start;
+      margin-bottom:3.5rem;
+    }
+    .card{
+      background:var(--surface);
+      border-radius:26px;
+      border:1px solid var(--border);
+      padding:1.5rem;
+      box-shadow:var(--shadow-strong);
+    }
+    .card-soft{
+      background:var(--surface-soft);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:1.35rem;
+      box-shadow:var(--shadow-soft);
+    }
+    .eyebrow{
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.78rem;
+      color:var(--accent);
+      margin-bottom:.4rem;
+    }
+    h2{
+      margin:.2rem 0 1rem;
+      font-size:1.55rem;
+    }
+    .muted{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      margin-top:.8rem;
+    }
+    .links a{
+      padding:.55rem .95rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.85rem;
+    }
+
+    .blog-bienetre{
+      margin:0 0 3.5rem;
+      background:var(--surface-soft);
+      border-radius:24px;
+      border:1px solid var(--border);
+      padding:1.5rem 1.6rem;
+      box-shadow:var(--shadow-soft);
+    }
+    .blog-bienetre h3{
+      margin:.1rem 0 .6rem;
+      font-size:1.25rem;
+    }
+    .blog-bienetre p{
+      margin:0 0 1rem;
+      font-size:.95rem;
+      color:var(--muted);
+    }
+    .blog-bienetre-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      margin-top:.4rem;
+    }
+    .blog-bienetre-list a{
+      padding:.5rem .9rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.85rem;
+    }
+
+    .ad-section{
+      max-width:900px;
+      margin:0 auto;
+    }
+    .ad-slot{
+      margin:0 auto;
+      padding:1rem 1.2rem;
+      border-radius:18px;
+      border:1px dashed var(--border);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.7);
+    }
+
+    footer{
+      background:var(--dark);
+      color:#f4efe8;
+      padding:2rem 1.25rem;
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media(max-width:900px){
+      .hero{text-align:center;min-height:88vh;}
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-aside{margin-top:1rem;}
+      nav.main-nav{max-width:94vw;}
+      .grid{grid-template-columns:1fr;}
+      .logo{margin:0 auto 1.2rem;}
+      .sub{margin:0 auto 1.3rem;}
+      h1{margin:0 auto 1rem;}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="jardin.html">Jardin</a>
+      <a href="maison.html">Maison</a>
+      <a href="bienetre.html">Bien-être</a>
+      <a href="corps.html">Corps</a>
+      <a href="eso.html">Ésotérisme</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="hero-inner">
+      <div>
+        <img src="logo.jpg" alt="Logo Zen Chez Toi" class="logo">
+        <h1>Quand le corps ralentit et que l’esprit s’allège, la vie retrouve un peu plus de silence.</h1>
+        <p class="sub">
+          Un univers pour apaiser, recentrer, retrouver de l’énergie et proposer des solutions
+          simples et désirables au quotidien.
+        </p>
+        <a href="#contenu" class="pill-hero">Voir les pistes bien-être</a>
+      </div>
+      <div class="hero-aside">
+        <strong>Le calme devient concret.</strong>
+        <p>
+          Ici tu proposes des réponses simples à des besoins très réels :
+          sommeil, stress, fatigue, respiration, concentration et retour à soi.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="grid">
+      <article class="card">
+        <div class="eyebrow">Bien-être</div>
+        <h2>Rendre le calme plus accessible</h2>
+        <p>
+          Cette page rassemble tes grandes thématiques bien-être : fatigue, sommeil profond,
+          anti-stress, énergie, relaxation, méditation, respiration et retour au corps.
+        </p>
+        <p class="muted">
+          L’idée est de montrer que le bien-être n’est pas une abstraction :
+          ce sont des gestes, des habitudes et quelques produits choisis qui allègent réellement le quotidien.
+        </p>
+        <div class="links">
+          <a href="fatigue.html">Fatigue</a>
+          <a href="sommeil-profond.html">Sommeil profond</a>
+          <a href="anti-stress.html">Anti-stress</a>
+          <a href="energie-vitalite.html">Énergie & vitalité</a>
+          <a href="relaxation.html">Respiration & relaxation</a>
+          <a href="meditation.html">Méditation</a>
+          <a href="focus.html">Focus</a>
+          <a href="yoga-etirements.html">Yoga & étirements</a>
+          <a href="bienetre-selection.html">Les essentiels</a>
+        </div>
+      </article>
+
+      <aside class="card-soft">
+        <div class="eyebrow">Intérêt</div>
+        <h2>Rassurer puis orienter</h2>
+        <p class="muted">
+          Les personnes qui arrivent ici ne cherchent pas “le bien-être” au sens vague :
+          elles cherchent souvent à moins stresser, mieux dormir, retrouver un peu de souffle ou se recentrer.
+        </p>
+        <p class="muted">
+          Ta mission est de les rassurer, puis de les orienter soit vers la bonne page précise,
+          soit vers ta sélection essentielle si elles veulent commencer simplement.
+        </p>
+        <div class="links" style="margin-top:1rem;">
+          <a href="bienetre-selection.html">Voir les essentiels Bien-être</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="blog-bienetre" aria-labelledby="blog-bienetre-titre">
+      <div class="eyebrow">Univers Bien-être</div>
+      <h3 id="blog-bienetre-titre">Les pages éditoriales de l’univers Bien-être</h3>
+      <p>
+        Pour approfondir chaque sujet, tu peux renvoyer ici vers les pages qui expliquent,
+        rassurent et donnent des pistes concrètes avant de proposer quelques produits bien choisis.
+      </p>
+      <div class="blog-bienetre-list">
+        <a href="fatigue.html">Fatigue & manque d’élan</a>
+        <a href="sommeil-profond.html">Sommeil plus profond</a>
+        <a href="anti-stress.html">Stress & apaisement</a>
+        <a href="energie-vitalite.html">Énergie & vitalité</a>
+        <a href="relaxation.html">Respiration & relaxation</a>
+        <a href="meditation.html">Méditation</a>
+        <a href="focus.html">Focus & concentration</a>
+        <a href="yoga-etirements.html">Yoga & étirements</a>
+        <a href="bienetre-selection.html">Les essentiels Bien-être</a>
+      </div>
+    </section>
+
+    <section class="ad-section" aria-label="contenu sponsorisé">
+      <div class="ad-slot">
+        <!-- Code publicitaire / bloc affiliation à insérer ici -->
+        Emplacement discret pour une sélection bien-être
+        (infusions, compléments doux, accessoires de détente, respiration, méditation…).
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Zen Chez Toi Bien-être • calme, respiration et solutions douces
+  </footer>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatigue : retrouver un peu d’élan au quotidien | Zen Chez Toi</title>
+
+  <meta name="description" content="Fatigue persistante, manque d’énergie, baisse d’élan : comprendre les causes fréquentes et installer un rituel doux avec récupération, hydratation et complément ciblé.">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Fonts corrigées -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fff7f4;
+      --text: #3b221d;
+      --muted: #8a5c52;
+      --accent: #e27b63;
+      --dark: #2a1410;
+      --surface: rgba(255,255,255,.94);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: 0.3s;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250,246,243,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-wrap a {
+      font-size: .8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: .1em;
+      padding: 4px 8px;
+    }
+
+    .nav-wrap a.active,
+    .nav-wrap a:hover {
+      color: var(--accent);
+    }
+
+    .dot {
+      color: rgba(0,0,0,.1);
+      font-size: .7rem;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      background: #000;
+      line-height: 0;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      max-height: 460px;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .hero-content {
+      max-width: 860px;
+      color: white;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      opacity: .9;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      margin: 0 0 14px;
+      line-height: 1.08;
+    }
+
+    .hero-sub {
+      font-size: 1.04rem;
+      max-width: 720px;
+      margin: 0 auto;
+      color: rgba(255,255,255,.92);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 20px 70px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 42px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0 0 14px;
+    }
+
+    li { margin-bottom: 6px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px;
+      margin: 26px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,.05);
+      border: 1px solid rgba(0,0,0,.03);
+    }
+
+    .cta-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: .95rem;
+    }
+
+    .cta-link:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .note {
+      font-size: .95rem;
+      color: var(--muted);
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html" class="active">Corps</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="assets/fatigue.jpg" alt="Retrouver de l’énergie et apaiser la fatigue">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="hero-kicker">Corps · Vitalité</div>
+        <h1>Fatigue : retrouver un peu d’élan sans brusquer le corps</h1>
+        <p class="hero-sub">
+          La fatigue peut venir d’un manque de sommeil, du stress, d’une récupération incomplète, d’une hydratation insuffisante
+          ou parfois d’une carence nutritionnelle.[web:937][web:943][web:945] Quand elle s’installe, le plus utile est souvent
+          de revenir à quelques bases simples avant de vouloir tout révolutionner d’un coup.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Quand la fatigue devient plus qu’un simple coup de mou</h2>
+      <p>
+        La fatigue ne se limite pas à l’envie de dormir. Elle peut aussi s’exprimer par une perte de motivation, des difficultés
+        de concentration, une irritabilité, des douleurs diffuses ou une sensation de récupération insuffisante même après une nuit
+        complète.[web:937][web:945]
+      </p>
+      <p>
+        Quand elle dure, elle mérite d’être observée avec sérieux, surtout si elle s’accompagne d’essoufflement, de pâleur,
+        de troubles du sommeil ou d’une baisse nette des capacités habituelles.[web:937][web:945]
+      </p>
+    </section>
+
+    <section>
+      <h2>Les bases qui soutiennent l’énergie</h2>
+      <p>
+        Avant même de penser complément, il est utile de regarder les piliers les plus simples : sommeil, hydratation, rythme
+        des repas, lumière du jour et mouvement doux. Une légère déshydratation peut déjà altérer l’attention et le niveau
+        d’énergie perçu.[web:943][web:1275]
+      </p>
+      <ul>
+        <li>Boire régulièrement dans la journée, sans attendre la sensation de soif.[web:943][web:1272]</li>
+        <li>Éviter les excès de caféine tardive qui perturbent le repos.[web:943][web:946]</li>
+        <li>Sortir quelques minutes à la lumière du jour pour aider le rythme veille-sommeil.[web:755][web:1278]</li>
+        <li>Garder un minimum de mouvement, même doux, pour relancer sans s’épuiser.[web:761][web:1274]</li>
+      </ul>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section>
+      <h2>3 gestes express quand la fatigue monte</h2>
+      <p>
+        Quand la fatigue se fait sentir en plein milieu de journée, vous pouvez tester ces trois gestes rapides pour vous donner un peu plus d’élan, sans vous pousser au‑delà de vos limites.[web:1260][web:1312]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Verre d’eau + respiration lente</div>
+        <p>
+          Commencez par boire un grand verre d’eau à température ambiante, puis prenez une minute pour respirer profondément : inspirez sur 4 secondes, bloquez 2 secondes, expirez sur 6 secondes, à répéter 4 à 5 fois.[web:1307][web:1311]
+          L’hydratation et le souffle profond aident à faire descendre un peu la tension et à clarifier le ressenti, sans cacher la fatigue réelle.[web:1310]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. 3 minutes de mouvement doux</div>
+        <p>
+          Levez‑vous, marchez dans la pièce, étirez la nuque et les épaules, faites quelques pas dans les escaliers ou dehors si possible.[web:1312][web:1313]
+          Même très court, ce mouvement relance la circulation et peut alléger la sensation de lourdeur qui accompagne certains coups de barre.[web:761]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Un rituel du soir pour recharger le terrain</div>
+        <p>
+          Si la fatigue revient souvent, vous pouvez installer un petit rituel de fin de journée : hydratation, coucher à heure régulière quand c’est possible, et, après avis médical, un complément ciblé comme un magnésium associé à des vitamines B.[web:1270][web:1273][web:1309]
+        </p>
+        <p>
+          Le magnésium et certaines vitamines B sont souvent cités pour leur rôle dans le métabolisme énergétique et l’équilibre nerveux, en soutien d’une meilleure récupération.[web:1273][web:1279]
+        </p>
+        <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">
+          Un complément ne remplace pas une recherche de cause quand la fatigue dure, mais il peut accompagner votre corps pendant que vous ajustez sommeil, rythme et charge mentale.[web:1292][web:1310]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Le rôle du magnésium et des vitamines B</h2>
+      <p>
+        Le magnésium intervient dans de nombreuses réactions liées à la production d’énergie, et les vitamines du groupe B
+        participent elles aussi au métabolisme énergétique.[web:1270][web:1273][web:1279] Plusieurs sources soulignent aussi la complémentarité
+        fréquente entre magnésium et vitamine B6 dans les contextes de fatigue, stress, nervosité ou sommeil perturbé.[web:1273][web:1276]
+      </p>
+      <p>
+        Une fatigue persistante peut parfois être liée à une carence, notamment en certaines vitamines ou minéraux, ce qui
+        explique pourquoi un complément bien choisi peut avoir sa place dans une approche plus large.[web:942][web:945]
+      </p>
+    </section>
+
+    <section>
+      <h2>Produit choisi pour cette page</h2>
+      <p>
+        Pour cette fiche, tu as prévu un complément orienté <strong>magnésium + vitamines B</strong>, ce qui est cohérent avec une page
+        consacrée à la fatigue et au manque d’élan, surtout quand le stress ou la récupération insuffisante entrent aussi en jeu.[web:1270][web:1276]
+      </p>
+
+      <div class="box">
+        <strong>Produit associé – Magnésium et vitamines B</strong>
+        <p>
+          Ce type de complément peut s’intégrer comme soutien ponctuel ou saisonnier, en parallèle d’un meilleur sommeil,
+          d’une hydratation plus régulière et d’un rythme quotidien un peu mieux réparti. Il ne remplace pas une recherche de cause
+          si la fatigue dure, mais il peut accompagner une phase de récupération.[web:1270][web:1276][web:1279]
+        </p>
+        <a class="cta-link"
+           href="https://www.amazon.fr/s?k=magnesium+vitamines+B+fatigue&tag=zencheztoi-21"
+           target="_blank" rel="nofollow sponsored">
+          Voir le complément fatigue sur Amazon
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ce qu’il faut surveiller si la fatigue persiste</h2>
+      <p>
+        Si la fatigue s’installe durablement, si elle ne s’améliore pas malgré le repos, ou si elle s’accompagne d’autres signes
+        comme une grande pâleur, un essoufflement, des troubles neurologiques, des fourmillements ou une vraie baisse de fonctionnement,
+        il vaut mieux demander un avis médical.[web:937][web:942][web:945]
+      </p>
+      <p class="note">
+        Cette page propose une approche de confort et d’accompagnement, mais elle ne remplace pas une évaluation de santé en cas
+        de fatigue importante ou inhabituelle.[web:937][web:945]
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;">
+      Zen <em style="color:var(--accent);font-style:italic;">Chez</em> Toi
+    </div>
+    <p style="opacity:.65;">© 2026 Zen Chez Toi — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

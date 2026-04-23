@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Chez Toi – Blog</title>
+  <meta name="description" content="Le blog Zen Chez Toi : articles pour aller plus loin, réfléchir, t’inspirer et relier les cinq univers entre eux.">
+  <style>
+    :root{
+      --bg:#f5f2ec;
+      --text:#2b2622;
+      --muted:#6f6660;
+      --accent:#a67b51;
+      --surface:rgba(255,255,255,.95);
+      --dark:#221b16;
+      --border:rgba(43,38,34,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Georgia,serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    /* HEADER */
+    header{
+      background:var(--dark);
+      color:#f4eee8;
+      padding:1.1rem 1.5rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .topbar{
+      max-width:1150px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+      font-size:.95rem;
+    }
+    .brand img{
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      object-fit:cover;
+    }
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      font-size:.85rem;
+    }
+    nav a{
+      padding:.45rem .85rem;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    /* HERO BLOG */
+    .hero-blog{
+      max-width:1150px;
+      margin:1.8rem auto 0;
+      padding:0 1.25rem 2rem;
+    }
+    .hero-blog h1{
+      font-size:2.1rem;
+      margin:.2rem 0 .6rem;
+    }
+    .hero-blog p{
+      margin:0;
+      color:var(--muted);
+      max-width:720px;
+      font-size:.98rem;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.35rem .7rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.7);
+      font-size:.8rem;
+      margin-bottom:.4rem;
+    }
+
+    main{
+      max-width:1150px;
+      margin:0 auto;
+      padding:0 1.25rem 4rem;
+    }
+
+    /* LAYOUT */
+    .layout{
+      display:grid;
+      grid-template-columns:2.1fr 1fr;
+      gap:1.8rem;
+      align-items:start;
+    }
+
+    /* POSTS */
+    .section-title{
+      font-size:1.3rem;
+      margin:2rem 0 1rem;
+    }
+    .posts-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.2rem;
+    }
+    .post-card{
+      background:var(--surface);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:1.2rem 1.3rem;
+      box-shadow:0 18px 40px rgba(0,0,0,.04);
+    }
+    .post-meta{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+      margin-bottom:.3rem;
+    }
+    .post-card h2{
+      font-size:1.05rem;
+      margin:.1rem 0 .4rem;
+    }
+    .post-card p{
+      margin:0 0 .7rem;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    .post-card a.more{
+      display:inline-block;
+      font-size:.88rem;
+      padding:.45rem .85rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      display:flex;
+      flex-direction:column;
+      gap:1.2rem;
+    }
+    .side-block{
+      background:var(--surface);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:1.2rem 1.3rem;
+      box-shadow:0 18px 40px rgba(0,0,0,.04);
+      font-size:.92rem;
+    }
+    .side-block h3{
+      margin:.1rem 0 .6rem;
+      font-size:1.02rem;
+    }
+    .chip-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-top:.3rem;
+    }
+    .chip-row a{
+      padding:.4rem .75rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.82rem;
+    }
+    .side-block ul{
+      list-style:none;
+      padding:0;
+      margin:.2rem 0 0;
+      font-size:.9rem;
+    }
+    .side-block li+li{
+      margin-top:.25rem;
+    }
+
+    /* Slot pub discret */
+    .ad-slot{
+      margin:1.5rem 0 0;
+      padding:1rem 1.1rem;
+      border-radius:18px;
+      border:1px dashed var(--border);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.8);
+    }
+
+    footer{
+      background:var(--dark);
+      color:#f4eee8;
+      padding:2rem 1.25rem;
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media(max-width:960px){
+      .layout{grid-template-columns:1fr;}
+      .posts-grid{grid-template-columns:1fr;}
+      header{position:static;}
+      .topbar{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <img src="logo.jpg" alt="Logo Zen Chez Toi">
+        <span>Zen Chez Toi – Blog</span>
+      </div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="jardin.html">Jardin</a>
+        <a href="maison.html">Maison</a>
+        <a href="bienetre.html">Bien-être</a>
+        <a href="corps.html">Corps</a>
+        <a href="eso.html">Ésotérisme</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-blog">
+    <div class="badge">
+      <span>Articles</span><span>•</span><span>Guides &amp; inspirations</span>
+    </div>
+    <h1>Le blog qui relie tes 5 univers.</h1>
+    <p>
+      Ici, tu peux raconter, expliquer, inspirer, relier jardin, maison, corps, bien-être et ésotérisme.
+      Chaque article peut ensuite envoyer vers tes pages “problèmes” et tes recommandations.
+    </p>
+  </section>
+
+  <main>
+    <div class="layout">
+      <section>
+        <h2 class="section-title">Autour du jardin et de la maison</h2>
+        <div class="posts-grid">
+          <article class="post-card">
+            <div class="post-meta">Jardin • Conseils</div>
+            <h2>Comprendre ce que ton jardin essaie de te dire</h2>
+            <p>
+              Un article pour expliquer les signes de fatigue du sol, des feuilles,
+              et comment les relier à tes pages pucerons, mildiou, oïdium, sol épuisé…
+            </p>
+            <a class="more" href="pucerons.html">Voir la page Pucerons</a>
+          </article>
+
+          <article class="post-card">
+            <div class="post-meta">Maison • Ambiance</div>
+            <h2>Alléger l’air chez toi, pièce par pièce</h2>
+            <p>
+              Un texte qui peut renvoyer vers humidité, mauvaises odeurs, vitres éclatantes
+              et canalisations pour transformer ton quotidien sans tout bouleverser.
+            </p>
+            <a class="more" href="humidite.html">Voir la page Humidité</a>
+          </article>
+        </div>
+
+        <h2 class="section-title">Bien-être, corps et monde intérieur</h2>
+        <div class="posts-grid">
+          <article class="post-card">
+            <div class="post-meta">Bien-être • Sommeil</div>
+            <h2>Quand le corps ne lâche pas la journée</h2>
+            <p>
+              Article qui peut relier fatigue, sommeil profond, méditation et anti-stress,
+              avec des pistes concrètes pour relâcher vraiment.
+            </p>
+            <a class="more" href="sommeil-profond.html">Voir Sommeil profond</a>
+          </article>
+
+          <article class="post-card">
+            <div class="post-meta">Ésotérisme • Rituels</div>
+            <h2>Donner une forme à tes questions</h2>
+            <p>
+              Un texte qui renvoie vers tarot, runes, pendule, cristaux et encens
+              pour accompagner les moments de doute ou de transition.
+            </p>
+            <a class="more" href="tarot.html">Voir la page Tarot</a>
+          </article>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="side-block">
+          <h3>Explorer par univers</h3>
+          <div class="chip-row">
+            <a href="jardin.html">Côté Jardin</a>
+            <a href="maison.html">Côté Maison</a>
+            <a href="bienetre.html">Côté Bien-être</a>
+            <a href="corps.html">Côté Corps</a>
+            <a href="eso.html">Côté Ésotérisme</a>
+          </div>
+        </div>
+
+        <div class="side-block">
+          <h3>Pages utiles à relier</h3>
+          <ul>
+            <li><a href="pucerons.html">Traiter les pucerons</a></li>
+            <li><a href="humidite.html">Gérer l’humidité</a></li>
+            <li><a href="sommeil-profond.html">Retrouver un sommeil profond</a></li>
+            <li><a href="mal-de-dos.html">Soulager le mal de dos</a></li>
+            <li><a href="tarot.html">Découvrir le tarot</a></li>
+          </ul>
+        </div>
+
+        <!-- Emplacement publicitaire discret (blog sidebar) -->
+        <div class="side-block ad-slot" aria-label="contenu sponsorisé">
+          <!-- Code publicitaire / bloc affiliation à insérer ici -->
+          Emplacement prévu pour un encart publicitaire discret (produit phare, bannière, sélection).
+        </div>
+
+        <div class="side-block">
+          <h3>Note pour toi</h3>
+          <p>
+            Tu pourras créer de nouveaux articles en suivant ce principe :
+            un sujet précis, de la valeur, puis des liens vers tes pages clés
+            et, quand tu seras prêt, quelques produits bien choisis.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © Zen Chez Toi – Blog des 5 univers
+  </footer>
+</body>
+</html>

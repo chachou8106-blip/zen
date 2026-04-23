@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mildiou au potager : reconnaître les premiers signes, prévenir avec quelques gestes simples et utiliser des traitements naturels (bicarbonate, purins, lait...).">
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <title>Mildiou : protéger le potager naturellement | Zen Chez Toi</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </scripipt>
+
+  //fonts.googleapis.comom">
+  //fonts.gstatic.com" crossorigigin>
+  //fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fdfaf5;
+      --text: #332a22;
+      --muted: #685e55;
+      --accent: #5da679;
+      --dark: #1f140e;
+      --surface: rgba(255,255,255,.92);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 245, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+
+    .dot {
+      color: rgba(0,0,0,0.12);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 20px 24px;
+      text-align: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .box-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo em {
+      color: #d97757;
+      font-style: italic;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0.72;
+      font-size: 0.88rem;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 52px; }
+      h2 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html" class="active">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Jardin · Maladies</div>
+    <h1>Mildiou : protéger le potager sans tout arracher</h1>
+    <p class="hero-sub">
+      Le mildiou est la maladie qui fait le plus peur au potager, surtout sur les tomates et les pommes de terre. Entre prévention, observation et quelques traitements naturels, tu peux réduire son impact sans perdre tout plaisir à jardiner.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Reconnaître les premiers signes</h2>
+      <p>
+        Le mildiou est une maladie fongique qui provoque des taches vert foncé à brun sur les feuilles, souvent en bordure, avant qu’elles ne jaunissent et ne se dessèchent.[web:84][web:87][web:90][web:93]
+      </p>
+      <p>
+        Il apprécie particulièrement les périodes humides et douces, et touche surtout les tomates, pommes de terre et autres plantes du même groupe.[web:84][web:87][web:90]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Quelques signes typiques</div>
+        <u
+        <ul>
+          >Petites taches vert foncé à brun sur les feuilles, qui s’étendent rapidement.[web:84][web:87][web:90][web:93]</li>
+          >Feuilles qui se dessèchent, plants qui semblent s’effondrer en quelques jours par temps humide.[web:84][web:87]</li>
+          >Taches brunes sur les fruits (tomates) ou sur les tubercules (pommes de terre) en cas d’attaque sévère.[web:84][web:87][web:90]
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Geste n°1 : la prévention au quotidien</h2>
+      <p>
+        Les sources de jardinage insistent sur le fait qu’il n’existe pas de solution miracle curative, et que le plus efficace reste une bonne prévention.[web:84][web:87][web:90][web:93]
+      </p>
+
+      <h3>Espacer et aérer les plants</h3>
+      <p>
+        De nombreux guides recommandent de bien espacer les plants, d’aérer le feuillage (taille des feuilles basses, suppression des gourmands) et de favoriser la circulation de l’air pour que l’humidité ne stagne pas.[web:84][web:85][web:87][web:90][web:91]
+      </p>
+
+      <h3>Arroser au pied, le matin</h3>
+      <p>
+        Arroser les tomates et autres plantes sensibles au pied plutôt que sur le feuillage, de préférence le matin, revient dans la plupart des conseils pour limiter le développement du mildiou.[web:84][web:87][web:90][web:93]
+      </p>
+
+      <h3>Choisir variétés et emplacement</h3>
+      <p>
+        Certaines variétés de tomates sont décrites comme plus tolérantes au mildiou, et plusieurs sources recommandent aussi de ne pas planter tomates et pommes de terre côte à côte.[web:87][web:90][web:93]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Un sol vivant comme allié</div>
+        <p>
+          Les purins d’ortie, de prêle ou de consoude sont souvent conseillés pour stimuler les défenses naturelles des plantes et renforcer leur résistance aux maladies.[web:85][web:87][web:90][web:93]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Bicarbonate, lait et purins : traitements naturels souvent cités</h2>
+      <p>
+        Plusieurs traitements doux reviennent régulièrement dans les conseils de lutte contre le mildiou : bicarbonate de soude, purins végétaux, lait dilué, parfois en complément de pratiques classiques.[web:84][web:86][web:87][web:90][web:93]
+      </p>
+
+      <h3>Solution au bicarbonate de soude</h3>
+      <p>
+        De nombreux jardiniers proposent de diluer environ 1 cuillère à café (5 à 10 g) de bicarbonate de soude par litre d’eau, avec une petite quantité de savon noir comme agent mouillant.[web:84][web:86][web:89][web:90][web:93]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Exemple de dosage mentionné</div>
+        <u
+        <ul>
+          >1 cuillère à café de bicarbonate de soude pour 1 litre d’eau.[web:84][web:86][web:90][web:93]</li>
+          >Ajouter 1 cuillère à café de savon noir liquide ou un peu de savon doux pour aider la solution à adhérer.[web:84][web:86][web:90][web:93]</li>
+          >Pulvériser sur l’ensemble du feuillage en prévention ou au tout début de l’attaque, sans dépasser environ 10 g/L pour éviter de brûler les feuilles.[web:84][web:86][web:89][web:93]</li>
+        </ul>
+      </div>
+
+      <h3>Lait dilué</h3>
+      <p>
+        Le lait dilué (souvent 1 volume de lait pour 9 volumes d’eau) est présenté comme un fongicide doux à pulvériser régulièrement sur les feuilles, qui peut aussi aider contre le mildiou.[web:90][web:93]
+      </p>
+
+      <h3>Purins d’ortie, de prêle, de consoude</h3>
+      <p>
+        Les purins (surtout prêle et ortie, parfois consoude en complément) sont souvent recommandés en prévention, à pulvériser sur les feuilles ou à arroser au pied pour renforcer la plante et limiter l’installation du champignon.[web:85][web:87][web:90][web:91][web:93]
+      </p>
+    </section>
+
+    <section>
+      <h2>Que faire en cas d’attaque déjà installée ?</h2>
+      <p>
+        Si le mildiou est bien visible, les conseils convergent vers la suppression rapide des feuilles et parties les plus atteintes, en évitant de les laisser au sol ou dans le compost.[web:84][web:87][web:90][web:93]
+      </p>
+      <p>
+        Dans certains cas, il est recommandé d’arracher complètement les plants les plus touchés pour protéger les autres, surtout lorsque la météo reste très favorable au mildiou.[web:84][web:87][web:90][web:93]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Préserver ce qui peut l’être</div>
+        <p>
+          Plusieurs guides conseillent de récolter les fruits encore sains dès que possible, de nettoyer les tuteurs et de renouveler certaines pratiques de culture l’année suivante (rotation, variétés, emplacement).[web:87][web:90][web:93]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="box">
+        <div class="box-title">3 gestes express quand la météo devient humide</div>
+        <u
+        <ul>
+          >Faire un tour rapide des tomates et pommes de terre, retirer les feuilles les plus basses qui touchent le sol et celles qui paraissent douteuses.[web:84][web:87]</li>
+          >Préparer une pulvérisation douce (bicarbonate + un peu de savon noir, ou purin de prêle/ortie dilué) à passer en prévention sur les plants les plus sensibles.[web:84][web:85][web:87][web:90][web:93]</li>
+          >Arroser seulement au pied, le matin, et laisser bien respirer le feuillage en évitant les arrosages en fin de journée.[web:84][web:87][web:90][web:93]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outils utiles pour gérer le mildiou</h2>
+      <p>
+        Sans multiplier les produits, quelques basiques peuvent t’aider à mettre en place ces traitements naturels et une prévention plus sereine.[web:84][web:85][web:86][web:87][web:90][web:93]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Bicarbonate de soude</strong>
+          <p>
+            Utilisé dans de nombreuses recettes de pulvérisation douce pour limiter le mildiou, en complément des gestes préventifs au potager.[web:84][web:86][web:90][web:93]
+          </p>
+          <a href="https://www.amazon.fr/dp/B0BQLQW79Z?psc=1&linkCode=ll2&tag=zencheztoi-21&linkId=4e8cd8bbec7fda5a2f7eb82cd3a57142&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Savon noir liquide pour le jardin</strong>
+          <p>
+            Un savon noir liquide naturel à diluer en petite quantité dans vos préparations (bicarbonate, purins) pour améliorer l’adhérence sur le feuillage et renforcer vos traitements maison.[web:84][web:86][web:90][web:93]
+          </p>
+          <a href="https://www.amazon.fr/Naturel-Concentr%C3%A9-SoluControl-Nettoyant-Feuilles/dp/B0DFXVQXLM?crid=1BT67RR0PSCIX&dib=eyJ2IjoiMSJ9.cvQooRl36W4qJXd30hJ6a0gdyfALAhmT91_5xfw6tLftnKYpcQzZHpsldY_QpHR4XA1onbggb74RMONWJ0oO2Dgjvd5gY8n3U3UT80vJeWtSaOWe2lS2k1G4FIe5TaUyRBKMqh1CwwkVKspNdCCs2Y7Btwas5pSJP0qjY00CF_pGbr6u0vvYGzaSoF4q5UmsULUSCA4J0kbbLYyg4b7FtTc7bEOJjUiKGU3e9FBVHvMUeDKN8U_5tF1GxAoewx2a-rP84XrlAPJhNL1AnrtUC2uH0BUe9TEg-dU4nVCDoX0.qgiVhP7sr75DSN089DC4hX3boSoUkhqnktxrUkyN_B0&dib_tag=se&keywords=savon+noir+liquide+pur+pour+le+jardin&qid=1776781012&sprefix=savon+noir+pour+le+jardin%2Caps%2C263&sr=8-12&linkCode=ll2&tag=zencheztoi-21&linkId=ed688f2604700b9bb0bd6fc47648ad6a&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Cocktail de purins prêle/ortie/consoude</strong>
+          <p>
+            Un mélange de purins de plantes prêt à l’emploi pour renforcer les défenses de tes légumes (dont les tomates) contre les maladies comme le mildiou, tout en nourrissant le sol de façon naturelle.[web:85][web:87][web:90][web:93]
+          </p>
+          <a href="https://www.amazon.fr/MGI-DEVELOPPEMENT-fran%C3%A7ais-Cocktail-consoude/dp/B08TRH3HDS?th=1&linkCode=ll2&tag=zencheztoi-21&linkId=1939b50d3996ba0e92df5d87d3c50788&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Garder confiance dans ton potager</h2>
+      <p>
+        Même si le mildiou peut décourager, les retours d’expérience montrent qu’on peut apprendre, ajuster ses pratiques et limiter les dégâts saison après saison.[web:84][web:87][web:90]
+      </p>
+      <p>
+        Avec quelques réflexes simples, des traitements naturels et une dose de patience, ton potager reste un lieu d’apprentissage et de plaisir, pas un terrain d’angoisse permanente.
+      </p>
+
+      <div class="box">
+        <div class="box-title">Petit rituel de saison</div>
+        <p>
+          Quand la météo annonce plusieurs jours humides et doux, fais un tour de tes tomates : un peu d’aération, un arrosage bien placé, un passage de purin ou de bicarbonate si besoin… et une respiration pour toi aussi.[web:84][web:85][web:87][web:90][web:93]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

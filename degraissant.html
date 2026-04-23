@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dégraissant naturel pour la cuisine | Zen Chez Toi</title>
+  <meta name="description" content="Comprendre les graisses tenaces en cuisine et découvrir des gestes simples, recettes maison et produits doux pour dégraisser sans étouffer votre intérieur.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google Fonts corrigé -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Maison : vert d'eau frais, cohérent avec un univers entretien/air sain */
+      --bg: #f4faf9;
+      --text: #243235;
+      --muted: #5f7b80;
+      --accent: #4aa6a0;
+      --dark: #142022;
+      --surface: rgba(255,255,255,.95);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 250, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+    .dot {
+      color: rgba(0,0,0,0.12);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 20px 24px;
+      text-align: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+    p { margin: 0 0 14px; }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+    li { margin-bottom: 8px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .box-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .product-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+    .footer-logo em {
+      color: #4aa6a0;
+      font-style: italic;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0.72;
+      font-size: 0.88rem;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 52px; }
+      h2 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html" class="active">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Maison · Entretien</div>
+    <h1>Dégraissant doux pour une cuisine qui respire</h1>
+    <p class="hero-sub">
+      Plaque grasse, hotte collante, traces sur les portes de placard… La cuisine vit avec toi au quotidien. 
+      L’idée ici : retrouver des surfaces propres, sans étouffer ton intérieur ni tes mains.[web:1181][web:1194]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Reconnaître quand la graisse s’installe</h2>
+      <p>
+        Graisses de cuisson, vapeurs, projections d’huile : avec le temps, elles forment un film collant sur les surfaces, surtout autour des plaques, de la hotte et du four.[web:1181][web:1183]
+      </p>
+      <p>
+        Même en nettoyant régulièrement, il reste parfois une sensation de “gras qui ne part jamais” ou des zones qui ternissent malgré les coups d’éponge.[web:1187][web:1188]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Signes typiques</div>
+        <ul>
+          <li>Surfaces mates ou collantes, même juste après un nettoyage rapide.[web:1182][web:1189]</li>
+          <li>Traces jaunâtres autour des poignées, interrupteurs, crédence.[web:1187][web:1189]</li>
+          <li>Hotte, filtre ou rebords de four qui accrochent sous les doigts.[web:1188][web:1189]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ce qui se cache souvent derrière</h2>
+      <p>
+        La graisse s’accumule surtout quand on cuisine souvent au même endroit, avec peu de ventilation ou une hotte peu utilisée, et un nettoyage limité à de l’eau savonneuse.[web:1181][web:1187]
+      </p>
+
+      <h3>La superposition de couches fines</h3>
+      <p>
+        Une fine pellicule grasse laissée après chaque cuisson finit par se transformer en dépôt plus dur, surtout sur les zones chaudes ou rarement essuyées.[web:1183][web:1189]
+      </p>
+
+      <h3>Les produits trop agressifs</h3>
+      <p>
+        Les dégraissants très forts peuvent abîmer certaines surfaces et irriter les voies respiratoires, ce qui donne parfois envie de les utiliser le moins possible et de laisser traîner la graisse.[web:1185][web:1186]
+      </p>
+
+      <h3>Manque de régularité</h3>
+      <p>
+        Quand on repousse souvent le “vrai” nettoyage parce qu’il demande trop d’énergie, on finit par se retrouver avec un chantier plus lourd qui décourage encore plus.[web:1187]
+      </p>
+    </section>
+
+    <section>
+      <h2>Des gestes simples pour dégraisser sans s’épuiser</h2>
+      <p>
+        L’objectif : réduire la graisse incrustée avec quelques gestes ciblés, puis garder une routine légère qui ne demande pas un dimanche entier.[web:1187][web:1183]
+      </p>
+
+      <h3>Geste n°1 : laisser le produit agir</h3>
+      <p>
+        Au lieu de frotter très fort, applique ton dégraissant (maison ou prêt à l’emploi), laisse-le agir quelques minutes sur les zones les plus grasses, puis essuie : le temps de pose fait une grande partie du travail.[web:1183][web:1189]
+      </p>
+
+      <h3>Geste n°2 : distinguer le “gros” du “courant”</h3>
+      <p>
+        Réserve un nettoyage plus profond (plaques, hotte, crédence) une fois toutes les 1 à 2 semaines, et contente-toi d’un coup d’éponge rapide au quotidien sur les zones de projection.[web:1187][web:1188]
+      </p>
+
+      <h3>Geste n°3 : protéger ce qui peut l’être</h3>
+      <p>
+        Pour les zones très exposées, un essuyage systématique après cuisson et, si besoin, une protection légère limitent l’accumulation de graisses.[web:1182][web:1187]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Petit rappel rassurant</div>
+        <p>
+          Tu n’as pas besoin de tout dégraisser parfaitement à chaque fois : quelques zones ciblées, traitées un peu mieux mais pas forcément plus longtemps, changent déjà beaucoup la sensation de propre.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : Recettes maison -->
+    <section>
+      <h2>3 recettes maison, de la plus douce à la plus costaud</h2>
+      <p>
+        Si tu préfères commencer avec ce que tu as déjà dans le placard, ces trois recettes vont du spray très doux au mélange plus costaud aux cristaux de soude, en restant sur des ingrédients simples.[web:1187][web:1196]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. Spray très doux au savon noir (quotidien)</div>
+        <p>
+          Idéal pour l’entretien courant des plaques peu grasses, façades de meubles et plans de travail.[web:1181][web:1193]
+        </p>
+        <ul>
+          <li>500 ml d’eau tiède.</li>
+          <li>1 à 2 cuillères à soupe de savon noir liquide (ou d’un dégraissant doux prêt à l’emploi dilué).[web:1181][web:1193]</li>
+          <li>Optionnel : 5–10 gouttes d’huile essentielle de citron ou d’orange douce si tu en utilises.</li>
+        </ul>
+        <p>
+          Verse l’eau tiède dans un flacon spray, ajoute le savon noir, puis les éventuelles huiles essentielles, et agite doucement.[web:1181]
+          Vaporise sur la surface, laisse agir 2–3 minutes, puis essuie avec une lingette microfibre.[web:1194]
+        </p>
+        <p class="product-note">
+          Tu peux par exemple utiliser ici le spray écologique prêt à l’emploi, légèrement dilué, en complément de quelques gouttes de savon noir si besoin.
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. Spray équilibré savon noir + vinaigre + bicarbonate</div>
+        <p>
+          Plus costaud, mais toujours raisonnable, pour la graisse installée sur crédence, hotte et portes de placards.[web:1187][web:1191]
+        </p>
+        <ul>
+          <li>750 ml d’eau chaude (non bouillante).</li>
+          <li>2 cuillères à soupe de savon noir liquide.</li>
+          <li>2 cuillères à soupe de vinaigre blanc.[web:1183][web:1196]</li>
+          <li>1 cuillère à soupe de bicarbonate de soude.</li>
+        </ul>
+        <p>
+          Mélange l’eau chaude et le savon noir, ajoute le bicarbonate, puis le vinaigre petit à petit (ça mousse, c’est normal), laisse retomber et verse dans un spray.[web:1187]
+        </p>
+        <p>
+          Vaporise sur les zones grasses, laisse agir 5–10 minutes, puis frotte avec tes éponges réutilisables ou lingettes microfibres avant de rincer ou d’essuyer à l’eau claire.[web:1187][web:1194]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Dégraissant fort aux cristaux de soude (usage ponctuel)</div>
+        <p>
+          Pour les cas costauds : hotte très encrassée, porte de four, grilles, casseroles très grasses.[web:1195][web:1201]
+        </p>
+        <ul>
+          <li>500 ml d’eau chaude (50–60 °C).</li>
+          <li>1 grosse cuillère à soupe de cristaux de soude (≈ 20 g).[web:1195][web:1205]</li>
+          <li>1 cuillère à soupe de savon noir liquide.</li>
+          <li>1 cuillère à soupe de vinaigre blanc.</li>
+        </ul>
+        <p>
+          Dissous les cristaux de soude dans l’eau chaude, ajoute le savon noir, puis le vinaigre blanc, et mets le tout dans un flacon résistant à la chaleur.[web:1195][web:1201]
+        </p>
+        <p>
+          Vaporise sur les zones très grasses, laisse agir 5–15 minutes, puis frotte avec une éponge ou une lingette microfibre et rince soigneusement, surtout sur les surfaces en contact alimentaire.[web:1203][web:1207]
+        </p>
+        <p class="product-note">
+          Porte des gants et aère bien la pièce : les cristaux de soude restent irritants, même s’ils sont d’origine minérale.[web:1196][web:1205]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outils utiles pour dégraisser en douceur</h2>
+      <p>
+        Ces produits ne sont pas des baguettes magiques, mais des alliés pratiques pour t’éviter de frotter pendant des heures ou d’utiliser des sprays trop agressifs.[web:1185][web:1190]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Dégraissant cuisine écologique prêt à l’emploi</strong>
+          <p>
+            Un spray dégraissant multi‑surfaces pour la cuisine, formulé avec des agents nettoyants plus doux pour le quotidien : plans de travail, portes de placard et plaques légèrement grasses.[web:1190]
+          </p>
+          <a href="https://www.amazon.fr/D%C3%A9graissant-Cuisine-%C3%89cologique-Multi-Surfaces-INDUSTRIES/dp/B0GSRRH9LV?th=1&linkCode=ll2&tag=zencheztoi-21&linkId=90cdb140d907f52f11b222a54006b6d9&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Dégraissant concentré pour graisses incrustées</strong>
+          <p>
+            Un dégraissant concentré à utiliser ponctuellement sur les zones très encrassées comme la hotte, l’intérieur du four ou certaines crédences, avec gants et bonne aération.[web:1186][web:1189]
+          </p>
+          <a href="https://www.amazon.fr/VRAI-PROFESSIONNEL-D%C3%A9graissant-Multi-Usages-Fabrication/dp/B00EZN1PCA?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3C5MG6UNSXSCM&dib=eyJ2IjoiMSJ9.OAAlWjGFguBKkI3Le-7zk2R1DH_C7MvHUOF0hfiZmwvxGmVztDZd8pnZ8Jt9jw6C4XN31HPYdQy4YF55vLSk18UJ2KlmHGjrXsrsTYYcTjJ52TVwCIX8N33z7_5CzukgBNRmjTcE2iDAtay5l9QF-OqF_vseq1RlWDJvbwu2Bp-e9E71HETRzRFf4Xf2vabMj5AhXr24rsggoifOt5Ff-CShyouOEQiTG3ZA8aKdcUFsWWwhMdIgfkguCSn1iArHwC-xTElTejNFQBKX94KxCyUjpT4dorXrxGbn5ZMoVuU.rUSH--Mlww45_aYT343qEJpeoUBpiW_5GHN25BuN0NM&dib_tag=se&keywords=d%C3%A9graissant%2Bconcentr%C3%A9%2Bhotte%2Bfour%2Bbio&qid=1776767240&sprefix=d%C3%A9graissant%2Bconcentr%C3%A9%2Bhotte%2Bfour%2Bbio%2Caps%2C222&sr=8-7&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=a0fe9c43fefcbfe4181ca05b572014b5&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Éponges réutilisables en microfibre de carbone</strong>
+          <p>
+            Éponges lavables qui nettoient sans rayer sur de nombreuses surfaces (cuisine, salle de bain, plaque induction, vaisselle, voiture), très absorbantes et réutilisables plus de 100 lavages pour réduire les déchets.[web:1188]
+          </p>
+          <a href="https://www.amazon.fr/DSproducts%C2%AE-Eponges-R%C3%A9utilisables-Lavables-Micro-Rayures/dp/B0D2P279CX?&linkCode=ll2&tag=zencheztoi-21&linkId=f3c548302564598bb17de69377cc1e83&ref_=as_li_ss_tlfait"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Lingettes microfibres DSproducts</strong>
+          <p>
+            Chiffons en microfibre de carbone pour vitres et surfaces lisses, qui retirent traces, poussières et peluches en un seul passage, lavables et réutilisables, tout en soutenant une petite startup française engagée dans le zéro déchet.[web:1188][web:1190]
+          </p>
+          <a href="https://www.amazon.fr/DSproducts%C2%AE-Chiffons-Microfibre-Nettoyage-Lingette/dp/B0CSZ5MXH8?crid=1WOGC45Y4JR7A&dib=eyJ2IjoiMSJ9.SeO-M3hoDFIvl6JfKR_be86505VkKC2mnQKbzPKnLgEtkqD5gp7cRZmGCJx_4AVwU5xjwITxv5rj58m-6PjifJTwOv9oOU_CGVsC4G_6ZZk7Ejt88NZXDCKusc1aK7PkYi3ysUqd_NNGQht555okU5c5wEUN08Ypuw3vtvF8R_q1aUCOOYH1eYtFVVfDH9jqmwsmRt0TlK3iz1V-h1qtAjKhezXaIj7RjhbAL7cRVuM88mDt8swlAzHMTi_J8E41b6XyqOFxwK4eaHqqFjUWBqmNOFGXnUukHkjYY49nRZg.tGQw2apQ1gbDofPAENXE9cry9fLXqBj9x0dYSNxNtes&dib_tag=se&keywords=microfibre+ecologique&qid=1776767700&sprefix=microfibre+ecologoque%2Caps%2C234&sr=8-5&linkCode=ll2&tag=zencheztoi-21&linkId=264db99a92f4f3ed3b620019e12cd1d9&ref_=as_li_ss_tl"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Un petit plan simple pour la cuisine</h2>
+      <p>
+        Plutôt que de viser une cuisine “parfaite”, tu peux poser un rythme réaliste : un peu chaque jour, un peu mieux de temps en temps, sans tout refaire à zéro.[web:1187][web:1183]
+      </p>
+
+      <div class="box">
+        <div class="box-title">En pratique sur 2 semaines</div>
+        <p>
+          Jour 1 : choisir une zone “prioritaire” (plaques + crédence) et laisser agir le dégraissant avant d’essuyer.<br>
+          Semaine 1 : faire un passage plus appuyé sur la hotte et les poignées, une fois dans la semaine.<br>
+          Semaine 2 : recommencer sur une autre zone (portes de placard, plan de travail) et ajuster le rythme selon ton énergie.[web:1187][web:1189]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

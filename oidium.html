@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oïdium au jardin : reconnaître le voile blanc sur les feuilles, prévenir naturellement et utiliser des traitements doux (bicarbonate, savon noir, purins...).">
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <title>Oïdium : prévenir & traiter en douceur | Zen Chez Toi</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fdfaf5;
+      --text: #332a22;
+      --muted: #685e55;
+      --accent: #5da679;
+      --dark: #1f140e;
+      --surface: rgba(255,255,255,.92);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 245, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+
+    .dot {
+      color: rgba(0,0,0,0.12);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 20px 24px;
+      text-align: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      margin: 40px 0 14px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      margin: 26px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .box-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 60px 20px 80px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo em {
+      color: #d97757;
+      font-style: italic;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0.72;
+      font-size: 0.88rem;
+      margin: 16px 0;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 52px; }
+      h2 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html" class="active">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Jardin · Maladies</div>
+    <h1>Oïdium : apprivoiser la “maladie du blanc”</h1>
+    <p class="hero-sub">
+      Un voile blanc poudreux sur les feuilles, les tiges ou les boutons de fleurs… L’oïdium arrive souvent quand il fait chaud et que l’air est un peu humide. Plutôt que paniquer, on peut apprendre à le repérer tôt et à le limiter naturellement.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Reconnaître l’oïdium</h2>
+      <p>
+        Les ressources de jardinage décrivent l’oïdium comme un champignon donnant un aspect farineux ou poudreux blanc à gris sur les feuilles et tiges.[web:107][web:108][web:110][web:113]
+      </p>
+      <p>
+        Il touche de nombreuses plantes (courgettes, rosiers, tomates, cucurbitacées, plantes ornementales) et apparaît souvent par temps chaud avec une certaine humidité, surtout si l’air circule mal autour des plantes.[web:107][web:108][web:109][web:111][web:112][web:113][web:116]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Signes fréquents</div>
+        <ul>
+          <li>Feuilles couvertes de taches blanches poudreuses, comme saupoudrées de farine.[web:107][web:108][web:111][web:113]</li>
+          <li>Feuilles qui se déforment, jaunissent, puis sèchent si l’attaque progresse.[web:107][web:110][web:111][web:113]</li>
+          <li>Plantes qui semblent moins vigoureuses, avec une floraison ou une production réduite.[web:107][web:108][web:111][web:113]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Prévenir l’oïdium en amont</h2>
+      <p>
+        De nombreux guides insistent sur la prévention : aération, arrosage au bon endroit, vigueur des plantes et rotations de culture.[web:107][web:111][web:112][web:113][web:114][web:115]
+      </p>
+
+      <h3>1. Aérer et espacer les plantations</h3>
+      <p>
+        Plusieurs sources recommandent de ne pas trop serrer les plantes, de tailler légèrement pour favoriser la circulation de l’air et de limiter les excès d’humidité stagnante sur le feuillage.[web:107][web:108][web:111][web:113][web:116]
+      </p>
+
+      <h3>2. Arroser au pied, pas sur les feuilles</h3>
+      <p>
+        Arroser le sol plutôt que le feuillage permet de limiter les conditions favorables aux champignons, surtout en soirée.[web:108][web:111][web:112][web:114][web:116]
+      </p>
+
+      <h3>3. Renforcer naturellement les plantes</h3>
+      <p>
+        Des articles mettent en avant les purins (prêle, ortie, consoude) appliqués en prévention pour renforcer les défenses naturelles des plantes et les rendre moins accueillantes pour l’oïdium.[web:107][web:111][web:113][web:114]
+      </p>
+    </section>
+
+    <section>
+      <h2>Bicarbonate & savon noir : une recette très utilisée</h2>
+      <p>
+        Le bicarbonate de soude est souvent cité comme traitement naturel accessible contre l’oïdium, surtout en combinant une petite quantité de bicarbonate avec de l’eau et un peu de savon noir comme agent mouillant.[web:107][web:110][web:111][web:113][web:115]
+      </p>
+
+      <h3>Solution simple au bicarbonate</h3>
+      <p>
+        Plusieurs sources proposent une base proche : environ 1 cuillère à café de bicarbonate de soude dans 1 litre d’eau, avec quelques gouttes de savon noir ou de savon de Marseille liquide.[web:110][web:111][web:113][web:114][web:115]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Exemple de dosage mentionné</div>
+        <ul>
+          <li>1 cuillère à café de bicarbonate de soude pour 1 litre d’eau.[web:110][web:111][web:113][web:115]</li>
+          <li>Quelques gouttes ou une cuillère à soupe de savon noir liquide pour aider la solution à adhérer aux feuilles.[web:110][web:111][web:113]</li>
+          <li>Pulvériser sur les deux faces des feuilles, de préférence le matin ou le soir, en répétant tous les quelques jours si besoin.[web:110][web:111][web:113][web:114][web:115]</li>
+        </ul>
+      </div>
+
+      <h3>Autres préparations naturelles</h3>
+      <p>
+        D’autres traitements naturels cités incluent des pulvérisations de lait dilué, de purin de prêle ou de mélanges de purins d’ortie, consoude et prêle, souvent utilisés en complément ou en prévention.[web:107][web:111][web:113][web:114]
+      </p>
+    </section>
+
+    <section>
+      <h2>Quand l’oïdium est déjà bien installé</h2>
+      <p>
+        Si le blanc est très présent, les ressources recommandent souvent de supprimer les feuilles les plus atteintes, de les retirer du jardin (sans les composter si elles sont trop contaminées), puis d’appliquer les traitements naturels.[web:107][web:108][web:111][web:113][web:116]
+      </p>
+      <p>
+        Les traitements sont en général à répéter régulièrement et associés à une amélioration des conditions de culture (aération, arrosage adapté, sol vivant).[web:107][web:111][web:112][web:113][web:114]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Rester réaliste</div>
+        <p>
+          Plusieurs jardiniers rappellent que l’objectif est souvent de limiter l’impact de l’oïdium et de préserver la saison, plutôt que d’effacer toute trace à tout prix.[web:107][web:111][web:113]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="box">
+        <div class="box-title">3 gestes express au premier voile blanc</div>
+        <ul>
+          <li>Retirer quelques feuilles très atteintes et les sortir du jardin, surtout si elles sont bien poudrées.[web:107][web:111][web:113][web:116]</li>
+          <li>Préparer une pulvérisation douce (1 c. à café de bicarbonate + un peu de savon noir dans 1 L d’eau) et traiter les deux faces des feuilles par temps sec.[web:110][web:111][web:113][web:114][web:115]</li>
+          <li>Éclaircir légèrement les plantes trop serrées et vérifier que l’air circule bien pour que les feuilles sèchent plus vite après la rosée ou la pluie.[web:108][web:111][web:112][web:116]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Outils utiles contre l’oïdium</h2>
+      <p>
+        Quelques produits simples suffisent pour mettre en œuvre ces traitements naturels.[web:107][web:110][web:111][web:113][web:115]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Bicarbonate de soude</strong>
+          <p>
+            Souvent présenté comme l’un des remèdes naturels les plus utilisés contre l’oïdium, en pulvérisation douce sur le feuillage.[web:107][web:110][web:111][web:113][web:115]
+          </p>
+          <a href="https://www.amazon.fr/dp/B0BQLQW79Z?psc=1&linkCode=ll2&tag=zencheztoi-21&linkId=4e8cd8bbec7fda5a2f7eb82cd3a57142&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Savon noir liquide</strong>
+          <p>
+            Utilisé comme agent mouillant dans les solutions au bicarbonate et dans d’autres recettes naturelles pour mieux fixer les traitements sur les feuilles.[web:110][web:111][web:113][web:115]
+          </p>
+          <a href="https://www.amazon.fr/Naturel-Concentr%C3%A9-SoluControl-Nettoyant-Feuilles/dp/B0DFXVQXLM?crid=1BT67RR0PSCIX&dib=eyJ2IjoiMSJ9.cvQooRl36W4qJXd30hJ6a0gdyfALAhmT91_5xfw6tLftnKYpcQzZHpsldY_QpHR4XA1onbggb74RMONWJ0oO2Dgjvd5gY8n3U3UT80vJeWtSaOWe2lS2k1G4FIe5TaUyRBKMqh1CwwkVKspNdCCs2Y7Btwas5pSJP0qjY00CF_pGbr6u0vvYGzaSoF4q5UmsULUSCA4J0kbbLYyg4b7FtTc7bEOJjUiKGU3e9FBVHvMUeDKN8U_5tF1GxAoewx2a-rP84XrlAPJhNL1AnrtUC2uH0BUe9TEg-dU4nVCDoX0.qgiVhP7sr75DSN089DC4hX3boSoUkhqnktxrUkyN_B0&dib_tag=se&keywords=savon+noir+liquide+pur+pour+le+jardin&qid=1776781012&sprefix=savon+noir+pour+le+jardin%2Caps%2C263&sr=8-12&linkCode=ll2&tag=zencheztoi-21&linkId=ed688f2604700b9bb0bd6fc47648ad6a&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+
+        <div class="product-card">
+          <strong>Purin de prêle / ortie prêt à l’emploi</strong>
+          <p>
+            Proposé en prévention pour renforcer les plantes et les aider à mieux résister aux maladies comme l’oïdium, en pulvérisation ou en arrosage dilué.[web:107][web:111][web:113][web:114]
+          </p>
+          <a href="https://www.amazon.fr/MGI-DEVELOPPEMENT-fran%C3%A7ais-Cocktail-consoude/dp/B08TRH3HDS?th=1&linkCode=ll2&tag=zencheztoi-21&linkId=1939b50d3996ba0e92df5d87d3c50788&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Garder un regard serein sur les maladies du jardin</h2>
+      <p>
+        Les approches de jardinage naturel rappellent que les maladies comme l’oïdium sont aussi des signes : d’une plante fatiguée, d’un sol qui a besoin d’attention, ou d’un manque d’aération.[web:107][web:111][web:113][web:116]
+      </p>
+      <p>
+        En prenant l’habitude d’observer, de renforcer progressivement le sol et les plantes, puis d’agir avec des traitements doux, ton jardin peut rester un espace vivant, même si tout n’est pas parfait.[web:107][web:111][web:113]
+      </p>
+
+      <div class="box">
+        <div class="box-title">À tester au prochain “voile blanc”</div>
+        <p>
+          Sur les premières feuilles touchées, retire quelques feuilles très atteintes, puis essaie une solution bicarbonate + savon noir. Note ce qui change au fil de la saison, plutôt que d’attendre que tout le massif soit blanc.[web:107][web:110][web:111][web:113][web:115]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mémoire & concentration : gestes doux pour entretenir vos capacités | Zen Chez Toi</title>
+  <meta name="description" content="Des gestes simples pour soutenir mémoire et concentration : hygiène de vie douce, jeux, écriture à la main, pauses, alimentation et rituels pour un cerveau plus serein.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f9;
+      --text: #2d2633;
+      --muted: #62566d;
+      --accent: #9b72c2; 
+      --dark: #1a1421;
+      --surface: rgba(255,255,255,.9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .hero-inner {
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .hero-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.1); font-size: 0.7rem; }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .box-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card strong { display: block; margin-bottom: 4px; }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 50px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .footer-logo em { color: var(--accent); font-style: italic; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px;
+      opacity: 0.6; font-size: 0.85rem; flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html" class="active">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero-inner">
+    <div class="hero-kicker">Bien-être · Mémoire</div>
+    <h1>Mémoire &amp; concentration : gestes doux pour entretenir vos capacités</h1>
+    <p class="hero-sub">
+      Oublier un nom, perdre le fil, avoir du mal à se concentrer… cela arrive à tout le monde. Plutôt que de vous inquiéter seul·e, vous pouvez cultiver au quotidien un terrain plus favorable pour votre mémoire.
+    </p>
+    <p class="hero-note">
+      Ici, pas de promesse de “mémoire parfaite” : seulement des pistes simples pour soutenir votre cerveau avec douceur. En cas de doute ou de trouble important, un avis médical reste essentiel.
+    </p>
+  </header>
+
+  <main>
+    <section id="comprendre">
+      <h2>Comprendre sa mémoire avec bienveillance</h2>
+      <p>
+        La mémoire n’est pas un bloc figé : elle est sensible au stress, au sommeil, à l’alimentation, au manque de mouvement et à la surcharge d’informations.[web:74][web:77][web:79]
+      </p>
+      <p>
+        Oublier certaines choses ponctuellement est souvent normal. L’important est de repérer ce qui soutient votre cerveau au quotidien, plutôt que de vous juger pour ce que vous oubliez.[web:74][web:79]
+      </p>
+      <div class="box">
+        <div class="box-title">Ce que vous pouvez ressentir</div>
+        <ul>
+          <li>Des difficultés à retenir des informations récentes (un nom, un rendez-vous).[web:74]</li>
+          <li>Une impression de “flou” mental ou de fatigue cérébrale.[web:74][web:82]</li>
+          <li>La sensation de ne plus réussir à vous concentrer comme avant.[web:78][web:83]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gestes">
+      <h2>Rituels doux pour soutenir mémoire et concentration</h2>
+      <p>
+        Vous pouvez commencer par un ou deux gestes, puis ajuster en fonction de ce qui vous fait du bien. L’idée n’est pas de remplir vos journées d’exercices, mais d’intégrer la mémoire dans votre hygiène de vie globale.[web:74][web:77]
+      </p>
+
+      <h3>Rituel 1 · Écrire à la main ce qui compte</h3>
+      <p>
+        Quand quelque chose est important (une idée, un rendez-vous, un apprentissage), prenez le temps de l’écrire à la main plutôt que seulement sur écran. L’écriture manuscrite engage plusieurs zones du cerveau et favorise la mémorisation.[web:75][web:80]
+      </p>
+
+      <h3>Rituel 2 · Donner une place à la répétition</h3>
+      <p>
+        Si vous souhaitez retenir une information, revenez‑y plusieurs fois dans la journée ou dans la semaine : relire vos notes, les reformuler, les expliquer à quelqu’un. La répétition espacée est une alliée discrète mais très efficace.[web:74]
+      </p>
+
+      <h3>Rituel 3 · Jouer avec votre cerveau (Les Ponts de la sérénité)</h3>
+      <p>
+        Intégrez des petits jeux dans votre quotidien. Par exemple, un jeu de logique visuel comme le Hashiwokakero – que l’on pourrait appeler ici “Les Ponts de la sérénité” – où l’on relie des îles entre elles avec des ponts, stimule la concentration et la mémoire de travail sans mettre en jeu la culture générale.[web:76][web:81]
+      </p>
+
+      <h3>Rituel 4 · Soigner le terrain : sommeil, eau, mouvement</h3>
+      <p>
+        Le cerveau a besoin de sommeil suffisant, d’hydratation et d’un minimum de mouvement pour bien fonctionner. Un bon sommeil soutient la consolidation des souvenirs, l’eau aide l’attention, et l’activité physique douce favorise la circulation et l’oxygénation.[web:74][web:77][web:78][web:79][web:83]
+      </p>
+
+      <h3>Rituel 5 · Une alimentation amie du cerveau</h3>
+      <p>
+        Sans viser la perfection, vous pouvez privilégier plus souvent des aliments intéressants pour le cerveau : poissons gras riches en oméga‑3, fruits et légumes colorés riches en antioxydants, noix et oléagineux, œufs.[web:74][web:79]
+        Ils participent à nourrir les neurones et à protéger le cerveau du stress oxydatif.[web:74][web:79]
+      </p>
+
+      <div class="box">
+        <div class="box-title">À garder en tête</div>
+        <p>
+          Si vous ou vos proches remarquez des oublis très fréquents, qui impactent vraiment votre quotidien, en parler à un médecin ou à un spécialiste est important. Ces pistes ne remplacent pas un avis médical, mais peuvent accompagner votre démarche.[web:74]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3 gestes express pour aujourd’hui</div>
+        <ul>
+          <li>Écrire à la main une chose importante à retenir (idée, rendez-vous, apprentissage) dans un carnet dédié.[web:75][web:80]</li>
+          <li>Boire un grand verre d’eau en conscience, puis garder votre gourde en vue pour le reste de la journée.[web:78][web:79][web:83]</li>
+          <li>Prendre 5 à 10 minutes pour un petit jeu cérébral calme (comme un puzzle de “ponts”) ou une courte marche pour oxygéner le cerveau.[web:76][web:77][web:82]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="produits">
+      <h2>Outils doux pour entretenir votre mémoire</h2>
+      <p>
+        Quelques supports matériels peuvent vous aider à rendre ces rituels plus concrets et plus agréables, tout en restant dans quelque chose de simple.[web:74][web:79]
+      </p>
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Carnet dédié à vos notes et idées</strong>
+          <p>
+            Un carnet en papier recyclé pour écrire à la main ce que vous voulez retenir : listes, rendez-vous, idées, apprentissages. Il devient votre allié mémoire du quotidien.[web:75][web:80]
+          </p>
+          <a href="https://www.amazon.fr/certifi%C3%A9-%C3%89criture-Couverture-%C3%A9co-responsable-%C3%A9crivant/dp/B0DT14P82T?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TL9QJRAW4DYB&dib=eyJ2IjoiMSJ9.t0qpDHsWFbvaQlx_bRkMRS5oewRSbOmgFkFbev1Zno7FDaNt1KtigFRCpC0YI9cgypJ5bkx-TlOsW7rVcesUxma6MYUW92h84lJSzgBCHixAqcqB7u8eyXj5EnUfJZ2ieyMsPBC4oUdu6oYodq5EYS8ITvezGLxeovPNfchhr3YJRPPifcIOFre7XkXDOZ58jQ6yg8-CTCPaS8u2u8TYteBqG6Z8TQfc_9P-ft5i8FuVzHQG9iAIghswddG-y67OJ9r0aCLD0HdvNmFuRbKPmpqiFpxBkYHFJsAbQm-ORkg.JJr5zhhD97rbSa1G0yCi6hohi68UeaNgmojZtQdtlVQ&dib_tag=se&keywords=carnet%2Brecycl%C3%A9&qid=1776753341&sprefix=carnet%2Brecycl%C3%A9%2Caps%2C239&sr=8-11&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=9491aec9fc5f04cded3ab3932191ef13&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+        <div class="product-card">
+          <strong>“Ponts de la sérénité” (Hashiwokakero)</strong>
+          <p>
+            Un cahier de puzzles Hashiwokakero pour entraîner votre logique et votre attention de façon visuelle et apaisante : relier des “îles” entre elles par des ponts selon quelques règles simples, comme si vous dessiniez une carte.[web:76][web:81]
+          </p>
+          <a href="https://www.amazon.fr/Mind-Bridge-Hashiwokakero-Puzzles-Sharpen/dp/B0F87T51FY?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HXR3VJXQSNPK&dib=eyJ2IjoiMSJ9.T6fmlE57kv3eDi8nQlDEtFWYRkJVRkAthhTRuQpFvRlOrw-V4GL_BY209E7aWMfJoy19TTNjGVlA8bYwSI7DmeLmOzqlvP5Ct35jqph6CmhK14KSzp9KpTswDi-TqW0P4Ehwp1kzRCsFSfHe-W639gQdpQWBgjv_xSleKENZ4H_SltLrWv8Y-oYNvQlOw8OYzinx3OxqLhRcUrUSOZxjTw1Qk9DkBX4WdPuQs1uMVW64-xu4kVUM4HTZUArI22NbQu3AFs0Ezd_Yp70i8DG5sbGuzZkRUxoszewOfv2rZWU.LuQIDJLMJxpA2AMScRNIH7Q-8LJegjMpDhztf1YNzQk&dib_tag=se&keywords=Hashiwokakero&qid=1776778652&sprefix=hashiwokakero%2Caps%2C286&sr=8-9&linkCode=ll2&tag=zencheztoi-21&linkId=c5ff54a8dad8d089b488e8e08cfe78d7&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+        <div class="product-card">
+          <strong>Gourde isotherme à garder sous les yeux</strong>
+          <p>
+            Une gourde en inox réutilisable, à garder sur votre bureau ou dans votre sac, pour vous rappeler de boire régulièrement au fil de la journée et soutenir ainsi votre attention.[web:74][web:78][web:79][web:83]
+          </p>
+          <a href="https://www.amazon.fr/Isotherme-Bouteille-Inoxydable-R%C3%A9utilisable-Randonn%C3%A9e/dp/B0C371KHVY?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=31BIEMG0XXYN3&dib=eyJ2IjoiMSJ9.wnskVx7yG1UrrZx5MzL9uweQGjAwaGV7O8eVk90gTobljn5khbg95YkAGLgWhTZeMj7DWjFm3pKB6WzeHaTv2MYmDE4x8tOeVrNo9AZwNs-W5P0ucmA1N9KiJv1uqbSo4toldk5dsggO5hcLymyHxf4iHQKPkDDT1Wh1d8uY6H8AuYP1rxKplfjwzbfb7CynLhidCOixiMWJ2vp1FvrKJ2h_PfjZMgMLo6kASZQwW5aE-qMtsdQw8QnkpNsgaC6Ehnxd4_fZBdu4EDEQHBO5YEP4y0YrPMwGVXsiFEP7d5Q.wqpiZYIdxVHOqceA79_fSVsA8jvQ2gOBpPKois6013Q&dib_tag=se&keywords=gourde%2Beco%2Bresponsable&qid=1776761920&refinements=p_36%3A2000-&rnid=366994031&sprefix=gourde%2Beco%2Bresponsable%2Caps%2C235&sr=8-9&th=1&linkCode=ll2&tag=zencheztoi-21&linkId=15c50e2688c92070bdc16ac78348d0be&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section id="ancrage">
+      <h2>Installer des habitudes mémoire à votre rythme</h2>
+      <p>
+        Vous n’avez pas besoin de transformer votre vie pour prendre soin de votre mémoire. Vous pouvez commencer par un seul geste : écrire à la main ce qui compte, jouer quelques minutes aux “Ponts de la sérénité”, ou faire une petite marche pour oxygéner votre cerveau.[web:74][web:77][web:80][web:82]
+      </p>
+      <p>
+        Au fil du temps, ces petites attentions répétées envoient un message clair à votre cerveau : “tu comptes pour moi, je prends soin de toi”.[web:75][web:82]
+      </p>
+      <div class="box">
+        <div class="box-title">Une invitation</div>
+        <p>
+          Aujourd’hui, choisissez une information que vous souhaitez garder (une idée, une phrase, un souvenir de la journée) et écrivez‑la dans votre carnet. Revenez‑y dans quelques jours, et observez ce que cela change dans votre façon de la retenir.[web:75][web:80]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="index.html">Accueil</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

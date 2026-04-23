@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chute de cheveux : soutenir le cuir chevelu en douceur | Zen Chez Toi</title>
+  <meta name="description" content="Chute de cheveux liée au stress, à la fatigue ou à certaines carences : comprendre les causes fréquentes et soutenir la routine capillaire avec douceur.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google Fonts corrigé -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#fff7f4;
+      --text:#3b221d;
+      --muted:#8a5c52;
+      /* Corps : cannelle douce */
+      --accent:#a86f5a;
+      --dark:#2a1410;
+      --surface:rgba(255,255,255,.94);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a { text-decoration:none; color:var(--accent); transition:.3s; }
+    img { max-width:100%; display:block; }
+
+    .main-nav {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,246,243,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .nav-wrap {
+      max-width:1200px;
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .nav-wrap a {
+      font-size:.8rem;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--muted);
+      letter-spacing:.1em;
+      padding:4px 8px;
+    }
+    .nav-wrap a.active,
+    .nav-wrap a:hover { color:var(--accent); }
+    .dot { color:rgba(0,0,0,.1); font-size:.7rem; }
+
+    .hero {
+      position:relative;
+      background:#000;
+      line-height:0;
+    }
+    .hero img {
+      width:100%;
+      max-height:460px;
+      min-height:300px;
+      object-fit:cover;
+    }
+    .hero-overlay {
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.28);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+      line-height:1.6;
+    }
+    .hero-content { max-width:860px; color:white; }
+    .hero-kicker {
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.8rem;
+      font-weight:700;
+      margin-bottom:10px;
+      opacity:.9;
+    }
+    h1 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.4rem,5vw,4rem);
+      margin:0 0 14px;
+      line-height:1.08;
+    }
+    .hero-sub {
+      font-size:1.04rem;
+      max-width:720px;
+      margin:0 auto;
+      color:rgba(255,255,255,.92);
+    }
+
+    main {
+      max-width:900px;
+      margin:0 auto;
+      padding:28px 20px 70px;
+    }
+    h2 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.8rem;
+      margin-top:42px;
+      margin-bottom:10px;
+    }
+    p { margin:0 0 14px; }
+    ul { padding-left:20px; margin:0 0 14px; }
+
+    .box {
+      background:var(--surface);
+      border-radius:18px;
+      padding:18px;
+      margin:26px 0;
+      box-shadow:0 12px 28px rgba(0,0,0,.05);
+      border:1px solid rgba(0,0,0,.03);
+    }
+
+    .cta-link {
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 18px;
+      border:1px solid var(--accent);
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:.95rem;
+    }
+    .cta-link:hover {
+      background:var(--accent);
+      color:white;
+    }
+
+    /* Slot pub discret pour l'univers Corps */
+    .ad-slot{
+      margin:32px auto 0;
+      max-width:900px;
+      padding:1rem 1.2rem;
+      border-radius:18px;
+      border:1px dashed rgba(0,0,0,.12);
+      font-size:.85rem;
+      color:var(--muted);
+      background:rgba(255,255,255,.7);
+    }
+
+    .footer {
+      background:var(--dark);
+      color:#f3dfca;
+      padding:60px 20px 80px;
+      text-align:center;
+      margin-top:30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">&bull;</span>
+      <a href="Corps.html" class="active">Corps</a><span class="dot">&bull;</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="assets/chute-cheveux.jpg" alt="Limiter la chute des cheveux">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="hero-kicker">Corps · Cheveux</div>
+        <h1>Chute de cheveux : comprendre avant de surcharger la routine</h1>
+        <p class="hero-sub">
+          Une chute de cheveux diffuse peut être réactionnelle et apparaître après une période de stress, de fatigue, de surmenage ou de carence nutritionnelle, parfois avec un décalage de plusieurs semaines.[web:1097][web:1100]
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Quand faut-il observer davantage ?</h2>
+      <p>
+        Perdre quelques cheveux chaque jour est normal, mais une chute plus marquée et diffuse sur l’ensemble du cuir chevelu peut signaler une chute réactionnelle, souvent temporaire quand la cause est identifiée et prise en charge.[web:1097][web:1100]
+      </p>
+      <p>
+        Le stress, la fatigue, certaines carences ou un bouleversement physiologique peuvent perturber le cycle pilaire et déclencher cette phase de chute.[web:1094][web:1097]
+      </p>
+    </section>
+
+    <section>
+      <h2>Les axes les plus utiles</h2>
+      <ul>
+        <li>Réduire la surcharge physique et mentale quand c’est possible.[web:1097][web:1103]</li>
+        <li>Revoir les apports nutritionnels en cas de fatigue ou de doute sur d’éventuelles carences.[web:1094][web:1101]</li>
+        <li>Adopter des soins capillaires doux, sans trop d’agression mécanique ou chimique.[web:1099][web:1102]</li>
+      </ul>
+      <p>
+        Avant d’empiler les produits, il est souvent plus pertinent de chercher le facteur déclenchant et d’accompagner la repousse avec patience.[web:1094][web:1103]
+      </p>
+    </section>
+
+    <section>
+      <h2>Produit choisi pour cette page</h2>
+      <div class="box">
+        <strong>Produit associé – Biotine et soin fortifiant</strong>
+        <p>
+          Les compléments ou soins orientés force capillaire sont souvent utilisés comme soutien de routine, surtout en cas de carence identifiée, mais s’intègrent dans une approche globale incluant repos, gestion du stress et équilibre nutritionnel.[web:1095][web:1101]
+        </p>
+        <a class="cta-link"
+           href="https://www.amazon.fr/s?k=biotine+cheveux&tag=zencheztoi-21"
+           target="_blank" rel="nofollow sponsored">
+          Voir le soin cheveux
+        </a>
+      </div>
+    </section>
+
+    <!-- Emplacement publicitaire discret pour la page Chute de cheveux (univers Corps) -->
+    <div class="ad-slot" aria-label="contenu sponsorisé">
+      <!-- Code publicitaire / bloc affiliation à insérer ici -->
+      Ici, tu pourras mettre en avant un pack “cheveux” (complément
+      + sérum cuir chevelu, routine antichute) ou une bannière liée au
+      soutien capillaire en douceur.
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;">
+      Zen <em style="color:var(--accent);font-style:italic;">Chez</em> Toi
+    </div>
+    <p style="opacity:.65;">© 2026 Zen Chez Toi — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

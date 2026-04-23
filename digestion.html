@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Digestion plus légère : routines douces pour un ventre plus serein | Zen Chez Toi</title>
+  <meta name="description" content="Des routines simples pour une digestion plus sereine : mastication, chaleur douce, marche tranquille, tisanes et auto-massage du ventre, à adapter à votre rythme.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google Fonts corrigé -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f9;
+      --text: #2d2633;
+      --muted: #62566d;
+      --accent: #9b72c2; 
+      --dark: #1a1421;
+      --surface: rgba(255,255,255,.9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    img { max-width: 100%; display: block; }
+
+    .hero-inner {
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .hero-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.1); font-size: 0.7rem; }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .box-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card strong { display: block; margin-bottom: 4px; }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 50px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .footer-logo em { color: var(--accent); font-style: italic; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px;
+      opacity: 0.6; font-size: 0.85rem; flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html" class="active">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero-inner">
+    <div class="hero-kicker">Bien-être · Digestion</div>
+    <h1>Digestion plus légère : routines douces pour un ventre plus serein</h1>
+    <p class="hero-sub">
+      Ballonnements, lourdeurs, ventre qui se crispe : beaucoup de ventres parlent fort au quotidien. Vous avez le droit de chercher plus de confort, sans tout révolutionner d’un coup.[web:1208]
+    </p>
+    <p class="hero-note">
+      Ici, pas de promesse médicale : seulement des pistes simples pour soutenir votre digestion avec douceur. En cas de doute ou de douleur persistante, un avis médical reste important.
+    </p>
+
+    <div style="max-width:420px;margin:24px auto 0;">
+      <img src="assets/probiotiques.jpg"
+           alt="Compléments de probiotiques posés sur une table, associés au confort digestif"
+           style="width:100%;border-radius:18px;box-shadow:0 12px 28px rgba(0,0,0,0.15);">
+    </div>
+  </header>
+
+  <main>
+    <section id="comprendre">
+      <h2>Comprendre votre digestion en douceur</h2>
+      <p>
+        La digestion n’est pas seulement une histoire d’aliments : elle est aussi liée au stress, au rythme de vie, au sommeil et à la façon dont on mange.[web:1208]
+        Un repas pris très vite, dans le bruit ou en travaillant, ne sera pas vécu de la même façon par le corps qu’un repas un peu plus posé.
+      </p>
+      <p>
+        Plutôt que de chercher le “parfait” pour chaque repas, vous pouvez explorer de petites modifications, répétées régulièrement, qui permettent à votre ventre de se sentir un peu plus en sécurité.
+      </p>
+      <div class="box">
+        <div class="box-title">Ce que vous pouvez ressentir</div>
+        <ul>
+          <li>Ballonnements après les repas, sensation de ventre tendu ou gonflé.[web:1211]</li>
+          <li>Lourdeur ou somnolence après avoir mangé, difficulté à vous concentrer.[web:1208]</li>
+          <li>Un lien entre périodes de stress et inconfort digestif (ventre “noué”).[web:1208]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gestes">
+      <h2>Rituels doux pour accompagner votre ventre</h2>
+      <p>
+        Vous pouvez choisir un seul geste à la fois, et voir comment votre corps réagit sur quelques jours. L’idée n’est pas de cocher une liste, mais de créer des moments où votre digestion peut se faire dans un peu plus de calme.
+      </p>
+
+      <h3>Rituel 1 · Mâcher plus lentement</h3>
+      <p>
+        Choisissez un repas par jour comme “repas test”. Pendant ce repas, posez vos couverts entre quelques bouchées, prenez le temps de sentir les textures et les goûts.[web:1208]
+        Une mastication plus lente peut aider à mieux préparer les aliments pour la suite du trajet digestif.
+      </p>
+
+      <h3>Rituel 2 · Une vraie pause pour manger</h3>
+      <p>
+        Si c’est possible pour vous, essayez au moins une fois par jour de manger sans écran et sans travailler en même temps.[web:1208]
+        Même si le repas reste court, consacrer ce moment uniquement au fait de manger permet au corps de se mettre davantage en mode “digestion” qu’en mode “urgence”.
+      </p>
+
+      <h3>Rituel 3 · Un peu de chaleur sur le ventre</h3>
+      <p>
+        Les jours où le ventre est tendu ou inconfortable, vous pouvez poser une source de chaleur douce (bouillotte bien sécurisée, coussin chauffant) sur le bas du ventre en position allongée ou assise.[web:1209][web:1215]
+        La chaleur aide souvent les tissus à se détendre et peut apaiser certaines sensations de crispation et de spasmes digestifs.
+      </p>
+
+      <h3>Rituel 4 · Marcher quelques minutes après le repas</h3>
+      <p>
+        Une marche lente de quelques minutes après le repas (dans la maison ou dehors si c’est possible) peut soutenir le transit sans le brusquer.[web:1208]
+        Le mouvement doux aide le corps à “relancer la mécanique” tout en favorisant aussi une détente générale.
+      </p>
+
+      <h3>Rituel 5 · Une tisane simple après le dîner</h3>
+      <p>
+        Après le dîner, une tisane tiède à base de plantes souvent associées au confort digestif (menthe douce, fenouil, camomille, mélisse) peut accompagner la fin du repas.[web:1211]
+        Ce moment peut aussi devenir un petit rituel de ralentissement, tasse entre les mains.
+      </p>
+
+      <h3>Rituel 6 · Auto-massage doux du ventre</h3>
+      <p>
+        Si vous vous sentez à l’aise, vous pouvez masser doucement votre ventre avec la paume de la main ou le bout des doigts, dans le sens des aiguilles d’une montre.[web:1215]
+        De petits mouvements circulaires, sans appuyer fort, peuvent aider le corps à relâcher un peu la zone.
+      </p>
+
+      <div class="box">
+        <div class="box-title">À garder en tête</div>
+        <p>
+          Ces rituels ne remplacent pas un avis médical en cas de douleur importante ou persistante, mais ils peuvent être des alliés du quotidien.[web:1208]
+          Vous pouvez les adapter, les simplifier, les combiner. L’important est qu’ils restent réalistes pour vous, dans votre vraie vie.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : gestes express -->
+    <section id="gestes-express">
+      <h2>3 gestes express avant un repas plus lourd</h2>
+      <p>
+        Quand un repas s’annonce plus copieux que d’habitude, vous pouvez préparer votre système digestif en douceur avec quelques gestes simples, sans tomber dans la sur‑anticipation.[web:1218][web:1221]
+      </p>
+
+      <div class="box">
+        <div class="box-title">1. 3–5 respirations profondes avant de manger</div>
+        <p>
+          Avant de commencer le repas, prenez 3 à 5 respirations profondes en gonflant doucement le ventre, puis en expirant lentement.[web:1221]
+          Cela aide à passer d’un état de tension à un état un peu plus “repos‑digestion”, ce qui peut limiter les ballonnements et la sensation de ventre noué.[web:1224]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">2. Quelques minutes de marche douce</div>
+        <p>
+          Si vous en avez la possibilité, faites 5 à 10 minutes de marche lente avant de vous mettre à table, même à l’intérieur.[web:1219][web:1224]
+          Ce petit mouvement réveille la circulation vers les organes digestifs et prépare le corps à l’effort de digestion.[web:1221]
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">3. Un soutien fibres ou flore intestinale</div>
+        <p>
+          Selon ce que vous avez déjà mis en place avec votre médecin ou votre praticien, vous pouvez, sur certains repas, prendre un peu de psyllium blond avec beaucoup d’eau, ou votre complément de probiotiques au moment recommandé (souvent juste avant ou pendant un repas).[web:1220][web:1223][web:1226]
+        </p>
+        <p>
+          Le psyllium aide à apporter des fibres solubles qui forment un gel dans le tube digestif, tandis que les probiotiques soutiennent la flore intestinale, deux axes importants pour le confort digestif.[web:1217][web:1226]
+        </p>
+        <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">
+          Ces compléments restent à envisager avec un professionnel de santé, surtout si vous avez déjà des troubles digestifs ou un traitement en cours.[web:1223][web:1224]
+        </p>
+        <p style="font-size:0.9rem; margin-top:6px;">
+          Vous pouvez retrouver un exemple de
+          <a href="https://www.amazon.fr/dp/B07GFBPZJD?linkCode=ll2&tag=zencheztoi-21&linkId=4736434ed4e14846b77d192ff834e2e5&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored" style="color:var(--accent);font-weight:700;">
+            probiotiques pour la flore intestinale
+          </a>
+          et un
+          <a href="https://www.amazon.fr/dp/B0BYFYVJFG?linkCode=ll2&tag=zencheztoi-21&linkId=8f3e3fcb2be125a4c58614c3336fa720&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored" style="color:var(--accent);font-weight:700;">
+            psyllium blond riche en fibres
+          </a>
+          dans la sélection de cette page.
+        </p>
+      </div>
+    </section>
+
+    <section id="solutions-digestion">
+      <h2>Compléments doux pour digestion et transit</h2>
+      <p>
+        Quand l’inconfort digestif ou le transit ralenti s’installent, certains compléments peuvent soutenir le travail de fond, en particulier la flore intestinale et les fibres solubles.[web:1208][web:1211]
+      </p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Probiotiques pour la flore intestinale</strong>
+          <p>
+            Des souches probiotiques ciblées contribuent à l’équilibre de la flore intestinale, souvent associé à un meilleur confort digestif (ballonnements, transit, sensibilité intestinale).[web:1208][web:1217]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07GFBPZJD?linkCode=ll2&tag=zencheztoi-21&linkId=4736434ed4e14846b77d192ff834e2e5&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored">
+            Découvrir ces probiotiques
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Psyllium blond pour le transit</strong>
+          <p>
+            Le psyllium blond est riche en fibres solubles qui forment un gel au contact de l’eau, aidant à réguler en douceur un transit trop lent ou parfois irrégulier.[web:1208][web:1217]
+          </p>
+          <a href="https://www.amazon.fr/dp/B0BYFYVJFG?linkCode=ll2&tag=zencheztoi-21&linkId=8f3e3fcb2be125a4c58614c3336fa720&ref_=as_li_ss_tl"
+             target="_blank" rel="nofollow sponsored">
+            Découvrir ce psyllium blond
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Le psyllium doit toujours être pris avec beaucoup d’eau, et les compléments (probiotiques ou fibres) se font idéalement sur avis médical, surtout en cas de pathologie digestive ou de traitement en cours.[web:1211][web:1217]
+      </p>
+    </section>
+
+    <section id="produits">
+      <h2>Outils doux pour soutenir votre digestion</h2>
+      <p>
+        Quelques objets simples peuvent vous aider à ancrer ces routines dans votre quotidien. Ils n’ont rien d’obligatoire, mais peuvent devenir des repères rassurants pour votre ventre.
+      </p>
+
+      <div style="max-width:420px;margin:10px auto 20px;">
+        <img src="assets/psyllium.jpg"
+             alt="Graines de psyllium présentées dans un bol, associées au transit"
+             style="width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,0.12);">
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <strong>Mug en émail “Bee” dédié aux tisanes</strong>
+          <p>
+            Un mug en émail léger et durable, que vous pouvez réserver à vos tisanes du soir pour en faire un vrai petit rituel de pause après le repas.
+          </p>
+          <a href="https://www.amazon.fr/Ecologie-Bee-Mug-en-%C3%A9mail/dp/B08FJF2Q85?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+          <div class="box" style="margin-top:10px;">
+            <div class="box-title">Pourquoi les abeilles comptent</div>
+            <p style="font-size:0.9rem;">
+              Les abeilles participent à la pollinisation d’une grande partie de nos plantes alimentaires et sauvages. Les mettre en avant dans les objets du quotidien, c’est aussi se rappeler que notre confort dépend d’un écosystème vivant et fragile.
+            </p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <strong>Bouillotte aux noyaux de cerise pour le ventre</strong>
+          <p>
+            Une bouillotte remplie de noyaux de cerise séchés, dans une housse 100 % coton, diffuse une chaleur douce et durable sur le bas-ventre, utile en cas de ventre tendu ou de crampes digestives.[web:1209][web:1215]
+          </p>
+          <a href="https://www.amazon.fr/gp/aw/d/B0D4XZT763?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+
+        <div class="product-card">
+          <strong>Tabouret physiologique en bois pour les toilettes</strong>
+          <p>
+            Ce tabouret aide à retrouver une posture plus physiologique aux toilettes, en surélevant les pieds pour ouvrir l’angle du bassin et faciliter l’évacuation, ce qui peut soutenir un transit plus confortable.[web:1210][web:1213][web:1216]
+          </p>
+          <a href="https://www.amazon.fr/Tabouret-Physiologique-Toilette-Bois-Constipation/dp/B08L6MLYK9?tag=zencheztoi-21"
+             target="_blank" rel="noopener noreferrer">
+            Voir sur Amazon
+          </a>
+        </div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Ces liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <section id="liens-croises">
+      <h2>Parce que digestion, stress et sommeil sont liés</h2>
+      <div class="box">
+        <ul>
+          <li><a href="bienetre-anti-stress-gestes-simples.html">5 gestes simples pour apaiser le stress du quotidien</a>, quand le ventre réagit à la pression.</li>
+          <li><a href="sommeil-profond-gestes-doux.html">Rituels du soir pour un sommeil plus profond</a>, essentiel pour une bonne digestion.</li>
+          <li><a href="corps-jambes-lourdes-gestes-doux.html">Gestes doux pour jambes lourdes et circulation</a>, si l’inconfort digestif s’accompagne de circulation paresseuse.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ancrage">
+      <h2>Intégrer ces routines dans votre quotidien</h2>
+      <p>
+        Pour éviter de vous sentir submergé·e, vous pouvez choisir un seul rituel par repas ou par journée : par exemple, ralentir la mastication au déjeuner, marcher quelques minutes après le dîner, ou vous offrir quelques minutes de chaleur sur le ventre avant de dormir.[web:1208]
+      </p>
+      <p>
+        En répétant ces gestes, même de façon imparfaite, vous envoyez régulièrement à votre corps le message qu’il peut se détendre un peu et que sa digestion compte pour vous.
+      </p>
+      <div class="box">
+        <div class="box-title">Une invitation</div>
+        <p>
+          Lors de votre prochain repas, choisissez un seul changement : manger un peu plus lentement, ou vous accorder une vraie pause sans écran, ou terminer avec une tisane. Observez ce que cela change pour vous, sans attente particulière.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="index.html">Accueil</a>
+    </div>
+    <p style="margin-top:20px; opacity:0.3; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+  </div>
+
+</body>
+</html>

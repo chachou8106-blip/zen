@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Chez Toi Maison</title>
+  <meta name="description" content="Conseils et solutions pour une maison plus saine : humidité, odeurs, vitres, canalisations et entretien au quotidien.">
+  <style>
+    :root{
+      --bg:#f7f1ea;
+      --text:#382920;
+      --muted:#7d6558;
+      --accent:#b57a52;
+      --surface:rgba(255,255,255,.9);
+      --dark:#241913;
+      --border:rgba(56,41,32,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Georgia,serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      background:
+        linear-gradient(rgba(24,18,14,.4),rgba(24,18,14,.55)),
+        url("hero-maison.jpg") center/cover no-repeat;
+      color:#fff;
+      text-align:left;
+    }
+    .hero-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr .9fr;
+      gap:2rem;
+      align-items:center;
+    }
+    .logo{
+      width:min(340px,60vw);
+      margin:0 0 1.2rem;
+      filter:drop-shadow(0 12px 32px rgba(0,0,0,.45));
+    }
+    .nav{
+      position:absolute;
+      top:1.4rem;
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      gap:.7rem;
+      flex-wrap:wrap;
+      justify-content:center;
+      font-size:.85rem;
+    }
+    .nav a{
+      padding:.55rem .95rem;
+      border-radius:999px;
+      background:rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    h1{
+      font-size:clamp(2rem,4vw,3.7rem);
+      line-height:1.08;
+      margin:0 0 1rem;
+      max-width:14ch;
+    }
+    .sub{
+      max-width:540px;
+      margin:0 0 1.4rem;
+      font-size:1.02rem;
+      color:rgba(255,255,255,.9);
+    }
+    .pill{
+      display:inline-block;
+      padding:.85rem 1.3rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      font-size:.9rem;
+      background:#fff;
+      color:#1f1510;
+    }
+    .hero-aside{
+      background:rgba(0,0,0,.25);
+      border-radius:22px;
+      padding:1.4rem 1.5rem;
+      border:1px solid rgba(255,255,255,.28);
+      font-size:.95rem;
+    }
+
+    /* MAIN */
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:3.5rem 1.25rem 4.5rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1.4fr .9fr;
+      gap:1.6rem;
+      align-items:start;
+    }
+    .card{
+      background:var(--surface);
+      border-radius:26px;
+      border:1px solid var(--border);
+      padding:1.5rem;
+      box-shadow:0 20px 50px rgba(0,0,0,.06);
+    }
+    .eyebrow{
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.78rem;
+      color:var(--accent);
+      margin-bottom:.4rem;
+    }
+    h2{
+      margin:.2rem 0 1rem;
+      font-size:1.6rem;
+    }
+    .muted{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      margin-top:.8rem;
+    }
+    .links a{
+      padding:.55rem .95rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:.85rem;
+    }
+
+    footer{
+      background:var(--dark);
+      color:#f7f0e8;
+      padding:2rem 1.25rem;
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media(max-width:900px){
+      .hero{
+        text-align:center;
+      }
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+      .hero-aside{
+        margin-top:1rem;
+      }
+      .nav{max-width:94vw;}
+      .grid{grid-template-columns:1fr;}
+      .logo{
+        margin:0 auto 1.2rem;
+      }
+      .sub{
+        margin:0 auto 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="jardin.html">Jardin</a>
+      <a href="maison.html">Maison</a>
+      <a href="bienetre.html">Bien-être</a>
+      <a href="corps.html">Corps</a>
+      <a href="eso.html">Ésotérisme</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="hero-inner">
+      <div>
+        <img src="logo.jpg" alt="Logo Zen Chez Toi" class="logo">
+        <h1>Quand la maison respire, l’esprit se pose enfin.</h1>
+        <p class="sub">
+          Humidité, odeurs, taches et entretien : des gestes simples et des solutions choisies
+          pour alléger ton foyer sans le transformer en laboratoire.
+        </p>
+        <a href="#contenu" class="pill">Voir les solutions maison</a>
+      </div>
+      <div class="hero-aside">
+        <strong>Un foyer plus léger, sans culpabilité.</strong>
+        <p>
+          Ici tu montres que prendre soin de la maison, ce n’est pas courir derrière la perfection,
+          mais retrouver une ambiance où l’on respire mieux, jour après jour.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="grid">
+      <article class="card">
+        <div class="eyebrow">Maison</div>
+        <h2>Assainir sans agresser</h2>
+        <p>
+          Cette page rassemble tes grandes thématiques maison : humidité, mauvaises odeurs,
+          vitres, canalisations, taches difficiles, soin du bois…
+        </p>
+        <p class="muted">
+          L’idée est de montrer que prendre soin de la maison, ce n’est pas seulement nettoyer :
+          c’est aussi retrouver une sensation d’ordre, de respiration et de confort.
+        </p>
+        <div class="links">
+          <a href="humidite.html">Humidité</a>
+          <a href="mauvaises-odeurs.html">Mauvaises odeurs</a>
+          <a href="vitres-eclatantes.html">Vitres éclatantes</a>
+          <a href="canalisations.html">Canalisations</a>
+          <a href="taches-difficiles.html">Taches difficiles</a>
+          <a href="soin-bois.html">Soin du bois</a>
+        </div>
+      </article>
+
+      <aside class="card">
+        <div class="eyebrow">Intérêt</div>
+        <h2>Rassurer puis proposer des solutions</h2>
+        <p class="muted">
+          Les personnes qui arrivent ici ont souvent un problème précis : une odeur qui dérange,
+          une trace qui ne part pas, une pièce qui reste humide.
+        </p>
+        <p class="muted">
+          Ta mission est de les rassurer en quelques lignes, puis de les orienter vers les pages les plus adaptées
+          et, ensuite, vers tes produits choisis.
+        </p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    Zen Chez Toi Maison • douceur, ordre et solutions utiles
+  </footer>
+</body>
+</html>

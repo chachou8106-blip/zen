@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci – Zen Chez Toi</title>
+  <meta name="description" content="Page de remerciement Zen Chez Toi après avoir laissé un message dans le livre d’or.">
+  <style>
+    :root{
+      --bg:#f5f2ec;
+      --text:#2b2622;
+      --muted:#6f6660;
+      --accent:#a67b51;
+      --surface:rgba(255,255,255,.96);
+      --dark:#221b16;
+      --border:rgba(43,38,34,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Georgia,serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+
+    main{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem 1.25rem;
+    }
+    .box{
+      max-width:520px;
+      background:var(--surface);
+      border-radius:22px;
+      border:1px solid var(--border);
+      padding:2rem 2.2rem;
+      text-align:center;
+      box-shadow:0 18px 40px rgba(0,0,0,.05);
+    }
+    h1{
+      font-size:1.9rem;
+      margin:.2rem 0 .6rem;
+    }
+    p{
+      margin:0 0 1.2rem;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:.8rem;
+      margin-top:.5rem;
+    }
+    .btn{
+      display:inline-block;
+      padding:.7rem 1.3rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:.9rem;
+      background:#fff;
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="box">
+      <h1>Merci pour ton message.</h1>
+      <p>
+        Ton mot a bien été pris en compte. Même s’il n’apparaît pas tout de suite en ligne,
+        il compte dans la construction de Zen Chez Toi.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">Revenir à l’accueil</a>
+        <a class="btn" href="blog.html">Continuer à explorer le blog</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

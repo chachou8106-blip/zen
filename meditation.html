@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Méditation débutant : 5 minutes par jour pour apaiser le mental | Zen Chez Toi</title>
+  <meta name="description" content="Une pratique de méditation simple et accessible : 5 minutes par jour pour calmer le mental, revenir au corps et installer des rituels de présence dans votre quotidien.">
+
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f9;
+      --text: #2d2633;
+      --muted: #62566d;
+      --accent: #9b72c2; 
+      --dark: #1a1421;
+      --surface: rgba(255,255,255,.9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 249, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active { color: var(--accent); }
+    .dot { color: rgba(0,0,0,0.1); font-size: 0.7rem; }
+
+    .hero-inner {
+      padding: 70px 20px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 5vw, 3.1rem);
+      margin-bottom: 10px;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .hero-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .box-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card strong { display: block; margin-bottom: 4px; }
+
+    .footer {
+      background: var(--dark);
+      color: #f3dfca;
+      padding: 50px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .footer-logo em { color: var(--accent); font-style: italic; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px;
+      opacity: 0.6; font-size: 0.85rem; flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">&bull;</span>
+      <a href="eso.html">Ésotérisme</a><span class="dot">&bull;</span>
+      <a href="jardin.html">Jardin</a><span class="dot">&bull;</span>
+      <a href="maison.html">Maison</a><span class="dot">&bull;</span>
+      <a href="bienetre.html" class="active">Bien-être</a><span class="dot">&bull;</span>
+      <a href="corps.html">Corps</a>
+    </div>
+  </nav>
+
+  <header class="hero-inner">
+    <div class="hero-kicker">Blog · Méditation</div>
+    <h1>Méditation débutant : 5 minutes par jour pour apaiser le mental</h1>
+    <p class="hero-sub">
+      La méditation n’a pas besoin d’être longue ou parfaite pour faire du bien. Quelques minutes par jour peuvent déjà devenir un rendez-vous précieux avec vous‑même.
+    </p>
+    <p class="hero-note">
+      Vous n’avez pas à “vider votre tête” : seulement à vous offrir un espace pour observer ce qui se passe en vous, un souffle après l’autre.
+    </p>
+  </header>
+
+  <main>
+    <section id="comprendre">
+      <h2>Ce qu’est (vraiment) la méditation</h2>
+      <p>
+        On imagine souvent la méditation comme un esprit parfaitement vide, assis en silence pendant de longues minutes. En réalité, la méditation consiste surtout à revenir, encore et encore, à un point d’ancrage (la respiration, le corps, les sons) quand l’esprit s’éparpille.
+      </p>
+      <p>
+        Vos pensées vont continuer à apparaître : c’est normal. La pratique consiste à les remarquer, puis à revenir doucement à l’instant présent, sans vous juger pour ce qui se passe dans votre tête.
+      </p>
+      <div class="box">
+        <div class="box-title">Quelques bénéfices possibles</div>
+        <ul>
+          <li>Apaiser le mental en donnant un espace à ce qui se passe, plutôt que de le subir.</li>
+          <li>Développer une meilleure écoute de soi : émotions, besoins, limites.</li>
+          <li>Installer plus de présence dans le quotidien, même en dehors des séances.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="commencer">
+      <h2>Comment commencer la méditation en 5 minutes</h2>
+      <p>
+        Plutôt que de viser 20 minutes dès le départ, vous pouvez commencer par 5 minutes, une fois par jour. L’important est la régularité bien plus que la durée.
+      </p>
+
+      <h3>1. Choisir un moment repère</h3>
+      <p>
+        Le matin au réveil, après le déjeuner ou avant de dormir : choisissez un moment qui reviendra chaque jour. Vous pouvez associer la pratique à un geste déjà présent (après le café, après le brossage des dents…).
+      </p>
+
+      <h3>2. Trouver une position confortable</h3>
+      <p>
+        Asseyez‑vous sur une chaise, un coussin ou au bord du lit, dos relativement droit mais sans rigidité. Vous pouvez aussi vous allonger si c’est plus facile pour vous, en acceptant le risque de somnoler.
+      </p>
+
+      <h3>3. Choisir un point d’ancrage</h3>
+      <p>
+        Pour une méditation de 5 minutes, le plus simple est souvent la respiration : sentir l’air entrer et sortir par le nez, ou le mouvement du ventre qui se soulève à l’inspiration et se dépose à l’expiration.
+      </p>
+
+      <h3>4. Accueillir les pensées, puis revenir</h3>
+      <p>
+        Quand une pensée arrive (souvenir, liste, inquiétude), vous pouvez simplement la remarquer : “tiens, une pensée”. Puis ramener doucement votre attention sur la respiration, sans vous fâcher contre vous-même.
+      </p>
+
+      <!-- BLOC 3 GESTES EXPRESS -->
+      <div class="box">
+        <div class="box-title">3 gestes express pour aujourd’hui</div>
+        <ul>
+          <li>Choisir un moment précis (matin, midi ou soir) et le noter quelque part pour vos 5 minutes.</li>
+          <li>Préparer votre “coin méditation” : une chaise ou un coussin, et éventuellement un plaid ou une bougie.</li>
+          <li>Lancer un minuteur de 5 minutes, fermer les yeux et simplement suivre votre respiration, sans chercher à bien faire.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="box-title">Une mini-méditation guidée en 5 étapes</div>
+        <ol>
+          <li>Installez‑vous confortablement, fermez les yeux si c’est ok pour vous.</li>
+          <li>Prenez une grande inspiration par le nez, expirez par la bouche avec un léger soupir.</li>
+          <li>Puis respirez normalement, en sentant l’air entrer et sortir par le nez.</li>
+          <li>À chaque fois que vous partez dans vos pensées, revenez vers la sensation de la respiration.</li>
+          <li>Au bout d’environ 5 minutes, prenez une ou deux grandes respirations, bougez doucement le corps, ouvrez les yeux.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="rituels">
+      <h2>Idées de rituels autour de la méditation</h2>
+      <p>
+        Pour certaines personnes, structurer un peu la pratique aide à la rendre plus agréable et plus facile à tenir sur la durée. Vous pouvez créer vos propres rituels, sans rigidité.
+      </p>
+
+      <h3>Un coin calme, même tout petit</h3>
+      <p>
+        Un angle de canapé, une chaise près d’une fenêtre, un coussin au sol : choisissez un endroit que vous associerez à vos 5 minutes de méditation. Vous pouvez y ajouter un plaid, une bougie ou une plante, si cela vous plaît.
+      </p>
+
+      <h3>Un signal de départ</h3>
