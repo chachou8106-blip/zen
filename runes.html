@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Runes nordiques : tirages simples & petits rituels | Zen Chez Toi</title>
+  <meta name="description" content="Comment utiliser les runes nordiques en douceur : tirer une rune du jour, faire un tirage à 3 runes et créer de petits rituels symboliques dans ton quotidien.">
+
+  <!-- Vérification & tracking -->
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  //fonts.googleapis.com">
+  //fonts.gstatic.com" crossorigin>
+  //fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f111a;
+      --text: #f5f3ff;
+      --muted: #b2b0c8;
+      --accent: #a98bff;
+      --dark: #060712;
+      --surface: rgba(18, 20, 35, 0.96);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15,17,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+    .dot {
+      color: rgba(255,255,255,0.15);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      margin: 0 0 10px;
+    }
+    .hero-sub {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.9rem;
+      margin: 40px 0 12px;
+    }
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.3rem;
+      margin: 26px 0 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .box-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+    li { margin-bottom: 6px; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f5f3ff;
+      padding: 70px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.6rem;
+    }
+    .footer-title em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .footer-links {
+      margin-top: 18px;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 50px; }
+      h2 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">•</span>
+      <a href="eso.html" class="active">Ésotérisme</a><span class="dot">•</span>
+      <a href="jardin.html">Jardin</a><span class="dot">•</span>
+      <a href="maison.html">Maison</a><span class="dot">•</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">•</span>
+      <a href="corps.html">Corps</a><span class="dot">•</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Ésotérisme · Runes</div>
+    <h1>Runes nordiques : tirages simples & petits rituels</h1>
+    <p class="hero-sub">
+      Les runes sont un ancien alphabet germanique et nordique, utilisé aujourd’hui comme support
+      de divination et de réflexion symbolique, un peu comme un tarot ou un oracle.[web:201][web:204][web:207]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Découvrir les runes en douceur</h2>
+      <p>
+        Un set de runes se compose généralement de 24 symboles (plus parfois une rune blanche),
+        chacun portant une signification liée aux forces de la nature, aux cycles et aux expériences
+        humaines.[web:201][web:204][web:207]
+      </p>
+      <p>
+        On les utilise souvent pour tirer une « rune du jour » ou réaliser des tirages
+        plus complets, afin d’obtenir un éclairage symbolique sur une situation.[web:199][web:202][web:208]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Quelques intentions possibles</div>
+        <u
+        <ul>
+          >Recevoir un message symbolique pour la journée avec une rune unique.[web:199][web:208]</li>
+          >Explorer les dynamiques passé‑présent‑évolution avec un tirage à 3 runes.[web:199][web:202][web:205][web:208]</li>
+          >Créer un petit talisman ou autel avec la rune qui t’accompagne en ce moment.[web:201][web:204]
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Rune du jour : un tirage très simple</h2>
+      <p>
+        Le tirage d’une rune du jour est une manière douce de te familiariser avec l’alphabet runique
+        sans te perdre dans des systèmes complexes.[web:199][web:201][web:208]
+      </p>
+
+      <h3>Comment faire</h3>
+      <p>
+        Place tes runes dans un petit sac ou une coupelle, mélange‑les en restant centré·e sur ta journée,
+        puis pioche une rune au hasard et pose‑la devant toi.[web:199][web:202][web:208]
+      </p>
+      <p>
+        Note son nom, son dessin et quelques mots‑clés tirés d’un petit livret ou d’un livre, puis demande‑toi
+        comment ces thèmes résonnent avec ce que tu t’apprêtes à vivre.[web:200][web:201][web:203][web:204]
+      </p>
+    </section>
+
+    <section>
+      <h2>Tirage à 3 runes : regard sur une situation</h2>
+      <p>
+        Quand tu veux approfondir une question, tu peux utiliser le tirage à 3 runes, qui donne un aperçu
+        de la dynamique en cours plutôt qu’une prédiction figée.[web:199][web:202][web:205][web:208]
+      </p>
+
+      <h3>Passé – Présent – Évolution possible</h3>
+      <p>
+        Mélange les runes dans leur sac, puis pioche‑en 3 que tu disposes de gauche à droite devant toi.[web:199][web:202][web:205][web:208]
+      </p>
+      <p>
+        La première rune peut représenter le contexte ou les racines de la situation, la deuxième ce
+        que tu traverses maintenant, et la troisième une direction ou une tendance possible.[web:199][web:202][web:205]
+      </p>
+      <p>
+        Prends le temps de ressentir ce que chaque rune évoque pour toi, au‑delà de la signification
+        « officielle ».[web:200][web:201][web:203][web:204]
+      </p>
+    </section>
+
+    <section>
+      <h2>Petits rituels symboliques avec les runes</h2>
+      <p>
+        Les runes peuvent aussi t’accompagner dans des rituels symboliques très simples, sans forcément
+        faire de tirage complexe.[web:201][web:204]
+      </p>
+
+      <h3>Rune talisman</h3>
+      <p>
+        Choisis une rune dont le sens correspond à un besoin du moment (protection, ancrage, courage,
+        clarté…), dessine‑la sur un petit papier ou porte la rune physique sur toi pendant quelques jours.[web:201][web:204][web:207]
+      </p>
+      <p>
+        Tu peux la poser sur ton autel, sous ton oreiller ou près de ton bureau comme rappel symbolique
+        de ton intention.[web:201][web:204]
+      </p>
+    </section>
+
+    <section>
+      <h2>Runes · Sélection Zen Chez Toi</h2>
+      <p>
+        Voici quelques idées de jeux de runes et de supports pour t’accompagner dans tes premiers tirages
+        et rituels.[web:199][web:201][web:204]
+      </p>
+
+      <div class="products-grid">
+
+        <!-- 1. Jeu de runes en pierre -->
+        <div class="product-card">
+          <strong>Jeu de runes en pierre</strong>
+          <p>
+            Un jeu de runes gravées sur des pierres naturelles, livré avec un petit sac et un livret
+            de significations pour t’aider à débuter.[web:199][web:201]
+          </p>
+          <p>
+            Parfait pour la rune du jour ou les tirages à 3 runes, avec une belle présence dans la main.[web:199][web:205]
+          </p>
+          <p>
+            Tu peux les utiliser sur un tissu dédié ou sur ton autel, pour garder un espace symbolique.[web:201][web:204]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07V5K9N9C?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000B001&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un jeu de runes en pierre sur Amazon
+          </a>
+        </div>
+
+        <!-- 2. Runes en bois -->
+        <div class="product-card">
+          <strong>Runes gravées en bois</strong>
+          <p>
+            Un set de runes légères en bois, au toucher chaleureux, idéal si tu aimes les matériaux
+            naturels et l’ambiance nordique.[web:201][web:207]
+          </p>
+          <p>
+            Elles sont faciles à manipuler pour les tirages où tu plonges la main dans le sac.[web:199][web:202]
+          </p>
+          <p>
+            Tu peux aussi en garder une seule dans ta poche comme talisman discret pour la journée.[web:201][web:204]
+          </p>
+          <a href="https://www.amazon.fr/dp/B07R9Z3D7D?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000B002&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un set de runes en bois sur Amazon
+          </a>
+        </div>
+
+        <!-- 3. Livre d’introduction aux runes -->
+        <div class="product-card">
+          <strong>Livre « Runes & divination »</strong>
+          <p>
+            Un livre d’introduction pour découvrir la signification de chaque rune, apprendre quelques
+            tirages et créer tes propres rituels symboliques.[web:199][web:200][web:201][web:204]
+          </p>
+          <p>
+            Il t’aide à nouer une relation personnelle avec ce système ancien sans te perdre dans la théorie.[web:200][web:204]
+          </p>
+          <p>
+            Tu peux l’utiliser comme compagnon de route, à côté de ton grimoire ou carnet de tirages.[web:205]
+          </p>
+          <a href="https://www.amazon.fr/dp/2841978091?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000B003&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un livre sur les runes sur Amazon
+          </a>
+        </div>
+
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Certains liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création
+        de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <!-- Liens croisés vers Grimoire et Corps -->
+    <section>
+      <div class="box">
+        <div class="box-title">Pour continuer ta pratique des runes</div>
+        <p>
+          Si tu veux noter ta rune du jour, tes tirages et les symboles qui reviennent souvent, la page
+          <a href="grimoire.html" style="color:var(--accent); font-weight:700;">Grimoire & carnet de rituels</a>
+          t’aidera à créer un carnet dédié à tes expériences.[web:205][web:206]
+        </p>
+        <p>
+          Et si tu utilises les runes pour travailler l’ancrage, le courage ou la confiance, la rubrique
+          <a href="corps.html" style="color:var(--accent); font-weight:700;">Corps</a>
+          peut t’inspirer des gestes concrets (mouvement, respiration) pour accompagner ce travail énergétique.[web:193][web:196]
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="eso.html">Retour à l’univers Ésotérisme</a>
+    </div>
+    <p style="margin-top:30px; opacity:0.35; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Pratiques ésotériques : ces contenus ont une portée symbolique et ne remplacent pas un avis médical,
+    psychologique ou juridique. Liens affiliés Amazon : je réalise un bénéfice sur les achats remplissant
+    les conditions requises.
+  </div>
+
+</body>
+</html>

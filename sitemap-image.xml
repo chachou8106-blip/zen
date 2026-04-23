@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/index.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-accueil.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/logo.jpg</image:loc></image:image>
+  </url>
+
+  <!-- Bien-être / Compléments & sommeil (exemple page bienetre) -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/bienetre.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-bienetre.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/acerola.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/ashwagandha.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/curcuma.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/ginseng-rhodiola.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/magnesium.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/melatonine.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/omega3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/probiotiques.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/psyllium.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/safran-griffonia.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/tisane-sommeil.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/cbd.jpg</image:loc></image:image>
+  </url>
+
+  <!-- Corps : hub + images génériques -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/Corps.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-corps.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-corps-deskop.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-corps-mobile.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/hero-corps-tablet.jpg</image:loc></image:image>
+  </url>
+
+  <!-- Corps : tensions musculaires -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/tensions-musculaires.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/tensions-musculaire.png</image:loc></image:image>
+  </url>
+
+  <!-- Corps : varices / circulation / jambes lourdes -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/varices.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/varices.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/jambes-lourdes.png</image:loc></image:image>
+  </url>
+
+  <!-- Corps : cellulite, douleurs articulaires, mal de dos, transpiration, pieds douloureux, chute de cheveux, peau sèche -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/Corps.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/cellulite.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/douleurs-articulaires.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/mal-de-dos.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/transpiration.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/pieds-douloureux.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/chute-cheveux.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/peau-seche.png</image:loc></image:image>
+  </url>
+
+  <!-- Maison : taches, calcaire, vitres, odeurs, canalisations, parquet, peinture, humidité/moisissures -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/maison.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/taches-tissu.png</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/calcaire.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/vitres-sales.png</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/odeurs-frigo.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/canalisations.png</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/parquet-raye.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/peinture-ecaillee.png</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/humidite.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/moisissures.png</image:loc></image:image>
+  </url>
+
+  <!-- Jardin : nuisibles, maladies, sol, feuilles -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/Jardin.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/feuilles-jaunes.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/cochenilles.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/fourmis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/limaces.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/pucerons.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/nuisibles.png</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/mildiou.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/oidium.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/rouille.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/tavelure.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/sol-epuise.jpg</image:loc></image:image>
+  </url>
+
+  <!-- Ésotérisme : tarot, oracle, quartz, pierre, attrape rêve, pendule, bol tibétain, encens, bougie, diffuseur, sputnik, lampe de sel, livre cristaux, chakra -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/eso.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/tarot.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/oracle.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/quartz-rose.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/pierre.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/attrape-reve.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/pendule.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/bol-tibetain.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/encens.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/bougie.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/diffuseur.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/sputnik.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/lampe-sel.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/livre-cristaux.jpg</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/chakra.jpg</image:loc></image:image>
+  </url>
+
+  <!-- Bien-être / Yoga & étirements, posture, désordre -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/yoga-etirements.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/mauvaise-posture.png</image:loc></image:image>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/désordre.png</image:loc></image:image>
+  </url>
+
+  <!-- Divers / Madero, parquet, notice, etc., attachés à Corps ou Maison -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/Corps.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/notice-madero.png</image:loc></image:image>
+  </url>
+
+  <!-- Odeurs / frigo déjà rattaché à Maison ci-dessus -->
+
+  <!-- Araignées : jardin / maison -->
+  <url>
+    <loc>https://zencheztoi.netlify.app/Jardin.html</loc>
+    <image:image><image:loc>https://zencheztoi.netlify.app/assets/araignees.jpg</image:loc></image:image>
+  </url>
+
+</urlset>

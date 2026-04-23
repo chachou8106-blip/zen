@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tarot & oracles : faire des tirages en douceur | Zen Chez Toi</title>
+  <meta name="description" content="Comment débuter avec le tarot et les oracles : choisir ton jeu, faire des tirages simples à 1 ou 3 cartes, poser des questions claires et garder une trace dans ton grimoire.">
+
+  <!-- Vérification & tracking -->
+  <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JRV5YNRL57');
+  </script>
+
+  <!-- Google AdSense global -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-7501098246029504"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f111a;
+      --text: #f5f3ff;
+      --muted: #b2b0c8;
+      --accent: #a98bff;
+      --dark: #060712;
+      --surface: rgba(18, 20, 35, 0.96);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15,17,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-wrap a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 5px 8px;
+    }
+    .nav-wrap a:hover,
+    .nav-wrap a.active {
+      color: var(--accent);
+    }
+    .dot {
+      color: rgba(255,255,255,0.15);
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      margin: 0 0 10px;
+    }
+    .hero-sub {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.9rem;
+      margin: 40px 0 12px;
+    }
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.3rem;
+      margin: 26px 0 8px;
+    }
+    p { margin: 0 0 12px; }
+
+    .box {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      margin: 22px 0;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .box-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 12px;
+    }
+    li { margin-bottom: 6px; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .product-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #f5f3ff;
+      padding: 70px 20px 80px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.6rem;
+    }
+    .footer-title em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .footer-links {
+      margin-top: 18px;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    #disclaimer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 50px; }
+      h2 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-wrap">
+      <a href="index.html">Accueil</a><span class="dot">•</span>
+      <a href="eso.html" class="active">Ésotérisme</a><span class="dot">•</span>
+      <a href="Jardin.html">Jardin</a><span class="dot">•</span>
+      <a href="maison.html">Maison</a><span class="dot">•</span>
+      <a href="bienetre.html">Bien-être</a><span class="dot">•</span>
+      <a href="Corps.html">Corps</a><span class="dot">•</span>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-kicker">Ésotérisme · Tarot & oracles</div>
+    <h1>Tarot & oracles : des tirages simples pour éclairer ton chemin</h1>
+    <p class="hero-sub">
+      Le tarot et les oracles sont des supports symboliques pour dialoguer avec ton intuition,
+      prendre du recul et explorer les différentes facettes d’une situation. [web:269][web:270][web:271][web:127][web:129]
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tarot ou oracle&nbsp;: que choisir&nbsp;?</h2>
+      <p>
+        Un jeu de tarot classique comporte 78 cartes avec une structure précise&nbsp;: 22 arcanes majeurs
+        (les grandes étapes de vie) et 56 arcanes mineurs (les expériences plus concrètes du quotidien). [web:269][web:270][web:127][web:129]
+      </p>
+      <p>
+        Les oracles, eux, sont plus libres&nbsp;: chaque jeu a son univers, son nombre de cartes et ses
+        propres mots‑clés, ce qui les rend très accessibles si tu veux des messages directs et intuitifs. [web:269][web:271][web:274]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Pour débuter en douceur</div>
+        <ul>
+          <li>Si tu aimes les structures et les systèmes, un tarot (type Rider‑Waite ou Marseille) peut t’aider à progresser pas à pas. [web:269][web:270][web:129]</li>
+          <li>Si tu préfères un langage simple et des phrases claires, un oracle est souvent plus fluide au début. [web:269][web:271][web:274]</li>
+          <li>L’essentiel est de choisir un jeu dont les illustrations et l’ambiance te parlent vraiment. [web:269][web:270][web:271]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Préparer ton tirage</h2>
+      <p>
+        Avant de tirer les cartes, prends quelques minutes pour te poser, mélanger ton jeu et formuler
+        une question claire, plutôt ouverte que fermée. [web:269][web:270][web:271]
+      </p>
+      <p>
+        Beaucoup de praticiens conseillent de battre les cartes plusieurs fois, de couper le jeu de la
+        main gauche (celle du cœur et de l’intuition) et de respirer calmement avant de tirer. [web:270][web:271]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Exemples de bonnes questions</div>
+        <ul>
+          <li>«&nbsp;Comment puis‑je prendre soin de moi dans cette situation&nbsp;?&nbsp;» [web:271]</li>
+          <li>«&nbsp;De quoi ai‑je besoin de prendre conscience aujourd’hui&nbsp;?&nbsp;» [web:269][web:271]</li>
+          <li>«&nbsp;Quelle est la prochaine petite étape pour avancer sereinement&nbsp;?&nbsp;» [web:269][web:271]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Deux tirages très simples</h2>
+      <p>
+        Tu n’as pas besoin de tirages compliqués pour commencer&nbsp;: un tirage à 1 carte ou à 3 cartes
+        permet déjà d’ouvrir une discussion avec toi‑même. [web:270][web:271]
+      </p>
+
+      <h3>Le tirage «&nbsp;Carte du jour&nbsp;»</h3>
+      <p>
+        Mélange ton jeu en pensant à ta journée, coupe, puis tire une carte que tu poses devant toi&nbsp;:
+        elle représente un message, une énergie ou un point d’attention pour les heures à venir. [web:269][web:270][web:271]
+      </p>
+      <p>
+        Tu peux la photographier ou la noter dans ton carnet, puis le soir, revenir voir comment son
+        message s’est manifesté (ou pas) dans ta journée. [web:269][web:271]
+      </p>
+
+      <h3>Le tirage à 3 cartes</h3>
+      <p>
+        Pour une question un peu plus précise, tu peux tirer trois cartes et les disposer de gauche à droite&nbsp;:
+        passé – présent – évolution possible, ou bien situation – conseil – tendance. [web:270][web:271]
+      </p>
+      <p>
+        Prends le temps de regarder les images, les couleurs, les symboles, puis d’associer ce que tu vois
+        à ta situation actuelle, plutôt que de chercher « la bonne réponse » toute faite. [web:269][web:270][web:274]
+      </p>
+    </section>
+
+    <section>
+      <h2>Lire les cartes en restant connectée à toi</h2>
+      <p>
+        Chaque carte possède des significations classiques, mais ton ressenti et ton contexte restent
+        au centre de la lecture&nbsp;: une même carte peut te parler différemment selon le moment. [web:127][web:129][web:130][web:274]
+      </p>
+      <p>
+        Les arcanes majeurs parlent souvent de grandes étapes de vie, tandis que les arcanes mineurs
+        reflètent des situations plus quotidiennes et des états d’esprit que tu peux faire évoluer. [web:127][web:129][web:130]
+      </p>
+
+      <div class="box">
+        <div class="box-title">Une petite façon d’interpréter</div>
+        <ul>
+          <li>Commence par observer l’image&nbsp;: ce qui t’attire, les couleurs, l’ambiance générale. [web:269][web:127][web:274]</li>
+          <li>Ajoute quelques mots‑clés classiques pour cette carte (amour, mouvement, choix, etc.). [web:127][web:129][web:130]</li>
+          <li>Relie le tout à ta question et à ce que tu vis en ce moment, sans te juger. [web:269][web:271]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tarot & oracles · Sélection Zen Chez Toi</h2>
+      <p>
+        Voici quelques idées de jeux et de supports pour accompagner tes tirages, ainsi qu’un livre pour
+        t’aider à apprivoiser le tarot si tu débutes. [web:269][web:270][web:271][web:129][web:272][web:273]
+      </p>
+
+      <div class="products-grid">
+
+        <!-- 1. Tarot type Rider-Waite débutant -->
+        <div class="product-card">
+          <strong>Tarot illustré pour débuter</strong>
+          <p>
+            Un tarot au système classique (type Rider‑Waite ou inspiré), avec des illustrations détaillées
+            qui facilitent l’intuition et l’apprentissage des cartes. [web:269][web:270][web:129]
+          </p>
+          <p>
+            Parfait si tu as envie d’explorer la structure complète du tarot (arcanes majeurs et mineurs)
+            avec un support visuel parlant. [web:269][web:270][web:129]
+          </p>
+          <p>
+            Tu pourras l’utiliser pour les tirages à 1 ou 3 cartes décrits sur cette page, puis aller
+            vers des tirages plus avancés quand tu te sentiras prête. [web:269][web:270][web:271]
+          </p>
+          <a href="https://www.amazon.fr/dp/8865277352?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000A001&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un tarot illustré pour débuter sur Amazon
+          </a>
+        </div>
+
+        <!-- 2. Oracle doux / guidance -->
+        <div class="product-card">
+          <strong>Oracle de guidance douce</strong>
+          <p>
+            Un oracle avec des messages simples et bienveillants, idéal pour tirer une carte par jour
+            ou recevoir un conseil symbolique dans une situation donnée. [web:269][web:271][web:274]
+          </p>
+          <p>
+            Chaque carte propose généralement un mot‑clé ou une phrase qui t’aide à mettre des mots
+            sur ce que tu ressens. [web:269][web:271]
+          </p>
+          <p>
+            Tu peux l’utiliser seul ou en complément du tarot pour ajouter une touche de douceur
+            à tes tirages. [web:269][web:271][web:274]
+          </p>
+          <a href="https://www.amazon.fr/dp/2361883084?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000A002&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir un oracle de guidance sur Amazon
+          </a>
+        </div>
+
+        <!-- 3. Livre « Tarot pour débutants » -->
+        <div class="product-card">
+          <strong>Livre « Tarot pour débutants »</strong>
+          <p>
+            Un guide qui reprend les bases du tarot&nbsp;: structure du jeu, signification des arcanes
+            majeurs et mineurs, exemples de tirages et conseils pour formuler tes questions. [web:269][web:270][web:272][web:273]
+          </p>
+          <p>
+            Il t’accompagne pas à pas pour créer un lien personnel avec tes cartes et interpréter
+            tes tirages avec plus de confiance. [web:269][web:272][web:273]
+          </p>
+          <p>
+            Tu peux le garder à portée de main au début, puis t’en détacher progressivement au fil
+            de ta pratique. [web:269][web:271][web:272]
+          </p>
+          <a href="https://www.amazon.fr/dp/2017159591?linkCode=ll2&tag=zencheztoi-21&linkId=0000000000000000000000000000A003&ref_=as_li_ss_tl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir le livre Tarot pour débutants sur Amazon
+          </a>
+        </div>
+
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--muted); margin-top:10px;">
+        Certains liens sont affiliés : ils ne changent rien pour vous, mais soutiennent la création
+        de Zen Chez Toi si vous choisissez d’acheter via ces recommandations.
+      </p>
+    </section>
+
+    <!-- Liens croisés vers Grimoire et Blog -->
+    <section>
+      <div class="box">
+        <div class="box-title">Pour continuer ta pratique des cartes</div>
+        <p>
+          Si tu as envie de garder une trace de tes tirages, des cartes qui reviennent souvent et de tes ressentis,
+          tu peux créer un journal dédié grâce à la page
+          <a href="grimoire.html" style="color:var(--accent); font-weight:700;">Grimoire & carnet de rituels</a>. [web:244][web:246][web:248][web:250]
+        </p>
+        <p>
+          Et pour nourrir tes réflexions sur l’intuition, les intentions ou les cycles, les articles du
+          <a href="blog.html" style="color:var(--accent); font-weight:700;">Blog</a>
+          pourront accompagner tes tirages comme de petites lectures de fond. [web:244][web:246][web:248][web:250]
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title">Zen <em>Chez</em> Toi</div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Gestion des cookies</a>
+      <a href="eso.html">Retour à l’univers Ésotérisme</a>
+    </div>
+    <p style="margin-top:30px; opacity:0.35; font-size:0.8rem;">
+      © 2026 Zen Chez Toi — Tous droits réservés.
+    </p>
+  </footer>
+
+  <div id="disclaimer-bar">
+    Pratiques ésotériques : ces contenus ont une portée symbolique et ne remplacent pas un avis médical,
+    psychologique ou juridique. Liens affiliés Amazon : je réalise un bénéfice sur les achats remplissant
+    les conditions requises.
+  </div>
+
+</body>
+</html>

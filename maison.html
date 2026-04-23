@@ -1,254 +1,194 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Chez Toi Maison</title>
-  <meta name="description" content="Conseils et solutions pour une maison plus saine : humidité, odeurs, vitres, canalisations et entretien au quotidien.">
-  <style>
-    :root{
-      --bg:#f7f1ea;
-      --text:#382920;
-      --muted:#7d6558;
-      --accent:#b57a52;
-      --surface:rgba(255,255,255,.9);
-      --dark:#241913;
-      --border:rgba(56,41,32,.14);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Georgia,serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jardin Naturel - L'Encyclopédie Zen</title>
+    <style>
+        :root {
+            --bg-color: #f5f2ec; /* Sable doux */
+            --text-color: #2b2622;
+            --accent-color: #7b9074; /* Vert Sauge pour le jardin */
+            --card-bg: #ffffff;
+        }
 
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
-      background:
-        linear-gradient(rgba(24,18,14,.4),rgba(24,18,14,.55)),
-        url("hero-maison.jpg") center/cover no-repeat;
-      color:#fff;
-      text-align:left;
-    }
-    .hero-inner{
-      max-width:1100px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:1.2fr .9fr;
-      gap:2rem;
-      align-items:center;
-    }
-    .logo{
-      width:min(340px,60vw);
-      margin:0 0 1.2rem;
-      filter:drop-shadow(0 12px 32px rgba(0,0,0,.45));
-    }
-    .nav{
-      position:absolute;
-      top:1.4rem;
-      left:50%;
-      transform:translateX(-50%);
-      display:flex;
-      gap:.7rem;
-      flex-wrap:wrap;
-      justify-content:center;
-      font-size:.85rem;
-    }
-    .nav a{
-      padding:.55rem .95rem;
-      border-radius:999px;
-      background:rgba(0,0,0,.28);
-      border:1px solid rgba(255,255,255,.18);
-    }
-    h1{
-      font-size:clamp(2rem,4vw,3.7rem);
-      line-height:1.08;
-      margin:0 0 1rem;
-      max-width:14ch;
-    }
-    .sub{
-      max-width:540px;
-      margin:0 0 1.4rem;
-      font-size:1.02rem;
-      color:rgba(255,255,255,.9);
-    }
-    .pill{
-      display:inline-block;
-      padding:.85rem 1.3rem;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.2);
-      font-size:.9rem;
-      background:#fff;
-      color:#1f1510;
-    }
-    .hero-aside{
-      background:rgba(0,0,0,.25);
-      border-radius:22px;
-      padding:1.4rem 1.5rem;
-      border:1px solid rgba(255,255,255,.28);
-      font-size:.95rem;
-    }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
 
-    /* MAIN */
-    main{
-      max-width:1100px;
-      margin:0 auto;
-      padding:3.5rem 1.25rem 4.5rem;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:1.4fr .9fr;
-      gap:1.6rem;
-      align-items:start;
-    }
-    .card{
-      background:var(--surface);
-      border-radius:26px;
-      border:1px solid var(--border);
-      padding:1.5rem;
-      box-shadow:0 20px 50px rgba(0,0,0,.06);
-    }
-    .eyebrow{
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:.78rem;
-      color:var(--accent);
-      margin-bottom:.4rem;
-    }
-    h2{
-      margin:.2rem 0 1rem;
-      font-size:1.6rem;
-    }
-    .muted{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      margin-top:.8rem;
-    }
-    .links a{
-      padding:.55rem .95rem;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-size:.85rem;
-    }
+        .promo-bar {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-    footer{
-      background:var(--dark);
-      color:#f7f0e8;
-      padding:2rem 1.25rem;
-      font-size:.9rem;
-      text-align:center;
-    }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-    @media(max-width:900px){
-      .hero{
-        text-align:center;
-      }
-      .hero-inner{
-        grid-template-columns:1fr;
-      }
-      .hero-aside{
-        margin-top:1rem;
-      }
-      .nav{max-width:94vw;}
-      .grid{grid-template-columns:1fr;}
-      .logo{
-        margin:0 auto 1.2rem;
-      }
-      .sub{
-        margin:0 auto 1.4rem;
-      }
-    }
-  </style>
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-variant: small-caps;
+            padding: 5px 10px;
+            transition: 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-style: italic;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section-card h2 {
+            color: var(--accent-color);
+            border-bottom: 1px solid #e0dbd1;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-list li {
+            margin: 12px 0;
+        }
+
+        .link-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        .link-list a:before {
+            content: "◈";
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 0.8em;
+        }
+
+        .link-list a:hover {
+            padding-left: 5px;
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="jardin.html">Jardin</a>
-      <a href="maison.html">Maison</a>
-      <a href="bienetre.html">Bien-être</a>
-      <a href="corps.html">Corps</a>
-      <a href="eso.html">Ésotérisme</a>
-      <a href="blog.html">Blog</a>
-    </nav>
 
-    <div class="hero-inner">
-      <div>
-        <img src="logo.jpg" alt="Logo Zen Chez Toi" class="logo">
-        <h1>Quand la maison respire, l’esprit se pose enfin.</h1>
-        <p class="sub">
-          Humidité, odeurs, taches et entretien : des gestes simples et des solutions choisies
-          pour alléger ton foyer sans le transformer en laboratoire.
-        </p>
-        <a href="#contenu" class="pill">Voir les solutions maison</a>
-      </div>
-      <div class="hero-aside">
-        <strong>Un foyer plus léger, sans culpabilité.</strong>
-        <p>
-          Ici tu montres que prendre soin de la maison, ce n’est pas courir derrière la perfection,
-          mais retrouver une ambiance où l’on respire mieux, jour après jour.
-        </p>
-      </div>
-    </div>
-  </header>
+    <div class="promo-bar">🍃 Cultiver le vivant, respecter la terre 🍃</div>
 
-  <main id="contenu">
-    <section class="grid">
-      <article class="card">
-        <div class="eyebrow">Maison</div>
-        <h2>Assainir sans agresser</h2>
-        <p>
-          Cette page rassemble tes grandes thématiques maison : humidité, mauvaises odeurs,
-          vitres, canalisations, taches difficiles, soin du bois…
+    <header>
+        <h1>Jardin & Potager</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="maison.html">Maison</a>
+            <a href="bienetre.html">Bien-être</a>
+            <a href="corps.html">Corps</a>
+            <a href="eso.html">Ésotérisme</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="intro">
+            Retrouvez ici tous les secrets de la nature pour soigner vos plantes, 
+            éloigner les nuisibles sans produits chimiques et comprendre les cycles du vivant.
         </p>
-        <p class="muted">
-          L’idée est de montrer que prendre soin de la maison, ce n’est pas seulement nettoyer :
-          c’est aussi retrouver une sensation d’ordre, de respiration et de confort.
-        </p>
-        <div class="links">
-          <a href="humidite.html">Humidité</a>
-          <a href="mauvaises-odeurs.html">Mauvaises odeurs</a>
-          <a href="vitres-eclatantes.html">Vitres éclatantes</a>
-          <a href="canalisations.html">Canalisations</a>
-          <a href="taches-difficiles.html">Taches difficiles</a>
-          <a href="soin-bois.html">Soin du bois</a>
+
+        <div class="grid">
+            <div class="section-card">
+                <h2>Nuisibles & Insectes</h2>
+                <ul class="link-list">
+                    <li><a href="limaces.html">Les Limaces : solutions naturelles</a></li>
+                    <li><a href="cochenilles-thrips.html">Cochenilles & Thrips</a></li>
+                    <li><a href="insectes.html">Guide des insectes du jardin</a></li>
+                    <li><a href="araignees.html">Araignées rouges & jaunes</a></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2>Maladies & Vitalité</h2>
+                <ul class="link-list">
+                    <li><a href="mildiou.html">Traiter le Mildiou</a></li>
+                    <li><a href="oidium.html">Lutter contre l'Oïdium</a></li>
+                    <li><a href="feuilles-jaunes.html">Pourquoi les feuilles jaunissent ?</a></li>
+                    <li><a href="jardin-selection.html">Ma sélection de plantes</a></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2>L'Apothicaire du Jardin</h2>
+                <ul class="link-list">
+                    <li><a href="neem.html">L'Huile de Neem</a></li>
+                    <li><a href="poudre-ortie.html">La Poudre d'Ortie</a></li>
+                    <li><a href="ail.html">L'Ail au jardin</a></li>
+                    <li><a href="terre-diatomee.html">La Terre de Diatomée</a></li>
+                </ul>
+            </div>
         </div>
-      </article>
+    </div>
 
-      <aside class="card">
-        <div class="eyebrow">Intérêt</div>
-        <h2>Rassurer puis proposer des solutions</h2>
-        <p class="muted">
-          Les personnes qui arrivent ici ont souvent un problème précis : une odeur qui dérange,
-          une trace qui ne part pas, une pièce qui reste humide.
-        </p>
-        <p class="muted">
-          Ta mission est de les rassurer en quelques lignes, puis de les orienter vers les pages les plus adaptées
-          et, ensuite, vers tes produits choisis.
-        </p>
-      </aside>
-    </section>
-  </main>
+    <footer>
+        &copy; Zen & Nature - L'Encyclopédie Incontournable
+    </footer>
 
-  <footer>
-    Zen Chez Toi Maison • douceur, ordre et solutions utiles
-  </footer>
 </body>
 </html>
