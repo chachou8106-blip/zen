@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Argile Verte – Zen Chez Toi</title>
-  <style> /* Style identique */
-    :root{ --bg:#f5f2ec; --text:#2b2622; --muted:#6f6660; --accent:#a67b51; --accent-soft:#e9ddcf; --dark:#221b16; --surface:rgba(255,255,255,.94); --border:rgba(43,38,34,.12); --shadow:0 15px 35px rgba(0,0,0,.08); }
-    *{box-sizing:border-box} body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; }
-    header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--dark); }
-    .tagline { font-style: italic; color: var(--muted); font-size: 1.2rem; }
-    .main-btn { display: inline-block; background: #c68642; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; box-shadow: var(--shadow); transition: 0.3s; }
-    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .univers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
-    .univers-card { background: var(--surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
-    .univers-card h3 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.5rem; }
-    .univers-card ul { padding-left: 1.2rem; } .univers-card li { margin-bottom: 0.5rem; }
-    .pricing-section { background: var(--dark); color: #fff; padding: 4rem 2rem; border-radius: 40px; text-align: center; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .price-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
-    .price-card.featured { background: var(--surface); color: var(--text); transform: scale(1.05); }
-    .price { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; }
-    .buy-btn { display: block; background: var(--accent); color: white; padding: 0.8rem; border-radius: 10px; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagesse n°3 : L'Argile – Zen Chez Toi</title>
+    
+    <meta name="p:domain_verify" content="549770272775"/>
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
+
+        /* NAVIGATION & RETOUR FIXE */
+        .btn-retour-grimoire { position: fixed; top: 25px; left: 25px; z-index: 2000; background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 50px; text-decoration: none; color: var(--brun-sombre); font-size: 0.9em; font-style: italic; backdrop-filter: blur(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .btn-retour-grimoire:hover { background: var(--blanc); transform: translateX(-5px); }
+        
+        .scroll-nav { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 1500; padding: 0 30px; }
+        .arrow-nav { pointer-events: auto; background: var(--blanc); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; color: var(--or-zen); font-size: 1.5em; box-shadow: 0 5px 15px rgba(0,0,0,0.15); opacity: 0.6; transition: 0.3s; }
+        .arrow-nav:hover { opacity: 1; transform: scale(1.1); background: var(--or-zen); color: #fff; }
+
+        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; display: flex; justify-content: center; }
+        .logo-link img { max-height: 100px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); transition: 0.3s; }
+
+        /* HERO - LISIBILITÉ TOTALE AVEC CONTOUR BLEU (VOLUME 1) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-argile.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px;
+        }
+        
+        .maitre-phrase { 
+            font-size: 1.4em; font-variant: small-caps; letter-spacing: 5px; font-weight: bold; margin-bottom: 20px; 
+            color: #fff; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .sagesse-num { 
+            font-size: 1.2em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; 
+            color: #fff; font-weight: bold; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison);
+        }
+        .hero h1 { 
+            font-size: 5.5em; font-weight: normal; margin-bottom: 30px; line-height: 1.1;
+            color: #fff; text-shadow: -2px -2px 0 var(--maison), 2px -2px 0 var(--maison), -2px 2px 0 var(--maison), 2px 2px 0 var(--maison), 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .tagline { 
+            font-size: 1.8em; font-style: italic; max-width: 900px; line-height: 1.4;
+            color: #fff; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* CONTENU DESCRIPTIF */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .histoire-section { background: var(--blanc); padding: 80px; border-radius: 30px; margin-top: -120px; position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
+        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; font-weight: normal; text-align: center; }
+        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; line-height: 2; }
+
+        /* ALLIANCES MAILLAGE */
+        .allies-box { background: var(--bg-sable); padding: 50px; border-radius: 20px; margin: 80px 0; border-left: 8px solid var(--or-zen); }
+        .allies-box h3 { font-size: 2em; color: var(--brun-sombre); margin-bottom: 30px; font-weight: normal; }
+        .allies-list { list-style: none; }
+        .allies-list li { background: var(--blanc); margin-bottom: 15px; padding: 20px 30px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+        .allies-list a { font-weight: bold; color: var(--brun-sombre); text-decoration: none; border-bottom: 2px solid var(--or-zen); font-size: 1.1em; }
+        .vol-tag { font-size: 0.8em; font-weight: bold; color: var(--or-zen); text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--or-zen); padding: 5px 15px; border-radius: 50px; }
+
+        /* BOUTON AMAZON ZEN ÉPURÉ */
+        .amazon-section { text-align: center; margin: 80px 0 120px; }
+        .amazon-btn { display: inline-block; padding: 22px 55px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); }
+
+        /* SECTION PRIX INDEX */
+        .pricing-section { background-color: var(--blanc); padding: 120px 20px; text-align: center; border-top: 1px solid #eee; margin-top: 80px; }
+        .pills-row { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 60px; }
+        .pill { padding: 12px 25px; border: 2px solid; border-radius: 50px; font-variant: small-caps; font-weight: bold; font-size: 1em; text-decoration: none; background: var(--blanc); transition: 0.3s; }
+        .p1 { border-color: var(--maison); color: var(--maison); } .p1:hover { background: var(--maison); color: #fff; }
+        .p2 { border-color: var(--jardin); color: var(--jardin); } .p2:hover { background: var(--jardin); color: #fff; }
+        .p3 { border-color: var(--corps); color: var(--corps); } .p3:hover { background: var(--corps); color: #fff; }
+        .p4 { border-color: var(--bienetre); color: var(--bienetre); } .p4:hover { background: var(--bienetre); color: #fff; }
+        .p5 { border-color: var(--eso); color: var(--eso); } .p5:hover { background: var(--eso); color: #fff; }
+        
+        .pricing-grid { display: flex; justify-content: center; gap: 80px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
+        .price-box h4 { font-weight: normal; color: #777; margin-bottom: 10px; font-size: 1.1em; }
+        .price-box .amount { font-size: 2.8em; color: var(--or-zen); font-weight: bold; }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 100px 20px; text-align: center; }
+        .footer-logo img { max-height: 100px; margin-bottom: 50px; }
+        .footer-links { margin-bottom: 40px; display: flex; justify-content: center; gap: 40px; font-size: 1em; opacity: 0.7; }
+        .footer-links a { color: #fff; text-decoration: none; }
+
+        @media (max-width: 1000px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .pricing-grid { gap: 40px; } }
+    </style>
 </head>
 <body>
-  <div class="promo-bar">🎁 VOLUME 2 : L'Argile Verte pour vos 5 mondes. <a href="#offres">Voir les offres</a></div>
-  <header>
-    <div style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent);">Solution n°17 / 50</div>
-    <h1>Argile Verte</h1>
-    <p class="tagline">"L'aimant terrestre : elle absorbe, détoxifie et cicatrise d'un monde à l'autre."</p>
-    <a href="https://www.amazon.fr/Argile-Verte-Illite-Surfine-1kg/dp/B00XP029S6?&linkCode=ll1&tag=zencheztoi-21" class="main-btn" target="_blank">Acheter l'Argile Verte (Poudre Surfine)</a>
-  </header>
-  <main>
-    <div class="univers-grid">
-      <div class="univers-card"><h3>🏠 Monde Maison</h3><ul><li>Dégraissage profond des zones de cuisson.</li><li>Absorbe les odeurs fortes (frigo, litière).</li><li>Nettoie les joints de carrelage poreux.</li><li>Absorbe les taches de vin sur tapis.</li><li>Base pour "terre de nettoyage" maison.</li></ul></div>
-      <div class="univers-card"><h3>🌿 Monde Jardin</h3><ul><li>Assainit l'eau des bassins (clarifiant).</li><li>Soin pour les coupures d'arbres.</li><li>Pralinage des racines avant plantation.</li><li>Apport minéral détoxifiant pour le sol.</li><li>Éloigne certains parasites du feuillage.</li></ul></div>
-      <div class="univers-card"><h3>✨ Monde Corps</h3><ul><li>Masque détoxifiant pour peaux grasses.</li><li>Cataplasme pour apaiser les articulations.</li><li>Shampoing pour cheveux gras (absorbant).</li><li>Cicatrisation rapide des petites plaies.</li><li>Soin reminéralisant pour le bain.</li></ul></div>
-      <div class="univers-card"><h3>🧘 Monde Bien-être</h3><ul><li>Détoxifie l'organisme (eau d'argile).</li><li>Soulage les maux de ventre (cataplasme).</li><li>Apaise les piqûres d'insectes.</li><li>Aide à la récupération après l'effort.</li><li>Élimine les toxines cutanées.</li></ul></div>
-      <div class="univers-card"><h3>🔮 Monde Ésotérisme</h3><ul><li>Absorption des énergies lourdes d'un lieu.</li><li>Ancrage puissant lors de rituels telluriques.</li><li>Purification des minéraux sombres.</li><li>Fabrication d'amulettes de protection (terre).</li><li>Connexion à l'élément Terre sauvage.</li></ul></div>
+
+    <a href="grimoire.html" class="btn-retour-grimoire">← Retour au Grimoire</a>
+
+    <div class="scroll-nav">
+        <a href="ail.html" class="arrow-nav">❮</a>
+        <a href="bicarbonate.html" class="arrow-nav">❯</a>
     </div>
-    <section id="offres" class="pricing-section">
-      <h2>Apprenez à tout soigner avec le Volume 2</h2>
-      <div class="pricing-grid">
-        <div class="price-card"><h3>Volume 2</h3><div class="price">9,90€</div><a href="#" class="buy-btn">Commander le Vol. 2</a></div>
-        <div class="price-card featured"><h3>Pack 3 Volumes</h3><div class="price">24,90€</div><a href="#" class="buy-btn">Choisir le Trio</a></div>
-        <div class="price-card"><h3>L'Intégrale (5 Vol.)</h3><div class="price">39,90€</div><a href="#" class="buy-btn">La Totale Zen</a></div>
-      </div>
+
+    <header>
+        <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+    </header>
+
+    <section class="hero">
+        <p class="maitre-phrase">Maître des Fondations</p>
+        <p class="sagesse-num">Sagesse n°3 : La Terre de Régénération</p>
+        <h1>L'Argile</h1>
+        <p class="tagline">"Le savoir n'est pas une arme, c'est une lumière. Apprenez à voir la vie là où le sédiment l'a préservée."</p>
     </section>
-  </main>
-  <footer>© Zen Chez Toi - La détox par la terre.</footer>
+
+    <main class="container">
+        
+        <section class="histoire-section">
+            <h2>Le Souffle de la Roche Bleue</h2>
+            <div class="histoire-text">
+                <p>Depuis la nuit des temps, l'argile est le pansement de la Terre. Les animaux sauvages furent les premiers alchimistes, plongeant leurs blessures dans la boue argileuse pour hâter leur guérison. Dans l'Égypte antique, elle était utilisée non seulement pour la beauté des reines, mais aussi pour la momification, prouvant sa capacité unique à préserver la structure du vivant contre la corruption.</p>
+                <p>Au XIXe siècle, le célèbre <strong>Abbé Kneipp</strong> et les pionniers de la naturopathie redécouvrirent sa force électrique. Car l'argile n'est pas inerte : elle possède une intelligence ionique. Elle sait attirer le mal, emprisonner les poisons et restituer les minéraux essentiels. Utiliser l'argile concassée, c'est renouer avec ce rituel lent, où l'on laisse la roche redevenir vie au contact de l'eau pure.</p>
+            </div>
+        </section>
+
+        <section class="allies-box">
+            <h3>Alliances & Correspondances</h3>
+            <ul class="allies-list">
+                <li><a href="sel-de-mer.html">Le Sel de Mer Gris</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="huile-de-ricin.html">L'Huile de Ricin Sacrée</a> <span class="vol-tag">Volume 3</span></li>
+                <li><a href="charbon-actif.html">Le Charbon Végétal</a> <span class="vol-tag">Volume 5</span></li>
+            </ul>
+        </section>
+
+        <div class="amazon-section">
+            <a href="https://www.amazon.fr/Cattier-Vrac-Argile-Verte-Concass%C3%A9e/dp/B00AE3I35C?tag=zencheztoi-21" class="amazon-btn" target="_blank">
+                Acquérir la Terre de Régénération
+            </a>
+        </div>
+
+    </main>
+
+    <section class="pricing-section">
+        <h2 class="section-title">L'Encyclopédie des Solutions Nomades (PDF)</h2>
+        <div class="pills-row">
+            <a href="encyclopedie.html" class="pill p1">Vol 1 : Les Fondations</a>
+            <a href="encyclopedie.html" class="pill p2">Vol 2 : L'Enracinement</a>
+            <a href="encyclopedie.html" class="pill p3">Vol 3 : L'Éclosion</a>
+            <a href="encyclopedie.html" class="pill p4">Vol 4 : L'Harmonie</a>
+            <a href="encyclopedie.html" class="pill p5">Vol 5 : L'Élévation</a>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-box"><h4>Un Volume de Savoir</h4><span class="amount">14,90 €</span></div>
+            <div class="price-box"><h4>Le Pack Trio Alchimique</h4><span class="amount">24,90 €</span></div>
+            <div class="price-box"><h4>L'Intégrale du Maître (5 Vol.)</h4><span class="amount">39,90 €</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a> | <a href="confidentialite.html">Confidentialité</a> | <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Boutique Amazon</a>
+        </div>
+        <p>&copy; 2026 Zen Chez Toi – Transmettre pour Libérer</p>
+    </footer>
+
 </body>
 </html>

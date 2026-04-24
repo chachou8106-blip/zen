@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le Journal Zen - Zen Chez Toi</title>
-    
-    <meta name="description" content="Le blog qui relie tes 5 univers : jardin, maison, corps, bien-être et ésotérisme. Inspirations et conseils pour une vie harmonieuse.">
-    <link rel="icon" type="image/png" href="assets/logo.png">
 
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <meta name="p:domain_verify" content="549770272775"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID" crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
         :root {
             --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
@@ -16,86 +18,94 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; }
 
-        /* HEADER TRANSPARENT (Harmonisé) */
+        /* HEADER & BADGE PINTEREST ZEN */
         header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
-        .logo img { max-height: 90px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        .logo-area { display: flex; align-items: center; gap: 25px; }
+        .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        
+        .pinterest-badge { 
+            display: inline-flex; align-items: center; justify-content: center; 
+            width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.4); 
+            border-radius: 50%; color: #ffffff; text-decoration: none; 
+            font-family: 'Georgia', serif; font-style: italic; font-size: 1.1rem;
+            transition: all 0.4s ease; background: rgba(255,255,255,0.1); backdrop-filter: blur(2px);
+        }
+        .pinterest-badge:hover { background: var(--or-zen); border-color: var(--or-zen); transform: rotate(15deg) scale(1.1); box-shadow: 0 4px 15px rgba(166, 123, 81, 0.3); }
+
         nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
         nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
         nav a:hover { color: var(--or-zen); }
 
-        /* HERO 100VH (Full Screen) */
+        /* HERO ZEN */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-accueil.jpg') center/cover no-repeat;
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
         }
-        .hero h1 { font-size: 4.5em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.6em; font-style: italic; max-width: 800px; margin-top: 15px; padding: 0 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 3.2em; font-weight: normal; letter-spacing: 4px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); font-variant: small-caps; line-height: 1.2; }
+        .hero p { font-size: 1.4em; font-style: italic; margin-top: 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-        /* SÉPARATEUR */
+        /* ◈ L'ALCHIMIE DU QUOTIDIEN (BARRE DE RECHERCHE) */
+        .search-area { background: var(--blanc); padding: 80px 20px; text-align: center; }
+        .section-title { font-size: 2.5em; font-weight: normal; font-variant: small-caps; letter-spacing: 2px; }
+        .alchimiste-quote { font-style: italic; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+        .search-container { max-width: 700px; margin: 0 auto; position: relative; }
+        .search-container input { width: 100%; padding: 22px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
+        .search-container button { position: absolute; right: 10px; top: 10px; padding: 12px 30px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; font-variant: small-caps; font-weight: bold; }
+
+        /* SÉPARATEURS */
         .section-separator { text-align: center; margin: 60px 0 40px; }
-        .section-separator img { height: 50px; opacity: 0.6; }
-        .section-title { text-align: center; font-size: 2.5em; margin-bottom: 40px; font-weight: normal; font-variant: small-caps; }
+        .section-separator img { height: 40px; opacity: 0.6; margin-bottom: 20px; }
 
-        /* GRILLE DE BLOG (5 Colonnes) */
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
-        .blog-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-
-        .blog-card { 
-            background: var(--blanc); border-radius: 12px; text-decoration: none; color: inherit; transition: 0.4s ease; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;
-            border-bottom: 5px solid transparent;
-        }
+        /* GRILLE DE JOURNAL */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-bottom: 40px; }
+        .blog-card { background: var(--blanc); border-radius: 12px; text-decoration: none; color: inherit; transition: 0.4s; overflow: hidden; display: flex; flex-direction: column; border-bottom: 5px solid transparent; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .blog-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-        
-        .blog-img { height: 160px; background-size: cover; background-position: center; transition: 0.5s; }
-        .blog-card:hover .blog-img { transform: scale(1.05); }
-        
-        .blog-content { padding: 25px 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-meta { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--or-zen); margin-bottom: 12px; display: block; font-weight: bold; }
-        .blog-card h3 { font-size: 1.2em; font-weight: normal; margin-bottom: 12px; line-height: 1.3; color: var(--brun-sombre); }
-        .blog-card p { font-size: 0.9em; color: #666; margin-bottom: 20px; line-height: 1.5; }
-        .read-more { font-size: 0.8em; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid var(--or-zen); padding-bottom: 2px; align-self: flex-start; margin-top: auto; }
+        .blog-img { height: 160px; background-size: cover; background-position: center; }
+        .blog-content { padding: 25px 20px; flex-grow: 1; }
+        .blog-meta { font-size: 0.75rem; text-transform: uppercase; color: var(--or-zen); font-weight: bold; margin-bottom: 10px; display: block; }
+        .blog-card h3 { font-size: 1.1em; font-weight: normal; margin-bottom: 12px; line-height: 1.3; }
+        .blog-card p { font-size: 0.85em; color: #666; margin-bottom: 15px; line-height: 1.4; }
+        .read-more { font-size: 0.8em; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid var(--or-zen); align-self: flex-start; }
 
-        /* COULEURS PAR UNIVERS */
         .card-maison { border-bottom-color: var(--maison); }
         .card-jardin { border-bottom-color: var(--jardin); }
         .card-corps { border-bottom-color: var(--corps); }
         .card-bienetre { border-bottom-color: var(--bienetre); }
         .card-eso { border-bottom-color: var(--eso); }
 
-        /* SECTION PRICING HARMONISÉE */
+        /* PUBS PRODUITS */
+        .promo-banner { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0 80px; }
+        .promo-box { background: var(--brun-sombre); color: #fff; padding: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid var(--or-zen); }
+        .promo-text { flex: 1; padding-right: 25px; }
+        .promo-text h4 { font-variant: small-caps; font-size: 1.6em; color: var(--or-zen); margin-bottom: 12px; }
+        .promo-text p { font-size: 0.95em; opacity: 0.8; font-style: italic; }
+        .promo-link { padding: 12px 30px; border: 1px solid var(--or-zen); color: var(--or-zen); text-decoration: none; font-variant: small-caps; transition: 0.3s; font-weight: bold; }
+        .promo-link:hover { background: var(--or-zen); color: #fff; }
+
+        /* PRICING */
         .pricing-section { background-color: var(--blanc); padding: 100px 20px; text-align: center; border-top: 1px solid #eee; }
-        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 60px; }
-        .vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-weight: bold; transition: 0.3s; background: #fff; }
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
+        .vol-btn { padding: 15px 25px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-weight: bold; transition: 0.3s; background: #fff; }
+        
         .btn-v1 { border-color: var(--maison); color: var(--maison); } .btn-v1:hover { background: var(--maison); color: #fff; }
         .btn-v2 { border-color: var(--jardin); color: var(--jardin); } .btn-v2:hover { background: var(--jardin); color: #fff; }
         .btn-v3 { border-color: var(--corps); color: var(--corps); } .btn-v3:hover { background: var(--corps); color: #fff; }
         .btn-v4 { border-color: var(--bienetre); color: var(--bienetre); } .btn-v4:hover { background: var(--bienetre); color: #fff; }
         .btn-v5 { border-color: var(--eso); color: var(--eso); } .btn-v5:hover { background: var(--eso); color: #fff; }
 
-        .pricing-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .amount { font-size: 2.2em; color: var(--or-zen); display: block; font-weight: bold; }
+        .pricing-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .amount { font-size: 2.5em; color: var(--or-zen); font-weight: bold; }
 
-        /* FOOTER COMPACT FINAL */
-        footer { background: var(--brun-sombre); color: #fff; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(166, 123, 81, 0.2); }
-        .footer-main { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .footer-logo-small { height: 40px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
-        .footer-nav-compact { display: flex; gap: 25px; list-style: none; padding: 0; }
-        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.85em; opacity: 0.7; font-variant: small-caps; letter-spacing: 1px; transition: 0.3s; }
-        .footer-nav-compact a:hover { opacity: 1; color: var(--or-zen); }
-        .amazon-disclosure { font-size: 0.7em; opacity: 0.3; max-width: 800px; margin: 25px auto 0; font-style: italic; line-height: 1.4; }
-        .copyright { font-size: 0.75em; opacity: 0.5; margin-top: 15px; letter-spacing: 1px; }
+        footer { background: var(--brun-sombre); color: #fff; padding: 60px 20px; text-align: center; }
+        .footer-logo-small { height: 45px; margin-bottom: 25px; }
+        .footer-nav-compact { display: flex; gap: 25px; list-style: none; justify-content: center; margin-bottom: 25px; padding: 0; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.9em; opacity: 0.7; font-variant: small-caps; }
 
-        /* RESPONSIVE */
-        @media (max-width: 1200px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { 
-            .blog-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 3em; }
-            .hero p { font-size: 1.2em; }
-            .footer-main { flex-direction: column; gap: 20px; }
-        }
+        @media (max-width: 1200px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } .promo-banner { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2.5em; } }
         @media (max-width: 480px) { .blog-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -103,7 +113,10 @@
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+            <div class="logo-area">
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+                <a href="https://www.pinterest.com/VOTRE_PROFIL" class="pinterest-badge" target="_blank" title="Inspiration Zen">p</a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -118,75 +131,116 @@
     <main>
         <section class="hero">
             <h1>Le Journal Zen</h1>
-            <p>Le blog qui relie tes 5 univers : jardin, maison, corps, bien-être et ésotérisme.</p>
+            <p>"Écrire pour se souvenir, lire pour s'éveiller."</p>
         </section>
 
-        <div class="section-separator"><img src="assets/logo.png" alt="Zen" loading="lazy"></div>
+        <div style="max-width: 1400px; margin: 20px auto; text-align: center;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-YOUR_CLIENT_ID" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="search-area">
+            <h2 class="section-title">L'Alchimie du Quotidien</h2>
+            <p class="alchimiste-quote">"Cherche la solution, elle est déjà en toi... ou dans ce grimoire."</p>
+            <div class="search-container">
+                <form action="recherche.html" method="GET">
+                    <input type="text" name="q" placeholder="Explorer le journal..." aria-label="Rechercher">
+                    <button type="submit">Chercher</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Inspirations</h2>
+        </div>
 
         <div class="container">
-            <h2 class="section-title">Dernières Inspirations</h2>
-            
             <div class="blog-grid">
-                <a href="article-maison.html" class="blog-card card-maison">
-                    <div class="blog-img" style="background-image: url('assets/hero-maison.jpg');" role="img" aria-label="Ambiance Maison"></div>
+                <a href="blog.html#maison" class="blog-card card-maison">
+                    <div class="blog-img" style="background-image: url('assets/hero-maison.jpg');"></div>
                     <div class="blog-content">
-                        <span class="blog-meta">Maison • Ambiance</span>
-                        <h3>Alléger l’air chez toi, pièce par pièce</h3>
-                        <p>Comment transformer ton quotidien sans tout bouleverser par des gestes simples.</p>
+                        <span class="blog-meta">Maison</span>
+                        <h3>Alléger l’air chez toi</h3>
+                        <p>Transformer ton quotidien par des gestes simples et des rituels naturels.</p>
                         <span class="read-more">Lire l'article</span>
                     </div>
                 </a>
-
-                <a href="article-jardin.html" class="blog-card card-jardin">
-                    <div class="blog-img" style="background-image: url('assets/hero-jardin.jpg');" role="img" aria-label="Conseils Jardin"></div>
+                <a href="blog.html#jardin" class="blog-card card-jardin">
+                    <div class="blog-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
                     <div class="blog-content">
-                        <span class="blog-meta">Jardin • Conseils</span>
-                        <h3>Ce que ton jardin essaie de te dire</h3>
-                        <p>Apprendre à décrypter les signes de fatigue du sol et des feuilles.</p>
+                        <span class="blog-meta">Jardin</span>
+                        <h3>Le langage du sol</h3>
+                        <p>Apprendre à décrypter les signes de fatigue et les besoins de ta terre.</p>
                         <span class="read-more">Lire l'article</span>
                     </div>
                 </a>
-
-                <a href="article-corps.html" class="blog-card card-corps">
-                    <div class="blog-img" style="background-image: url('assets/hero-corps.jpg');" role="img" aria-label="Vitalité Corps"></div>
+                <a href="blog.html#corps" class="blog-card card-corps">
+                    <div class="blog-img" style="background-image: url('assets/hero-corps.jpg');"></div>
                     <div class="blog-content">
-                        <span class="blog-meta">Corps • Vitalité</span>
-                        <h3>Rituel matinal pour réveiller ses sens</h3>
-                        <p>Une routine naturelle pour préparer son corps à une journée harmonieuse.</p>
+                        <span class="blog-meta">Corps</span>
+                        <h3>Rituel matinal</h3>
+                        <p>Une routine naturelle et sensorielle pour une journée en pleine harmonie.</p>
                         <span class="read-more">Lire l'article</span>
                     </div>
                 </a>
-
-                <a href="article-sommeil.html" class="blog-card card-bienetre">
-                    <div class="blog-img" style="background-image: url('assets/hero-bienetre.jpg');" role="img" aria-label="Bien-être Sommeil"></div>
+                <a href="blog.html#bienetre" class="blog-card card-bienetre">
+                    <div class="blog-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
                     <div class="blog-content">
-                        <span class="blog-meta">Bien-être • Sommeil</span>
-                        <h3>Quand le corps ne lâche pas la journée</h3>
-                        <p>Des pistes concrètes pour relâcher la pression et retrouver le repos.</p>
+                        <span class="blog-meta">Bien-être</span>
+                        <h3>Lâcher prise le soir</h3>
+                        <p>Des pistes concrètes pour évacuer les tensions et retrouver le repos.</p>
                         <span class="read-more">Lire l'article</span>
                     </div>
                 </a>
-
-                <a href="article-tarot.html" class="blog-card card-eso">
-                    <div class="blog-img" style="background-image: url('assets/hero-eso.jpg');" role="img" aria-label="Ésotérisme Rituels"></div>
+                <a href="blog.html#eso" class="blog-card card-eso">
+                    <div class="blog-img" style="background-image: url('assets/hero-eso.jpg');"></div>
                     <div class="blog-content">
-                        <span class="blog-meta">Ésotérisme • Rituels</span>
-                        <h3>Donner une forme à tes questions</h3>
-                        <p>Utiliser le tarot et les cristaux pour accompagner tes moments de doute.</p>
+                        <span class="blog-meta">Ésotérisme</span>
+                        <h3>La forme des doutes</h3>
+                        <p>Utiliser le tarot et les rituels pour éclairer tes questionnements intérieurs.</p>
                         <span class="read-more">Lire l'article</span>
                     </div>
                 </a>
             </div>
         </div>
 
-        <section class="pricing-section">
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Les Essentiels de l'Alchimiste</h2>
+        </div>
+
+        <div class="container">
+            <div class="promo-banner">
+                <div class="promo-box">
+                    <div class="promo-text">
+                        <h4>Cristal de Clarté</h4>
+                        <p>L'Acide Citrique : le secret ancestral pour une maison saine, brillante et libérée du calcaire.</p>
+                    </div>
+                    <a href="acide-citrique.html" class="promo-link">Découvrir</a>
+                </div>
+                <div class="promo-box">
+                    <div class="promo-text">
+                        <h4>Terre Sacrée</h4>
+                        <p>L'Argile Verte : purifiez votre corps et apaisez vos maux avec la puissance brute des minéraux.</p>
+                    </div>
+                    <a href="argile-verte.html" class="promo-link">Découvrir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
             <h2 class="section-title">L'Encyclopédie Nomade</h2>
+        </div>
+
+        <section class="pricing-section">
             <div class="volume-buttons">
-                <a href="encyclopedie.html" class="vol-btn btn-v1">Vol 1 : Fondations</a>
-                <a href="encyclopedie.html" class="vol-btn btn-v2">Vol 2 : Enracinement</a>
-                <a href="encyclopedie.html" class="vol-btn btn-v3">Vol 3 : Éclosion</a>
-                <a href="encyclopedie.html" class="vol-btn btn-v4">Vol 4 : Harmonie</a>
-                <a href="encyclopedie.html" class="vol-btn btn-v5">Vol 5 : Élévation</a>
+                <a href="encyclopedie.html#vol1" class="vol-btn btn-v1">Vol 1 : Fondations</a>
+                <a href="encyclopedie.html#vol2" class="vol-btn btn-v2">Vol 2 : Enracinement</a>
+                <a href="encyclopedie.html#vol3" class="vol-btn btn-v3">Vol 3 : Éclosion</a>
+                <a href="encyclopedie.html#vol4" class="vol-btn btn-v4">Vol 4 : Harmonie</a>
+                <a href="encyclopedie.html#vol5" class="vol-btn btn-v5">Vol 5 : Élévation</a>
             </div>
             <div class="pricing-grid">
                 <div class="price-item"><h4>Le Volume</h4><span class="amount">14.90 €</span></div>
@@ -197,20 +251,14 @@
     </main>
 
     <footer>
-        <div class="footer-main">
-            <a href="index.html"><img src="assets/logo.png" class="footer-logo-small" alt="Zen Chez Toi"></a>
-            <ul class="footer-nav-compact">
-                <li><a href="mentions-legales.html">Mentions</a></li>
-                <li><a href="confidentialite.html">Confidentialité</a></li>
-                <li><a href="cookies.html">Cookies</a></li>
-                <li><a href="livre-or.html">Livre d'Or</a></li>
-            </ul>
-        </div>
-        <p class="amazon-disclosure">
-            En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Zen Chez Toi participe au Programme Partenaires d’Amazon EU.
-        </p>
-        <p class="copyright">&copy; 2026 Zen Chez Toi - Transmettre pour Libérer</p>
+        <img src="assets/logo.png" class="footer-logo-small" alt="Zen">
+        <ul class="footer-nav-compact">
+            <li><a href="mentions-legales.html">Mentions</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="livre-or.html">Livre d'Or</a></li>
+        </ul>
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 Zen Chez Toi - L'Harmonie au Naturel</p>
     </footer>
-
 </body>
 </html>

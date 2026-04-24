@@ -1,0 +1,12 @@
+code couleur 🎨 La Palette des 5 Univers (Ordre & Codes)
+Voici les couleurs exactes pour l'harmonisation de tes 50 fiches :
+
+🏠 Maison : Bleu Horizon (--maison: #6a7f8f)
+
+🌿 Jardin : Vert Sauge (--jardin: #7b9074)
+
+🌸 Corps : Vieux Rose / Chair (--corps: #cca8a0)
+
+☀️ Bien-être : Ambre Zen (--bienetre: #d4a259)
+
+✨ Ésotérisme : Mauve Mystique (--eso: #826a8f)
