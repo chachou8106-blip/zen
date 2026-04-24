@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sagesse n°1 : L'Acide Citrique – Zen Chez Toi</title>
     
-    <meta name="p:domain_verify" content="549770272775"/>
     <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
-    
+    <meta name="p:domain_verify" content="549770272775"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JRV5YNRL57');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7501098246029504" crossorigin="anonymous"></script>
+
+    <meta name="description" content="Découvrez l'acide citrique, le cristal naturel issu des agrumes pour détartrer en profondeur et nettoyer votre maison écologiquement.">
     <link rel="icon" type="image/png" href="assets/logo.png">
 
     <style>
@@ -18,37 +27,34 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
 
-        /* NAVIGATION HAUTE & LIVRE D'OR */
-        .nav-top { position: fixed; top: 25px; left: 25px; right: 25px; display: flex; justify-content: space-between; z-index: 2000; pointer-events: none; }
-        .nav-btn { pointer-events: auto; background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 50px; text-decoration: none; color: var(--brun-sombre); font-size: 0.9em; font-style: italic; backdrop-filter: blur(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
-        .nav-btn:hover { background: var(--blanc); transform: translateY(-2px); }
-        
-        /* NAVIGATION LATÉRALE */
+        header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        .pinterest-badge { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.4); border-radius: 50%; color: #ffffff; text-decoration: none; font-family: 'Georgia', serif; font-style: italic; font-size: 1.1rem; transition: 0.4s ease; background: rgba(255,255,255,0.1); backdrop-filter: blur(2px); }
+        .pinterest-badge:hover { background: var(--or-zen); border-color: var(--or-zen); transform: rotate(15deg) scale(1.1); }
+        nav ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--or-zen); }
+
         .scroll-nav { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 1500; padding: 0 30px; }
         .arrow-nav { pointer-events: auto; background: var(--blanc); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; color: var(--or-zen); font-size: 1.5em; box-shadow: 0 5px 15px rgba(0,0,0,0.15); opacity: 0.6; transition: 0.3s; }
         .arrow-nav:hover { opacity: 1; transform: scale(1.1); background: var(--or-zen); color: #fff; }
 
-        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; display: flex; justify-content: center; }
-        .logo-link img { max-height: 100px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
-
-        /* HERO - LISIBILITÉ TOTALE (VOLUME 1) */
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-maison.jpg') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px; }
         .maitre-phrase { font-size: 1.4em; font-variant: small-caps; letter-spacing: 5px; font-weight: bold; margin-bottom: 20px; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 4px rgba(0,0,0,0.5); }
         .sagesse-num { font-size: 1.2em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; font-weight: bold; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison); }
         .hero h1 { font-size: 5.5em; font-weight: normal; margin-bottom: 30px; line-height: 1.1; text-shadow: -2px -2px 0 var(--maison), 2px -2px 0 var(--maison), -2px 2px 0 var(--maison), 2px 2px 0 var(--maison), 0 5px 15px rgba(0,0,0,0.5); }
         .tagline { font-size: 1.8em; font-style: italic; max-width: 900px; line-height: 1.4; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 10px rgba(0,0,0,0.5); }
 
-        /* SECTION HISTOIRE & PICTOGRAMMES */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .histoire-section { background: var(--blanc); padding: 80px; border-radius: 30px; margin-top: -120px; position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
-        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; text-align: center; }
-        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; }
+        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; text-align: center; font-weight: normal; }
+        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; line-height: 2; }
 
         .picto-container { display: flex; justify-content: center; gap: 40px; margin: 40px 0; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .picto-item { text-align: center; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--or-zen); font-weight: bold; }
         .picto-item img { height: 45px; display: block; margin: 0 auto 10px; opacity: 0.8; }
 
-        /* TABLEAU ALLIANCES & CORRESPONDANCES */
         .allies-box { background: var(--bg-sable); padding: 50px; border-radius: 20px; margin: 80px 0; border-left: 8px solid var(--or-zen); }
         .allies-box h3 { font-size: 2em; color: var(--brun-sombre); margin-bottom: 30px; font-weight: normal; }
         .allies-list { list-style: none; }
@@ -56,7 +62,6 @@
         .allies-list a { font-weight: bold; color: var(--brun-sombre); text-decoration: none; border-bottom: 2px solid var(--or-zen); font-size: 1.1em; }
         .vol-tag { font-size: 0.8em; font-weight: bold; color: var(--or-zen); text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--or-zen); padding: 5px 15px; border-radius: 50px; }
 
-        /* BLOC EXPERTISE & MOT DU MAÎTRE */
         .expert-container { background: #fff; border: 1px solid #eee; padding: 50px; border-radius: 30px; margin: 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.02); }
         .maitre-mot h3 { font-size: 1.6em; color: var(--or-zen); margin-bottom: 20px; font-variant: small-caps; letter-spacing: 2px; }
         .maitre-mot p { font-style: italic; font-size: 1.1em; color: #666; line-height: 1.7; border-left: 3px solid #eee; padding-left: 20px; }
@@ -64,34 +69,59 @@
         .expertise-item h4 { font-size: 1.1em; color: var(--brun-sombre); margin-bottom: 10px; }
         .expertise-item p { font-size: 0.95em; color: #777; line-height: 1.6; }
 
-        /* BOUTONS ACHAT */
-        .amazon-section { text-align: center; margin: 40px 0 120px; }
-        .amazon-btn { display: inline-block; padding: 22px 55px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); }
+        /* DOUBLE BOUTON AMAZON - VERSION ALCHIMIQUE */
+        .amazon-section { text-align: center; margin: 60px 0; }
+        .amazon-btn { display: inline-block; padding: 20px 40px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin: 10px; border: 1px solid transparent; }
+        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); border-color: var(--or-zen); }
 
-        /* FOOTER & LÉGAL */
-        footer { background: var(--brun-sombre); color: #fff; padding: 100px 20px; text-align: center; }
-        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; gap: 30px; opacity: 0.7; font-size: 0.9em; }
-        .footer-links a { color: #fff; text-decoration: none; }
-        .amazon-disclosure { font-size: 0.75em; opacity: 0.4; max-width: 800px; margin: 40px auto 0; font-style: italic; line-height: 1.5; }
+        .ad-container { margin: 40px 0 80px; text-align: center; }
 
-        @media (max-width: 1000px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .expertise-list { grid-template-columns: 1fr; } .picto-container { gap: 15px; flex-wrap: wrap; } }
+        .pricing-section { background-color: var(--blanc); padding: 120px 20px; text-align: center; border-top: 1px solid #eee; }
+        .pills-row { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 60px; }
+        .pill { padding: 12px 25px; border: 2px solid; border-radius: 50px; font-variant: small-caps; font-weight: bold; font-size: 1em; text-decoration: none; background: var(--blanc); transition: 0.3s; }
+        .p1 { border-color: var(--maison); color: var(--maison); } .p1:hover { background: var(--maison); color: #fff; }
+        .p2 { border-color: var(--jardin); color: var(--jardin); } .p2:hover { background: var(--jardin); color: #fff; }
+        .p3 { border-color: var(--corps); color: var(--corps); } .p3:hover { background: var(--corps); color: #fff; }
+        .p4 { border-color: var(--bienetre); color: var(--bienetre); } .p4:hover { background: var(--bienetre); color: #fff; }
+        .p5 { border-color: var(--eso); color: var(--eso); } .p5:hover { background: var(--eso); color: #fff; }
+        
+        .pricing-grid { display: flex; justify-content: center; gap: 80px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
+        .price-box h4 { font-weight: normal; color: #777; margin-bottom: 10px; font-size: 1.1em; }
+        .price-box .amount { font-size: 2.8em; color: var(--or-zen); font-weight: bold; }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 60px 20px; text-align: center; }
+        .footer-logo-small { height: 45px; margin-bottom: 25px; }
+        .footer-nav-compact { display: flex; gap: 25px; list-style: none; justify-content: center; margin-bottom: 25px; padding: 0; flex-wrap: wrap; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; opacity: 0.7; font-variant: small-caps; transition: 0.3s; }
+        .footer-nav-compact a:hover { opacity: 1; color: var(--or-zen); }
+        #disclaimer-bar { background: var(--brun-sombre); color: rgba(255,255,255,0.7); font-size: 0.8rem; text-align: center; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 1000px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .expertise-list { grid-template-columns: 1fr; } .picto-container { gap: 15px; flex-wrap: wrap; } .nav-container { flex-direction: column; gap: 15px; } nav ul { justify-content: center; } }
     </style>
 </head>
 <body>
 
-    <div class="nav-top">
-        <a href="grimoire.html" class="nav-btn">← Le Grimoire</a>
-        <a href="livre-d-or.html" class="nav-btn">Livre d'Or ✍️</a>
-    </div>
-
     <div class="scroll-nav">
-        <a href="index.html" class="arrow-nav">❮</a>
-        <a href="ail.html" class="arrow-nav">❯</a>
+        <a href="vinaigre.html" class="arrow-nav">❮</a>
+        <a href="savon-marseille.html" class="arrow-nav">❯</a>
     </div>
 
     <header>
-        <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+                <a href="https://www.pinterest.com/" class="pinterest-badge" target="_blank">p</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="grimoire.html">Grimoire</a></li>
+                    <li><a href="maison.html">Maison</a></li>
+                    <li><a href="encyclopedie.html">Encyclopédie</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
@@ -107,7 +137,7 @@
             <h2>L'Origine du Cristal de Clarté</h2>
             <div class="histoire-text">
                 <p>Bien avant que la chimie moderne ne lui donne un nom, l'humanité utilisait déjà la force de l'acide citrique à travers le jus de citron. Les sources historiques nous ramènent au <strong>VIIIe siècle</strong>, où l'alchimiste persan <strong>Jābir ibn Hayyān</strong> (Geber) avait déjà pressenti l'existence de cet acide organique au cœur des agrumes.</p>
-                <p>Il fallut attendre <strong>1784</strong> pour que le brillant chimiste suédo-allemand <strong>Carl Wilhelm Scheele</strong> réussisse à isoler le cristal pour la première fois. Ce cristal est le fruit de siècles d'observation de la nature par ceux qui cherchaient la "Clarté Absolue".</p>
+                <p>Il fallut attendre <strong>1784</strong> pour que le brillant chimiste suédo-allemand <strong>Carl Wilhelm Scheele</strong> réussisse à isoler le cristal pour la première fois. Ce cristal est le fruit de siècles d'observation de la nature par ceux qui cherchaient la "Clarté Absolue". Aujourd'hui, il est le détartrant ultime de la maison, bien plus puissant que le vinaigre.</p>
             </div>
 
             <div class="picto-container">
@@ -123,7 +153,7 @@
             <ul class="allies-list">
                 <li><a href="savon-noir.html">Le Savon Noir Alchimique</a> <span class="vol-tag">Volume 1</span></li>
                 <li><a href="bicarbonate.html">Le Bicarbonate de Soude</a> <span class="vol-tag">Volume 1</span></li>
-                <li><a href="sel-gris.html">Le Sel Gris de Guérande</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="sel-mer-gris.html">Le Sel Gris de Guérande</a> <span class="vol-tag">Volume 1</span></li>
             </ul>
         </section>
 
@@ -150,32 +180,57 @@
         </section>
 
         <div class="amazon-section">
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Initié"</p>
-                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07MR71T2C?tag=zencheztoi-21" class="amazon-btn" target="_blank">
-                        Acquérir le Cristal de Clarté (800g)
-                    </a>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <p style="font-style: italic; margin-bottom: 10px; color: #777; font-size: 0.9em;">Le Format "Initié"</p>
+                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07MR71T2C?tag=zencheztoi-21" class="amazon-btn" target="_blank">Cristal de Clarté en 800g</a>
                 </div>
-                <div style="text-align: center;">
-                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Souverain"</p>
-                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07HN8XYR7?tag=zencheztoi-21" class="amazon-btn" target="_blank">
-                        Acquérir le Cristal de Clarté (5kg)
-                    </a>
+                <div>
+                    <p style="font-style: italic; margin-bottom: 10px; color: #777; font-size: 0.9em;">Le Format "Souverain"</p>
+                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07HN8XYR7?tag=zencheztoi-21" class="amazon-btn" target="_blank">Cristal de Clarté en 5 kgs</a>
                 </div>
             </div>
         </div>
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7501098246029504" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="mentions-legales.html">Mentions Légales</a>
-            <a href="cookies.html">Gestion des Cookies</a>
-            <a href="confidentialite.html">Confidentialité</a>
-            <a href="boutique.html">Boutique Amazon</a>
+    <section class="pricing-section">
+        <h2 class="section-title" style="color:var(--brun-sombre); margin-bottom: 30px;">L'Encyclopédie des Solutions Nomades (PDF)</h2>
+        <div class="pills-row">
+            <a href="encyclopedie.html" class="pill p1">Vol 1 : Les Fondations</a>
+            <a href="encyclopedie.html" class="pill p2">Vol 2 : L'Enracinement</a>
+            <a href="encyclopedie.html" class="pill p3">Vol 3 : L'Éclosion</a>
+            <a href="encyclopedie.html" class="pill p4">Vol 4 : L'Harmonie</a>
+            <a href="encyclopedie.html" class="pill p5">Vol 5 : L'Élévation</a>
         </div>
-        <p>&copy; 2026 Zen Chez Toi – Transmettre pour Libérer</p>
-        <p class="amazon-disclosure">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises par le Programme Partenaires d’Amazon EU.</p>
+        <div class="pricing-grid">
+            <div class="price-box"><h4>Un Volume de Savoir</h4><span class="amount">14,90 €</span></div>
+            <div class="price-box"><h4>Le Pack Trio Alchimique</h4><span class="amount">24,90 €</span></div>
+            <div class="price-box"><h4>L'Intégrale du Maître (5 Vol.)</h4><span class="amount">39,90 €</span></div>
+        </div>
+    </section>
+
+    <div id="disclaimer-bar">
+        🔗 Liens affiliés Amazon : En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+    </div>
+
+    <footer>
+        <img src="assets/logo.png" class="footer-logo-small" alt="Zen Chez Toi">
+        <ul class="footer-nav-compact">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="livre-or.html">Livre d'Or</a></li>
+        </ul>
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 Zen Chez Toi • Transmettre pour Libérer</p>
     </footer>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </body>
 </html>
