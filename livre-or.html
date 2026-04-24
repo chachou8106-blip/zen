@@ -1,259 +1,196 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Chez Toi – Livre d’or</title>
-  <meta name="description" content="Livre d’or Zen Chez Toi : un espace pour laisser un mot, un ressenti, un retour sur les univers du site.">
-  <style>
-    :root{
-      --bg:#f5f2ec;
-      --text:#2b2622;
-      --muted:#6f6660;
-      --accent:#a67b51;
-      --surface:rgba(255,255,255,.96);
-      --dark:#221b16;
-      --border:rgba(43,38,34,.14);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Georgia,serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Grimoire des Murmures – Zen Chez Toi</title>
+    <meta name="description" content="Livre d’or Zen Chez Toi : un espace pour laisser un mot, un ressenti, un retour sur les univers du site.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
-    header{
-      background:var(--dark);
-      color:#f4eee8;
-      padding:1.1rem 1.5rem;
-    }
-    .topbar{
-      max-width:900px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-      font-size:.95rem;
-    }
-    .brand img{
-      width:32px;
-      height:32px;
-      border-radius:999px;
-      object-fit:cover;
-    }
-    nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      font-size:.85rem;
-    }
-    nav a{
-      padding:.4rem .85rem;
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.18);
-    }
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
 
-    main{
-      max-width:900px;
-      margin:0 auto;
-      padding:2.5rem 1.25rem 4rem;
-    }
-    h1{
-      font-size:2rem;
-      margin:.2rem 0 .4rem;
-    }
-    .intro{
-      margin:0 0 2rem;
-      color:var(--muted);
-      font-size:.98rem;
-    }
+        /* HEADER TRANSPARENT */
+        header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--or-zen); }
 
-    .card{
-      background:var(--surface);
-      border-radius:22px;
-      border:1px solid var(--border);
-      padding:1.5rem 1.6rem;
-      box-shadow:0 18px 40px rgba(0,0,0,.04);
-    }
-    .field{
-      margin-bottom:1rem;
-      font-size:.95rem;
-    }
-    label{
-      display:block;
-      margin-bottom:.25rem;
-      font-size:.9rem;
-      color:var(--muted);
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea{
-      width:100%;
-      padding:.6rem .7rem;
-      border-radius:10px;
-      border:1px solid var(--border);
-      font-family:inherit;
-      font-size:.95rem;
-      background:#fff;
-      color:var(--text);
-    }
-    textarea{
-      min-height:140px;
-      resize:vertical;
-    }
-    .hint{
-      font-size:.8rem;
-      color:var(--muted);
-      margin-top:.25rem;
-    }
-    .actions{
-      margin-top:1.4rem;
-      display:flex;
-      justify-content:flex-end;
-    }
-    button{
-      border:none;
-      border-radius:999px;
-      padding:.7rem 1.3rem;
-      font-size:.9rem;
-      cursor:pointer;
-      background:var(--accent);
-      color:#fff;
-    }
+        /* HERO FULL SCREEN */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/hero-accueil.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 4.5em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); font-variant: small-caps; }
+        .hero p { font-size: 1.6em; font-style: italic; margin-top: 15px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-    .notes{
-      margin-top:2.5rem;
-    }
-    .notes h2{
-      font-size:1.2rem;
-      margin:0 0 .8rem;
-    }
-    .note{
-      border-top:1px solid var(--border);
-      padding-top:.8rem;
-      margin-top:.8rem;
-      font-size:.92rem;
-    }
-    .note small{
-      display:block;
-      color:var(--muted);
-      font-size:.8rem;
-    }
+        /* SÉPARATEURS AVEC TITRES */
+        .section-separator { text-align: center; margin: 80px 0 40px; }
+        .section-separator img { height: 40px; opacity: 0.6; margin-bottom: 20px; }
+        .section-title { font-size: 2.5em; font-weight: normal; font-variant: small-caps; letter-spacing: 2px; }
 
-    /* Slot pub discret */
-    .ad-slot{
-      margin:2.5rem auto 0;
-      max-width:900px;
-      padding:1rem 1.2rem;
-      border-radius:18px;
-      border:1px dashed var(--border);
-      font-size:.85rem;
-      color:var(--muted);
-      background:rgba(255,255,255,.7);
-    }
+        /* CONTENU */
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        .form-section { background: var(--blanc); padding: 60px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 60px; }
+        .intro-text { text-align: center; margin-bottom: 40px; color: #666; font-style: italic; font-size: 1.1em; }
 
-    footer{
-      background:var(--dark);
-      color:#f4eee8;
-      padding:2rem 1.25rem;
-      font-size:.9rem;
-      text-align:center;
-    }
+        /* FORMULAIRE */
+        .field { margin-bottom: 25px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9em; color: var(--or-zen); font-variant: small-caps; font-weight: bold; }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #eee; font-family: inherit; font-size: 1em; background: #fafafa; transition: 0.3s;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--or-zen); background: #fff; }
+        textarea { min-height: 150px; }
+        .hint { font-size: 0.8em; color: #999; margin-top: 5px; font-style: italic; }
 
-    @media(max-width:700px){
-      .topbar{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-  </style>
+        .btn-submit { display: block; width: 100%; padding: 18px; background: var(--brun-sombre); color: #fff; border: none; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: 0.3s; font-variant: small-caps; }
+        .btn-submit:hover { background: var(--or-zen); transform: translateY(-3px); }
+
+        /* TÉMOIGNAGES */
+        .note-card { background: var(--blanc); padding: 40px; border-radius: 12px; border-left: 5px solid var(--or-zen); margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .note-card blockquote { font-style: italic; font-size: 1.2em; color: #444; margin-bottom: 20px; }
+        .note-card cite { display: block; text-align: right; font-size: 0.95em; color: var(--or-zen); font-weight: bold; }
+
+        /* ENCARTS PUB (LES ESSENTIELS) */
+        .promo-banner { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 60px 0 80px; }
+        .promo-box { background: var(--brun-sombre); color: #fff; padding: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid var(--or-zen); }
+        .promo-text { flex: 1; padding-right: 25px; }
+        .promo-text h4 { font-variant: small-caps; font-size: 1.6em; color: var(--or-zen); margin-bottom: 12px; }
+        .promo-text p { font-size: 0.95em; opacity: 0.8; font-style: italic; }
+        .promo-link { padding: 12px 30px; border: 1px solid var(--or-zen); color: var(--or-zen); text-decoration: none; font-variant: small-caps; transition: 0.3s; font-weight: bold; }
+        .promo-link:hover { background: var(--or-zen); color: #fff; }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 60px 20px; text-align: center; }
+        .footer-logo-small { height: 45px; margin-bottom: 25px; }
+        .footer-nav-compact { display: flex; gap: 25px; list-style: none; justify-content: center; margin-bottom: 25px; padding: 0; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.9em; opacity: 0.7; font-variant: small-caps; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 3em; } .promo-banner { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <img src="logo.jpg" alt="Logo Zen Chez Toi">
-        <span>Zen Chez Toi – Livre d’or</span>
-      </div>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="jardin.html">Jardin</a>
-        <a href="maison.html">Maison</a>
-        <a href="bienetre.html">Bien-être</a>
-        <a href="corps.html">Corps</a>
-        <a href="eso.html">Ésotérisme</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <h1>Laisser un mot dans le livre d’or</h1>
-    <p class="intro">
-      Si un article, une page ou un univers t’a aidé, tu peux laisser ici un message.
-      Ce livre d’or n’est pas une obligation, juste un espace pour poser une trace.
-    </p>
-
-    <section class="card">
-      <form action="merci.html" method="get">
-        <div class="field">
-          <label for="nom">Prénom ou pseudo</label>
-          <input type="text" id="nom" name="nom" placeholder="Ex. : Claire" required>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="grimoire.html">Grimoire</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                    <li><a href="encyclopedie.html">Encyclopédie</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="field">
-          <label for="univers">Univers concerné (facultatif)</label>
-          <input type="text" id="univers" name="univers" placeholder="Jardin, Maison, Bien-être, Corps, Ésotérisme…">
-          <div class="hint">Tu peux indiquer l’univers ou la page qui t’a été utile.</div>
-        </div>
-        <div class="field">
-          <label for="message">Ton message</label>
-          <textarea id="message" name="message" placeholder="Quelques lignes sur ce que tu as apprécié, ce que ça a changé pour toi…" required></textarea>
-        </div>
-        <div class="field">
-          <label for="email">Email (facultatif, non publié)</label>
-          <input type="email" id="email" name="email" placeholder="Pour éventuellement te répondre un jour">
-          <div class="hint">Ton email ne sera pas affiché sur le site.</div>
-        </div>
-        <div class="actions">
-          <button type="submit">Envoyer mon message</button>
-        </div>
-      </form>
-    </section>
+    </header>
 
-    <section class="notes">
-      <h2>Quelques mots déjà déposés</h2>
-      <div class="note">
-        « Une façon douce de parler des problèmes du quotidien, ça fait du bien. »
-        <small>— visiteuse anonyme</small>
-      </div>
-      <div class="note">
-        « J’ai enfin compris quoi faire pour mes pucerons sans tout traiter à la chimie. Merci. »
-        <small>— côté Jardin</small>
-      </div>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Le Grimoire des Murmures</h1>
+            <p>"Chaque mot déposé est une graine de lumière partagée."</p>
+        </section>
 
-    <!-- Emplacement publicitaire discret (livre-or) -->
-    <div class="ad-slot" aria-label="contenu sponsorisé">
-      <!-- Code publicitaire / bloc affiliation à insérer ici -->
-      Espace discret pour un produit “coup de cœur” ou un livre en lien avec l’univers Zen Chez Toi.
-    </div>
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Déposer une Trace</h2>
+        </div>
 
-  </main>
+        <div class="container">
+            <section class="form-section">
+                <p class="intro-text">
+                    Si un article, une page ou un univers t’a aidé, tu peux laisser ici un message.<br>
+                    Ce livre d’or est un espace pour poser une trace, un écho de ton passage.
+                </p>
 
-  <footer>
-    Merci pour ta confiance et tes mots laissés ici.
-  </footer>
+                <form action="merci.html" method="get">
+                    <div class="field">
+                        <label for="nom">Prénom ou pseudo</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ex. : Claire" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="univers">L'Univers qui t'a aidé</label>
+                        <input type="text" id="univers" name="univers" placeholder="Jardin, Maison, Bien-être, Corps, Ésotérisme…">
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Ton Murmure</label>
+                        <textarea id="message" name="message" placeholder="Un ressenti, une réussite, un merci..." required></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Ton Email (Invisible et facultatif)</label>
+                        <input type="email" id="email" name="email" placeholder="Pour rester en contact secret">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Partager mon Murmure</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Échos de la Communauté</h2>
+        </div>
+
+        <div class="container">
+            <div class="note-card">
+                <blockquote>« Une façon douce de parler des problèmes du quotidien, ça fait du bien. »</blockquote>
+                <cite>— Une visiteuse anonyme</cite>
+            </div>
+
+            <div class="note-card">
+                <blockquote>« J’ai enfin compris quoi faire pour mes pucerons sans tout traiter à la chimie. Merci. »</blockquote>
+                <cite>— Côté Jardin</cite>
+            </div>
+        </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Les Essentiels du Livre</h2>
+        </div>
+
+        <div class="container">
+            <div class="promo-banner">
+                <div class="promo-box">
+                    <div class="promo-text">
+                        <h4>Bouclier Végétal</h4>
+                        <p>L'Huile de Neem : la solution ultime et naturelle pour protéger vos plantes des envahisseurs.</p>
+                    </div>
+                    <a href="huile-neem.html" class="promo-link">Découvrir</a>
+                </div>
+                <div class="promo-box">
+                    <div class="promo-text">
+                        <h4>Sérénité Bleue</h4>
+                        <p>La Lavande Vraie : quelques gouttes suffisent pour apaiser l'esprit et purifier l'atmosphère.</p>
+                    </div>
+                    <a href="lavande-vraie.html" class="promo-link">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="assets/logo.png" class="footer-logo-small" alt="Zen">
+        <ul class="footer-nav-compact">
+            <li><a href="mentions-legales.html">Mentions</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="index.html">Accueil</a></li>
+        </ul>
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 Zen Chez Toi - L'Harmonie au Naturel</p>
+    </footer>
+
 </body>
 </html>

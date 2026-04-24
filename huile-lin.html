@@ -1,56 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Huile de Lin – Zen Chez Toi</title>
-  <style> /* Style identique */
-    :root{ --bg:#f5f2ec; --text:#2b2622; --muted:#6f6660; --accent:#a67b51; --accent-soft:#e9ddcf; --dark:#221b16; --surface:rgba(255,255,255,.94); --border:rgba(43,38,34,.12); --shadow:0 15px 35px rgba(0,0,0,.08); }
-    *{box-sizing:border-box} body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; }
-    header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--dark); }
-    .tagline { font-style: italic; color: var(--muted); font-size: 1.2rem; }
-    .main-btn { display: inline-block; background: #c68642; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; box-shadow: var(--shadow); transition: 0.3s; }
-    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .univers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
-    .univers-card { background: var(--surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
-    .univers-card h3 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.5rem; }
-    .univers-card ul { padding-left: 1.2rem; } .univers-card li { margin-bottom: 0.5rem; }
-    .pricing-section { background: var(--dark); color: #fff; padding: 4rem 2rem; border-radius: 40px; text-align: center; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .price-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
-    .price-card.featured { background: var(--surface); color: var(--text); transform: scale(1.05); }
-    .price { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; }
-    .buy-btn { display: block; background: var(--accent); color: white; padding: 0.8rem; border-radius: 10px; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagesse n°8 : L'Huile de Lin – Zen Chez Toi</title>
+    
+    <meta name="p:domain_verify" content="549770272775"/>
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
+
+        /* NAVIGATION & RETOUR */
+        .btn-retour-grimoire { position: fixed; top: 25px; left: 25px; z-index: 2000; background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 50px; text-decoration: none; color: var(--brun-sombre); font-size: 0.9em; font-style: italic; backdrop-filter: blur(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .btn-retour-grimoire:hover { background: var(--blanc); transform: translateX(-5px); }
+        
+        .scroll-nav { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 1500; padding: 0 30px; }
+        .arrow-nav { pointer-events: auto; background: var(--blanc); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; color: var(--or-zen); font-size: 1.5em; box-shadow: 0 5px 15px rgba(0,0,0,0.15); opacity: 0.6; transition: 0.3s; }
+        .arrow-nav:hover { opacity: 1; transform: scale(1.1); background: var(--or-zen); color: #fff; }
+
+        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; display: flex; justify-content: center; }
+        .logo-link img { max-height: 100px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); transition: 0.3s; }
+
+        /* HERO - LISIBILITÉ TOTALE AVEC CONTOUR BLEU */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-huile-lin.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px;
+        }
+        
+        .maitre-phrase { 
+            font-size: 1.4em; font-variant: small-caps; letter-spacing: 5px; font-weight: bold; margin-bottom: 20px; 
+            color: #fff; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .sagesse-num { 
+            font-size: 1.2em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; 
+            color: #fff; font-weight: bold; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison);
+        }
+        .hero h1 { 
+            font-size: 5.5em; font-weight: normal; margin-bottom: 30px; line-height: 1.1;
+            color: #fff; text-shadow: -2px -2px 0 var(--maison), 2px -2px 0 var(--maison), -2px 2px 0 var(--maison), 2px 2px 0 var(--maison), 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .tagline { 
+            font-size: 1.8em; font-style: italic; max-width: 900px; line-height: 1.4;
+            color: #fff; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* CONTENU DESCRIPTIF */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .histoire-section { background: var(--blanc); padding: 80px; border-radius: 30px; margin-top: -120px; position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
+        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; font-weight: normal; text-align: center; }
+        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; line-height: 2; }
+
+        /* ALLIANCES MAILLAGE */
+        .allies-box { background: var(--bg-sable); padding: 50px; border-radius: 20px; margin: 80px 0; border-left: 8px solid var(--or-zen); }
+        .allies-box h3 { font-size: 2em; color: var(--brun-sombre); margin-bottom: 30px; font-weight: normal; }
+        .allies-list { list-style: none; }
+        .allies-list li { background: var(--blanc); margin-bottom: 15px; padding: 20px 30px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+        .allies-list a { font-weight: bold; color: var(--brun-sombre); text-decoration: none; border-bottom: 2px solid var(--or-zen); font-size: 1.1em; }
+        .vol-tag { font-size: 0.8em; font-weight: bold; color: var(--or-zen); text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--or-zen); padding: 5px 15px; border-radius: 50px; }
+
+        /* BLOC EXPERTISE & PAMPHLET */
+        .expert-container { background: #fff; border: 1px solid #eee; padding: 50px; border-radius: 30px; margin: 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.02); }
+        
+        .maitre-mot { margin-bottom: 40px; }
+        .maitre-mot h3 { font-size: 1.6em; color: var(--or-zen); margin-bottom: 20px; font-variant: small-caps; letter-spacing: 2px; }
+        .maitre-mot p { font-style: italic; font-size: 1.1em; color: #666; line-height: 1.7; border-left: 3px solid #eee; padding-left: 20px; }
+
+        .expertise-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
+        .expertise-item h4 { font-size: 1.1em; color: var(--brun-sombre); margin-bottom: 10px; }
+        .expertise-item p { font-size: 0.95em; color: #777; line-height: 1.6; }
+
+        /* BOUTON AMAZON ZEN ÉPURÉ */
+        .amazon-section { text-align: center; margin: 40px 0 120px; }
+        .amazon-btn { display: inline-block; padding: 22px 55px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); }
+
+        /* SECTION PRIX INDEX */
+        .pricing-section { background-color: var(--blanc); padding: 120px 20px; text-align: center; border-top: 1px solid #eee; margin-top: 80px; }
+        .pills-row { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 60px; }
+        .pill { padding: 12px 25px; border: 2px solid; border-radius: 50px; font-variant: small-caps; font-weight: bold; font-size: 1em; text-decoration: none; background: var(--blanc); transition: 0.3s; }
+        .p1 { border-color: var(--maison); color: var(--maison); } .p1:hover { background: var(--maison); color: #fff; }
+        .p2 { border-color: var(--jardin); color: var(--jardin); } .p2:hover { background: var(--jardin); color: #fff; }
+        .p3 { border-color: var(--corps); color: var(--corps); } .p3:hover { background: var(--corps); color: #fff; }
+        .p4 { border-color: var(--bienetre); color: var(--bienetre); } .p4:hover { background: var(--bienetre); color: #fff; }
+        .p5 { border-color: var(--eso); color: var(--eso); } .p5:hover { background: var(--eso); color: #fff; }
+        
+        .pricing-grid { display: flex; justify-content: center; gap: 80px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
+        .price-box h4 { font-weight: normal; color: #777; margin-bottom: 10px; font-size: 1.1em; }
+        .price-box .amount { font-size: 2.8em; color: var(--or-zen); font-weight: bold; }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 100px 20px; text-align: center; }
+        .footer-logo img { max-height: 100px; margin-bottom: 50px; }
+        .footer-links { margin-bottom: 40px; display: flex; justify-content: center; gap: 40px; font-size: 1em; opacity: 0.7; }
+        .footer-links a { color: #fff; text-decoration: none; }
+
+        @media (max-width: 900px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .expertise-list { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-  <div class="promo-bar">🎁 VOLUME 2 : L'Huile de Lin dans vos 5 mondes. <a href="#offres">Voir les offres</a></div>
-  <header>
-    <div style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent);">Solution n°16 / 50</div>
-    <h1>Huile de Lin</h1>
-    <p class="tagline">"La sève nourricière : elle sature, protège et magnifie la matière de vos mondes."</p>
-    <a href="https://www.amazon.fr/Huile-Lin-1L-Pure-Naturelle/dp/B007SSV6Z2?&linkCode=ll1&tag=zencheztoi-21" class="main-btn" target="_blank">Acheter l'Huile de Lin (1L Haute Qualité)</a>
-  </header>
-  <main>
-    <div class="univers-grid">
-      <div class="univers-card"><h3>🏠 Monde Maison</h3><ul><li>Protège et ravive les sols en terre cuite.</li><li>Nourrit les bois intérieurs (meubles, poutres).</li><li>Entretien et fait briller les linos.</li><li>Imperméabilise les joints de carrelage.</li><li>Protège les objets en fonte de la rouille.</li></ul></div>
-      <div class="univers-card"><h3>🌿 Monde Jardin</h3><ul><li>Traitement naturel pour les bois extérieurs.</li><li>Imperméabilise les manches d'outils.</li><li>Protège les boiseries de la serre.</li><li>Nourrit les meubles de jardin en bois.</li><li>Protège les brouettes métalliques de la corrosion.</li></ul></div>
-      <div class="univers-card"><h3>✨ Monde Corps</h3><ul><li>Soin nourrissant pour ongles cassants.</li><li>Masque capillaire pour cheveux très secs.</li><li>Soin des zones de peau très sèches (coudes).</li><li>Protection des cheveux contre l'eau de mer.</li><li>Ingrédient pour baumes corporels riches.</li></ul></div>
-      <div class="univers-card"><h3>🧘 Monde Bien-être</h3><ul><li>Nourrit les accessoires de yoga en liège/bois.</li><li>Entretien des instruments de musique (bois).</li><li>Base d'huile pour massage (si grade alimentaire).</li><li>Soin du bois des saunas et hammams.</li><li>Nourrit les brosses de massage en bois.</li></ul></div>
-      <div class="univers-card)<h3>🔮 Monde Ésotérisme</h3><ul><li>Onction des outils rituels en bois.</li><li>Protection et brillance des baguettes.</li><li>Entretien des runes et dés en bois.</li><li>Onction des bougies rituelles (protection).</li><li>Protection des masques de cérémonie.</li></ul></div>
+
+    <a href="grimoire.html" class="btn-retour-grimoire">← Retour au Grimoire</a>
+
+    <div class="scroll-nav">
+        <a href="sel-gris.html" class="arrow-nav">❮</a>
+        <a href="savon-de-marseille.html" class="arrow-nav">❯</a>
     </div>
-    <section id="offres" class="pricing-section">
-      <h2>Apprenez l'art de nourrir avec le Volume 2</h2>
-      <div class="pricing-grid">
-        <div class="price-card"><h3>Volume 2</h3><div class="price">9,90€</div><a href="#" class="buy-btn">Commander le Vol. 2</a></div>
-        <div class="price-card featured"><h3>Pack 3 Volumes</h3><div class="price">24,90€</div><a href="#" class="buy-btn">Choisir le Trio</a></div>
-        <div class="price-card"><h3>L'Intégrale (5 Vol.)</h3><div class="price">39,90€</div><a href="#" class="buy-btn">La Totale Zen</a></div>
-      </div>
+
+    <header>
+        <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+    </header>
+
+    <section class="hero">
+        <p class="maitre-phrase">Maître des Fondations</p>
+        <p class="sagesse-num">Sagesse n°8 : La Sève de Protection</p>
+        <h1>L'Huile de Lin</h1>
+        <p class="tagline">"Le savoir n'est pas une arme, c'est une lumière. Apprenez à voir la vie là où le champ s'est fait miroir."</p>
     </section>
-  </main>
-  <footer>© Zen Chez Toi - La force du lin naturel.</footer>
+
+    <main class="container">
+        
+        <section class="histoire-section">
+            <h2>L'Âme Bleue des Artisans</h2>
+            <div class="histoire-text">
+                <p>Bien avant de devenir un allié domestique, le lin était une plante sacrée. Dans l'**Égypte antique**, il était le symbole de la pureté divine, utilisé pour tisser les linceuls des pharaons et les vêtements des prêtres. Mais c'est au cœur de ses graines que se cache son véritable secret : une huile capable de "siccativer", c'est-à-dire de se transformer en un film protecteur souple et résistant au contact de l'air.</p>
+                <p>À la Renaissance, elle devint le liant préféré des maîtres comme **Léonard de Vinci**. Sans l'huile de lin, les couleurs des plus grands chefs-d'œuvre se seraient écaillées avec le temps. Dans ton Grimoire, elle incarne la protection absolue. Capable de saturer les bois les plus assoiffés et de redonner vie aux pierres ternies, elle ne se contente pas de recouvrir : elle s'unit à la matière. Elle est la sève qui, une fois extraite de la plante, continue de veiller sur ton foyer comme elle veillait sur les toiles immortelles.</p>
+            </div>
+        </section>
+
+        <section class="allies-box">
+            <h3>Alliances & Correspondances</h3>
+            <ul class="allies-list">
+                <li><a href="savon-noir.html">Le Savon Noir Alchimique</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="essence-de-terebenthine.html">L'Essence de Térébenthine</a> <span class="vol-tag">Volume 2</span></li>
+                <li><a href="cire-d-abeille.html">La Cire d'Abeille Pure</a> <span class="vol-tag">Volume 4</span></li>
+            </ul>
+        </section>
+
+        <section class="expert-container">
+            <div class="maitre-mot">
+                <h3>Le Mot du Maître</h3>
+                <p>"Choisir son huile de lin est un acte de préservation. Dans ce Grimoire, nous écartons les huiles industrielles saturées de siccatifs chimiques. Nous privilégions une pression à froid, brute et clarifiée, car elle seule possède cette capacité de 'respiration' pour vos bois et vos pierres. C'est un produit vivant, qui se lie aux fibres pour les nourrir en profondeur. Ce format d'un litre est le compagnon idéal : assez pour vos grands projets de protection, assez petit pour rester frais et actif."</p>
+            </div>
+            
+            <div class="expertise-list">
+                <div class="expertise-item">
+                    <h4>Saturateur Naturel</h4>
+                    <p>Pénètre les fibres en profondeur pour créer une barrière hydrofuge respirante.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Force Oméga-3</h4>
+                    <p>Un trésor biologique pour la structure cellulaire et l'équilibre inflammatoire.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Lien Alchimique</h4>
+                    <p>Historiquement utilisée pour fixer la lumière et protéger les supports les plus nobles.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="amazon-section">
+            <a href="[TON_LIEN_AMAZON_ICI]" class="amazon-btn" target="_blank">
+                Acquérir la Sève de Protection
+            </a>
+        </div>
+
+    </main>
+
+    <section class="pricing-section">
+        <h2 class="section-title">L'Encyclopédie des Solutions Nomades (PDF)</h2>
+        <div class="pills-row">
+            <a href="encyclopedie.html" class="pill p1">Vol 1 : Les Fondations</a>
+            <a href="encyclopedie.html" class="pill p2">Vol 2 : L'Enracinement</a>
+            <a href="encyclopedie.html" class="pill p3">Vol 3 : L'Éclosion</a>
+            <a href="encyclopedie.html" class="pill p4">Vol 4 : L'Harmonie</a>
+            <a href="encyclopedie.html" class="pill p5">Vol 5 : L'Élévation</a>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-box"><h4>Un Volume de Savoir</h4><span class="amount">14,90 €</span></div>
+            <div class="price-box"><h4>Le Pack Trio Alchimique</h4><span class="amount">24,90 €</span></div>
+            <div class="price-box"><h4>L'Intégrale du Maître (5 Vol.)</h4><span class="amount">39,90 €</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a> | <a href="confidentialite.html">Confidentialité</a> | <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Boutique Amazon</a>
+        </div>
+        <p>&copy; 2026 Zen Chez Toi – Transmettre pour Libérer</p>
+    </footer>
+
 </body>
 </html>

@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Grimoire - Zen Chez Toi</title>
+    <title>Le Grimoire - Zen Chez Toi | Votre Bibliothèque de Solutions Naturelles</title>
+
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <meta name="p:domain_verify" content="549770272775"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID" crossorigin="anonymous"></script>
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
         :root {
@@ -13,100 +18,276 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; }
 
+        /* HEADER & BADGE PINTEREST ZEN */
         header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo-area { display: flex; align-items: center; gap: 25px; }
         .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
-        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
-        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); }
+        
+        .pinterest-badge { 
+            display: inline-flex; align-items: center; justify-content: center; 
+            width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.4); 
+            border-radius: 50%; color: #ffffff; text-decoration: none; 
+            font-family: 'Georgia', serif; font-style: italic; font-size: 1.1rem;
+            transition: all 0.4s ease; background: rgba(255,255,255,0.1); backdrop-filter: blur(2px);
+        }
+        .pinterest-badge:hover { background: var(--or-zen); border-color: var(--or-zen); transform: rotate(15deg) scale(1.1); box-shadow: 0 4px 15px rgba(166, 123, 81, 0.3); }
 
+        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--or-zen); }
+
+        /* HERO ZEN */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-accueil.jpg') center/cover no-repeat;
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
         }
-        .hero h1 { font-size: 4.5em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.6em; font-style: italic; margin-top: 15px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 3.2em; font-weight: normal; letter-spacing: 4px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); font-variant: small-caps; line-height: 1.2; }
+        .hero p { font-size: 1.4em; font-style: italic; margin-top: 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
+        /* ◈ L'ALCHIMIE DU QUOTIDIEN (BARRE DE RECHERCHE) */
         .search-area { background: var(--blanc); padding: 80px 20px; text-align: center; }
+        .section-title { font-size: 2.5em; font-weight: normal; font-variant: small-caps; letter-spacing: 2px; }
+        .alchimiste-quote { font-style: italic; color: #666; margin-bottom: 30px; font-size: 1.1em; }
         .search-container { max-width: 700px; margin: 0 auto; position: relative; }
-        .search-container input { width: 100%; padding: 20px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
-        .search-container button { position: absolute; right: 10px; top: 10px; padding: 10px 25px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; }
+        .search-container input { width: 100%; padding: 22px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
+        .search-container button { position: absolute; right: 10px; top: 10px; padding: 12px 30px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; font-variant: small-caps; font-weight: bold; }
 
-        .section-separator { text-align: center; margin: 60px 0; }
-        .section-separator img { height: 40px; opacity: 0.6; }
+        /* SÉPARATEURS ET SECTIONS */
+        .section-separator { text-align: center; margin: 80px 0 20px; }
+        .section-separator img { height: 40px; opacity: 0.6; margin-bottom: 20px; }
+        .section-intro { text-align: center; font-style: italic; color: #666; max-width: 800px; margin: 0 auto 40px; }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
-        .chapitre { background: var(--blanc); padding: 40px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-        .chapitre h2 { text-align: center; font-size: 2.2em; margin-bottom: 30px; font-weight: normal; font-variant: small-caps; border-bottom: 1px solid var(--bg-sable); padding-bottom: 15px; color: var(--or-zen); }
-        .index-grid { column-count: 3; column-gap: 40px; list-style: none; }
-        .index-grid li { margin-bottom: 12px; break-inside: avoid-column; position: relative; padding-left: 20px; }
-        .index-grid li::before { content: "◈"; position: absolute; left: 0; color: var(--or-zen); font-size: 0.8em; }
+        /* INDEX GRIDS */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .chapitre { background: var(--blanc); padding: 50px; border-radius: 12px; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+        .index-grid { column-count: 3; column-gap: 50px; list-style: none; }
+        .index-grid li { margin-bottom: 15px; break-inside: avoid-column; position: relative; padding-left: 25px; }
+        .index-grid li::before { content: "◈"; position: absolute; left: 0; color: var(--or-zen); opacity: 0.5; }
         .index-grid a { text-decoration: none; color: var(--brun-sombre); transition: 0.2s; }
+        .index-grid a:hover { color: var(--or-zen); padding-left: 5px; }
 
-        .pricing-section { background-color: var(--blanc); padding: 80px 20px; text-align: center; border-top: 1px solid #eee; }
-        .vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-weight: bold; }
-        .amount { font-size: 2.2em; color: var(--or-zen); font-weight: bold; }
+        /* PUBS & ENCYCLOPÉDIE */
+        .pricing-section { background-color: var(--blanc); padding: 100px 20px; text-align: center; }
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
+        .vol-btn { padding: 15px 25px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-weight: bold; transition: 0.3s; background: transparent; }
+        .btn-v1 { border-color: var(--maison); color: var(--maison); } .btn-v1:hover { background: var(--maison); color: #fff; }
+        .btn-v2 { border-color: var(--jardin); color: var(--jardin); } .btn-v2:hover { background: var(--jardin); color: #fff; }
+        .btn-v3 { border-color: var(--corps); color: var(--corps); } .btn-v3:hover { background: var(--corps); color: #fff; }
+        .btn-v4 { border-color: var(--bienetre); color: var(--bienetre); } .btn-v4:hover { background: var(--bienetre); color: #fff; }
+        .btn-v5 { border-color: var(--eso); color: var(--eso); } .btn-v5:hover { background: var(--eso); color: #fff; }
 
-        footer { background: var(--brun-sombre); color: #fff; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(166, 123, 81, 0.2); }
-        .footer-main { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 40px; }
-        .footer-logo-small { height: 40px; }
-        .footer-nav-compact { display: flex; gap: 20px; list-style: none; padding: 0; }
-        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.85em; opacity: 0.7; font-variant: small-caps; }
+        .pricing-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .amount { font-size: 2.5em; color: var(--or-zen); font-weight: bold; }
+
+        /* FOOTER */
+        footer { background: var(--brun-sombre); color: #fff; padding: 60px 20px; text-align: center; }
+        .footer-logo-small { height: 45px; margin-bottom: 25px; }
+        .footer-nav-compact { display: flex; gap: 25px; list-style: none; justify-content: center; margin-bottom: 25px; padding: 0; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.9em; opacity: 0.7; font-variant: small-caps; }
+
+        @media (max-width: 992px) { .index-grid { column-count: 2; } }
+        @media (max-width: 600px) { .index-grid { column-count: 1; } .hero h1 { font-size: 2.5em; } }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
-            <nav><ul><li><a href="index.html">Accueil</a></li><li><a href="blog.html">Journal</a></li><li><a href="encyclopedie.html">Encyclopédie</a></li><li><a href="livre-or.html">Livre d'Or</a></li></ul></nav>
+            <div class="logo-area">
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+                <a href="https://www.pinterest.com/VOTRE_PROFIL" class="pinterest-badge" target="_blank">p</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                    <li><a href="encyclopedie.html">Encyclopédie</a></li>
+                    <li><a href="livre-or.html">Livre d'Or</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <h1>Le Grimoire</h1>
-            <p>"L'index sacré de tes solutions naturelles."</p>
+            <p>"La connaissance ne vaut que si elle est partagée au naturel."</p>
         </section>
+
+        <div style="max-width: 1400px; margin: 20px auto; text-align: center;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-YOUR_CLIENT_ID" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
         <section class="search-area">
+            <h2 class="section-title">L'Alchimie du Quotidien</h2>
+            <p class="alchimiste-quote">"Cherche la solution, elle est déjà en toi... ou dans ce grimoire."</p>
             <div class="search-container">
                 <form action="recherche.html" method="GET">
-                    <input type="text" name="q" placeholder="Sommeil, Calcaire, Pucerons...">
+                    <input type="text" name="q" placeholder="Rechercher une matière ou un remède..." aria-label="Rechercher">
                     <button type="submit">Chercher</button>
                 </form>
             </div>
         </section>
-        <div class="section-separator"><img src="assets/logo.png" alt="Zen"></div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Le Cabinet des Matières</h2>
+        </div>
+        <p class="section-intro">"Minéraux, essences et bases végétales : les 30 piliers de la maison, du jardin et du corps."</p>
+
         <div class="container">
             <section class="chapitre">
-                <h2>L'Herbier</h2>
                 <ul class="index-grid">
                     <li><a href="acide-citrique.html">Acide Citrique</a></li>
-                    </ul>
-            </section>
-            <div class="section-separator"><img src="assets/logo.png" alt="Zen"></div>
-            <section class="chapitre">
-                <h2>L'Apothicaire</h2>
-                <ul class="index-grid">
-                    </ul>
-            </section>
-            <div class="section-separator"><img src="assets/logo.png" alt="Zen"></div>
-            <section class="chapitre">
-                <h2>Le Placard à Soucis</h2>
-                <ul class="index-grid">
-                    </ul>
+                    <li><a href="bicarbonate.html">Bicarbonate de Soude</a></li>
+                    <li><a href="blanc-meudon.html">Blanc de Meudon</a></li>
+                    <li><a href="cristaux-soude.html">Cristaux de Soude</a></li>
+                    <li><a href="gros-sel.html">Gros Sel</a></li>
+                    <li><a href="percarbonate.html">Percarbonate de Soude</a></li>
+                    <li><a href="pierre-argile.html">Pierre d'Argile</a></li>
+                    <li><a href="savon-marseille.html">Savon de Marseille</a></li>
+                    <li><a href="savon-noir.html">Savon Noir</a></li>
+                    <li><a href="vinaigre.html">Vinaigre Blanc</a></li>
+                    <li><a href="ail.html">Ail</a></li>
+                    <li><a href="argile-jaune.html">Argile Jaune</a></li>
+                    <li><a href="binchotan.html">Binchotan</a></li>
+                    <li><a href="cendre-bois.html">Cendre de Bois</a></li>
+                    <li><a href="neem.html">Huile de Neem</a></li>
+                    <li><a href="marc-cafe.html">Marc de Café</a></li>
+                    <li><a href="poudre-ortie.html">Poudre d'Ortie</a></li>
+                    <li><a href="sel-epsom.html">Sel d'Epsom</a></li>
+                    <li><a href="soufre.html">Soufre</a></li>
+                    <li><a href="terre-diatomee.html">Terre de Diatomée</a></li>
+                    <li><a href="aloe-vera.html">Aloe Vera</a></li>
+                    <li><a href="argile-blanche.html">Argile Blanche</a></li>
+                    <li><a href="argile-verte.html">Argile Verte</a></li>
+                    <li><a href="karite.html">Beurre de Karité</a></li>
+                    <li><a href="cire-abeille.html">Cire d'Abeille</a></li>
+                    <li><a href="huile-coco.html">Huile de Coco</a></li>
+                    <li><a href="nigelle.html">Huile de Nigelle</a></li>
+                    <li><a href="huile-ricin.html">Huile de Ricin</a></li>
+                    <li><a href="castille.html">Savon de Castille</a></li>
+                    <li><a href="mer-morte.html">Sel de la Mer Morte</a></li>
+                </ul>
             </section>
         </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">L'Apothicaire</h2>
+        </div>
+        <p class="section-intro">"Équilibrez vos énergies et soignez votre esprit. Remèdes botaniques et outils sacrés."</p>
+
+        <div class="container">
+            <section class="chapitre">
+                <ul class="index-grid">
+                    <li><a href="acerola.html">Acérola</a></li>
+                    <li><a href="ashwagandha.html">Ashwagandha</a></li>
+                    <li><a href="eucalyptus.html">Eucalyptus</a></li>
+                    <li><a href="lavande.html">Lavande Vraie</a></li>
+                    <li><a href="magnesium.html">Magnésium</a></li>
+                    <li><a href="melatonine.html">Mélatonine</a></li>
+                    <li><a href="menthe-poivree.html">Menthe Poivrée</a></li>
+                    <li><a href="probiotiques.html">Probiotiques</a></li>
+                    <li><a href="tea-tree.html">Tea Tree</a></li>
+                    <li><a href="tisane-sommeil.html">Tisane Sommeil</a></li>
+                    <li><a href="benjoin.html">Benjoin</a></li>
+                    <li><a href="diamant.html">Diamant</a></li>
+                    <li><a href="elixir-cristal.html">Élixir de Cristal</a></li>
+                    <li><a href="encens.html">Encens</a></li>
+                    <li><a href="myrrhe.html">Myrrhe</a></li>
+                    <li><a href="oliban.html">Oliban</a></li>
+                    <li><a href="pendule.html">Pendule</a></li>
+                    <li><a href="quartz-rose.html">Quartz Rose</a></li>
+                    <li><a href="runes.html">Runes</a></li>
+                    <li><a href="tarot.html">Tarot</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Le Placard à Soucis</h2>
+        </div>
+        <p class="section-intro">"Trouvez le remède immédiat à vos tracas du quotidien."</p>
+
+        <div class="container">
+            <section class="chapitre">
+                <ul class="index-grid">
+                    <li><a href="anti-stress.html">Anti-Stress</a></li>
+                    <li><a href="araignees.html">Araignées</a></li>
+                    <li><a href="articulations.html">Articulations</a></li>
+                    <li><a href="canalisations.html">Canalisations</a></li>
+                    <li><a href="cellulite.html">Cellulite</a></li>
+                    <li><a href="chute-cheveux.html">Chute de Cheveux</a></li>
+                    <li><a href="cochenilles-thrips.html">Cochenilles</a></li>
+                    <li><a href="degraissant.html">Dégraissant</a></li>
+                    <li><a href="digestion.html">Digestion</a></li>
+                    <li><a href="eclat-peau.html">Éclat Peau</a></li>
+                    <li><a href="energie-vitalite.html">Fatigue & Vitalité</a></li>
+                    <li><a href="feuilles-jaunes.html">Feuilles Jaunes</a></li>
+                    <li><a href="focus.html">Concentration</a></li>
+                    <li><a href="humidite.html">Humidité</a></li>
+                    <li><a href="immunite.html">Immunité</a></li>
+                    <li><a href="insectes.html">Insectes</a></li>
+                    <li><a href="jambes-lourdes.html">Jambes Lourdes</a></li>
+                    <li><a href="limaces.html">Limaces</a></li>
+                    <li><a href="mal-de-dos.html">Mal de Dos</a></li>
+                    <li><a href="mauvaises-odeurs.html">Mauvaises Odeurs</a></li>
+                    <li><a href="meditation.html">Agitation Mentale</a></li>
+                    <li><a href="mildiou.html">Mildiou</a></li>
+                    <li><a href="oidium.html">Oïdium</a></li>
+                    <li><a href="peau-seche.html">Peau Sèche</a></li>
+                    <li><a href="pieds-fatigues.html">Pieds Fatigués</a></li>
+                    <li><a href="posture.html">Posture</a></li>
+                    <li><a href="pucerons.html">Pucerons</a></li>
+                    <li><a href="relaxation.html">Tensions & Stress</a></li>
+                    <li><a href="soin-bois.html">Entretien Bois</a></li>
+                    <li><a href="sol-epuise.html">Sol Épuisé</a></li>
+                    <li><a href="sommeil-profond.html">Sommeil</a></li>
+                    <li><a href="taches-difficiles.html">Taches</a></li>
+                    <li><a href="tensions-musculaires.html">Muscles</a></li>
+                    <li><a href="varices.html">Varices</a></li>
+                    <li><a href="vitres-eclatantes.html">Vitres</a></li>
+                    <li><a href="yoga-etirements.html">Souplesse</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">L'Encyclopédie des Solutions Nomades</h2>
+        </div>
+
+        <section class="pricing-section">
+            <div class="volume-buttons">
+                <a href="encyclopedie.html#vol1" class="vol-btn btn-v1">Vol 1 : Fondations</a>
+                <a href="encyclopedie.html#vol2" class="vol-btn btn-v2">Vol 2 : Enracinement</a>
+                <a href="encyclopedie.html#vol3" class="vol-btn btn-v3">Vol 3 : Éclosion</a>
+                <a href="encyclopedie.html#vol4" class="vol-btn btn-v4">Vol 4 : Harmonie</a>
+                <a href="encyclopedie.html#vol5" class="vol-btn btn-v5">Vol 5 : Élévation</a>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-item"><h4>Le Volume</h4><span class="amount">14.90 €</span></div>
+                <div class="price-item"><h4>Le Pack Trio</h4><span class="amount">24.90 €</span></div>
+                <div class="price-item"><h4>L'Intégrale</h4><span class="amount">39.90 €</span></div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <div class="footer-main">
-            <a href="index.html"><img src="assets/logo.png" class="footer-logo-small"></a>
-            <ul class="footer-nav-compact">
-                <li><a href="mentions-legales.html">Mentions</a></li>
-                <li><a href="confidentialite.html">Confidentialité</a></li>
-                <li><a href="cookies.html">Cookies</a></li>
-                <li><a href="livre-or.html">Livre d'Or</a></li>
-            </ul>
-        </div>
-        <p style="font-size: 0.75em; opacity: 0.5; margin-top: 15px;">&copy; 2026 Zen Chez Toi - Transmettre pour Libérer</p>
+        <img src="assets/logo.png" class="footer-logo-small" alt="Zen">
+        <ul class="footer-nav-compact">
+            <li><a href="mentions-legales.html">Mentions</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="livre-or.html">Livre d'Or</a></li>
+        </ul>
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 Zen Chez Toi - L'Harmonie au Naturel</p>
     </footer>
+
 </body>
 </html>

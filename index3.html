@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen Chez Toi - L'Art de Transmuter le Quotidien</title>
+    
+    <meta name="description" content="Découvrez Zen Chez Toi : Votre grimoire de solutions naturelles pour la maison, le jardin et le bien-être. Explorez l'Encyclopédie des Solutions Nomades pour une autonomie totale.">
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <meta name="p:domain_verify" content="549770272775"/>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; }
+
+        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; }
+        .nav-container { max-width: 1600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+
+        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--or-zen); }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/hero-accueil.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff;
+        }
+        .titre-marque { font-size: 4.5em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); text-transform: lowercase; }
+        .titre-marque em { font-style: italic; color: var(--or-zen); text-transform: none; }
+        .hero p { font-size: 1.6em; font-style: italic; opacity: 0.9; text-shadow: 0 2px 5px rgba(0,0,0,0.5); margin-top: 10px; }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            gap: 40px;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .sidebar { position: sticky; top: 40px; height: fit-content; }
+        .sidebar-title { font-variant: small-caps; font-size: 1em; letter-spacing: 2px; color: var(--or-zen); margin-bottom: 25px; text-align: center; border-bottom: 1px solid rgba(166,123,81,0.2); padding-bottom: 10px; }
+        
+        /* Harmonisation des blocs cliquables */
+        .sidebar-link-box { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
+        .sidebar-link-box:hover { transform: translateY(-5px); }
+
+        .sidebar-box { background: var(--blanc); padding: 20px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.04); text-align: center; }
+        .sidebar-box img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .sidebar-box p { font-size: 0.9em; line-height: 1.5; color: #555; }
+        .sidebar-box strong { display: block; margin-bottom: 10px; font-variant: small-caps; color: var(--brun-sombre); font-size: 1.1em; }
+
+        /* Zones Publicité Sidebars */
+        .ad-sidebar { margin-top: 25px; min-height: 250px; background: rgba(0,0,0,0.02); border-radius: 10px; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; }
+
+        .section-title { text-align: center; font-variant: small-caps; font-size: 2.2em; margin-bottom: 40px; letter-spacing: 3px; font-weight: normal; }
+        .separator { text-align: center; margin: 60px 0; }
+        .separator img { height: 40px; opacity: 0.2; }
+
+        .grid-univers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--blanc); border-radius: 12px; text-decoration: none; color: inherit; transition: 0.4s; overflow: hidden;
+            border-bottom: 5px solid transparent; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+        .card-img { height: 160px; background-size: cover; background-position: center; transition: 0.5s; }
+        .card-content { padding: 20px; text-align: center; font-variant: small-caps; letter-spacing: 1px; }
+
+        .maison { border-color: var(--maison); } .jardin { border-color: var(--jardin); } .corps { border-color: var(--corps); } .bienetre { border-color: var(--bienetre); } .eso { border-color: var(--eso); }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 80px 20px; text-align: center; margin-top: 80px; }
+        .footer-logo { height: 50px; opacity: 0.5; margin-bottom: 25px; }
+        .footer-nav { list-style: none; display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; font-variant: small-caps; }
+        .footer-nav a { color: #fff; opacity: 0.6; text-decoration: none; }
+        .amazon-disclosure { font-size: 0.75em; opacity: 0.3; max-width: 700px; margin: 0 auto; font-style: italic; }
+
+        @media (max-width: 1300px) { .grid-univers { grid-template-columns: repeat(3, 1fr); } .main-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 768px) { .grid-univers { grid-template-columns: repeat(2, 1fr); } .titre-marque { font-size: 3em; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+            <nav>
+                <ul>
+                    <li><a href="grimoire.html">grimoire</a></li>
+                    <li><a href="blog.html">journal</a></li>
+                    <li><a href="encyclopedie.html">encyclopédie</a></li>
+                    <li><a href="livre-or.html">livre d'or</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="titre-marque">zen <em>chez</em> toi</h1>
+            <p>zen chez toi - l'art de transmuter le quotidien</p>
+        </section>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <a href="encyclopedie.html" class="sidebar-link-box">
+                    <h3 class="sidebar-title">l'encyclopédie</h3>
+                    <div class="sidebar-box">
+                        <img src="assets/couverture-vol1.jpg" alt="Volume 1">
+                        <strong>Vol. 1 : Les Fondations</strong>
+                        <p>Initiez votre voyage vers l'autonomie avec le premier tome de notre recueil.</p>
+                    </div>
+                </a>
+                <div class="ad-sidebar"></div>
+            </aside>
+
+            <div class="content-center">
+                <h2 class="section-title">nos univers</h2>
+                <div class="grid-univers">
+                    <a href="maison.html" class="card maison"><div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div><div class="card-content">maison</div></a>
+                    <a href="jardin.html" class="card jardin"><div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div><div class="card-content">jardin</div></a>
+                    <a href="corps.html" class="card corps"><div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div><div class="card-content">corps</div></a>
+                    <a href="bienetre.html" class="card bienetre"><div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div><div class="card-content">bien-être</div></a>
+                    <a href="eso.html" class="card eso"><div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div><div class="card-content">ésotérisme</div></a>
+                </div>
+
+                <div class="separator"><img src="assets/logo.png" alt="Zen"></div>
+
+                <h2 class="section-title">le journal zen</h2>
+                <div class="grid-univers">
+                    <a href="blog.html#maison" class="card maison"><div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div><div class="card-content">blog maison</div></a>
+                    <a href="blog.html#jardin" class="card jardin"><div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div><div class="card-content">blog jardin</div></a>
+                    <a href="blog.html#corps" class="card corps"><div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div><div class="card-content">blog corps</div></a>
+                    <a href="blog.html#bienetre" class="card bienetre"><div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div><div class="card-content">blog bien-être</div></a>
+                    <a href="blog.html#eso" class="card eso"><div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div><div class="card-content">blog ésotérisme</div></a>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <a href="acide-citrique.html" class="sidebar-link-box">
+                    <h3 class="sidebar-title">les essentiels</h3>
+                    <div class="sidebar-box" style="border-left: 4px solid var(--maison);">
+                        <img src="assets/acide-citrique-elu.jpg" alt="Acide Citrique">
+                        <strong>Le Cristal de Clarté</strong>
+                        <p>Saviez-vous que l'acide citrique est le scalpel qui dissout les voiles du calcaire pour révéler la brillance originelle de votre sanctuaire ?</p>
+                    </div>
+                </a>
+                <div class="ad-sidebar"></div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <img src="assets/logo.png" alt="Zen" class="footer-logo">
+        <p style="font-variant: small-caps; letter-spacing: 1px; margin-bottom: 30px;">zen chez toi - l'art de transmuter le quotidien</p>
+        <ul class="footer-nav">
+            <li><a href="mentions-legales.html">mentions</a></li>
+            <li><a href="livre-or.html">livre d'or</a></li>
+            <li><a href="cookies.html">cookies</a></li>
+        </ul>
+        <p class="amazon-disclosure">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
+        <p class="copyright">&copy; 2026 zen chez toi</p>
+    </footer>
+
+</body>
+</html>
