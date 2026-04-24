@@ -1,237 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zen Chez Toi Ésotérisme</title>
-  <meta name="description" content="Tarot, runes, pendule, cristaux et encens pour t’accompagner dans tes questions, tes rituels et ton intuition.">
-  <style>
-    :root{
-      --bg:#f4f0f6;
-      --text:#2e2236;
-      --muted:#71637a;
-      --accent:#8264a3;
-      --surface:rgba(255,255,255,.92);
-      --dark:#1f1825;
-      --border:rgba(46,34,54,.14);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Georgia,serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ésotérisme & Rituels - Zen Chez Toi</title>
 
-    .hero{
-      min-height:100vh;
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
-      background:
-        linear-gradient(rgba(17,13,20,.46),rgba(17,13,20,.62)),
-        url("hero-eso.jpg") center/cover no-repeat;
-      color:#fff;
-      text-align:center;
-    }
-    .hero-inner{
-      max-width:960px;
-      margin:0 auto;
-    }
-    .logo{
-      width:min(330px,72vw);
-      margin:0 auto 1.4rem;
-      filter:drop-shadow(0 12px 32px rgba(0,0,0,.45));
-    }
-    .nav{
-      position:absolute;
-      top:1.4rem;
-      left:50%;
-      transform:translateX(-50%);
-      display:flex;
-      gap:.7rem;
-      flex-wrap:wrap;
-      justify-content:center;
-      font-size:.85rem;
-    }
-    .nav a{
-      padding:.55rem .95rem;
-      border-radius:999px;
-      background:rgba(0,0,0,.28);
-      border:1px solid rgba(255,255,255,.18);
-    }
-    h1{
-      font-size:clamp(2rem,4vw,4rem);
-      line-height:1.1;
-      margin:0 auto 1rem;
-      max-width:18ch;
-    }
-    .sub{
-      max-width:760px;
-      margin:0 auto 1.4rem;
-      font-size:1.02rem;
-      color:rgba(255,255,255,.9);
-    }
-    .pill{
-      display:inline-block;
-      padding:.85rem 1.3rem;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.2);
-      margin-top:.4rem;
-      font-size:.9rem;
-      background:rgba(255,255,255,.1);
-      color:#fff;
-    }
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    <meta name="p:domain_verify" content="549770272775"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRV5YNRL57"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JRV5YNRL57');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7501098246029504" crossorigin="anonymous"></script>
+    
+    <meta name="description" content="Tarot, runes, pendule, cristaux et encens pour t’accompagner dans tes questions, tes rituels et ton intuition.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
-    main{
-      max-width:1100px;
-      margin:0 auto;
-      padding:3.5rem 1.25rem 4.5rem;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:1.4fr .9fr;
-      gap:1.6rem;
-      align-items:start;
-    }
-    .card{
-      background:var(--surface);
-      border-radius:26px;
-      border:1px solid var(--border);
-      padding:1.5rem;
-      box-shadow:0 20px 50px rgba(0,0,0,.06);
-    }
-    .eyebrow{
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:.78rem;
-      color:var(--accent);
-      margin-bottom:.4rem;
-    }
-    h2{
-      margin:.2rem 0 1rem;
-      font-size:1.6rem;
-    }
-    .muted{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      margin-top:.8rem;
-    }
-    .links a{
-      padding:.55rem .95rem;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-size:.85rem;
-    }
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #1f1825; --or-zen: #a67b51;
+            --eso: #826a8f; --eso-light: #f4f0f6;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
-    /* Slot pub discret */
-    .ad-slot{
-      margin:2.5rem auto 0;
-      max-width:900px;
-      padding:1rem 1.2rem;
-      border-radius:18px;
-      border:1px dashed var(--border);
-      font-size:.85rem;
-      color:var(--muted);
-      background:rgba(255,255,255,.7);
-    }
+        header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+        .logo img { max-height: 90px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        
+        .pinterest-badge { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.4); border-radius: 50%; color: #ffffff; text-decoration: none; font-family: 'Georgia', serif; font-style: italic; font-size: 1.1rem; transition: 0.4s ease; background: rgba(255,255,255,0.1); backdrop-filter: blur(2px); }
+        .pinterest-badge:hover { background: var(--or-zen); border-color: var(--or-zen); transform: rotate(15deg) scale(1.1); }
 
-    footer{
-      background:var(--dark);
-      color:#f2ebf7;
-      padding:2rem 1.25rem;
-      font-size:.9rem;
-      text-align:center;
-    }
+        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--eso); }
 
-    @media(max-width:900px){
-      .hero{text-align:center;}
-      .nav{max-width:94vw;}
-      .grid{grid-template-columns:1fr;}
-    }
-  </style>
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(17,13,20,0.5), rgba(17,13,20,0.7)), url('assets/hero-eso.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.2em; font-weight: normal; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); max-width: 900px; line-height: 1.2; font-variant: small-caps; }
+        .hero p { font-size: 1.3em; font-style: italic; margin-top: 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); max-width: 760px; opacity: 0.9; }
+        .hero-btn { margin-top: 30px; padding: 15px 35px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; font-variant: small-caps; font-weight: bold; transition: 0.3s; backdrop-filter: blur(5px); }
+        .hero-btn:hover { background: var(--eso); border-color: var(--eso); }
+
+        /* ◈ L'ALCHIMIE DU QUOTIDIEN */
+        .search-area { background: var(--blanc); padding: 80px 20px; text-align: center; }
+        .section-title { font-size: 2.5em; font-weight: normal; font-variant: small-caps; letter-spacing: 2px; color: var(--eso); }
+        .alchimiste-quote { font-style: italic; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+        .search-container { max-width: 700px; margin: 0 auto; position: relative; }
+        .search-container input { width: 100%; padding: 22px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
+        .search-container button { position: absolute; right: 10px; top: 10px; padding: 12px 30px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; font-variant: small-caps; font-weight: bold; }
+
+        .section-separator { text-align: center; margin: 60px 0 30px; }
+        .section-separator img { height: 40px; opacity: 0.6; margin-bottom: 20px; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* CONTENT BOXES */
+        .grid-layout { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: 30px; align-items: start; margin-bottom: 50px; }
+        .card { background: var(--blanc); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 5px solid var(--eso); }
+        .eyebrow { letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; color: var(--eso); margin-bottom: 10px; font-weight: bold; }
+        .card h2 { font-size: 1.8em; margin-bottom: 15px; font-weight: normal; font-variant: small-caps; }
+        .card p { color: #555; margin-bottom: 20px; font-size: 1.05em; }
+        
+        .link-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .link-list a { padding: 8px 18px; border: 1px solid #eee; border-radius: 50px; color: var(--brun-sombre); text-decoration: none; font-size: 0.9em; transition: 0.3s; background: var(--bg-sable); }
+        .link-list a:hover { background: var(--eso); color: #fff; border-color: var(--eso); }
+
+        .aside-card { background: var(--eso-light); padding: 30px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); }
+        .aside-card h3 { font-variant: small-caps; margin-bottom: 15px; color: var(--eso); }
+
+        /* ADSENSE */
+        .ad-container { max-width: 900px; margin: 40px auto; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 12px; text-align: center; border: 1px dashed #ccc; }
+
+        footer { background: var(--brun-sombre); color: #fff; padding: 60px 20px; text-align: center; }
+        .footer-logo-small { height: 45px; margin-bottom: 25px; }
+        .footer-nav-compact { display: flex; gap: 25px; list-style: none; justify-content: center; margin-bottom: 25px; padding: 0; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.9em; opacity: 0.7; font-variant: small-caps; }
+
+        @media (max-width: 900px) { .grid-layout { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5em; } }
+    </style>
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="jardin.html">Jardin</a>
-      <a href="maison.html">Maison</a>
-      <a href="bienetre.html">Bien-être</a>
-      <a href="corps.html">Corps</a>
-      <a href="eso.html">Ésotérisme</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <div class="hero-inner">
-      <img src="logo.jpg" alt="Logo Zen Chez Toi" class="logo">
-      <h1>Ce que l’on cherche dehors est parfois la forme visible d’une réponse déjà en attente en soi.</h1>
-      <p class="sub">
-        Tarot, runes, pendule, cristaux, encens et rituels : un univers pensé pour éveiller la curiosité,
-        guider en douceur et proposer des objets porteurs de sens.
-      </p>
-      <a href="#contenu" class="pill">Voir l’univers ésotérique</a>
-    </div>
-  </header>
 
-  <main id="contenu">
-    <section class="grid">
-      <article class="card">
-        <div class="eyebrow">Ésotérisme</div>
-        <h2>Une atmosphère forte mais lisible</h2>
-        <p>
-          L’ésotérisme doit séduire sans perdre le visiteur. Tu proposes des entrées claires :
-          tarot, runes, pendule, cristaux, encens, grimoire, etc.
-        </p>
-        <p class="muted">
-          Les objets prennent de la valeur grâce au récit, au rituel et à la sensation d’alignement
-          que tu construis autour d’eux.
-        </p>
-        <div class="links">
-          <a href="tarot.html">Tarot</a>
-          <a href="runes.html">Runes</a>
-          <a href="pendule.html">Pendule</a>
-          <a href="cristaux.html">Cristaux</a>
-          <a href="encens.html">Encens</a>
-          <a href="grimoire.html">Grimoire</a>
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+                <a href="https://www.pinterest.com/" class="pinterest-badge" target="_blank">p</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="grimoire.html">Grimoire</a></li>
+                    <li><a href="encyclopedie.html">Encyclopédie</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                </ul>
+            </nav>
         </div>
-      </article>
+    </header>
 
-      <aside class="card">
-        <div class="eyebrow">Univers</div>
-        <h2>Vendre l’objet par le sens</h2>
-        <p class="muted">
-          Ici, tu vends autant l’expérience et le symbolique que l’objet lui-même :
-          tirages, rituels, petits gestes du quotidien.
-        </p>
-        <p class="muted">
-          Les produits trouvent naturellement leur place au cœur d’un récit :
-          comment on les utilise, dans quel rituel, pour quelle intention.
-        </p>
-      </aside>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Ce que l’on cherche dehors est parfois la forme visible d’une réponse déjà en attente en soi.</h1>
+            <p>Tarot, runes, pendule, cristaux, encens et rituels : un univers pensé pour éveiller la curiosité, guider en douceur et proposer des objets porteurs de sens.</p>
+            <a href="#contenu" class="hero-btn">Voir l’univers ésotérique</a>
+        </section>
 
-    <!-- Emplacement publicitaire discret (eso) -->
-    <div class="ad-slot" aria-label="contenu sponsorisé">
-      <!-- Code publicitaire / bloc affiliation à insérer ici -->
-      Emplacement discret pour une sélection ésotérisme (tarots, runes, cristaux, encens…).
-    </div>
+        <section class="search-area">
+            <h2 class="section-title">L'Alchimie du Quotidien</h2>
+            <p class="alchimiste-quote">"Cherche la solution, elle est déjà en toi... ou dans ce grimoire."</p>
+            <div class="search-container">
+                <form action="recherche.html" method="GET">
+                    <input type="text" name="q" placeholder="Tarot, Quartz, Encens..." aria-label="Rechercher">
+                    <button type="submit">Chercher</button>
+                </form>
+            </div>
+        </section>
 
-  </main>
+        <div id="contenu" class="section-separator">
+            <img src="assets/logo.png" alt="Zen">
+            <h2 class="section-title">Une atmosphère lisible</h2>
+        </div>
 
-  <footer>
-    Zen Chez Toi Ésotérisme • intuition, mystère et objets de sens
-  </footer>
+        <div class="container">
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="eyebrow">Ésotérisme</div>
+                    <h2>Vendre l'objet par le sens</h2>
+                    <p>L’ésotérisme doit séduire sans perdre le visiteur. Tu proposes des entrées claires : tarot, runes, pendule, cristaux, encens, grimoire, etc.</p>
+                    <p style="font-style: italic; color: #888;">Les objets prennent de la valeur grâce au récit, au rituel et à la sensation d’alignement que tu construis autour d’eux.</p>
+                    
+                    <div class="link-list">
+                        <a href="tarot.html">Tarot</a>
+                        <a href="runes.html">Runes</a>
+                        <a href="pendule.html">Pendule</a>
+                        <a href="cristaux.html">Cristaux</a>
+                        <a href="encens.html">Encens</a>
+                        <a href="grimoire.html">Grimoire</a>
+                    </div>
+                </article>
+
+                <aside class="aside-card">
+                    <div class="eyebrow">Univers</div>
+                    <h3>Rituel & Sensation</h3>
+                    <p>Ici, tu vends autant l’expérience et le symbolique que l’objet lui-même : tirages, rituels, petits gestes du quotidien.</p>
+                    <p style="margin-top:15px; font-size: 0.9em; color: var(--muted);">Les produits trouvent naturellement leur place au cœur d’un récit : comment on les utilise, dans quel rituel, pour quelle intention.</p>
+                </aside>
+            </div>
+
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7501098246029504" data-ad-slot="5678468169" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="assets/logo.png" class="footer-logo-small" alt="Zen">
+        <ul class="footer-nav-compact">
+            <li><a href="mentions-legales.html">Mentions</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="livre-or.html">Livre d'Or</a></li>
+        </ul>
+        <p style="font-size: 0.8em; opacity: 0.5;">&copy; 2026 Zen Chez Toi Ésotérisme • Intuition, mystère et objets de sens</p>
+    </footer>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </body>
 </html>
