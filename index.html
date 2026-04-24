@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zen Chez Toi - L'Harmonie au Naturel</title>
+    <title>Zen Chez Toi - L'Harmonie au Naturel | Grimoire & Solutions Nomades</title>
     
-    <meta name="description" content="Zen Chez Toi : maison, jardin, corps, bien-être et ésotérisme. Découvrez l'Encyclopédie des Solutions Nomades.">
+    <meta name="description" content="Découvrez Zen Chez Toi : Votre grimoire de solutions naturelles pour la maison, le jardin et le bien-être. Explorez l'Encyclopédie des Solutions Nomades pour une autonomie totale.">
     <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
-    <meta name="p:domain_verify" content="VOTRE_CODE_PINTEREST_ICI"/>
+    <meta name="p:domain_verify" content="549770272775"/>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
     <style>
         :root {
-            --bg-sable: #f5f2ec;
-            --blanc: #ffffff;
-            --brun-sombre: #2b2622;
-            --or-zen: #a67b51;
-            /* COULEURS DES VOLUMES / UNIVERS */
-            --vol1-vert: #7b9074;  /* Vert Sauge - Maison */
-            --vol2-bleu: #6a7f8f;  /* Bleu Ardoise - Jardin */
-            --vol3-rose: #cca8a0;  /* Rose Argile - Corps */
-            --vol4-jaune: #d4a259; /* Jaune Safran - Bien-être */
-            --vol5-violet: #826a8f;/* Violet Améthyste - Ésotérisme */
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --vol1-bleu: #6a7f8f; --vol2-vert: #7b9074; --vol3-rose: #cca8a0; --vol4-jaune: #d4a259; --vol5-violet: #826a8f;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.6; overflow-x: hidden; }
 
-        /* --- NAVIGATION & LOGO HEADER --- */
+        /* HEADER TRANSPARENT ÉPURÉ */
         header { position: absolute; top: 0; width: 100%; padding: 25px 0; z-index: 1000; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
-        
-        .logo { background: none; border: none; padding: 0; }
-        .logo img { 
-            max-height: 90px; 
-            width: auto; 
-            display: block;
-            background: transparent; /* Force la transparence */
-            border: none;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); 
-        }
+        .logo img { max-height: 90px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
 
-        nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
-        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
+        nav a { text-decoration: none; color: #ffffff; font-variant: small-caps; font-size: 1.1em; text-shadow: 0 2px 5px rgba(0,0,0,0.6); transition: 0.3s; }
+        nav a:hover { color: var(--or-zen); }
 
-        /* --- HERO SECTION --- */
+        /* HERO */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/hero-accueil.jpg') center/cover no-repeat;
@@ -53,26 +39,19 @@
         .titre-marque em { font-style: italic; color: var(--or-zen); text-transform: none; }
         .hero p { font-size: 1.6em; font-style: italic; opacity: 0.9; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-        /* --- RECHERCHE --- */
+        /* RECHERCHE */
         .search-area { background: var(--blanc); padding: 80px 20px 40px; text-align: center; }
         .search-container { max-width: 700px; margin: 20px auto 0; position: relative; }
         .search-container input { width: 100%; padding: 20px 35px; border: 2px solid var(--bg-sable); border-radius: 50px; font-size: 1.1em; outline: none; }
         .search-container button { position: absolute; right: 10px; top: 10px; padding: 10px 25px; border-radius: 40px; border: none; background: var(--or-zen); color: white; cursor: pointer; }
 
-        /* --- SÉPARATEUR LOGO (NETTOYÉ) --- */
-        .section-separator { text-align: center; margin: 40px 0; background: none; }
-        .section-separator img { 
-            height: 50px; 
-            width: auto; 
-            opacity: 0.6; 
-            background: transparent; 
-            border: none; 
-        }
+        /* SÉPARATEURS AVEC TITRES */
+        .section-separator { text-align: center; margin: 60px 0 40px; }
+        .section-separator img { height: 50px; opacity: 0.6; margin-bottom: 20px; }
+        .section-title { font-size: 2.2em; font-weight: normal; font-variant: small-caps; letter-spacing: 2px; }
 
-        .section-title { text-align: center; font-size: 2.2em; margin-bottom: 30px; font-weight: normal; }
-
-        /* --- GRILLES 5 CARTES --- */
-        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 60px; }
+        /* GRILLES 5 CARTES (ENTIÈREMENT CLIQUABLES) */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px 60px; }
         .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
         
         .card { 
@@ -80,184 +59,200 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; border-bottom: 4px solid transparent;
         }
         .card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .card-img { height: 160px; background-size: cover; background-position: center; }
+        .card-img { height: 160px; background-size: cover; background-position: center; transition: 0.5s; }
+        .card:hover .card-img { transform: scale(1.05); }
         .card-content { padding: 20px 15px; text-align: center; flex-grow: 1; }
-        .card h3 { font-size: 1.3em; font-weight: normal; margin: 0; }
+        .card h3 { font-size: 1.3em; font-weight: normal; margin-bottom: 5px; }
+        /* Étiquette de volume supprimée ici */
 
-        .card.maison { border-color: var(--vol1-vert); }
-        .card.jardin { border-color: var(--vol2-bleu); }
+        .card.maison { border-color: var(--vol1-bleu); }
+        .card.jardin { border-color: var(--vol2-vert); }
         .card.corps { border-color: var(--vol3-rose); }
         .card.bienetre { border-color: var(--vol4-jaune); }
         .card.eso { border-color: var(--vol5-violet); }
 
-        /* --- ENCYCLOPÉDIE (BOUTONS SUR UNE LIGNE AVEC COULEURS) --- */
+        /* ENCYCLOPÉDIE */
         .pricing-section { background-color: var(--blanc); padding: 80px 20px; text-align: center; border-top: 1px solid #eee; }
-        .pricing-subtitle { font-style: italic; color: #666; margin-bottom: 40px; }
+        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
+        .vol-btn { padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; font-variant: small-caps; font-weight: bold; transition: 0.3s; }
         
-        .volume-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 0 auto 50px; max-width: 1300px; }
-        .vol-btn { 
-            padding: 12px 20px; border: 2px solid; border-radius: 50px; text-decoration: none; 
-            font-variant: small-caps; font-size: 1em; font-weight: bold; transition: 0.3s; background: var(--blanc);
-        }
-        
-        /* Attribution des couleurs aux boutons */
-        .btn-v1 { border-color: var(--vol1-vert); color: var(--vol1-vert); }
-        .btn-v1:hover { background: var(--vol1-vert); color: #fff; }
-        
-        .btn-v2 { border-color: var(--vol2-bleu); color: var(--vol2-bleu); }
-        .btn-v2:hover { background: var(--vol2-bleu); color: #fff; }
-        
+        .btn-v1 { border-color: var(--vol1-bleu); color: var(--vol1-bleu); }
+        .btn-v2 { border-color: var(--vol2-vert); color: var(--vol2-vert); }
         .btn-v3 { border-color: var(--vol3-rose); color: var(--vol3-rose); }
-        .btn-v3:hover { background: var(--vol3-rose); color: #fff; }
-        
         .btn-v4 { border-color: var(--vol4-jaune); color: var(--vol4-jaune); }
-        .btn-v4:hover { background: var(--vol4-jaune); color: #fff; }
-        
         .btn-v5 { border-color: var(--vol5-violet); color: var(--vol5-violet); }
-        .btn-v5:hover { background: var(--vol5-violet); color: #fff; }
+        .vol-btn:hover { background: var(--brun-sombre); color: #fff; border-color: var(--brun-sombre); }
 
-        .pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
-        .price-item { flex: 1; min-width: 200px; }
-        .price-item h4 { font-weight: normal; font-size: 1.1em; margin-bottom: 5px; color: #555; }
-        .price-item .amount { font-size: 1.8em; color: var(--or-zen); }
+        .pricing-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .amount { font-size: 2.2em; color: var(--or-zen); display: block; font-weight: bold; }
 
-        /* --- FOOTER --- */
-        footer { background: var(--brun-sombre); color: var(--bg-sable); padding: 40px 20px; text-align: center; }
-        .footer-promo { 
-            background: rgba(255, 255, 255, 0.03); padding: 15px; margin-bottom: 30px; 
-            border-top: 1px solid rgba(166, 123, 81, 0.2); border-bottom: 1px solid rgba(166, 123, 81, 0.2);
-        }
-        .footer-promo a { color: var(--or-zen); text-decoration: none; font-variant: small-caps; font-size: 1em; display: block; }
-        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-        .footer-links a { color: var(--bg-sable); text-decoration: none; font-size: 0.9em; opacity: 0.7; }
+        /* FOOTER COMPACT AVEC LOGO */
+        footer { background: var(--brun-sombre); color: #fff; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(166, 123, 81, 0.2); }
+        .footer-main { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .footer-logo-small { height: 40px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+        .footer-nav-compact { display: flex; gap: 20px; list-style: none; padding: 0; }
+        .footer-nav-compact a { color: #fff; text-decoration: none; font-size: 0.85em; opacity: 0.7; font-variant: small-caps; letter-spacing: 1px; transition: 0.3s; }
+        .footer-nav-compact a:hover { opacity: 1; color: var(--or-zen); }
+        .amazon-disclosure { font-size: 0.7em; opacity: 0.3; max-width: 800px; margin: 25px auto 0; font-style: italic; line-height: 1.4; }
+        .copyright { font-size: 0.75em; opacity: 0.5; margin-top: 15px; letter-spacing: 1px; }
 
         /* RESPONSIVE */
         @media (max-width: 1100px) { .grid-5 { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { .grid-5 { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 480px) { .grid-5 { grid-template-columns: 1fr; } .vol-btn { width: 100%; text-align: center; } }
+        @media (max-width: 768px) { 
+            .grid-5 { grid-template-columns: repeat(2, 1fr); }
+            .footer-main { flex-direction: column; gap: 15px; } 
+            .footer-nav-compact { flex-wrap: wrap; justify-content: center; } 
+            .titre-marque { font-size: 3em; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
-            <nav>
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Zen Chez Toi Retour Accueil"></a>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="grimoire.html">Grimoire</a></li>
                     <li><a href="blog.html">Journal</a></li>
-                    <li><a href="encyclopedie.html">L'Encyclopédie</a></li>
+                    <li><a href="encyclopedie.html">Encyclopédie</a></li>
+                    <li><a href="livre-or.html">Livre d'Or</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h1 class="titre-marque">Zen <em>Chez</em> Toi</h1>
-        <p>"Le calme est la plus grande des forces."</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1 class="titre-marque">Zen <em>Chez</em> Toi</h1>
+            <p>"Le calme est la plus grande des forces."</p>
+        </section>
 
-    <section class="search-area">
-        <h2 class="section-title">Que cherchez-vous dans ce grimoire ?</h2>
-        <div class="search-container">
-            <form action="recherche.html" method="GET">
-                <input type="text" name="q" placeholder="Sommeil, pucerons, taches, cristaux...">
-                <button type="submit">Chercher</button>
-            </form>
-        </div>
-    </section>
+        <section class="search-area">
+            <h2 class="section-title">Que cherchez-vous dans ce grimoire ?</h2>
+            <div class="search-container">
+                <form action="recherche.html" method="GET">
+                    <input type="text" name="q" placeholder="Sommeil, pucerons, taches, cristaux..." aria-label="Rechercher une solution">
+                    <button type="submit">Chercher</button>
+                </form>
+            </div>
+        </section>
 
-    <div class="section-separator">
-        <img src="assets/logo.png" alt="Symbole Zen">
-    </div>
-
-    <div class="container">
-        <h2 class="section-title">Nos Univers</h2>
-        <div class="grid-5">
-            <a href="maison.html" class="card maison">
-                <div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div>
-                <div class="card-content"><h3>La Maison</h3></div>
-            </a>
-            <a href="jardin.html" class="card jardin">
-                <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
-                <div class="card-content"><h3>Le Jardin</h3></div>
-            </a>
-            <a href="corps.html" class="card corps">
-                <div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div>
-                <div class="card-content"><h3>Le Corps</h3></div>
-            </a>
-            <a href="bienetre.html" class="card bienetre">
-                <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
-                <div class="card-content"><h3>Le Bien-être</h3></div>
-            </a>
-            <a href="eso.html" class="card eso">
-                <div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div>
-                <div class="card-content"><h3>L'Ésotérisme</h3></div>
-            </a>
-        </div>
-    </div>
-
-    <div class="section-separator">
-        <img src="assets/logo.png" alt="Symbole Zen">
-    </div>
-
-    <div class="container">
-        <h2 class="section-title">Le Journal Zen</h2>
-        <div class="grid-5">
-            <a href="blog.html#maison" class="card maison">
-                <div class="card-img" style="background-image: url('assets/hero-maison.jpg');"></div>
-                <div class="card-content"><h3>Blog Maison</h3></div>
-            </a>
-            <a href="blog.html#jardin" class="card jardin">
-                <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');"></div>
-                <div class="card-content"><h3>Blog Jardin</h3></div>
-            </a>
-            <a href="blog.html#corps" class="card corps">
-                <div class="card-img" style="background-image: url('assets/hero-corps.jpg');"></div>
-                <div class="card-content"><h3>Blog Corps</h3></div>
-            </a>
-            <a href="blog.html#bienetre" class="card bienetre">
-                <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');"></div>
-                <div class="card-content"><h3>Blog Bien-être</h3></div>
-            </a>
-            <a href="blog.html#eso" class="card eso">
-                <div class="card-img" style="background-image: url('assets/hero-eso.jpg');"></div>
-                <div class="card-content"><h3>Blog Ésotérisme</h3></div>
-            </a>
-        </div>
-    </div>
-
-    <section class="pricing-section">
-        <h2 class="section-title">L'Encyclopédie des Solutions Nomades (PDF)</h2>
-        <p class="pricing-subtitle">Un parcours d'évolution. Cliquez sur un volume pour l'acquérir.</p>
-        
-        <div class="volume-buttons">
-            <a href="encyclopedie.html" class="vol-btn btn-v1">Vol 1 : Les Fondations</a>
-            <a href="encyclopedie.html" class="vol-btn btn-v2">Vol 2 : L'Enracinement</a>
-            <a href="encyclopedie.html" class="vol-btn btn-v3">Vol 3 : L'Éclosion</a>
-            <a href="encyclopedie.html" class="vol-btn btn-v4">Vol 4 : L'Harmonie</a>
-            <a href="encyclopedie.html" class="vol-btn btn-v5">Vol 5 : L'Élévation</a>
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Symbole Zen" loading="lazy">
+            <h2 class="section-title">Nos Univers</h2>
         </div>
 
-        <div class="pricing-grid">
-            <div class="price-item"><h4>1 Volume (PDF)</h4><span class="amount">29 €</span></div>
-            <div class="price-item"><h4>3 Volumes (PDF)</h4><span class="amount">59 €</span></div>
-            <div class="price-item"><h4>L'Intégrale - 5 Volumes</h4><span class="amount">79 €</span></div>
+        <section class="container">
+            <div class="grid-5">
+                <a href="maison.html" class="card maison">
+                    <div class="card-img" style="background-image: url('assets/hero-maison.jpg');" role="img" aria-label="Univers Maison"></div>
+                    <div class="card-content">
+                        <h3>Côté Maison</h3>
+                    </div>
+                </a>
+                <a href="jardin.html" class="card jardin">
+                    <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');" role="img" aria-label="Univers Jardin"></div>
+                    <div class="card-content">
+                        <h3>Côté Jardin</h3>
+                    </div>
+                </a>
+                <a href="corps.html" class="card corps">
+                    <div class="card-img" style="background-image: url('assets/hero-corps.jpg');" role="img" aria-label="Univers Corps"></div>
+                    <div class="card-content">
+                        <h3>Côté Corps</h3>
+                    </div>
+                </a>
+                <a href="bienetre.html" class="card bienetre">
+                    <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');" role="img" aria-label="Univers Bien-être"></div>
+                    <div class="card-content">
+                        <h3>Bien-être</h3>
+                    </div>
+                </a>
+                <a href="eso.html" class="card eso">
+                    <div class="card-img" style="background-image: url('assets/hero-eso.jpg');" role="img" aria-label="Univers Ésotérisme"></div>
+                    <div class="card-content">
+                        <h3>Ésotérisme</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Symbole Zen" loading="lazy">
+            <h2 class="section-title">Le Journal Zen</h2>
         </div>
-    </section>
+
+        <section class="container">
+            <div class="grid-5">
+                <a href="blog.html#maison" class="card maison">
+                    <div class="card-img" style="background-image: url('assets/hero-maison.jpg');" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Blog Maison</h3>
+                    </div>
+                </a>
+                <a href="blog.html#jardin" class="card jardin">
+                    <div class="card-img" style="background-image: url('assets/hero-jardin.jpg');" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Blog Jardin</h3>
+                    </div>
+                </a>
+                <a href="blog.html#corps" class="card corps">
+                    <div class="card-img" style="background-image: url('assets/hero-corps.jpg');" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Blog Corps</h3>
+                    </div>
+                </a>
+                <a href="blog.html#bienetre" class="card bienetre">
+                    <div class="card-img" style="background-image: url('assets/hero-bienetre.jpg');" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Blog Bien-être</h3>
+                    </div>
+                </a>
+                <a href="blog.html#eso" class="card eso">
+                    <div class="card-img" style="background-image: url('assets/hero-eso.jpg');" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Blog Ésotérisme</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="section-separator">
+            <img src="assets/logo.png" alt="Symbole Zen" loading="lazy">
+            <h2 class="section-title">L'Encyclopédie Nomade</h2>
+        </div>
+
+        <section class="pricing-section">
+            <div class="volume-buttons">
+                <a href="encyclopedie.html" class="vol-btn btn-v1">Vol 1 : Les Fondations</a>
+                <a href="encyclopedie.html" class="vol-btn btn-v2">Vol 2 : L'Enracinement</a>
+                <a href="encyclopedie.html" class="vol-btn btn-v3">Vol 3 : L'Éclosion</a>
+                <a href="encyclopedie.html" class="vol-btn btn-v4">Vol 4 : L'Harmonie</a>
+                <a href="encyclopedie.html" class="vol-btn btn-v5">Vol 5 : L'Élévation</a>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-item"><h4>Le Volume (PDF)</h4><span class="amount">14.90 €</span></div>
+                <div class="price-item"><h4>Le Pack Trio</h4><span class="amount">24.90 €</span></div>
+                <div class="price-item"><h4>L'Intégrale</h4><span class="amount">39.90 €</span></div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-promo">
-            <a href="encyclopedie.html">📥 L'Encyclopédie des Solutions Nomades : Les Fondations • L'Enracinement • L'Éclosion • L'Harmonie • L'Élévation</a>
+        <div class="footer-main">
+            <a href="index.html"><img src="assets/logo.png" class="footer-logo-small" alt="Zen Chez Toi Retour Accueil"></a>
+            <ul class="footer-nav-compact">
+                <li><a href="mentions-legales.html">Mentions</a></li>
+                <li><a href="confidentialite.html">Confidentialité</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="livre-or.html">Livre d'Or</a></li>
+            </ul>
         </div>
-        <div class="footer-links">
-            <a href="mentions-legales.html">Mentions Légales</a>
-            <a href="confidentialite.html">Confidentialité</a>
-            <a href="cookies.html">Cookies</a>
-            <a href="livre-or.html">Livre d'Or</a>
-            <a href="https://www.amazon.fr/?tag=zencheztoi-21" target="_blank">Ma Sélection Amazon</a>
-        </div>
-        <p>&copy; 2024 Zen Chez Toi - L'Harmonie au Naturel</p>
+        <p class="amazon-disclosure">
+            En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Zen Chez Toi participe au Programme Partenaires d’Amazon EU.
+        </p>
+        <p class="copyright">&copy; 2026 Zen chez toi -Transmettre pour Libérer</p>
     </footer>
 
 </body>

@@ -1,36 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ail – Zen Chez Toi</title>
-  <style> :root{ --bg:#f5f2ec; --text:#2b2622; --muted:#6f6660; --accent:#a67b51; --accent-soft:#e9ddcf; --dark:#221b16; --surface:rgba(255,255,255,.94); --border:rgba(43,38,34,.12); --shadow:0 15px 35px rgba(0,0,0,.08); } *{box-sizing:border-box} body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); line-height:1.6; } .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; } .promo-bar a { color: var(--accent-soft); font-weight: bold; text-decoration: underline; margin-left: 10px; } header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; } h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--dark); } .tagline { font-style: italic; color: var(--muted); font-size: 1.2rem; } .main-btn { display: inline-block; background: #c68642; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; box-shadow: var(--shadow); transition: 0.3s; } main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; } .univers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; } .univers-card { background: var(--surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); } .univers-card h3 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.5rem; } .univers-card ul { padding-left: 1.2rem; } .univers-card li { margin-bottom: 0.5rem; } .pricing-section { background: var(--dark); color: #fff; padding: 4rem 2rem; border-radius: 40px; text-align: center; } .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; } .price-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); } .price-card.featured { background: var(--surface); color: var(--text); transform: scale(1.05); } .price { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; } .buy-btn { display: block; background: var(--accent); color: white; padding: 0.8rem; border-radius: 10px; text-decoration: none; font-weight: bold; } footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; } </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagesse n°2 : L'Ail – Zen Chez Toi</title>
+    
+    <meta name="p:domain_verify" content="549770272775"/>
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
+
+        /* NAVIGATION HAUTE & LIVRE D'OR */
+        .nav-top { position: fixed; top: 25px; left: 25px; right: 25px; display: flex; justify-content: space-between; z-index: 2000; pointer-events: none; }
+        .nav-btn { pointer-events: auto; background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 50px; text-decoration: none; color: var(--brun-sombre); font-size: 0.9em; font-style: italic; backdrop-filter: blur(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .nav-btn:hover { background: var(--blanc); transform: translateY(-2px); }
+        
+        /* NAVIGATION LATÉRALE */
+        .scroll-nav { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 1500; padding: 0 30px; }
+        .arrow-nav { pointer-events: auto; background: var(--blanc); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; color: var(--or-zen); font-size: 1.5em; box-shadow: 0 5px 15px rgba(0,0,0,0.15); opacity: 0.6; transition: 0.3s; }
+        .arrow-nav:hover { opacity: 1; transform: scale(1.1); background: var(--or-zen); color: #fff; }
+
+        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; display: flex; justify-content: center; }
+        .logo-link img { max-height: 100px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
+
+        /* HERO - VOLUME 1 (BLEU ARDOISE) */
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-ail.jpg') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px; }
+        .maitre-phrase { font-size: 1.4em; font-variant: small-caps; letter-spacing: 5px; font-weight: bold; margin-bottom: 20px; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 4px rgba(0,0,0,0.5); }
+        .sagesse-num { font-size: 1.2em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; font-weight: bold; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison); }
+        .hero h1 { font-size: 5.5em; font-weight: normal; margin-bottom: 30px; line-height: 1.1; text-shadow: -2px -2px 0 var(--maison), 2px -2px 0 var(--maison), -2px 2px 0 var(--maison), 2px 2px 0 var(--maison), 0 5px 15px rgba(0,0,0,0.5); }
+        .tagline { font-size: 1.8em; font-style: italic; max-width: 900px; line-height: 1.4; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 10px rgba(0,0,0,0.5); }
+
+        /* SECTION HISTOIRE & PICTOGRAMMES */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .histoire-section { background: var(--blanc); padding: 80px; border-radius: 30px; margin-top: -120px; position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
+        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; text-align: center; }
+        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; }
+
+        .picto-container { display: flex; justify-content: center; gap: 40px; margin: 40px 0; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .picto-item { text-align: center; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--or-zen); font-weight: bold; }
+        .picto-item img { height: 45px; display: block; margin: 0 auto 10px; opacity: 0.8; }
+
+        /* TABLEAU ALLIANCES & CORRESPONDANCES */
+        .allies-box { background: var(--bg-sable); padding: 50px; border-radius: 20px; margin: 80px 0; border-left: 8px solid var(--or-zen); }
+        .allies-box h3 { font-size: 2em; color: var(--brun-sombre); margin-bottom: 30px; font-weight: normal; }
+        .allies-list { list-style: none; }
+        .allies-list li { background: var(--blanc); margin-bottom: 15px; padding: 20px 30px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+        .allies-list a { font-weight: bold; color: var(--brun-sombre); text-decoration: none; border-bottom: 2px solid var(--or-zen); font-size: 1.1em; }
+        .vol-tag { font-size: 0.8em; font-weight: bold; color: var(--or-zen); text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--or-zen); padding: 5px 15px; border-radius: 50px; }
+
+        /* BLOC EXPERTISE & MOT DU MAÎTRE */
+        .expert-container { background: #fff; border: 1px solid #eee; padding: 50px; border-radius: 30px; margin: 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.02); }
+        .maitre-mot h3 { font-size: 1.6em; color: var(--or-zen); margin-bottom: 20px; font-variant: small-caps; letter-spacing: 2px; }
+        .maitre-mot p { font-style: italic; font-size: 1.1em; color: #666; line-height: 1.7; border-left: 3px solid #eee; padding-left: 20px; }
+        .expertise-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
+        .expertise-item h4 { font-size: 1.1em; color: var(--brun-sombre); margin-bottom: 10px; }
+        .expertise-item p { font-size: 0.95em; color: #777; line-height: 1.6; }
+
+        /* BOUTONS ACHAT */
+        .amazon-section { text-align: center; margin: 40px 0 120px; }
+        .amazon-btn { display: inline-block; padding: 22px 55px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); }
+
+        /* FOOTER & LÉGAL */
+        footer { background: var(--brun-sombre); color: #fff; padding: 100px 20px; text-align: center; }
+        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; gap: 30px; opacity: 0.7; font-size: 0.9em; }
+        .footer-links a { color: #fff; text-decoration: none; }
+        .amazon-disclosure { font-size: 0.75em; opacity: 0.4; max-width: 800px; margin: 40px auto 0; font-style: italic; line-height: 1.5; }
+
+        @media (max-width: 1000px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .expertise-list { grid-template-columns: 1fr; } .picto-container { gap: 15px; flex-wrap: wrap; } }
+    </style>
 </head>
 <body>
-  <div class="promo-bar">🎁 VOLUME 3 : L'Ail, le gardien suprême. <a href="#offres">Voir l'offre</a></div>
-  <header>
-    <div style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent);">Solution n°24 / 50</div>
-    <h1>Ail</h1>
-    <p class="tagline">"Le gardien du seuil : un bouclier biologique et vibratoire pour vos 5 mondes."</p>
-    <a href="https://www.amazon.fr/Ail-Poudre-1kg-Pur/dp/B00XP029S6?&linkCode=ll1&tag=zencheztoi-21" class="main-btn" target="_blank">Acheter l'Ail (Usage Technique)</a>
-  </header>
-  <main>
-    <div class="univers-grid">
-      <div class="univers-card"><h3>🏠 Monde Maison</h3><ul><li>Éloigne les insectes des réserves alimentaires.</li><li>Désinfectant naturel puissant (solution spray).</li><li>Lutte contre les moisissures des placards.</li><li>Purifie l'air (si l'odeur est gérée).</li><li>Protège les textiles des parasites.</li></ul></div>
-      <div class="univers-card"><h3>🌿 Monde Jardin</h3><ul><li>L'insecticide naturel par excellence (pucerons, chenilles).</li><li>Fongicide radical (cloque du pêcher, oïdium).</li><li>Repousse les rongeurs des galeries (bulbes).</li><li>Désinfecte le sol avant plantation.</li><li>Protège les légumes des maladies cryptogamiques.</li></ul></div>
-      <div class="univers-card"><h3>✨ Monde Corps</h3><ul><li>Antiseptique local (sur verrue ou bouton).</li><li>Aide à la santé des ongles (friction diluée).</li><li>Soin du cuir chevelu (anti-pelliculaire radical).</li><li>Soutien de la santé cutanée globale.</li><li>Purifiant pour les peaux à problèmes.</li></ul></div>
-      <div class="univers-card"><h3>🧘 Monde Bien-être</h3><ul><li>Booste radicalement l'immunité (cure).</li><li>Aide à réguler la tension artérielle.</li><li>Effet détoxifiant profond pour l'organisme.</li><li>Aide à combattre les parasites internes.</li><li>Soutient la vitalité lors des changements de saison.</li></ul></div>
-      <div class="univers-card"><h3>🔮 Monde Ésotérisme</h3><ul><li>Bannissement des énergies négatives lourdes.</li><li>Protection absolue de la porte d'entrée.</li><li>Nettoyage des entités indésirables.</li><li>Symbole de force et de courage.</li><li>Purification par le soufre végétal.</li></ul></div>
+
+    <div class="nav-top">
+        <a href="grimoire.html" class="nav-btn">← Le Grimoire</a>
+        <a href="livre-d-or.html" class="nav-btn">Livre d'Or ✍️</a>
     </div>
-    <section id="offres" class="pricing-section">
-      <h2>Apprenez à dresser vos boucliers</h2>
-      <div class="pricing-grid">
-        <div class="price-card"><h3>Volume 3</h3><div class="price">9,90€</div><a href="#" class="buy-btn">Acheter Vol. 3</a></div>
-        <div class="price-card featured"><h3>Pack 3 Volumes</h3><div class="price">24,90€</div><a href="#" class="buy-btn">Le Trio Zen</a></div>
-        <div class="price-card"><h3>L'Intégrale (5 Vol.)</h3><div class="price">39,90€</div><a href="#" class="buy-btn">La Totale</a></div>
-      </div>
+
+    <div class="scroll-nav">
+        <a href="acide-citrique.html" class="arrow-nav">❮</a>
+        <a href="argile.html" class="arrow-nav">❯</a>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+    </header>
+
+    <section class="hero">
+        <p class="maitre-phrase">Maître des Fondations</p>
+        <p class="sagesse-num">Sagesse n°2 : Le Bouclier de la Terre</p>
+        <h1>L'Ail</h1>
+        <p class="tagline">"Le savoir n'est pas une arme, c'est une lumière. Apprenez à voir la force là où la terre l'a forgée."</p>
     </section>
-  </main>
-  <footer>© Zen Chez Toi - La garde sans faille.</footer>
+
+    <main class="container">
+        
+        <section class="histoire-section">
+            <h2>L'Épopée du Bulbe Sacré</h2>
+            <div class="histoire-text">
+                <p>Depuis l'aube des civilisations, l'ail n'est pas une simple herbe, c'est un rempart. Dans l'Égypte antique, il était si précieux qu'il servait de salaire aux bâtisseurs des <strong>Pyramides de Gizeh</strong>. Une grève historique éclata même lorsque les rations d'ail furent coupées : sans ce bouclier, les ouvriers perdaient leur force et leur immunité face au désert.</p>
+                <p>Au Moyen Âge, il devint la légende des <strong>Quatre Voleurs</strong> à Marseille. Alors que la peste noire ravageait la ville, quatre pillards semblaient immunisés. Leur secret ? Un vinaigre macéré d'ail qu'ils s'appliquaient sur tout le corps. Aujourd'hui encore, de la cuisine au jardin, l'ail reste le premier gardien de la vitalité, capable de repousser l'invisible et de fortifier le vivant par sa seule présence.</p>
+            </div>
+
+            <div class="picto-container">
+                <div class="picto-item"><img src="assets/picto-food.png" alt="">Alimentaire</div>
+                <div class="picto-item"><img src="assets/picto-bio.png" alt="">100% Naturel</div>
+                <div class="picto-item"><img src="assets/picto-france.png" alt="">Qualité France</div>
+                <div class="picto-item"><img src="assets/picto-recycle.png" alt="">Eco-Sachet</div>
+            </div>
+        </section>
+
+        <section class="allies-box">
+            <h3>Alliances & Correspondances</h3>
+            <ul class="allies-list">
+                <li><a href="vinaigre-de-cidre.html">Le Vinaigre de Cidre</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="miel.html">Le Miel de Montagne</a> <span class="vol-tag">Volume 3</span></li>
+                <li><a href="huile-d-olive.html">L'Huile d'Olive Vierge</a> <span class="vol-tag">Volume 4</span></li>
+            </ul>
+        </section>
+
+        <section class="expert-container">
+            <div class="maitre-mot">
+                <h3>Le Mot du Maître</h3>
+                <p>"Pourquoi la semoule d'ail plutôt que le bulbe frais ? Pour la stabilité du Nomade. Cette semoule bio d'Alvendia, conservée dans son sachet refermable, garde intacte l'allicine, son principe actif. Pour l'Initié, 250g suffisent à couvrir des mois de recettes et de soins. Pour le Souverain, le format 1kg assure une protection totale de son jardin et de sa santé. Un choix de raison pour une efficacité éternelle."</p>
+            </div>
+            
+            <div class="expertise-list">
+                <div class="expertise-item">
+                    <h4>Antiseptique Majeur</h4>
+                    <p>Contient de l'allicine, capable de fortifier les défenses naturelles du vivant face aux agressions.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Répulsif Systémique</h4>
+                    <p>Éloigne les parasites du foyer et les insectes du jardin par simple diffusion ou macération.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Stabilité Totale</h4>
+                    <p>Une conservation de plusieurs années dans son sachet kraft sans aucune perte de principes actifs.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="amazon-section">
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Initié"</p>
+                    <a href="https://www.amazon.fr/ALVENDIA-Semoule-Additifs-Allerg%C3%A8nes-refermable/dp/B0GTWHX1WC?tag=zencheztoi-21" class="amazon-btn" target="_blank">
+                        Acquérir le Bouclier de la Terre (250g)
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Souverain"</p>
+                    <a href="https://www.amazon.fr/ALVENDIA-Semoule-Additifs-Allerg%C3%A8nes-refermable/dp/B0GTWHX1WC?tag=zencheztoi-21" class="amazon-btn" target="_blank">
+                        Acquérir le Bouclier de la Terre (1kg)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="cookies.html">Gestion des Cookies</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="boutique.html">Boutique Amazon</a>
+        </div>
+        <p>&copy; 2026 Zen Chez Toi – Transmettre pour Libérer</p>
+        <p class="amazon-disclosure">Zen Chez Toi participe au Programme Partenaires d’Amazon EU, un programme d’affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.fr. En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
+    </footer>
 </body>
 </html>

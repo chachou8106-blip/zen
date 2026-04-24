@@ -1,58 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acide Citrique – Zen Chez Toi</title>
-  <style>
-    :root{ --bg:#f5f2ec; --text:#2b2622; --muted:#6f6660; --accent:#a67b51; --accent-soft:#e9ddcf; --dark:#221b16; --surface:rgba(255,255,255,.94); --border:rgba(43,38,34,.12); --shadow:0 15px 35px rgba(0,0,0,.08); }
-    *{box-sizing:border-box} body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    .promo-bar { background: var(--dark); color: #fff; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 1000; font-size: 0.9rem; }
-    .promo-bar a { color: var(--accent-soft); font-weight: bold; text-decoration: underline; margin-left: 10px; }
-    header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--dark); }
-    .tagline { font-style: italic; color: var(--muted); font-size: 1.2rem; }
-    .main-btn { display: inline-block; background: #c68642; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; box-shadow: var(--shadow); transition: 0.3s; }
-    .main-btn:hover { background: var(--dark); }
-    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .univers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
-    .univers-card { background: var(--surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
-    .univers-card h3 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.5rem; }
-    .univers-card ul { padding-left: 1.2rem; } .univers-card li { margin-bottom: 0.5rem; }
-    .pricing-section { background: var(--dark); color: #fff; padding: 4rem 2rem; border-radius: 40px; text-align: center; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .price-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
-    .price-card.featured { background: var(--surface); color: var(--text); transform: scale(1.05); }
-    .price { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; }
-    .buy-btn { display: block; background: var(--accent); color: white; padding: 0.8rem; border-radius: 10px; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagesse n°1 : L'Acide Citrique – Zen Chez Toi</title>
+    
+    <meta name="p:domain_verify" content="549770272775"/>
+    <meta name="google-site-verification" content="JA8FAatlZ7okqYdp8jg8ZBfI5PxUIZEpxKNs8aKrJRs">
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        :root {
+            --bg-sable: #f5f2ec; --blanc: #ffffff; --brun-sombre: #2b2622; --or-zen: #a67b51;
+            --maison: #6a7f8f; --jardin: #7b9074; --corps: #cca8a0; --bienetre: #d4a259; --eso: #826a8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-sable); color: var(--brun-sombre); line-height: 1.8; overflow-x: hidden; }
+
+        /* NAVIGATION HAUTE & LIVRE D'OR */
+        .nav-top { position: fixed; top: 25px; left: 25px; right: 25px; display: flex; justify-content: space-between; z-index: 2000; pointer-events: none; }
+        .nav-btn { pointer-events: auto; background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 50px; text-decoration: none; color: var(--brun-sombre); font-size: 0.9em; font-style: italic; backdrop-filter: blur(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .nav-btn:hover { background: var(--blanc); transform: translateY(-2px); }
+        
+        /* NAVIGATION LATÉRALE */
+        .scroll-nav { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 1500; padding: 0 30px; }
+        .arrow-nav { pointer-events: auto; background: var(--blanc); width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; color: var(--or-zen); font-size: 1.5em; box-shadow: 0 5px 15px rgba(0,0,0,0.15); opacity: 0.6; transition: 0.3s; }
+        .arrow-nav:hover { opacity: 1; transform: scale(1.1); background: var(--or-zen); color: #fff; }
+
+        header { position: absolute; top: 0; width: 100%; padding: 30px 0; z-index: 1000; display: flex; justify-content: center; }
+        .logo-link img { max-height: 100px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
+
+        /* HERO - LISIBILITÉ TOTALE (VOLUME 1) */
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/hero-maison.jpg') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 0 20px; }
+        .maitre-phrase { font-size: 1.4em; font-variant: small-caps; letter-spacing: 5px; font-weight: bold; margin-bottom: 20px; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 4px rgba(0,0,0,0.5); }
+        .sagesse-num { font-size: 1.2em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; font-weight: bold; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison); }
+        .hero h1 { font-size: 5.5em; font-weight: normal; margin-bottom: 30px; line-height: 1.1; text-shadow: -2px -2px 0 var(--maison), 2px -2px 0 var(--maison), -2px 2px 0 var(--maison), 2px 2px 0 var(--maison), 0 5px 15px rgba(0,0,0,0.5); }
+        .tagline { font-size: 1.8em; font-style: italic; max-width: 900px; line-height: 1.4; text-shadow: -1px -1px 0 var(--maison), 1px -1px 0 var(--maison), -1px 1px 0 var(--maison), 1px 1px 0 var(--maison), 0 2px 10px rgba(0,0,0,0.5); }
+
+        /* SECTION HISTOIRE & PICTOGRAMMES */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .histoire-section { background: var(--blanc); padding: 80px; border-radius: 30px; margin-top: -120px; position: relative; z-index: 10; box-shadow: 0 25px 60px rgba(0,0,0,0.08); }
+        .histoire-section h2 { font-size: 2.8em; color: var(--or-zen); margin-bottom: 40px; text-align: center; }
+        .histoire-text { column-count: 2; column-gap: 60px; text-align: justify; font-size: 1.15rem; color: #444; }
+
+        .picto-container { display: flex; justify-content: center; gap: 40px; margin: 40px 0; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .picto-item { text-align: center; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: var(--or-zen); font-weight: bold; }
+        .picto-item img { height: 45px; display: block; margin: 0 auto 10px; opacity: 0.8; }
+
+        /* TABLEAU ALLIANCES & CORRESPONDANCES */
+        .allies-box { background: var(--bg-sable); padding: 50px; border-radius: 20px; margin: 80px 0; border-left: 8px solid var(--or-zen); }
+        .allies-box h3 { font-size: 2em; color: var(--brun-sombre); margin-bottom: 30px; font-weight: normal; }
+        .allies-list { list-style: none; }
+        .allies-list li { background: var(--blanc); margin-bottom: 15px; padding: 20px 30px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+        .allies-list a { font-weight: bold; color: var(--brun-sombre); text-decoration: none; border-bottom: 2px solid var(--or-zen); font-size: 1.1em; }
+        .vol-tag { font-size: 0.8em; font-weight: bold; color: var(--or-zen); text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--or-zen); padding: 5px 15px; border-radius: 50px; }
+
+        /* BLOC EXPERTISE & MOT DU MAÎTRE */
+        .expert-container { background: #fff; border: 1px solid #eee; padding: 50px; border-radius: 30px; margin: 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.02); }
+        .maitre-mot h3 { font-size: 1.6em; color: var(--or-zen); margin-bottom: 20px; font-variant: small-caps; letter-spacing: 2px; }
+        .maitre-mot p { font-style: italic; font-size: 1.1em; color: #666; line-height: 1.7; border-left: 3px solid #eee; padding-left: 20px; }
+        .expertise-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
+        .expertise-item h4 { font-size: 1.1em; color: var(--brun-sombre); margin-bottom: 10px; }
+        .expertise-item p { font-size: 0.95em; color: #777; line-height: 1.6; }
+
+        /* BOUTONS ACHAT */
+        .amazon-section { text-align: center; margin: 40px 0 120px; }
+        .amazon-btn { display: inline-block; padding: 22px 55px; background: var(--brun-sombre); color: #fff; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .amazon-btn:hover { background: var(--or-zen); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(166, 123, 81, 0.3); }
+
+        /* FOOTER & LÉGAL */
+        footer { background: var(--brun-sombre); color: #fff; padding: 100px 20px; text-align: center; }
+        .footer-links { margin-bottom: 30px; display: flex; justify-content: center; gap: 30px; opacity: 0.7; font-size: 0.9em; }
+        .footer-links a { color: #fff; text-decoration: none; }
+        .amazon-disclosure { font-size: 0.75em; opacity: 0.4; max-width: 800px; margin: 40px auto 0; font-style: italic; line-height: 1.5; }
+
+        @media (max-width: 1000px) { .histoire-text { column-count: 1; } .hero h1 { font-size: 3.5em; } .expertise-list { grid-template-columns: 1fr; } .picto-container { gap: 15px; flex-wrap: wrap; } }
+    </style>
 </head>
 <body>
-  <div class="promo-bar">🎁 OFFRE ZEN : Éradiquez le calcaire dans vos 5 mondes. <a href="#offres">Voir les Volumes</a></div>
-  <header>
-    <div style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent);">Solution n°7 / 50</div>
-    <h1>Acide Citrique</h1>
-    <p class="tagline">"Le détartrant ultime : purifie le minéral et l'organique avec une efficacité redoutable."</p>
-    <a href="https://www.amazon.fr/Acide-Citrique-1kg-Qualité-Alimentaire/dp/B00966K3U6?&linkCode=ll1&tag=zencheztoi-21" class="main-btn" target="_blank">Acheter l'Acide Citrique (Sélection Pro)</a>
-  </header>
-  <main>
-    <div class="univers-grid">
-      <div class="univers-card"><h3>🏠 Monde Maison</h3><ul><li>Détartrage complet de la robinetterie.</li><li>Élimine la rouille sur les objets métal.</li><li>Nettoie le fond de la cuvette des WC.</li><li>Fait briller le lave-vaisselle (remplace sel).</li><li>Élimine les taches de café et thé.</li></ul></div>
-      <div class="univers-card"><h3>🌿 Monde Jardin</h3><ul><li>Supprime la rouille des outils de jardin.</li><li>Nettoie les vitres des serres.</li><li>Élimine les dépôts calcaires des abreuvoirs.</li><li>Prépare le bois avant lasure (neutralisation).</li><li>Nettoie les pompes de fontaine.</li></ul></div>
-      <div class="univers-card"><h3>✨ Monde Corps</h3><ul><li>Dernière eau de rinçage cheveux (brillance).</li><li>Base pour "bombes de bain" effervescentes.</li><li>Lutte contre les callosités des pieds.</li><li>Nettoyage des accessoires de coiffure inox.</li><li>Aide à l'équilibre du pH (dilué).</li></ul></div>
-      <div class="univers-card"><h3>🧘 Monde Bien-être</h3><ul><li>Détartre les humidificateurs et brumisateurs.</li><li>Nettoie les fontaines zen.</li><li>Supprime les odeurs de transpiration tenaces.</li><li>Entretien les machines de yoga métal.</li><li>Nettoie les miroirs de salle de bain.</li></ul></div>
-      <div class="univers-card"><h3>🔮 Monde Ésotérisme</h3><ul><li>Nettoie les objets rituels en cuivre et laiton.</li><li>Redonne éclat aux athamés et dagues.</li><li>Purification par l'élément "Acide".</li><li>Lave les bougeoirs métalliques.</li><li>Purifie l'eau de cérémonie (selon dosage).</li></ul></div>
+
+    <div class="nav-top">
+        <a href="grimoire.html" class="nav-btn">← Le Grimoire</a>
+        <a href="livre-d-or.html" class="nav-btn">Livre d'Or ✍️</a>
     </div>
-    <section id="offres" class="pricing-section">
-      <h2>Tout savoir sur l'Acide Citrique dans l'Encyclopédie</h2>
-      <div class="pricing-grid">
-        <div class="price-card"><h3>Vol. 1 (Les 10 piliers)</h3><div class="price">9,90€</div><a href="#" class="buy-btn">Commander le Vol. 1</a></div>
-        <div class="price-card featured"><h3>Pack 3 Volumes</h3><div class="price">24,90€</div><a href="#" class="buy-btn">Choisir le Trio</a></div>
-        <div class="price-card"><h3>L'Intégrale (5 Vol.)</h3><div class="price">39,90€</div><a href="#" class="buy-btn">La Totale Zen</a></div>
-      </div>
+
+    <div class="scroll-nav">
+        <a href="index.html" class="arrow-nav">❮</a>
+        <a href="ail.html" class="arrow-nav">❯</a>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="Zen Chez Toi"></a>
+    </header>
+
+    <section class="hero">
+        <p class="maitre-phrase">Maître des Fondations</p>
+        <p class="sagesse-num">Sagesse n°1 : Le Souffle du Citron</p>
+        <h1>L'Acide Citrique</h1>
+        <p class="tagline">"Le savoir n'est pas une arme, c'est une lumière. Apprenez à voir la pureté là où le calcaire l'a cachée."</p>
     </section>
-  </main>
-  <footer>© Zen Chez Toi - La clarté par l'acide naturel.</footer>
+
+    <main class="container">
+        
+        <section class="histoire-section">
+            <h2>L'Origine du Cristal de Clarté</h2>
+            <div class="histoire-text">
+                <p>Bien avant que la chimie moderne ne lui donne un nom, l'humanité utilisait déjà la force de l'acide citrique à travers le jus de citron. Les sources historiques nous ramènent au <strong>VIIIe siècle</strong>, où l'alchimiste persan <strong>Jābir ibn Hayyān</strong> (Geber) avait déjà pressenti l'existence de cet acide organique au cœur des agrumes.</p>
+                <p>Il fallut attendre <strong>1784</strong> pour que le brillant chimiste suédo-allemand <strong>Carl Wilhelm Scheele</strong> réussisse à isoler le cristal pour la première fois. Ce cristal est le fruit de siècles d'observation de la nature par ceux qui cherchaient la "Clarté Absolue".</p>
+            </div>
+
+            <div class="picto-container">
+                <div class="picto-item"><img src="assets/picto-food.png" alt="">Alimentaire</div>
+                <div class="picto-item"><img src="assets/picto-bio.png" alt="">100% Naturel</div>
+                <div class="picto-item"><img src="assets/picto-france.png" alt="">Qualité France</div>
+                <div class="picto-item"><img src="assets/picto-recycle.png" alt="">Seau Recyclable</div>
+            </div>
+        </section>
+
+        <section class="allies-box">
+            <h3>Alliances & Correspondances</h3>
+            <ul class="allies-list">
+                <li><a href="savon-noir.html">Le Savon Noir Alchimique</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="bicarbonate.html">Le Bicarbonate de Soude</a> <span class="vol-tag">Volume 1</span></li>
+                <li><a href="sel-gris.html">Le Sel Gris de Guérande</a> <span class="vol-tag">Volume 1</span></li>
+            </ul>
+        </section>
+
+        <section class="expert-container">
+            <div class="maitre-mot">
+                <h3>Le Mot du Maître</h3>
+                <p>"L'Acide Citrique n'est pas un simple produit ménager, c'est le scalpel de l'alchimiste. J'ai sélectionné pour vous la pureté cristalline d'EluOecolo (Qualité Alimentaire & Pharmaceutique). Que vous soyez un explorateur débutant ou un gardien aguerri de votre foyer, le choix du conditionnement est votre première étape vers l'autonomie."</p>
+            </div>
+            
+            <div class="expertise-list">
+                <div class="expertise-item">
+                    <h4>Pureté Certifiée</h4>
+                    <p>Grade E330 garantissant une sécurité totale pour l'entretien, la cosmétique et la cuisine.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Éco-Responsable</h4>
+                    <p>Une marque engagée pour un impact minimal, conditionnée pour préserver la force du cristal.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Action Totale</h4>
+                    <p>Détartrant, antioxydant et conservateur : le pilier indispensable des Fondations.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="amazon-section">
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Initié"</p>
+                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07MR71T2C?tag=zencheztoi-21" class="amazon-btn" target="_blank">
+                        Acquérir le Cristal de Clarté (800g)
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-style: italic; margin-bottom: 15px; color: #777; font-size: 0.9em; letter-spacing: 1px;">Le Format "Souverain"</p>
+                    <a href="https://www.amazon.fr/Citrique-alimentaire-pharmaceutique-lint%C3%A9rieur-EluOecolo/dp/B07HN8XYR7?tag=zencheztoi-21" class="amazon-btn" target="_blank">
+                        Acquérir le Cristal de Clarté (5kg)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="cookies.html">Gestion des Cookies</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="boutique.html">Boutique Amazon</a>
+        </div>
+        <p>&copy; 2026 Zen Chez Toi – Transmettre pour Libérer</p>
+        <p class="amazon-disclosure">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises par le Programme Partenaires d’Amazon EU.</p>
+    </footer>
 </body>
 </html>
